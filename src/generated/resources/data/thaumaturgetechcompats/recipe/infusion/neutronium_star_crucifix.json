@@ -84,40 +84,18 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:matrix_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:matrix_star_crucifix",
   "components": [
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
-    }
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot",
+    "thaumaturgetechcompats:neutronium_salis_mundus",
+    "thaumaturgetechcompats:neutronium_salis_mundus",
+    "thaumaturgetechcompats:neutronium_salis_mundus",
+    "thaumaturgetechcompats:neutronium_salis_mundus",
+    "thaumaturgetechcompats:neutronium_salis_mundus",
+    "thaumaturgetechcompats:neutronium_salis_mundus"
   ],
   "instability": 11,
   "research": {

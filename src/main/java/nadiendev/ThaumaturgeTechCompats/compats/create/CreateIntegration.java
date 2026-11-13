@@ -17,7 +17,6 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModList;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.ArrayList;
@@ -70,11 +69,10 @@ public final class CreateIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new CreateBlockStates(output, helper));
-        generator.addProvider(event.includeClient(), new CreateItemModels(output, helper));
-        generator.addProvider(event.includeClient(), new CreateVariantModels(output, helper));
-        generator.addProvider(event.includeServer(), new CreateContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new CreateBlockStates(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new CreateItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new CreateVariantModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new CreateContent(output));
     }
 }

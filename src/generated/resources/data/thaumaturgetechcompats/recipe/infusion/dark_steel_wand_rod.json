@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:motus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:energetic_alloy_wand_rod"
-  },
+  "catalyst": "thaumaturgetechcompats:energetic_alloy_wand_rod",
   "components": [
-    {
-      "tag": "c:ingots/dark_steel"
-    },
-    {
-      "tag": "c:ingots/dark_steel"
-    },
-    {
-      "tag": "c:ingots/dark_steel"
-    },
-    {
-      "tag": "c:ingots/dark_steel"
-    }
+    "#c:ingots/dark_steel",
+    "#c:ingots/dark_steel",
+    "#c:ingots/dark_steel",
+    "#c:ingots/dark_steel"
   ],
   "instability": 3,
   "research": {

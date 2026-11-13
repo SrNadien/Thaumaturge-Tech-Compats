@@ -6,7 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.p3pp3rf1y.sophisticatedcore.common.gui.StorageBackgroundProperties;
@@ -28,9 +28,9 @@ public final class WideStorageLayout {
     private static final int HEADER = 17;
     private static final int FOOTER = 97;
     private static final int STRETCH_MAX = 150;
-    private static final ResourceLocation BACKGROUND = texture("storage_wide");
-    private static final ResourceLocation BACKGROUND_SCROLL = texture("storage_wide_scroll");
-    private static final ResourceLocation SLOTS = texture("storage_wide_slots");
+    private static final Identifier BACKGROUND = texture("storage_wide");
+    private static final Identifier BACKGROUND_SCROLL = texture("storage_wide_scroll");
+    private static final Identifier SLOTS = texture("storage_wide_slots");
 
     public static final StorageBackgroundProperties REGULAR = new StorageBackgroundProperties(COLUMNS, 80, BACKGROUND);
     public static final StorageBackgroundProperties WIDER = new StorageBackgroundProperties(COLUMNS, 83, BACKGROUND_SCROLL);
@@ -38,8 +38,8 @@ public final class WideStorageLayout {
     private WideStorageLayout() {
     }
 
-    private static ResourceLocation texture(String name) {
-        return ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "textures/gui/" + name + ".png");
+    private static Identifier texture(String name) {
+        return Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "textures/gui/" + name + ".png");
     }
 
     public static boolean applies(StorageContainerMenuBase<?> menu) {
@@ -67,7 +67,7 @@ public final class WideStorageLayout {
         return !wrapped.isEmpty() && BuiltInRegistries.ITEM.getKey(wrapped.getItem()).getNamespace().equals(ThaumaturgeTechCompats.MOD_ID);
     }
 
-    public static boolean drawBackground(GuiGraphics graphics, int x, int y, int width, int storageHeight, ResourceLocation texture) {
+    public static boolean drawBackground(GuiGraphics graphics, int x, int y, int width, int storageHeight, Identifier texture) {
         if (!texture.equals(BACKGROUND) && !texture.equals(BACKGROUND_SCROLL)) {
             return false;
         }

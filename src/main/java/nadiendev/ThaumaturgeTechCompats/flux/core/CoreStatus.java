@@ -41,14 +41,14 @@ public record CoreStatus(FluxTier tier, boolean formed, int missing, long stored
 
     public static CoreStatus fromTag(CompoundTag tag) {
         FluxTier tier = FluxTier.THAUMIUM;
-        String id = tag.getString(TIER);
+        String id = tag.getStringOr(TIER, "");
         for (FluxTier candidate : FluxTier.values()) {
             if (candidate.id().equals(id)) {
                 tier = candidate;
             }
         }
-        return new CoreStatus(tier, tag.getBoolean(FORMED), tag.getInt(MISSING), tag.getLong(STORED), tag.getLong(CAPACITY),
-                tag.getLong(BASE), tag.getInt(CELLS), tag.getLong(CELL_CAPACITY), tag.getInt(STABILIZERS), tag.getInt(POINTS),
-                tag.getInt(REQUIRED), tag.getBoolean(OVERLOADED));
+        return new CoreStatus(tier, tag.getBooleanOr(FORMED, false), tag.getIntOr(MISSING, 0), tag.getLongOr(STORED, 0L), tag.getLongOr(CAPACITY, 0L),
+                tag.getLongOr(BASE, 0L), tag.getIntOr(CELLS, 0), tag.getLongOr(CELL_CAPACITY, 0L), tag.getIntOr(STABILIZERS, 0), tag.getIntOr(POINTS, 0),
+                tag.getIntOr(REQUIRED, 0), tag.getBooleanOr(OVERLOADED, false));
     }
 }

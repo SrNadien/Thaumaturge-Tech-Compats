@@ -32,34 +32,16 @@
       "aspect": "thaumaturge:terra"
     }
   ],
-  "catalyst": {
-    "item": "oritech:resource_node_lapis"
-  },
+  "catalyst": "oritech:resource_node_lapis",
   "components": [
-    {
-      "item": "thaumaturge:ore_quartz"
-    },
-    {
-      "item": "minecraft:quartz"
-    },
-    {
-      "item": "thaumaturge:ore_quartz"
-    },
-    {
-      "item": "minecraft:quartz"
-    },
-    {
-      "item": "thaumaturge:ore_quartz"
-    },
-    {
-      "item": "minecraft:quartz"
-    },
-    {
-      "item": "thaumaturge:ore_quartz"
-    },
-    {
-      "item": "minecraft:quartz"
-    }
+    "thaumaturge:ore_quartz",
+    "minecraft:quartz",
+    "thaumaturge:ore_quartz",
+    "minecraft:quartz",
+    "thaumaturge:ore_quartz",
+    "minecraft:quartz",
+    "thaumaturge:ore_quartz",
+    "minecraft:quartz"
   ],
   "instability": 4,
   "research": {

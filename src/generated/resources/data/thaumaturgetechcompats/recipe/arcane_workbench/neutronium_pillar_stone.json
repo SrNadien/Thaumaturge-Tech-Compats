@@ -8,12 +8,8 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "I": {
-      "item": "avaritia:neutron_ingot"
-    },
-    "S": {
-      "item": "thaumaturgetechcompats:matrix_pillar_stone"
-    }
+    "I": "avaritia:neutron_ingot",
+    "S": "thaumaturgetechcompats:matrix_pillar_stone"
   },
   "pattern": [
     "ISI",

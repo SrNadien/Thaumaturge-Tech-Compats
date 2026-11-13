@@ -27,7 +27,7 @@ public abstract class MatrixEnvironmentMixin {
             return;
         }
         MatrixEnvironment environment = cir.getReturnValue();
-        cir.setReturnValue(new MatrixEnvironment(environment.pedestals(), environment.cycleTime(), environment.costMult(), 0.0F));
+        cir.setReturnValue(new MatrixEnvironment(environment.pedestals(), environment.cycleTime(), environment.costMult(), 0.0F, environment.faultyStabilisers()));
     }
 
     @Inject(method = "modifier", at = @At("HEAD"), cancellable = true, require = 0)

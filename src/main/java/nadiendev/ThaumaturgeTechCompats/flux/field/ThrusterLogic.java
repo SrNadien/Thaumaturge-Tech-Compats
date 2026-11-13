@@ -24,7 +24,7 @@ public final class ThrusterLogic {
     }
 
     public static void tick(Player player, ItemStack stack, FlightThrusterItem item, ThrusterState state, ThrusterInput input) {
-        boolean server = !player.level().isClientSide;
+        boolean server = !player.level().isClientSide();
         if (state.cooldown() > 0) {
             state.cooldown(state.cooldown() - 1);
         }
@@ -73,7 +73,6 @@ public final class ThrusterLogic {
             }
         }
         player.setDeltaMovement(x, vertical, z);
-        player.hasImpulse = true;
     }
 
     private static void exhaust(ServerLevel level, Player player) {

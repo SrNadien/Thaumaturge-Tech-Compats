@@ -6,7 +6,7 @@ import mezz.jei.api.gui.builder.ITooltipBuilder;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import nadiendev.ThaumaturgeTechCompats.infusion.client.InfusionInstabilityDisplay;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.crafting.RecipeHolder;
 import org.spongepowered.asm.mixin.Mixin;
@@ -19,7 +19,7 @@ import java.util.List;
 
 @Mixin(InfusionCategory.class)
 public abstract class InfusionCategoryMixin {
-    private static final String DRAW = "draw(Lnet/minecraft/world/item/crafting/RecipeHolder;Lmezz/jei/api/gui/ingredient/IRecipeSlotsView;Lnet/minecraft/client/gui/GuiGraphics;DD)V";
+    private static final String DRAW = "draw(Lnet/minecraft/world/item/crafting/RecipeHolder;Lmezz/jei/api/gui/ingredient/IRecipeSlotsView;Lnet/minecraft/client/gui/GuiGraphicsExtractor;DD)V";
     private static final String TOOLTIP = "getTooltip(Lmezz/jei/api/gui/builder/ITooltipBuilder;Lnet/minecraft/world/item/crafting/RecipeHolder;Lmezz/jei/api/gui/ingredient/IRecipeSlotsView;DD)V";
     private static final String LABEL = "gui.thaumaturge.infusion.instability";
     private static final int LABEL_CENTER_X = 73;
@@ -27,12 +27,12 @@ public abstract class InfusionCategoryMixin {
     private static final int LABEL_HEIGHT = 9;
 
     @Inject(method = DRAW, at = @At("HEAD"), require = 0)
-    private void thaumaturgetechcompats$beginDraw(RecipeHolder<?> holder, IRecipeSlotsView slots, GuiGraphics graphics, double mouseX, double mouseY, CallbackInfo ci) {
+    private void thaumaturgetechcompats$beginDraw(RecipeHolder<?> holder, IRecipeSlotsView slots, GuiGraphicsExtractor graphics, double mouseX, double mouseY, CallbackInfo ci) {
         InfusionInstabilityDisplay.begin((IInfusionRecipe) holder.value());
     }
 
     @Inject(method = DRAW, at = @At("RETURN"), require = 0)
-    private void thaumaturgetechcompats$endDraw(RecipeHolder<?> holder, IRecipeSlotsView slots, GuiGraphics graphics, double mouseX, double mouseY, CallbackInfo ci) {
+    private void thaumaturgetechcompats$endDraw(RecipeHolder<?> holder, IRecipeSlotsView slots, GuiGraphicsExtractor graphics, double mouseX, double mouseY, CallbackInfo ci) {
         InfusionInstabilityDisplay.end();
     }
 

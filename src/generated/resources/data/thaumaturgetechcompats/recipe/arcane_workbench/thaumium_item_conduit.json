@@ -25,22 +25,14 @@
     }
   ],
   "key": {
-    "B": {
-      "item": "enderio:conduit_binder"
-    },
+    "B": "enderio:conduit_binder",
     "C": {
       "type": "enderio:conduit",
       "conduit_type": "enderio:ender_item"
     },
-    "E": {
-      "item": "enderio:pulsating_alloy_ingot"
-    },
-    "M": {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    "P": {
-      "item": "thaumaturge:plate_thaumium"
-    }
+    "E": "enderio:pulsating_alloy_ingot",
+    "M": "thaumaturge:plate_thaumium",
+    "P": "thaumaturge:plate_thaumium"
   },
   "pattern": [
     "PEP",

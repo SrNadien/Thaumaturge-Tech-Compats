@@ -4,7 +4,7 @@ import com.leclowndu93150.thaumaturge.api.aura.AuraHelper;
 import com.leclowndu93150.thaumaturge.api.recipe.ArcaneWorkbenchContext;
 import com.leclowndu93150.thaumaturge.api.recipe.IArcaneWorkbench;
 import com.leclowndu93150.thaumaturge.api.recipe.IWorkbenchAuraSource;
-import com.leclowndu93150.thaumaturge.api.transaction.TransactionContext;
+import net.neoforged.neoforge.transfer.transaction.TransactionContext;
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedConfig;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;

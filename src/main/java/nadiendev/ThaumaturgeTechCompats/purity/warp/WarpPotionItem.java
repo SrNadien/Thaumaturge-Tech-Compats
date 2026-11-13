@@ -8,26 +8,28 @@ import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.TooltipFlag;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class WarpPotionItem extends Item {
     private static final int DRINK_TICKS = 32;
@@ -47,20 +49,20 @@ public class WarpPotionItem extends Item {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.DRINK;
+    public ItemUseAnimation getUseAnimation(ItemStack stack) {
+        return ItemUseAnimation.DRINK;
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!settings.enabled()) {
             message(level, player, "disabled");
-            return InteractionResultHolder.fail(stack);
+            return InteractionResult.FAIL;
         }
         if (removable(player) <= 0) {
             message(level, player, "nothing");
-            return InteractionResultHolder.fail(stack);
+            return InteractionResult.FAIL;
         }
         return ItemUtils.startUsingInstantly(level, player, hand);
     }
@@ -74,7 +76,7 @@ public class WarpPotionItem extends Item {
                 applySideEffect(serverPlayer);
                 level.playSound(null, serverPlayer.getX(), serverPlayer.getY(), serverPlayer.getZ(),
                         SoundEvents.AMETHYST_BLOCK_RESONATE, SoundSource.PLAYERS, 1.0F, 0.8F);
-                serverPlayer.serverLevel().sendParticles(ParticleTypes.ENCHANT, serverPlayer.getX(), serverPlayer.getY(0.7D), serverPlayer.getZ(),
+                serverPlayer.level().sendParticles(ParticleTypes.ENCHANT, serverPlayer.getX(), serverPlayer.getY(0.7D), serverPlayer.getZ(),
                         30, 0.4D, 0.6D, 0.4D, 0.4D);
             }
         }
@@ -84,7 +86,7 @@ public class WarpPotionItem extends Item {
         player.awardStat(Stats.ITEM_USED.get(this));
         int cooldown = settings.cooldown();
         if (cooldown > 0) {
-            player.getCooldowns().addCooldown(this, cooldown);
+            player.getCooldowns().addCooldown(BuiltInRegistries.ITEM.getKey(this), cooldown);
         }
         entity.gameEvent(GameEvent.DRINK);
         if (player.getAbilities().instabuild) {
@@ -104,8 +106,8 @@ public class WarpPotionItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable(getDescriptionId() + ".tooltip"));
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
+        tooltip.accept(Component.translatable(getDescriptionId() + ".tooltip"));
     }
 
     private int removable(Player player) {
@@ -141,18 +143,18 @@ public class WarpPotionItem extends Item {
         if (!settings.sideEffect()) {
             return;
         }
-        ResourceLocation id = ResourceLocation.tryParse(settings.effect());
+        Identifier id = Identifier.tryParse(settings.effect());
         if (id == null) {
             return;
         }
-        BuiltInRegistries.MOB_EFFECT.getHolder(id).ifPresent(effect ->
+        BuiltInRegistries.MOB_EFFECT.get(id).ifPresent(effect ->
                 player.addEffect(new MobEffectInstance(effect, settings.effectDuration(), settings.effectAmplifier())));
     }
 
     private void message(Level level, Player player, String kind) {
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             String name = BuiltInRegistries.ITEM.getKey(this).getPath();
-            player.displayClientMessage(Component.translatable("message." + ThaumaturgeTechCompats.MOD_ID + "." + name + "." + kind), true);
+            player.sendOverlayMessage(Component.translatable("message." + ThaumaturgeTechCompats.MOD_ID + "." + name + "." + kind));
         }
     }
 }

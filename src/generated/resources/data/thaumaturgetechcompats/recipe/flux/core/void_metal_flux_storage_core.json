@@ -36,34 +36,16 @@
       "aspect": "thaumaturge:ordo"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_flux_storage_core"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_flux_storage_core",
   "components": [
-    {
-      "item": "thaumaturge:metal_void"
-    },
-    {
-      "tag": "thaumaturge:nitors"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:alumentum"
-    },
-    {
-      "item": "thaumaturge:metal_void"
-    },
-    {
-      "tag": "thaumaturge:nitors"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:alumentum"
-    }
+    "thaumaturge:metal_void",
+    "#thaumaturge:nitors",
+    "thaumaturge:plate_void",
+    "thaumaturge:alumentum",
+    "thaumaturge:metal_void",
+    "#thaumaturge:nitors",
+    "thaumaturge:plate_void",
+    "thaumaturge:alumentum"
   ],
   "instability": 12,
   "research": {

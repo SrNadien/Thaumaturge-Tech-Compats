@@ -3,15 +3,15 @@ package nadiendev.ThaumaturgeTechCompats.wandtier;
 import com.leclowndu93150.thaumaturge.api.wands.WandCap;
 import com.leclowndu93150.thaumaturge.api.wands.WandRod;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.List;
 
 public final class WandTierParts {
-    public static final ResourceLocation NEUTRONIUM_RESEARCH = ThaumaturgeTechCompats.id("neutronium_wand");
-    public static final ResourceLocation MATRIX_RESEARCH = ThaumaturgeTechCompats.id("matrix_wand");
+    public static final Identifier NEUTRONIUM_RESEARCH = ThaumaturgeTechCompats.id("neutronium_wand");
+    public static final Identifier MATRIX_RESEARCH = ThaumaturgeTechCompats.id("matrix_wand");
 
     public static final int MATRIX_ROD_CAPACITY = 1000;
     public static final int MATRIX_ROD_CRAFT_COST = 120;

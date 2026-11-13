@@ -29,18 +29,10 @@
     }
   ],
   "key": {
-    "c": {
-      "item": "thaumaturgetechcompats:oritech_brass_speed_addon"
-    },
-    "m": {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    "p": {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    "s": {
-      "item": "oritech:overcharged_crystal"
-    }
+    "c": "thaumaturgetechcompats:oritech_brass_speed_addon",
+    "m": "thaumaturge:mechanism_complex",
+    "p": "thaumaturge:plate_thaumium",
+    "s": "oritech:overcharged_crystal"
   },
   "pattern": [
     "pmp",

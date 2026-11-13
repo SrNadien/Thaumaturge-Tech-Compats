@@ -13,7 +13,6 @@ import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechFeatures;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.intelligence.UnholyIntelligenceIntegration;
-import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.charger.ChargerIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.core.CoreIntegration;
@@ -53,9 +52,9 @@ public final class ModCreativeSubTabs {
         List<CreativeSubTab> tabs = new ArrayList<>();
         for (CreativeSection section : CreativeSection.values()) {
             if (section.parent() == parent && present(section)) {
-                tabs.add(new CreativeSubTab.Builder(parentTab, ThaumaturgeTechCompats.id(section.id()), Component.translatable(section.key()))
+                tabs.add(new CreativeSubTab.Builder(CreativeModeTab.builder().displayItems((parameters, output) -> fill(section, output)),
+                        parentTab, ThaumaturgeTechCompats.id(section.id()), Component.translatable(section.key()))
                         .hideParentTitle()
-                        .entries((parameters, output) -> fill(section, output))
                         .build());
             }
         }
@@ -69,7 +68,6 @@ public final class ModCreativeSubTabs {
     private static boolean present(CreativeSection section) {
         return switch (section) {
             case ORITECH -> loaded(OritechFeatures.MOD_ID);
-            case SOPHISTICATED -> loaded("sophisticatedcore");
             case BOTANIA -> loaded(BotaniaIntegration.MOD_ID);
             case VOID -> loaded(VoidMinersMagicalIntegration.MOD_ID);
             default -> true;
@@ -85,7 +83,6 @@ public final class ModCreativeSubTabs {
             case MATRICES -> matrices(output);
             case PEARLS -> pearls(output);
             case ORITECH -> oritech(output);
-            case SOPHISTICATED -> SophisticatedIntegration.fillCreativeTab(output);
             case BOTANIA -> BotaniaIntegration.fillCreativeTab(output);
             case VOID -> VoidMinersMagicalIntegration.fillCreativeTab(output);
             case NODES -> NodePowerIntegration.fillCreativeTab(new FilteredOutput(output, path -> !fluxJar(path)));

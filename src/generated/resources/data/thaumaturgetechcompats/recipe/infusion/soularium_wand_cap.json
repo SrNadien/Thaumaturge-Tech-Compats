@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:dark_steel_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:dark_steel_wand_cap",
   "components": [
-    {
-      "tag": "c:ingots/soularium"
-    },
-    {
-      "tag": "c:ingots/soularium"
-    },
-    {
-      "tag": "c:ingots/soularium"
-    },
-    {
-      "tag": "c:ingots/soularium"
-    }
+    "#c:ingots/soularium",
+    "#c:ingots/soularium",
+    "#c:ingots/soularium",
+    "#c:ingots/soularium"
   ],
   "instability": 3,
   "research": {

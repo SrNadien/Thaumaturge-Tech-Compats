@@ -88,46 +88,20 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:neutronium_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:neutronium_star_crucifix",
   "components": [
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_salis_mundus"
-    }
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "thaumaturgetechcompats:infinity_salis_mundus",
+    "thaumaturgetechcompats:infinity_salis_mundus",
+    "thaumaturgetechcompats:infinity_salis_mundus",
+    "thaumaturgetechcompats:infinity_salis_mundus",
+    "thaumaturgetechcompats:infinity_salis_mundus",
+    "thaumaturgetechcompats:infinity_salis_mundus",
+    "thaumaturgetechcompats:infinity_salis_mundus",
+    "thaumaturgetechcompats:infinity_salis_mundus"
   ],
   "instability": 12,
   "research": {

@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.flux.field;
 
 import nadiendev.ThaumaturgeTechCompats.flux.FluxTier;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.EnumMap;
@@ -215,7 +215,7 @@ public final class FieldConfig {
     }
 
     private static boolean validId(Object value) {
-        return value instanceof String text && ResourceLocation.tryParse(text) != null;
+        return value instanceof String text && Identifier.tryParse(text) != null;
     }
 
     private static boolean validPair(Object value) {

@@ -24,7 +24,7 @@ public final class ThaummotorRegistry {
     public static final DeferredBlock<ThaummotorBlock> THAUMMOTOR = BLOCKS.registerBlock(
             NAME,
             ThaummotorBlock::new,
-            BlockBehaviour.Properties.of()
+            () -> BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .strength(3.5F, 6.0F)
                     .sound(SoundType.METAL)

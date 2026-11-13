@@ -1,31 +1,28 @@
 package nadiendev.ThaumaturgeTechCompats.purity;
 
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+
+import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class PurityItemModels extends ItemModelProvider {
-    private static final String PLACEHOLDER_TEXTURE = "item/" + PurityRegistry.POTION_NAME;
-
-    public PurityItemModels(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+public class PurityItemModels extends ModelAssets {
+    public PurityItemModels(PackOutput output) {
+        super(output);
     }
 
     @Override
-    protected void registerModels() {
-        basicItem(PurityRegistry.PURIFICATION_POTION.get());
+    protected void register() {
+        basicItem(PurityRegistry.POTION_NAME);
         placeholder(PurityRegistry.BIOME_POTION_NAME);
         placeholder(PurityRegistry.CLARITY_POTION_NAME);
         placeholder(PurityRegistry.ABSOLUTION_POTION_NAME);
     }
 
     private void placeholder(String name) {
-        withExistingParent(name, mcLoc("item/generated")).texture("layer0", modLoc(PLACEHOLDER_TEXTURE));
+        item(name, "minecraft:item/generated", textures("layer0", mod("item/" + PurityRegistry.POTION_NAME)));
     }
 
     @Override
     public String getName() {
-        return "Item Models: " + ThaumaturgeTechCompats.MOD_ID + " purity";
+        return "Item Models: thaumaturgetechcompats purity";
     }
 }

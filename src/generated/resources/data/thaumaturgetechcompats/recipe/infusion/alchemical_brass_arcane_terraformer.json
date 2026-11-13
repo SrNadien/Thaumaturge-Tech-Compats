@@ -24,34 +24,16 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_arcane_terraformer"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_arcane_terraformer",
   "components": [
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "minecraft:cactus"
-    },
-    {
-      "item": "minecraft:snow_block"
-    }
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:mechanism_simple",
+    "thaumaturge:vis_resonator",
+    "minecraft:cactus",
+    "minecraft:snow_block"
   ],
   "instability": 3,
   "research": {

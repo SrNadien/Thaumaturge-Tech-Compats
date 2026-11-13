@@ -11,8 +11,10 @@ import net.minecraft.core.SectionPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.Containers;
 import net.minecraft.world.entity.player.Player;
@@ -43,7 +45,7 @@ public class TerraformerBlockEntity extends BlockEntity {
 
     private final FluxTier tier;
     private final FieldFluxStorage storage;
-    private ResourceLocation bait;
+    private Identifier bait;
     private int progress;
     private int timer;
     private long age;
@@ -86,31 +88,34 @@ public class TerraformerBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        CompoundTag tag = new CompoundTag();
         storage.save(tag);
         tag.putInt(PROGRESS_KEY, progress);
         if (bait != null) {
             tag.putString(BAIT_KEY, bait.toString());
         }
+        output.store("data", CompoundTag.CODEC, tag);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        CompoundTag tag = input.read("data", CompoundTag.CODEC).orElseGet(CompoundTag::new);
         storage.load(tag);
-        progress = tag.getInt(PROGRESS_KEY);
-        bait = tag.contains(BAIT_KEY) ? ResourceLocation.tryParse(tag.getString(BAIT_KEY)) : null;
+        progress = tag.getIntOr(PROGRESS_KEY, 0);
+        bait = tag.contains(BAIT_KEY) ? Identifier.tryParse(tag.getStringOr(BAIT_KEY, "")) : null;
     }
 
     public void loadBait(Player player, ItemStack stack) {
-        Optional<ResourceLocation> biome = TerraformerBaits.biomeFor(stack);
+        Optional<Identifier> biome = TerraformerBaits.biomeFor(stack);
         if (biome.isEmpty()) {
             return;
         }
-        ResourceLocation item = BuiltInRegistries.ITEM.getKey(stack.getItem());
+        Identifier item = BuiltInRegistries.ITEM.getKey(stack.getItem());
         if (item.equals(bait)) {
-            player.displayClientMessage(Component.translatable(FieldTranslations.TERRAFORMER_SAME).withStyle(ChatFormatting.YELLOW), true);
+            player.sendOverlayMessage(Component.translatable(FieldTranslations.TERRAFORMER_SAME).withStyle(ChatFormatting.YELLOW));
             return;
         }
         returnBait(player);
@@ -119,7 +124,7 @@ public class TerraformerBlockEntity extends BlockEntity {
         timer = 0;
         stack.consume(1, player);
         setChanged();
-        player.displayClientMessage(Component.translatable(FieldTranslations.TERRAFORMER_LOADED, stack.getItem().getDescription(), biomeName(biome.get())).withStyle(ChatFormatting.GREEN), true);
+        player.sendOverlayMessage(Component.translatable(FieldTranslations.TERRAFORMER_LOADED, stack.getHoverName(), biomeName(biome.get())).withStyle(ChatFormatting.GREEN));
     }
 
     public void removeBait(Player player) {
@@ -131,12 +136,12 @@ public class TerraformerBlockEntity extends BlockEntity {
         bait = null;
         progress = 0;
         setChanged();
-        player.displayClientMessage(Component.translatable(FieldTranslations.TERRAFORMER_REMOVED).withStyle(ChatFormatting.YELLOW), true);
+        player.sendOverlayMessage(Component.translatable(FieldTranslations.TERRAFORMER_REMOVED).withStyle(ChatFormatting.YELLOW));
     }
 
     public void dropBait() {
-        if (bait != null && level != null && !level.isClientSide) {
-            Containers.dropItemStack(level, worldPosition.getX() + 0.5D, worldPosition.getY() + 0.5D, worldPosition.getZ() + 0.5D, new ItemStack(BuiltInRegistries.ITEM.get(bait)));
+        if (bait != null && level != null && !level.isClientSide()) {
+            Containers.dropItemStack(level, worldPosition.getX() + 0.5D, worldPosition.getY() + 0.5D, worldPosition.getZ() + 0.5D, new ItemStack(BuiltInRegistries.ITEM.getValue(bait)));
             bait = null;
         }
     }
@@ -145,7 +150,7 @@ public class TerraformerBlockEntity extends BlockEntity {
         if (bait == null) {
             return;
         }
-        Item item = BuiltInRegistries.ITEM.get(bait);
+        Item item = BuiltInRegistries.ITEM.getValue(bait);
         if (item != Items.AIR) {
             player.getInventory().placeItemBackInInventory(new ItemStack(item));
         }
@@ -172,10 +177,10 @@ public class TerraformerBlockEntity extends BlockEntity {
         if (bait == null) {
             return Status.NO_BAIT;
         }
-        if (TerraformerBaits.dimensionBlocked(level.dimension().location())) {
+        if (TerraformerBaits.dimensionBlocked(level.dimension().identifier())) {
             return Status.BLOCKED_DIMENSION;
         }
-        Optional<ResourceLocation> biomeId = TerraformerBaits.biomeFor(bait);
+        Optional<Identifier> biomeId = TerraformerBaits.biomeFor(bait);
         if (biomeId.isEmpty() || TerraformerBaits.biomeBlocked(biomeId.get())) {
             return Status.INVALID_BAIT;
         }
@@ -213,7 +218,7 @@ public class TerraformerBlockEntity extends BlockEntity {
             }
             Holder<Biome> current = chunk.getNoiseBiome(quartX, quartY, quartZ);
             boolean same = current.value() == target.value();
-            boolean blocked = current.unwrapKey().map(biomeKey -> TerraformerBaits.biomeBlocked(biomeKey.location())).orElse(false);
+            boolean blocked = current.unwrapKey().map(biomeKey -> TerraformerBaits.biomeBlocked(biomeKey.identifier())).orElse(false);
             if (same || blocked) {
                 progress++;
                 continue;
@@ -266,33 +271,39 @@ public class TerraformerBlockEntity extends BlockEntity {
         progress = Math.min(progress, cells.length);
     }
 
-    private static Component biomeName(ResourceLocation biome) {
+    private static Component biomeName(Identifier biome) {
         return Component.translatable("biome." + biome.getNamespace() + "." + biome.getPath());
     }
 
     public void report(Player player) {
         NumberFormat format = NumberFormat.getIntegerInstance();
-        player.displayClientMessage(getBlockState().getBlock().getName().withStyle(ChatFormatting.LIGHT_PURPLE), false);
+        player.sendSystemMessage(getBlockState().getBlock().getName().withStyle(ChatFormatting.LIGHT_PURPLE));
         Status shown = status;
         ChatFormatting color = switch (shown) {
             case WORKING, DONE -> ChatFormatting.GREEN;
             case WAITING_FLUX, NO_BAIT -> ChatFormatting.YELLOW;
             default -> ChatFormatting.RED;
         };
-        player.displayClientMessage(Component.translatable(FieldTranslations.terraformerState(shown.id())).withStyle(color), false);
+        player.sendSystemMessage(Component.translatable(FieldTranslations.terraformerState(shown.id())).withStyle(color));
         if (bait == null) {
-            player.displayClientMessage(Component.translatable(FieldTranslations.TERRAFORMER_NO_BAIT).withStyle(ChatFormatting.GRAY), false);
+            player.sendSystemMessage(Component.translatable(FieldTranslations.TERRAFORMER_NO_BAIT).withStyle(ChatFormatting.GRAY));
         } else {
-            Item item = BuiltInRegistries.ITEM.get(bait);
+            Item item = BuiltInRegistries.ITEM.getValue(bait);
             Component biome = TerraformerBaits.biomeFor(bait).<Component>map(TerraformerBlockEntity::biomeName).orElse(Component.translatable(FieldTranslations.TERRAFORMER_UNKNOWN_BIOME));
-            player.displayClientMessage(Component.translatable(FieldTranslations.TERRAFORMER_BAIT, item.getDescription(), biome).withStyle(ChatFormatting.GRAY), false);
+            player.sendSystemMessage(Component.translatable(FieldTranslations.TERRAFORMER_BAIT, new ItemStack(item).getHoverName(), biome).withStyle(ChatFormatting.GRAY));
             ensureCells();
             int total = cells.length;
             int percent = total == 0 ? 100 : (int) (100L * Math.min(progress, total) / total);
-            player.displayClientMessage(Component.translatable(FieldTranslations.TERRAFORMER_PROGRESS, format.format(Math.min(progress, total)), format.format(total), percent).withStyle(ChatFormatting.GRAY), false);
+            player.sendSystemMessage(Component.translatable(FieldTranslations.TERRAFORMER_PROGRESS, format.format(Math.min(progress, total)), format.format(total), percent).withStyle(ChatFormatting.GRAY));
         }
-        player.displayClientMessage(Component.translatable(FieldTranslations.TERRAFORMER_RADIUS, FieldConfig.terraformerRadius(tier)).withStyle(ChatFormatting.GRAY), false);
-        player.displayClientMessage(Component.translatable(FieldTranslations.FLUX, format.format(storage.stored()), format.format(storage.capacity())).withStyle(ChatFormatting.GRAY), false);
-        player.displayClientMessage(Component.translatable(FieldTranslations.TERRAFORMER_COST, format.format(FieldConfig.terraformerCost(tier))).withStyle(ChatFormatting.GRAY), false);
+        player.sendSystemMessage(Component.translatable(FieldTranslations.TERRAFORMER_RADIUS, FieldConfig.terraformerRadius(tier)).withStyle(ChatFormatting.GRAY));
+        player.sendSystemMessage(Component.translatable(FieldTranslations.FLUX, format.format(storage.stored()), format.format(storage.capacity())).withStyle(ChatFormatting.GRAY));
+        player.sendSystemMessage(Component.translatable(FieldTranslations.TERRAFORMER_COST, format.format(FieldConfig.terraformerCost(tier))).withStyle(ChatFormatting.GRAY));
+    }
+
+    @Override
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        super.preRemoveSideEffects(pos, state);
+        dropBait();
     }
 }

@@ -17,15 +17,9 @@
     }
   ],
   "key": {
-    "M": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "P": {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    "R": {
-      "item": "thaumaturge:vis_resonator"
-    }
+    "M": "thaumaturge:mechanism_simple",
+    "P": "thaumaturge:plate_thaumium",
+    "R": "thaumaturge:vis_resonator"
   },
   "pattern": [
     "PRP",

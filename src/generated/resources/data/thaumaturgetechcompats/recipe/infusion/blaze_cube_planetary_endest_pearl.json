@@ -80,28 +80,14 @@
       "aspect": "thaumaturgetechcompats:cosmic"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:void_metal_planetary_endest_pearl"
-  },
+  "catalyst": "thaumaturgetechcompats:void_metal_planetary_endest_pearl",
   "components": [
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "thaumaturgetechcompats:blaze_cube_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:blaze_cube_salis_mundus"
-    }
+    "avaritia:blaze_cube",
+    "avaritia:blaze_cube",
+    "avaritia:blaze_cube",
+    "avaritia:blaze_cube",
+    "thaumaturgetechcompats:blaze_cube_salis_mundus",
+    "thaumaturgetechcompats:blaze_cube_salis_mundus"
   ],
   "instability": 9,
   "research": {

@@ -85,7 +85,7 @@ public final class PurityCure {
         if (entity instanceof Player) {
             return PurityConfig.curePlayers();
         }
-        if (entity instanceof OwnableEntity ownable && ownable.getOwnerUUID() != null) {
+        if (entity instanceof OwnableEntity ownable && ownable.getOwnerReference() != null) {
             return PurityConfig.curePets();
         }
         if (entity instanceof Enemy) {

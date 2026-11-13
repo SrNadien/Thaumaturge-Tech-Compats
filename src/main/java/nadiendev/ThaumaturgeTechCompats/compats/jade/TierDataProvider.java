@@ -9,7 +9,7 @@ import nadiendev.ThaumaturgeTechCompats.device.DeviceConfig;
 import nadiendev.ThaumaturgeTechCompats.device.DeviceTier;
 import nadiendev.ThaumaturgeTechCompats.smelter.SmelterTier;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IServerDataProvider;
@@ -17,7 +17,7 @@ import snownee.jade.api.IServerDataProvider;
 public enum TierDataProvider implements IServerDataProvider<BlockAccessor> {
     INSTANCE;
 
-    public static final ResourceLocation UID = ThaumaturgeTechCompats.id("block_info");
+    public static final Identifier UID = ThaumaturgeTechCompats.id("block_info");
 
     private static final int ADVANCED_LOCK = 2;
     private static final int ADVANCED_FEEDING = 20;
@@ -25,7 +25,7 @@ public enum TierDataProvider implements IServerDataProvider<BlockAccessor> {
     private static final int THAUMATURGE_CHARGER_RADIUS = 1;
 
     @Override
-    public ResourceLocation getUid() {
+    public Identifier getUid() {
         return UID;
     }
 

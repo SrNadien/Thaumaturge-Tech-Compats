@@ -1,6 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.jei.catalysts;
 
-import mezz.jei.api.recipe.RecipeType;
+import mezz.jei.api.recipe.types.IRecipeType;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalConfig;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalIntegration;
@@ -14,7 +14,7 @@ final class VoidMinersCatalysts {
     static void register(IRecipeCatalystRegistration registration) {
         for (VoidMinersMagicalTier tier : VoidMinersMagicalTier.values()) {
             if (VoidMinersMagicalIntegration.minerTierEnabled(tier)) {
-                RecipeType<MinerRecipe> type = RecipeType.create(VoidMinersMagicalIntegration.MOD_ID,
+                IRecipeType<MinerRecipe> type = IRecipeType.create(VoidMinersMagicalIntegration.MOD_ID,
                         "miner/tier" + VoidMinersMagicalConfig.minerTier(tier) + "_miner", MinerRecipe.class);
                 CatalystSupport.add(registration, tier.minerBlock(), type);
             }

@@ -5,7 +5,6 @@ import nadiendev.ThaumaturgeTechCompats.compats.create.casing.CasingTier;
 import nadiendev.ThaumaturgeTechCompats.compats.create.casing.CreateCasings;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class CreateBlockStates extends BlockStateProvider {
     public CreateBlockStates(PackOutput output, ExistingFileHelper helper) {

@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.device.DeviceJson;
+import nadiendev.ThaumaturgeTechCompats.datagen.RecipeSaver;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
@@ -39,7 +40,7 @@ public class StabilizerContent implements DataProvider {
 
     private CompletableFuture<?> save(CachedOutput cache, String relativePath, JsonElement json) {
         Path path = output.getOutputFolder().resolve(relativePath);
-        return DataProvider.saveStable(cache, json, path);
+        return RecipeSaver.save(cache, json, path);
     }
 
     private static JsonObject research() {

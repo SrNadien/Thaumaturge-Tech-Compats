@@ -16,9 +16,7 @@
       "aspect": "thaumaturge:vitium"
     }
   ],
-  "catalyst": {
-    "item": "minecraft:cooked_porkchop"
-  },
+  "catalyst": "minecraft:cooked_porkchop",
   "research": {
     "entry": "thaumaturgetechcompats:tainted_food"
   },

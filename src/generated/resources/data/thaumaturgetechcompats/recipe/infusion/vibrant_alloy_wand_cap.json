@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:pulsating_crystal_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:pulsating_crystal_wand_cap",
   "components": [
-    {
-      "tag": "c:ingots/vibrant_alloy"
-    },
-    {
-      "tag": "c:ingots/vibrant_alloy"
-    },
-    {
-      "tag": "c:ingots/vibrant_alloy"
-    },
-    {
-      "tag": "c:ingots/vibrant_alloy"
-    }
+    "#c:ingots/vibrant_alloy",
+    "#c:ingots/vibrant_alloy",
+    "#c:ingots/vibrant_alloy",
+    "#c:ingots/vibrant_alloy"
   ],
   "instability": 4,
   "research": {

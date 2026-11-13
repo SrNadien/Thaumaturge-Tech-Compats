@@ -31,16 +31,16 @@ public final class VoidMinersMagicalRegistry {
     public static void register(IEventBus modBus) {
         for (VoidMinersMagicalTier tier : VoidMinersMagicalTier.values()) {
             if (VoidMinersMagicalIntegration.minerTierEnabled(tier)) {
-                DeferredBlock<MagicalMinerBlock> miner = BLOCKS.registerBlock(tier.minerBlock(), properties -> new MagicalMinerBlock(properties, tier), controllerProperties());
-                DeferredBlock<MagicalFrameBlock> frame = BLOCKS.registerBlock(tier.minerFrameBlock(), properties -> new MagicalFrameBlock(properties, tier), frameProperties());
+                DeferredBlock<MagicalMinerBlock> miner = BLOCKS.registerBlock(tier.minerBlock(), properties -> new MagicalMinerBlock(properties, tier), () -> controllerProperties());
+                DeferredBlock<MagicalFrameBlock> frame = BLOCKS.registerBlock(tier.minerFrameBlock(), properties -> new MagicalFrameBlock(properties, tier), () -> frameProperties());
                 MINERS.put(tier, miner);
                 MINER_FRAMES.put(tier, frame);
                 addItem(tier, tier.minerBlock(), miner);
                 addItem(tier, tier.minerFrameBlock(), frame);
             }
             if (VoidMinersMagicalIntegration.solarTierEnabled(tier)) {
-                DeferredBlock<MagicalSolarBlock> solar = BLOCKS.registerBlock(tier.solarBlock(), properties -> new MagicalSolarBlock(properties, tier), controllerProperties());
-                DeferredBlock<MagicalFrameBlock> frame = BLOCKS.registerBlock(tier.solarFrameBlock(), properties -> new MagicalFrameBlock(properties, tier), frameProperties());
+                DeferredBlock<MagicalSolarBlock> solar = BLOCKS.registerBlock(tier.solarBlock(), properties -> new MagicalSolarBlock(properties, tier), () -> controllerProperties());
+                DeferredBlock<MagicalFrameBlock> frame = BLOCKS.registerBlock(tier.solarFrameBlock(), properties -> new MagicalFrameBlock(properties, tier), () -> frameProperties());
                 SOLARS.put(tier, solar);
                 SOLAR_FRAMES.put(tier, frame);
                 addItem(tier, tier.solarBlock(), solar);
@@ -59,14 +59,14 @@ public final class VoidMinersMagicalRegistry {
         }
         Map<MagicalUpgrade, DeferredBlock<MagicalModifierBlock>> blocks = UPGRADES.computeIfAbsent(tier, key -> new EnumMap<>(MagicalUpgrade.class));
         for (MagicalUpgrade upgrade : MagicalUpgrade.of(solar)) {
-            DeferredBlock<MagicalModifierBlock> block = BLOCKS.registerBlock(upgrade.blockName(tier), properties -> new MagicalModifierBlock(properties, tier, upgrade), frameProperties());
+            DeferredBlock<MagicalModifierBlock> block = BLOCKS.registerBlock(upgrade.blockName(tier), properties -> new MagicalModifierBlock(properties, tier, upgrade), () -> frameProperties());
             blocks.put(upgrade, block);
             addItem(tier, upgrade.blockName(tier), block);
         }
     }
 
     private static void addItem(VoidMinersMagicalTier tier, String name, DeferredBlock<? extends Block> block) {
-        ITEM_LIST.add(ITEMS.register(name, () -> new MagicalTierItem(block.get(), new Item.Properties().rarity(tier.rarity()), tier)));
+        ITEM_LIST.add(ITEMS.registerItem(name, properties -> new MagicalTierItem(block.get(), properties.useBlockDescriptionPrefix().rarity(tier.rarity()), tier)));
     }
 
     private static BlockBehaviour.Properties controllerProperties() {

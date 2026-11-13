@@ -1,8 +1,0 @@
-{
-  "parent": "ftbunearthed:block/core",
-  "textures": {
-    "0": "thaumaturgetechcompats:block/alchemical_brass_unearther_top",
-    "1": "thaumaturgetechcompats:block/alchemical_brass_unearther_side",
-    "particle": "thaumaturgetechcompats:block/alchemical_brass_unearther_side"
-  }
-}

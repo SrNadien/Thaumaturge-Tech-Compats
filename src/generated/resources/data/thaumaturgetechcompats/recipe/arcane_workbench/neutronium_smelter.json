@@ -7,18 +7,10 @@
     }
   ],
   "key": {
-    "C": {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    "F": {
-      "item": "thaumaturge:advanced_alchemical_construct"
-    },
-    "P": {
-      "item": "avaritia:neutron_ingot"
-    },
-    "R": {
-      "item": "thaumaturgetechcompats:matrix_smelter"
-    }
+    "C": "thaumaturgetechcompats:neutronium_plate",
+    "F": "thaumaturge:advanced_alchemical_construct",
+    "P": "avaritia:neutron_ingot",
+    "R": "thaumaturgetechcompats:matrix_smelter"
   },
   "pattern": [
     "PRP",

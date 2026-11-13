@@ -6,7 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -28,9 +28,9 @@ public final class InfusionIntegration {
     public static final String ALTAR_TOGGLE = "infusion_altar_variants";
 
     private static final ResourceKey<BlockEntityType<?>> MATRIX_ENTITY = ResourceKey.create(
-            Registries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath("thaumaturge", "infusion_matrix"));
+            Registries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath("thaumaturge", "infusion_matrix"));
     private static final ResourceKey<BlockEntityType<?>> PEDESTAL_ENTITY = ResourceKey.create(
-            Registries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath("thaumaturge", "pedestal"));
+            Registries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath("thaumaturge", "pedestal"));
 
     private InfusionIntegration() {
     }
@@ -77,8 +77,8 @@ public final class InfusionIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new InfusionAssets(output));
-        generator.addProvider(event.includeServer(), new InfusionContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new InfusionAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new InfusionContent(output));
     }
 
     private static void addValidBlocks(BlockEntityTypeAddBlocksEvent event) {

@@ -1,6 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.compats.voidminers;
 
-import nadiendev.voidminersremastered.util.ColorUtil;
+import nadiendev.voidminersremastered.util.CustomColorUtil;
 import nadiendev.voidminersremastered.world.block.MinerControllerBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
@@ -12,9 +12,9 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 
-import java.util.List;
+import java.util.function.Consumer;
 
-public class MagicalMinerBlock extends MinerControllerBlock implements MagicalEntityFactory {
+public class MagicalMinerBlock extends MinerControllerBlock implements MagicalEntityFactory, MagicalTooltipBlock {
     private final VoidMinersMagicalTier tier;
 
     public MagicalMinerBlock(Properties properties, VoidMinersMagicalTier tier) {
@@ -42,15 +42,15 @@ public class MagicalMinerBlock extends MinerControllerBlock implements MagicalEn
     }
 
     @Override
-    public ColorUtil getColor() {
+    public CustomColorUtil getColor() {
         return VoidMinersMagicalStructures.color(tier);
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable(VoidMinersMagicalTranslations.HOVER_MINER_COST,
+    public void appendTooltip(Consumer<Component> tooltip) {
+        tooltip.accept(Component.translatable(VoidMinersMagicalTranslations.HOVER_MINER_COST,
                 VoidMinersMagicalConfig.minerUnits(tier), VoidMinersMagicalConfig.minerInterval()).withStyle(ChatFormatting.LIGHT_PURPLE));
-        tooltip.add(Component.translatable(VoidMinersMagicalTranslations.HOVER_MINER_RATES,
+        tooltip.accept(Component.translatable(VoidMinersMagicalTranslations.HOVER_MINER_RATES,
                 VoidMinersMagicalConfig.minerDuration(tier), VoidMinersMagicalConfig.minerSpeed(tier), VoidMinersMagicalConfig.minerProduction(tier)).withStyle(ChatFormatting.GRAY));
     }
 }

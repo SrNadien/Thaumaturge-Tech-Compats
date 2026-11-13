@@ -10,7 +10,7 @@ import nadiendev.ThaumaturgeTechCompats.compats.create.CreateToggles;
 import nadiendev.ThaumaturgeTechCompats.compats.create.casing.CasingTier;
 import nadiendev.ThaumaturgeTechCompats.compats.create.variant.CreateVariants;
 import nadiendev.ThaumaturgeTechCompats.compats.create.variant.VariantKind;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.crafting.Recipe;
 
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Map;
 
 @JeiPlugin
 public class CreateJeiPlugin implements IModPlugin {
-    private static final ResourceLocation ID = ThaumaturgeTechCompats.id("create");
+    private static final Identifier ID = ThaumaturgeTechCompats.id("create");
 
     private static final Map<String, List<VariantKind>> CATEGORIES = Map.ofEntries(
             Map.entry("milling", List.of(VariantKind.MILLSTONE)),
@@ -35,7 +35,7 @@ public class CreateJeiPlugin implements IModPlugin {
             Map.entry("draining", List.of(VariantKind.ITEM_DRAIN)));
 
     @Override
-    public ResourceLocation getPluginUid() {
+    public Identifier getPluginUid() {
         return ID;
     }
 
@@ -45,7 +45,7 @@ public class CreateJeiPlugin implements IModPlugin {
             return;
         }
         for (Map.Entry<String, List<VariantKind>> category : CATEGORIES.entrySet()) {
-            RecipeType<?> type = RecipeType.<Recipe<?>>createRecipeHolderType(ResourceLocation.fromNamespaceAndPath(CreateIntegration.MOD_ID, category.getKey()));
+            RecipeType<?> type = RecipeType.<Recipe<?>>createRecipeHolderType(Identifier.fromNamespaceAndPath(CreateIntegration.MOD_ID, category.getKey()));
             for (VariantKind kind : category.getValue()) {
                 for (CasingTier tier : CasingTier.values()) {
                     if (CreateToggles.variant(kind, tier)) {

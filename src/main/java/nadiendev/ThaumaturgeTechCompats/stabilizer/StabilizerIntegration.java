@@ -15,7 +15,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -37,7 +36,7 @@ public final class StabilizerIntegration {
 
     static {
         for (StabilizerTier tier : StabilizerTier.values()) {
-            DeferredBlock<BlockNodeStabilizer> block = BLOCKS.registerBlock(tier.blockName(), properties -> new BlockNodeStabilizer(properties, true), BlockBehaviour.Properties.of()
+            DeferredBlock<BlockNodeStabilizer> block = BLOCKS.registerBlock(tier.blockName(), properties -> new BlockNodeStabilizer(properties, true), () -> BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
                     .strength(tier.hardness(), tier.resistance())
                     .noOcclusion());
@@ -90,14 +89,13 @@ public final class StabilizerIntegration {
     public static void addProviders(GatherDataEvent event) {
         var generator = event.getGenerator();
         var output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookup = event.getLookupProvider();
 
-        generator.addProvider(event.includeClient(), new StabilizerBlockStates(output, helper));
-        generator.addProvider(event.includeClient(), new StabilizerItemModels(output, helper));
-        generator.addProvider(event.includeServer(), DeviceLoot.provider(output, lookup));
-        generator.addProvider(event.includeServer(), new DeviceBlockTags(output, lookup, helper));
-        generator.addProvider(event.includeServer(), new StabilizerContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new StabilizerBlockStates(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new StabilizerItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, DeviceLoot.provider(output, lookup));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new DeviceBlockTags(output, lookup));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new StabilizerContent(output));
     }
 
     private static void addBlocksToBlockEntity(BlockEntityTypeAddBlocksEvent event) {

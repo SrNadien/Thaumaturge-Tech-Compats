@@ -1,6 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.braincharger.mixin;
 
-import com.leclowndu93150.thaumaturge.api.transaction.TransactionContext;
+import net.neoforged.neoforge.transfer.transaction.TransactionContext;
 import com.leclowndu93150.thaumaturge.content.workbench.BlockEntityArcaneWorkbench;
 import nadiendev.ThaumaturgeTechCompats.braincharger.BoostTier;
 import nadiendev.ThaumaturgeTechCompats.braincharger.ChargerBoost;
@@ -16,12 +16,12 @@ public abstract class ArcaneWorkbenchMixin {
     private void thaumaturgetechcompats$refreshAura(CallbackInfo ci) {
         BlockEntityArcaneWorkbench workbench = (BlockEntityArcaneWorkbench) (Object) this;
         BoostTier tier = ChargerBoost.tierAbove(workbench);
-        if (tier != null && workbench.getLevel() != null && !workbench.getLevel().isClientSide) {
+        if (tier != null && workbench.getLevel() != null && !workbench.getLevel().isClientSide()) {
             workbench.auraVis = ChargerBoost.availableVis(workbench, tier);
         }
     }
 
-    @Inject(method = "spendAura(ILcom/leclowndu93150/thaumaturge/api/transaction/TransactionContext;)Z", at = @At("HEAD"), cancellable = true)
+    @Inject(method = "spendAura(ILnet/neoforged/neoforge/transfer/transaction/TransactionContext;)Z", at = @At("HEAD"), cancellable = true)
     private void thaumaturgetechcompats$spendAura(int amount, TransactionContext transaction, CallbackInfoReturnable<Boolean> cir) {
         BlockEntityArcaneWorkbench workbench = (BlockEntityArcaneWorkbench) (Object) this;
         BoostTier tier = ChargerBoost.tierAbove(workbench);

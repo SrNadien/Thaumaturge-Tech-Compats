@@ -22,34 +22,16 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:jar_node"
-  },
+  "catalyst": "thaumaturge:jar_node",
   "components": [
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "thaumaturge:primordial_pearl"
-    },
-    {
-      "item": "thaumaturge:primordial_pearl"
-    }
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot",
+    "thaumaturge:primordial_pearl",
+    "thaumaturge:primordial_pearl"
   ],
   "instability": 12,
   "research": {

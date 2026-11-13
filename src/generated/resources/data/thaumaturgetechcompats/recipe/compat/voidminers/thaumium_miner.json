@@ -36,28 +36,14 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "voidminersremastered:rubetine_miner"
-  },
+  "catalyst": "voidminersremastered:rubetine_miner",
   "components": [
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    {
-      "item": "thaumaturgetechcompats:flux_jar"
-    },
-    {
-      "item": "thaumaturgetechcompats:flux_jar"
-    }
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:mechanism_simple",
+    "thaumaturgetechcompats:flux_jar",
+    "thaumaturgetechcompats:flux_jar"
   ],
   "instability": 2,
   "research": {

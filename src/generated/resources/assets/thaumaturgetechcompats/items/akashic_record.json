@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "avaritia:halo",
+    "color": -6233857,
+    "model": "thaumaturgetechcompats:item/akashic_record",
+    "pulse": false,
+    "size": 3,
+    "texture": "avaritia:misc/halo"
+  },
+  "oversized_in_gui": true
+}

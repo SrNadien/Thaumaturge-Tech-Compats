@@ -16,9 +16,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "I": {
-      "tag": "c:ingots/void_metal"
-    }
+    "I": "#c:ingots/void_metal"
   },
   "pattern": [
     " I ",

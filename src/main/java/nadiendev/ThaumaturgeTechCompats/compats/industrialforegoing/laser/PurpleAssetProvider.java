@@ -8,15 +8,15 @@ import com.hrznstudio.titanium.api.client.assets.types.ITankAsset;
 import com.hrznstudio.titanium.client.screen.asset.IAssetProvider;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.Direction;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.awt.Point;
 import java.awt.Rectangle;
 
 public final class PurpleAssetProvider implements IAssetProvider {
     public static final PurpleAssetProvider INSTANCE = new PurpleAssetProvider();
-    public static final ResourceLocation BACKGROUND = ThaumaturgeTechCompats.id("textures/gui/laser_machine_background.png");
-    public static final ResourceLocation BACKGROUND_ALT = ThaumaturgeTechCompats.id("textures/gui/laser_machine_background_alt.png");
+    public static final Identifier BACKGROUND = ThaumaturgeTechCompats.id("textures/gui/laser_machine_background.png");
+    public static final Identifier BACKGROUND_ALT = ThaumaturgeTechCompats.id("textures/gui/laser_machine_background_alt.png");
 
     private PurpleAssetProvider() {
     }
@@ -28,8 +28,8 @@ public final class PurpleAssetProvider implements IAssetProvider {
     }
 
     private static IAsset paint(IAsset asset) {
-        ResourceLocation location = asset.getResourceLocation();
-        ResourceLocation replacement;
+        Identifier location = asset.getResourceLocation();
+        Identifier replacement;
         if (location.equals(IAssetProvider.DEFAULT_LOCATION)) {
             replacement = BACKGROUND;
         } else if (location.equals(IAssetProvider.DEFAULT_LOCATION_ALT)) {
@@ -46,9 +46,9 @@ public final class PurpleAssetProvider implements IAssetProvider {
         return new Painted(asset, replacement);
     }
 
-    private record Painted(IAsset source, ResourceLocation texture) implements IAsset {
+    private record Painted(IAsset source, Identifier texture) implements IAsset {
         @Override
-        public ResourceLocation getResourceLocation() {
+        public Identifier getResourceLocation() {
             return texture;
         }
 
@@ -63,9 +63,9 @@ public final class PurpleAssetProvider implements IAssetProvider {
         }
     }
 
-    private record PaintedBackground(IBackgroundAsset source, ResourceLocation texture) implements IBackgroundAsset {
+    private record PaintedBackground(IBackgroundAsset source, Identifier texture) implements IBackgroundAsset {
         @Override
-        public ResourceLocation getResourceLocation() {
+        public Identifier getResourceLocation() {
             return texture;
         }
 
@@ -90,9 +90,9 @@ public final class PurpleAssetProvider implements IAssetProvider {
         }
     }
 
-    private record PaintedTank(ITankAsset source, ResourceLocation texture) implements ITankAsset {
+    private record PaintedTank(ITankAsset source, Identifier texture) implements ITankAsset {
         @Override
-        public ResourceLocation getResourceLocation() {
+        public Identifier getResourceLocation() {
             return texture;
         }
 

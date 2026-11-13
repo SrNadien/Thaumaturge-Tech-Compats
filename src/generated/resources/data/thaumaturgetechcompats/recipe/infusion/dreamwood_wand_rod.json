@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:praecantatio"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:livingwood_wand_rod"
-  },
+  "catalyst": "thaumaturgetechcompats:livingwood_wand_rod",
   "components": [
-    {
-      "item": "botania:dreamwood_twig"
-    },
-    {
-      "item": "botania:dreamwood_twig"
-    },
-    {
-      "item": "botania:dreamwood_twig"
-    },
-    {
-      "item": "botania:dreamwood_twig"
-    }
+    "botania:dreamwood_twig",
+    "botania:dreamwood_twig",
+    "botania:dreamwood_twig",
+    "botania:dreamwood_twig"
   ],
   "instability": 2,
   "research": {

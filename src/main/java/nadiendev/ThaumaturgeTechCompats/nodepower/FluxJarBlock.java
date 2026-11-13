@@ -61,7 +61,7 @@ public class FluxJarBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return null;
         }
         return createTickerHelper(type, NodePowerRegistry.FLUX_JAR_ENTITY.get(), FluxJarBlockEntity::tick);
@@ -70,20 +70,13 @@ public class FluxJarBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (level.getBlockEntity(pos) instanceof FluxJarBlockEntity jar) {
-            if (!level.isClientSide) {
-                player.displayClientMessage(Component.translatable("message.thaumaturgetechcompats.flux_jar",
-                        String.format("%.1f", jar.flux()), String.format("%.1f", jar.capacity())), true);
+            if (!level.isClientSide()) {
+                player.sendOverlayMessage(Component.translatable("message.thaumaturgetechcompats.flux_jar",
+                        String.format("%.1f", jar.flux()), String.format("%.1f", jar.capacity())));
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }
 
-    @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (!state.is(newState.getBlock()) && !level.isClientSide && level.getBlockEntity(pos) instanceof FluxJarBlockEntity jar && jar.flux() > 0.0F) {
-            AuraHelper.addFlux(level, pos, jar.flux());
-        }
-        super.onRemove(state, level, pos, newState, movedByPiston);
-    }
 }

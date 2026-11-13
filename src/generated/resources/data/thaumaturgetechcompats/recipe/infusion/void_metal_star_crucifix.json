@@ -60,22 +60,12 @@
       "aspect": "thaumaturge:alienis"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_star_crucifix",
   "components": [
-    {
-      "item": "thaumaturge:ingot_void"
-    },
-    {
-      "item": "thaumaturge:ingot_void"
-    },
-    {
-      "item": "thaumaturge:ingot_void"
-    },
-    {
-      "item": "thaumaturge:ingot_void"
-    }
+    "thaumaturge:ingot_void",
+    "thaumaturge:ingot_void",
+    "thaumaturge:ingot_void",
+    "thaumaturge:ingot_void"
   ],
   "instability": 8,
   "research": {

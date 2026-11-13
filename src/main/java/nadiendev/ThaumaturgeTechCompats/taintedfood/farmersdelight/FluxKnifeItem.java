@@ -3,12 +3,15 @@ package nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import vectorwing.farmersdelight.common.item.KnifeItem;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class FluxKnifeItem extends KnifeItem {
     public FluxKnifeItem(Properties properties) {
@@ -25,14 +28,14 @@ public class FluxKnifeItem extends KnifeItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
         if (FarmersDelightTaintedConfig.riftEnabled()) {
             String key = FarmersDelightTaintedConfig.riftRequireSneak() ? FluxKnife.RIFT_SNEAK_TOOLTIP_KEY : FluxKnife.RIFT_TOOLTIP_KEY;
-            tooltip.add(Component.translatable(key).withStyle(ChatFormatting.DARK_PURPLE));
+            tooltip.accept(Component.translatable(key).withStyle(ChatFormatting.DARK_PURPLE));
         }
         if (FarmersDelightTaintedConfig.cutEnabled()) {
-            tooltip.add(Component.translatable(FluxKnife.CUT_TOOLTIP_KEY).withStyle(ChatFormatting.DARK_PURPLE));
+            tooltip.accept(Component.translatable(FluxKnife.CUT_TOOLTIP_KEY).withStyle(ChatFormatting.DARK_PURPLE));
         }
-        super.appendHoverText(stack, context, tooltip, flag);
+        super.appendHoverText(stack, context, display, tooltip, flag);
     }
 }

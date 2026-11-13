@@ -7,13 +7,14 @@ import com.leclowndu93150.thaumaturge.api.wands.render.WandRenderers;
 import com.leclowndu93150.thaumaturge.client.render.BoxGeometry;
 import com.leclowndu93150.thaumaturge.client.render.TTFlatRenderTypes;
 import com.mojang.blaze3d.vertex.PoseStack;
-import com.mojang.blaze3d.vertex.VertexConsumer;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.registry.ModWandParts;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierParts;
-import net.minecraft.client.renderer.LightTexture;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.SubmitNodeCollector;
+import net.minecraft.client.renderer.rendertype.RenderType;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.resources.Identifier;
+import net.minecraft.util.LightCoordsUtil;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -22,7 +23,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-@EventBusSubscriber(modid = ThaumaturgeTechCompats.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = ThaumaturgeTechCompats.MOD_ID, value = Dist.CLIENT)
 public final class WandCapGlowRenderer implements IWandRenderer {
     private static final int PRIORITY = 100;
     private static final float PX = 0.0625F;
@@ -71,11 +72,11 @@ public final class WandCapGlowRenderer implements IWandRenderer {
     public void render(WandRenderContext context) {
         context.renderDefault();
         boolean staff = context.rod().staff();
-        ResourceLocation texture = context.cap().texture();
+        Identifier texture = context.cap().texture();
         RenderType type = context.firstPersonHand()
-                ? RenderType.entityCutoutNoCull(texture)
+                ? RenderTypes.entityCutout(texture)
                 : TTFlatRenderTypes.entityCutoutFlat(texture);
-        VertexConsumer consumer = context.buffers().getBuffer(type);
+        SubmitNodeCollector collector = context.collector();
         PoseStack pose = context.poseStack();
         pose.pushPose();
         if (staff) {
@@ -89,12 +90,12 @@ public final class WandCapGlowRenderer implements IWandRenderer {
             pose.translate(0.0F, placement.offsetY(), 0.0F);
             pose.scale(placement.scaleXz(), placement.scaleY(), placement.scaleXz());
             pose.translate(0.0F, PX, 0.0F);
-            BoxGeometry.box(pose.last(), consumer,
+            collector.submitCustomGeometry(pose, type, (last, consumer) -> BoxGeometry.box(last, consumer,
                     -PX, -PX, -PX, PX, PX, PX,
                     0, 0, 2, 2, 2,
                     TEXTURE_SIZE, TEXTURE_SIZE,
-                    WHITE, LightTexture.FULL_BRIGHT,
-                    true);
+                    WHITE, LightCoordsUtil.FULL_BRIGHT,
+                    true));
             pose.popPose();
         }
         pose.popPose();

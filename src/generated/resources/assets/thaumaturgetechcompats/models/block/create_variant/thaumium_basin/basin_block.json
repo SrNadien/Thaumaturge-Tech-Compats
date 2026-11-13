@@ -1,8 +1,0 @@
-{
-  "parent": "create:block/basin/block",
-  "render_type": "minecraft:cutout_mipped",
-  "textures": {
-    "12": "thaumaturgetechcompats:block/create_variant/thaumium/basin",
-    "particle": "thaumaturgetechcompats:block/create_variant/thaumium/industrial_iron_block"
-  }
-}

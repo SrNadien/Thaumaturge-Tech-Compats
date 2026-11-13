@@ -32,34 +32,16 @@
       "aspect": "thaumaturge:terra"
     }
   ],
-  "catalyst": {
-    "item": "oritech:resource_node_gold"
-  },
+  "catalyst": "oritech:resource_node_gold",
   "components": [
-    {
-      "item": "thaumaturge:ore_amber"
-    },
-    {
-      "item": "thaumaturge:amber"
-    },
-    {
-      "item": "thaumaturge:ore_amber"
-    },
-    {
-      "item": "thaumaturge:amber"
-    },
-    {
-      "item": "thaumaturge:ore_amber"
-    },
-    {
-      "item": "thaumaturge:amber"
-    },
-    {
-      "item": "thaumaturge:ore_amber"
-    },
-    {
-      "item": "thaumaturge:amber"
-    }
+    "thaumaturge:ore_amber",
+    "thaumaturge:amber",
+    "thaumaturge:ore_amber",
+    "thaumaturge:amber",
+    "thaumaturge:ore_amber",
+    "thaumaturge:amber",
+    "thaumaturge:ore_amber",
+    "thaumaturge:amber"
   ],
   "instability": 4,
   "research": {

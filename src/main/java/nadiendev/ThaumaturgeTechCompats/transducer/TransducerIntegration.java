@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -31,7 +30,7 @@ public final class TransducerIntegration {
 
     static {
         for (DeviceTier tier : DeviceTier.values()) {
-            DeferredBlock<BlockNodeTransducer> block = BLOCKS.registerBlock(blockName(tier), BlockNodeTransducer::new, BlockBehaviour.Properties.of()
+            DeferredBlock<BlockNodeTransducer> block = BLOCKS.registerBlock(blockName(tier), BlockNodeTransducer::new, () -> BlockBehaviour.Properties.of()
                     .mapColor(MapColor.STONE)
                     .strength(3.0F + tier.ordinal(), 30.0F * (tier.ordinal() + 1))
                     .noOcclusion());
@@ -87,11 +86,10 @@ public final class TransducerIntegration {
     public static void addProviders(GatherDataEvent event) {
         var generator = event.getGenerator();
         var output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new TransducerBlockStates(output, helper));
-        generator.addProvider(event.includeClient(), new TransducerItemModels(output, helper));
-        generator.addProvider(event.includeServer(), new TransducerContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new TransducerBlockStates(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new TransducerItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new TransducerContent(output));
     }
 
     private static void addBlocksToBlockEntity(BlockEntityTypeAddBlocksEvent event) {

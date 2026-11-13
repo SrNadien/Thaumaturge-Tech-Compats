@@ -28,25 +28,13 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_neutron_compressor"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_neutron_compressor",
   "components": [
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    }
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:mechanism_simple"
   ],
   "instability": 6,
   "research": {

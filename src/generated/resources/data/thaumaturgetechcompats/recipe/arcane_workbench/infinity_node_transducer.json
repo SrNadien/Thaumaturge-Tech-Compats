@@ -7,21 +7,11 @@
     }
   ],
   "key": {
-    "C": {
-      "item": "minecraft:comparator"
-    },
-    "I": {
-      "item": "avaritia:infinity_ingot"
-    },
-    "N": {
-      "tag": "thaumaturge:nitors"
-    },
-    "P": {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    "S": {
-      "item": "thaumaturgetechcompats:neutronium_node_transducer"
-    }
+    "C": "minecraft:comparator",
+    "I": "avaritia:infinity_ingot",
+    "N": "#thaumaturge:nitors",
+    "P": "thaumaturgetechcompats:infinity_plate",
+    "S": "thaumaturgetechcompats:neutronium_node_transducer"
   },
   "pattern": [
     "PCP",

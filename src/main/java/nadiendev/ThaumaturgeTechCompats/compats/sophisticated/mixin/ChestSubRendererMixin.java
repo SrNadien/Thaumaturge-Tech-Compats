@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.compats.sophisticated.mixin;
 
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.storage.StorageTierMaterials;
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.storage.TierChestBlock;
-import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.ChestType;
 import org.spongepowered.asm.mixin.Final;

@@ -5,7 +5,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -24,7 +24,7 @@ import java.util.List;
 import static nadiendev.ThaumaturgeTechCompats.tiercontent.ContentJson.MOD;
 
 public final class OritechIntegration {
-    private static final ResourceKey<BlockEntityType<?>> ADDON_ENTITY = ResourceKey.create(Registries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(OritechFeatures.MOD_ID, "addon_entity"));
+    private static final ResourceKey<BlockEntityType<?>> ADDON_ENTITY = ResourceKey.create(Registries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(OritechFeatures.MOD_ID, "addon_entity"));
 
     private OritechIntegration() {
     }
@@ -41,16 +41,16 @@ public final class OritechIntegration {
         modBus.addListener(OritechIntegration::addValidBlocks);
         NeoForge.EVENT_BUS.addListener(NodeProduction::onServerStarted);
         NeoForge.EVENT_BUS.addListener(NodeProduction::onDatapackSync);
-        if (FMLEnvironment.dist.isClient()) {
+        if (FMLEnvironment.getDist().isClient()) {
             NeoForge.EVENT_BUS.addListener(NodeProductionClient::onRecipesUpdated);
         }
     }
 
-    public static List<ResourceLocation> blockIds() {
-        List<ResourceLocation> ids = new ArrayList<>();
+    public static List<Identifier> blockIds() {
+        List<Identifier> ids = new ArrayList<>();
         for (OritechTier tier : OritechTier.values()) {
             for (OritechAddon addon : OritechAddon.values()) {
-                ids.add(ResourceLocation.fromNamespaceAndPath(MOD, addon.blockName(tier)));
+                ids.add(Identifier.fromNamespaceAndPath(MOD, addon.blockName(tier)));
             }
         }
         return ids;
@@ -68,8 +68,8 @@ public final class OritechIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new OritechAssets(output));
-        generator.addProvider(event.includeServer(), new OritechContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new OritechAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new OritechContent(output));
         OritechProcessingIntegration.addProviders(event);
     }
 

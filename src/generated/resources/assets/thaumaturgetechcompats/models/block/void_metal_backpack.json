@@ -1,6 +1,0 @@
-{
-  "parent": "sophisticatedbackpacks:block/backpack",
-  "textures": {
-    "clips": "thaumaturgetechcompats:block/void_metal_clips"
-  }
-}

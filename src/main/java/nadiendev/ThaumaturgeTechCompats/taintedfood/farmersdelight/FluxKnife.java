@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -28,13 +28,13 @@ public final class FluxKnife implements Tier {
     public static final double DEFAULT_MINING_SPEED = 8.0D;
     public static final int DEFAULT_ENCHANTABILITY = 22;
 
-    private static final ResourceLocation INGOT = ResourceLocation.parse("thaumaturge:ingot_void");
+    private static final Identifier INGOT = Identifier.parse("thaumaturge:ingot_void");
 
     private FluxKnife() {
     }
 
-    public static ResourceLocation itemId() {
-        return ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, ID);
+    public static Identifier itemId() {
+        return Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, ID);
     }
 
     public static String nameKey() {

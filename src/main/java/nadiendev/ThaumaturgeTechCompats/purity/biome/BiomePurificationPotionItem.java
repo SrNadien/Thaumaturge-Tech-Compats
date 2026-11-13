@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.purity.biome;
 
 import nadiendev.ThaumaturgeTechCompats.purity.SplashPotionItem;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.level.Level;
 
 public class BiomePurificationPotionItem extends SplashPotionItem {

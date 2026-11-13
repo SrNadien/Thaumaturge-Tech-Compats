@@ -29,15 +29,9 @@
     }
   ],
   "key": {
-    "M": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "P": {
-      "item": "thaumaturge:plate_brass"
-    },
-    "V": {
-      "item": "thaumaturge:void_seed"
-    }
+    "M": "thaumaturge:mechanism_simple",
+    "P": "thaumaturge:plate_brass",
+    "V": "thaumaturge:void_seed"
   },
   "pattern": [
     "PVP",

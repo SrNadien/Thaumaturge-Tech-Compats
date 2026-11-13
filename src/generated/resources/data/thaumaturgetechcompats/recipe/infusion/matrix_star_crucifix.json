@@ -80,34 +80,16 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:blaze_cube_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:blaze_cube_star_crucifix",
   "components": [
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_salis_mundus"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_salis_mundus"
-    }
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot",
+    "thaumaturgetechcompats:matrix_salis_mundus",
+    "thaumaturgetechcompats:matrix_salis_mundus",
+    "thaumaturgetechcompats:matrix_salis_mundus",
+    "thaumaturgetechcompats:matrix_salis_mundus"
   ],
   "instability": 10,
   "research": {

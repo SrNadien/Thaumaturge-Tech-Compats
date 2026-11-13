@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:pulsating_alloy_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:pulsating_alloy_wand_cap",
   "components": [
-    {
-      "tag": "c:ingots/energetic_alloy"
-    },
-    {
-      "tag": "c:ingots/energetic_alloy"
-    },
-    {
-      "tag": "c:ingots/energetic_alloy"
-    },
-    {
-      "tag": "c:ingots/energetic_alloy"
-    }
+    "#c:ingots/energetic_alloy",
+    "#c:ingots/energetic_alloy",
+    "#c:ingots/energetic_alloy",
+    "#c:ingots/energetic_alloy"
   ],
   "instability": 2,
   "research": {

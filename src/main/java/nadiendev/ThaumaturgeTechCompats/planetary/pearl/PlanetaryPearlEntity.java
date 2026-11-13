@@ -6,7 +6,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
@@ -34,8 +34,8 @@ public class PlanetaryPearlEntity extends ThrowableItemProjectile {
     @Override
     public void tick() {
         super.tick();
-        if (level().isClientSide && PearlConfig.trailParticles() > 0) {
-            Vector3f color = Vec3.fromRGB24(PearlColors.planetColor(tier(), tickCount)).toVector3f();
+        if (level().isClientSide() && PearlConfig.trailParticles() > 0) {
+            int color = PearlColors.planetColor(tier(), tickCount);
             level().addParticle(new DustParticleOptions(color, 1.0F), getX(), getY(), getZ(), 0.0D, 0.0D, 0.0D);
         }
     }

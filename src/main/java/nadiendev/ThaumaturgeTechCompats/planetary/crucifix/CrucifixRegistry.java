@@ -5,6 +5,7 @@ import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
 import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -37,7 +38,7 @@ public final class CrucifixRegistry {
             .fireImmune()
             .clientTrackingRange(8)
             .updateInterval(20)
-            .build(ThaumaturgeTechCompats.id(DISPLAY_NAME).toString()));
+            .build(ResourceKey.create(Registries.ENTITY_TYPE, ThaumaturgeTechCompats.id(DISPLAY_NAME))));
 
     public static final DeferredHolder<SoundEvent, SoundEvent> BIND = sound("item.star_crucifix.bind");
     public static final DeferredHolder<SoundEvent, SoundEvent> CHAINS = sound("item.star_crucifix.chains");
@@ -70,7 +71,7 @@ public final class CrucifixRegistry {
             } else {
                 properties.durability(CrucifixConfig.durability(tier));
             }
-            CRUCIFIXES.put(tier, ITEMS.registerItem(itemName(tier), item -> new StarCrucifixItem(item, tier), properties));
+            CRUCIFIXES.put(tier, ITEMS.registerItem(itemName(tier), item -> new StarCrucifixItem(item, tier), () -> properties));
         }
         ITEMS.register(modBus);
         ENTITY_TYPES.register(modBus);

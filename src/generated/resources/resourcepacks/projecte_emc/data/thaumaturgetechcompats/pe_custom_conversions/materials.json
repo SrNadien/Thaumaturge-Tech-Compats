@@ -3,37 +3,37 @@
   "values": {
     "before": [
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 256,
         "id": "thaumaturge:amber"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 512,
         "id": "thaumaturge:quicksilver"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 512,
         "id": "thaumaturge:shimmerleaf"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 64,
         "id": "thaumaturge:salis_mundus"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 768,
         "id": "thaumaturge:cinderpearl"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 512,
         "id": "thaumaturge:rare_earth"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 4096,
         "id": "thaumaturge:void_seed"
       }

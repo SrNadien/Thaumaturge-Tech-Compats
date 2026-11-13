@@ -32,15 +32,9 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "M": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "P": {
-      "item": "thaumaturge:plate_brass"
-    },
-    "U": {
-      "item": "thaumaturgetechcompats:thaumium_solar_generation_upgrade"
-    }
+    "M": "thaumaturge:mechanism_simple",
+    "P": "thaumaturge:plate_brass",
+    "U": "thaumaturgetechcompats:thaumium_solar_generation_upgrade"
   },
   "pattern": [
     " M ",

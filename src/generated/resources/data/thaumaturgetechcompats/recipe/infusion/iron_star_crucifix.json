@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:metallum"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:copper_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:copper_star_crucifix",
   "components": [
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    },
-    {
-      "item": "minecraft:iron_ingot"
-    }
+    "minecraft:iron_ingot",
+    "minecraft:iron_ingot",
+    "minecraft:iron_ingot",
+    "minecraft:iron_ingot"
   ],
   "instability": 2,
   "research": {

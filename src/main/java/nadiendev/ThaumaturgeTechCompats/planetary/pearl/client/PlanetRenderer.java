@@ -8,15 +8,17 @@ import nadiendev.ThaumaturgeTechCompats.planetary.pearl.PearlColors;
 import nadiendev.ThaumaturgeTechCompats.planetary.pearl.PearlConfig;
 import nadiendev.ThaumaturgeTechCompats.planetary.pearl.PlanetBody;
 import nadiendev.ThaumaturgeTechCompats.planetary.pearl.PlanetEntity;
-import net.minecraft.client.renderer.LightTexture;
-import net.minecraft.client.renderer.MultiBufferSource;
-import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.state.EntityRenderState;
+import net.minecraft.client.renderer.rendertype.RenderTypes;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
+import net.minecraft.util.LightCoordsUtil;
 
-public class PlanetRenderer extends EntityRenderer<PlanetEntity> {
+public class PlanetRenderer extends EntityRenderer<PlanetEntity, PlanetRenderer.State> {
     private static final int SEGMENTS = 16;
     private static final int RINGS = 10;
     private static final float RADIUS = 0.5F;
@@ -26,28 +28,37 @@ public class PlanetRenderer extends EntityRenderer<PlanetEntity> {
     }
 
     @Override
-    public ResourceLocation getTextureLocation(PlanetEntity entity) {
-        return entity.body().texture();
+    public State createRenderState() {
+        return new State();
     }
 
     @Override
-    public void render(PlanetEntity entity, float yaw, float partial, PoseStack pose, MultiBufferSource buffers, int light) {
-        float fade = entity.fade(partial);
-        if (fade <= 0.0F) {
-            return;
-        }
+    public void extractRenderState(PlanetEntity entity, State state, float partial) {
+        super.extractRenderState(entity, state, partial);
         PlanetBody body = entity.body();
         PlanetaryTier tier = entity.tier();
-        float size = body.size() * PearlConfig.planetScale() * fade;
-        int tint = PearlColors.mix(0xFFFFFF, PearlColors.planetColor(tier, entity.index()), PearlConfig.tintStrength());
+        state.fade = entity.fade(partial);
+        state.texture = body.texture();
+        state.size = body.size() * PearlConfig.planetScale() * state.fade;
+        state.tint = PearlColors.mix(0xFFFFFF, PearlColors.planetColor(tier, entity.index()), PearlConfig.tintStrength());
+        state.rotation = (entity.tickCount + partial) * body.spin();
+        state.height = entity.getBbHeight() * 0.5F;
+    }
+
+    @Override
+    public void submit(State state, PoseStack pose, SubmitNodeCollector collector, CameraRenderState camera) {
+        if (state.fade <= 0.0F) {
+            return;
+        }
         pose.pushPose();
-        pose.translate(0.0F, entity.getBbHeight() * 0.5F, 0.0F);
-        pose.mulPose(Axis.YP.rotationDegrees((entity.tickCount + partial) * body.spin()));
-        pose.scale(size, size, size);
-        VertexConsumer consumer = buffers.getBuffer(RenderType.entityCutoutNoCull(getTextureLocation(entity)));
-        sphere(pose.last(), consumer, (tint >> 16) & 255, (tint >> 8) & 255, tint & 255);
+        pose.translate(0.0F, state.height, 0.0F);
+        pose.mulPose(Axis.YP.rotationDegrees(state.rotation));
+        pose.scale(state.size, state.size, state.size);
+        int tint = state.tint;
+        collector.submitCustomGeometry(pose, RenderTypes.entityCutout(state.texture),
+                (last, consumer) -> sphere(last, consumer, (tint >> 16) & 255, (tint >> 8) & 255, tint & 255));
         pose.popPose();
-        super.render(entity, yaw, partial, pose, buffers, light);
+        super.submit(state, pose, collector, camera);
     }
 
     private static void sphere(PoseStack.Pose pose, VertexConsumer consumer, int r, int g, int b) {
@@ -75,7 +86,16 @@ public class PlanetRenderer extends EntityRenderer<PlanetEntity> {
                 .setColor(r, g, b, 255)
                 .setUv(u, v)
                 .setOverlay(OverlayTexture.NO_OVERLAY)
-                .setLight(LightTexture.FULL_BRIGHT)
+                .setLight(LightCoordsUtil.FULL_BRIGHT)
                 .setNormal(pose, nx, ny, nz);
+    }
+
+    public static final class State extends EntityRenderState {
+        private float fade;
+        private Identifier texture;
+        private float size;
+        private int tint;
+        private float rotation;
+        private float height;
     }
 }

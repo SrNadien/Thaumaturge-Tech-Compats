@@ -1,13 +1,13 @@
 package nadiendev.ThaumaturgeTechCompats.compats.forcecraft;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.phys.EntityHitResult;
 import net.neoforged.neoforge.event.entity.ProjectileImpactEvent;
 
 public final class ForceCraftFlask {
-    public static final ResourceLocation FLASK_ENTITY = ResourceLocation.fromNamespaceAndPath(ForceCraftIntegration.MOD_ID, "force_flask");
+    public static final Identifier FLASK_ENTITY = Identifier.fromNamespaceAndPath(ForceCraftIntegration.MOD_ID, "force_flask");
 
     private ForceCraftFlask() {
     }
@@ -20,7 +20,7 @@ public final class ForceCraftFlask {
         if (!FLASK_ENTITY.equals(BuiltInRegistries.ENTITY_TYPE.getKey(projectile.getType()))) {
             return;
         }
-        ResourceLocation target = BuiltInRegistries.ENTITY_TYPE.getKey(hit.getEntity().getType());
+        Identifier target = BuiltInRegistries.ENTITY_TYPE.getKey(hit.getEntity().getType());
         if (ForceCraftConfig.flaskBlocks(target)) {
             event.setCanceled(true);
         }

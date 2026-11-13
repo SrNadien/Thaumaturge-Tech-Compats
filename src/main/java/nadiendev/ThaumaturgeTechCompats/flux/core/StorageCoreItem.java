@@ -8,10 +8,12 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.Block;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class StorageCoreItem extends BlockItem {
     private final FluxTier tier;
@@ -27,12 +29,12 @@ public class StorageCoreItem extends BlockItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable(CoreTranslations.TOOLTIP_CORE_CAPACITY, CoreTooltip.number(FluxConfig.coreCapacity(tier))).withStyle(ChatFormatting.GRAY));
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
+        tooltip.accept(Component.translatable(CoreTranslations.TOOLTIP_CORE_CAPACITY, CoreTooltip.number(FluxConfig.coreCapacity(tier))).withStyle(ChatFormatting.GRAY));
         long stored = FluxComponents.stored(stack);
         if (stored > 0L) {
-            tooltip.add(Component.translatable(CoreTranslations.TOOLTIP_CORE_STORED, CoreTooltip.number(stored)).withStyle(ChatFormatting.LIGHT_PURPLE));
+            tooltip.accept(Component.translatable(CoreTranslations.TOOLTIP_CORE_STORED, CoreTooltip.number(stored)).withStyle(ChatFormatting.LIGHT_PURPLE));
         }
-        tooltip.add(Component.translatable(CoreTranslations.TOOLTIP_CORE_STRUCTURE).withStyle(ChatFormatting.DARK_PURPLE));
+        tooltip.accept(Component.translatable(CoreTranslations.TOOLTIP_CORE_STRUCTURE).withStyle(ChatFormatting.DARK_PURPLE));
     }
 }

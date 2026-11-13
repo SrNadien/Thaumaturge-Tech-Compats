@@ -25,18 +25,10 @@
     }
   ],
   "key": {
-    "a": {
-      "item": "thaumaturge:alumentum"
-    },
-    "b": {
-      "item": "thaumaturge:metal_thaumium"
-    },
-    "m": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "p": {
-      "item": "thaumaturge:plate_thaumium"
-    }
+    "a": "thaumaturge:alumentum",
+    "b": "thaumaturge:metal_thaumium",
+    "m": "thaumaturge:mechanism_simple",
+    "p": "thaumaturge:plate_thaumium"
   },
   "pattern": [
     "pap",

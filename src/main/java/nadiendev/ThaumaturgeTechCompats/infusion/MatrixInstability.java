@@ -9,7 +9,7 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.util.RandomSource;
@@ -20,8 +20,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.level.GameRules;
+import net.minecraft.world.entity.EntitySpawnReason;
+import net.minecraft.world.level.gamerules.GameRules;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseFireBlock;
 import net.minecraft.world.level.levelgen.Heightmap;
@@ -38,7 +38,7 @@ public final class MatrixInstability {
     }
 
     public static boolean solarDay(Level level, BlockPos pos) {
-        if (!level.isDay()) {
+        if (!level.isBrightOutside()) {
             return false;
         }
         return !InfusionConfig.flag(MatrixVariant.MATRIX, "day_requires_sky") || level.canSeeSky(pos.above());
@@ -153,7 +153,7 @@ public final class MatrixInstability {
     }
 
     private static void igniteGround(ServerLevel level, BlockPos pos, RandomSource random, int attempts, int radius) {
-        if (!level.getGameRules().getBoolean(GameRules.RULE_DOFIRETICK)) {
+        if (level.getGameRules().get(GameRules.FIRE_SPREAD_RADIUS_AROUND_PLAYER) == 0) {
             return;
         }
         for (int i = 0; i < attempts; i++) {
@@ -174,9 +174,9 @@ public final class MatrixInstability {
             int x = pos.getX() + random.nextInt(radius * 2 + 1) - radius;
             int z = pos.getZ() + random.nextInt(radius * 2 + 1) - radius;
             BlockPos target = level.getHeightmapPos(Heightmap.Types.MOTION_BLOCKING, new BlockPos(x, pos.getY(), z));
-            LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(level);
+            LightningBolt bolt = EntityType.LIGHTNING_BOLT.create(level, EntitySpawnReason.TRIGGERED);
             if (bolt != null) {
-                bolt.moveTo(Vec3.atBottomCenterOf(target));
+                bolt.snapTo(Vec3.atBottomCenterOf(target));
                 level.addFreshEntity(bolt);
             }
         }
@@ -188,19 +188,19 @@ public final class MatrixInstability {
             return;
         }
         for (int i = 0; i < count; i++) {
-            ResourceLocation id = ResourceLocation.tryParse(ids.get(random.nextInt(ids.size())));
+            Identifier id = Identifier.tryParse(ids.get(random.nextInt(ids.size())));
             Optional<EntityType<?>> type = id == null ? Optional.empty() : BuiltInRegistries.ENTITY_TYPE.getOptional(id);
             if (type.isEmpty()) {
                 continue;
             }
-            Entity entity = type.get().create(level);
+            Entity entity = type.get().create(level, EntitySpawnReason.EVENT);
             if (entity == null) {
                 continue;
             }
-            entity.moveTo(pos.getX() + 0.5D + random.nextInt(7) - 3, pos.getY() + 1.0D, pos.getZ() + 0.5D + random.nextInt(7) - 3,
+            entity.snapTo(pos.getX() + 0.5D + random.nextInt(7) - 3, pos.getY() + 1.0D, pos.getZ() + 0.5D + random.nextInt(7) - 3,
                     random.nextFloat() * 360.0F, 0.0F);
             if (entity instanceof Mob mob) {
-                mob.finalizeSpawn(level, level.getCurrentDifficultyAt(entity.blockPosition()), MobSpawnType.EVENT, null);
+                mob.finalizeSpawn(level, level.getCurrentDifficultyAt(entity.blockPosition()), EntitySpawnReason.EVENT, null);
             }
             level.addFreshEntity(entity);
         }

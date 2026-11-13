@@ -24,9 +24,7 @@
       "aspect": "thaumaturge:lux"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:ethereal_bloom"
-  },
+  "catalyst": "thaumaturge:ethereal_bloom",
   "research": {
     "entry": "thaumaturgetechcompats:purification_potion"
   },

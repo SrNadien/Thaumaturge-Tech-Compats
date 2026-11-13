@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "thaumaturgetechcompats:item/void_range_addon"
-  }
-}

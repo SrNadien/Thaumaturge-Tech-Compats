@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.compats.sophisticated.mixin;
 
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.storage.StorageTierMaterials;
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.storage.TierShulkerBoxBlock;
-import net.minecraft.client.resources.model.Material;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.world.level.block.Block;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;

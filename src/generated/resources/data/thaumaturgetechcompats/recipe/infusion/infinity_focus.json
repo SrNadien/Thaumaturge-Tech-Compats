@@ -18,28 +18,14 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:matrix_focus"
-  },
+  "catalyst": "thaumaturgetechcompats:matrix_focus",
   "components": [
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    }
+    "avaritia:infinity_ingot",
+    "thaumaturgetechcompats:infinity_plate",
+    "avaritia:infinity_ingot",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturgetechcompats:neutronium_plate"
   ],
   "instability": 14,
   "research": {

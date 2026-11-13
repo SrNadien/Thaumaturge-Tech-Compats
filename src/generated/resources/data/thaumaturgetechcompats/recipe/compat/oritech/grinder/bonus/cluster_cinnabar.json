@@ -19,9 +19,7 @@
   ],
   "type": "oritech:grinder",
   "ingredients": [
-    {
-      "item": "thaumaturge:cluster_cinnabar"
-    }
+    "thaumaturge:cluster_cinnabar"
   ],
   "results": [
     {

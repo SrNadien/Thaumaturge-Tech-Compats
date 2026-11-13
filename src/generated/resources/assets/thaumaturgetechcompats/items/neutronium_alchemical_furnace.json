@@ -1,0 +1,9 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "thaumaturgetechcompats:item/neutronium_alchemical_furnace",
+    "model": {
+      "type": "thaumaturge:advanced_alchemical_furnace"
+    }
+  }
+}

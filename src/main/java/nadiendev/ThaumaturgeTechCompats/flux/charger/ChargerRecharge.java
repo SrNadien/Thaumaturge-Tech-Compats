@@ -2,6 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.flux.charger;
 
 import com.leclowndu93150.thaumaturge.api.aspect.IAspect;
 import com.leclowndu93150.thaumaturge.api.aspect.TTAspects;
+import com.leclowndu93150.thaumaturge.api.items.ChargeProfile;
 import com.leclowndu93150.thaumaturge.api.items.RechargeAccess;
 import com.leclowndu93150.thaumaturge.content.wands.ItemWand;
 import com.leclowndu93150.thaumaturge.content.wands.WandVisHelper;
@@ -51,10 +52,10 @@ public final class ChargerRecharge {
         if (remaining <= 0) {
             return 0L;
         }
-        int max = WandVisHelper.getMaxVis(stack);
+        int max = WandVisHelper.capacityOf(stack);
         List<ResourceKey<IAspect>> open = new ArrayList<>();
         for (ResourceKey<IAspect> primal : TTAspects.PRIMALS) {
-            if (WandVisHelper.getVis(stack, primal) < max) {
+            if (WandVisHelper.storedIn(stack, primal) < max) {
                 open.add(primal);
             }
         }
@@ -67,10 +68,10 @@ public final class ChargerRecharge {
             if (remaining <= 0) {
                 break;
             }
-            int room = max - WandVisHelper.getVis(stack, primal);
+            int room = max - WandVisHelper.storedIn(stack, primal);
             int step = Math.min(share, Math.min(remaining, room));
             if (step > 0) {
-                WandVisHelper.addRealVis(stack, primal, step, true);
+                WandVisHelper.topUpCentivis(stack, primal, step, true);
                 added += step;
                 remaining -= step;
             }
@@ -82,7 +83,8 @@ public final class ChargerRecharge {
     }
 
     private static long chargeVis(ItemStack stack, IFluxStorage source, long budget) {
-        int room = RechargeAccess.roomFor(stack);
+        ChargeProfile profile = RechargeAccess.profile(stack);
+        int room = profile == null ? 0 : profile.capacity() - RechargeAccess.getCharge(stack);
         if (room <= 0) {
             return 0L;
         }
@@ -90,7 +92,7 @@ public final class ChargerRecharge {
         if (vis <= 0) {
             return 0L;
         }
-        int added = RechargeAccess.addVis(stack, vis);
+        int added = Math.round(RechargeAccess.rechargeItemBlindly(stack, null, vis));
         if (added <= 0) {
             return 0L;
         }

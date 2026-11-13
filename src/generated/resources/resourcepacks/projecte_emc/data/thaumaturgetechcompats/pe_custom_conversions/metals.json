@@ -3,17 +3,17 @@
   "values": {
     "before": [
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 1024,
         "id": "thaumaturge:ingot_thaumium"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 4096,
         "id": "thaumaturge:ingot_brass"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 24576,
         "id": "thaumaturge:ingot_void"
       }

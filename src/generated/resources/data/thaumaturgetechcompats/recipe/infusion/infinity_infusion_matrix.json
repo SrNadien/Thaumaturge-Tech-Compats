@@ -24,25 +24,13 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:neutronium_infusion_matrix"
-  },
+  "catalyst": "thaumaturgetechcompats:neutronium_infusion_matrix",
   "components": [
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:extremely_primordial_pearl"
-    }
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
   "instability": 9,
   "research": {

@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
@@ -26,8 +26,8 @@ public enum FarmersDelightKnife implements Tier {
     private static final String TAINT_TOOLTIP_KEY = "item." + ThaumaturgeTechCompats.MOD_ID + ".knife_taint.tooltip";
 
     private final String id;
-    private final ResourceLocation plate;
-    private final ResourceLocation ingot;
+    private final Identifier plate;
+    private final Identifier ingot;
     private final Rarity rarity;
     private final TagKey<Block> incorrectBlocks;
     private final int durability;
@@ -43,8 +43,8 @@ public enum FarmersDelightKnife implements Tier {
                         double damageBonus, double attackSpeed, double miningSpeed, int enchantability,
                         double taintChance, int taintDuration, int vis) {
         this.id = id;
-        this.plate = ResourceLocation.parse(plate);
-        this.ingot = ResourceLocation.parse(ingot);
+        this.plate = Identifier.parse(plate);
+        this.ingot = Identifier.parse(ingot);
         this.rarity = rarity;
         this.incorrectBlocks = incorrectBlocks;
         this.durability = durability;
@@ -73,8 +73,8 @@ public enum FarmersDelightKnife implements Tier {
         return id;
     }
 
-    public ResourceLocation itemId() {
-        return ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, id);
+    public Identifier itemId() {
+        return Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, id);
     }
 
     public String entryName() {
@@ -85,7 +85,7 @@ public enum FarmersDelightKnife implements Tier {
         return "item." + ThaumaturgeTechCompats.MOD_ID + "." + id;
     }
 
-    public ResourceLocation plate() {
+    public Identifier plate() {
         return plate;
     }
 

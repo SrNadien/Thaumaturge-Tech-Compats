@@ -3,6 +3,7 @@ package nadiendev.ThaumaturgeTechCompats.planetary.pearl;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.item.Item;
@@ -29,7 +30,7 @@ public final class PearlRegistry {
                     .sized(0.25F, 0.25F)
                     .clientTrackingRange(4)
                     .updateInterval(10)
-                    .build(PEARL_ENTITY_NAME));
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, ThaumaturgeTechCompats.id(PEARL_ENTITY_NAME))));
 
     public static final DeferredHolder<EntityType<?>, EntityType<PlanetEntity>> PLANET = ENTITIES.register(PLANET_ENTITY_NAME,
             () -> EntityType.Builder.<PlanetEntity>of(PlanetEntity::new, MobCategory.MISC)
@@ -39,11 +40,11 @@ public final class PearlRegistry {
                     .fireImmune()
                     .clientTrackingRange(8)
                     .updateInterval(Integer.MAX_VALUE)
-                    .build(PLANET_ENTITY_NAME));
+                    .build(ResourceKey.create(Registries.ENTITY_TYPE, ThaumaturgeTechCompats.id(PLANET_ENTITY_NAME))));
 
     static {
         for (PlanetaryTier tier : PlanetaryTier.values()) {
-            PEARLS.put(tier, ITEMS.register(name(tier), () -> new PlanetaryPearlItem(properties(tier), tier)));
+            PEARLS.put(tier, ITEMS.registerItem(name(tier), properties -> new PlanetaryPearlItem(properties(tier, properties), tier)));
         }
     }
 
@@ -62,8 +63,8 @@ public final class PearlRegistry {
         return List.copyOf(PEARLS.values());
     }
 
-    private static Item.Properties properties(PlanetaryTier tier) {
-        Item.Properties properties = new Item.Properties().rarity(tier.rarity()).stacksTo(1);
+    private static Item.Properties properties(PlanetaryTier tier, Item.Properties base) {
+        Item.Properties properties = base.rarity(tier.rarity()).stacksTo(1);
         return tier.unbreakable() ? properties.fireResistant() : properties.durability(PearlConfig.durability(tier));
     }
 }

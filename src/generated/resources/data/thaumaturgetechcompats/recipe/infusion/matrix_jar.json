@@ -18,22 +18,12 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:jar_normal"
-  },
+  "catalyst": "thaumaturge:jar_normal",
   "components": [
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    }
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot"
   ],
   "instability": 3,
   "research": {

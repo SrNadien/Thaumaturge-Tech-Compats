@@ -16,7 +16,7 @@ public class TaintedFoodItem extends Item {
     @Override
     public Component getName(ItemStack stack) {
         Component original = BuiltInRegistries.ITEM.getOptional(type.original())
-                .map(Item::getDescription)
+                .map(item -> new ItemStack(item).getHoverName())
                 .orElseGet(() -> Component.translatable(type.original().toLanguageKey("item")));
         return Component.translatable(type.gender().nameKey(), original);
     }

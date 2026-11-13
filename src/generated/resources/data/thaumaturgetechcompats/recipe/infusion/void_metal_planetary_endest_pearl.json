@@ -64,22 +64,12 @@
       "aspect": "thaumaturge:vacuos"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_planetary_endest_pearl"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_planetary_endest_pearl",
   "components": [
-    {
-      "item": "thaumaturge:ingot_void"
-    },
-    {
-      "item": "thaumaturge:ingot_void"
-    },
-    {
-      "item": "thaumaturge:ingot_void"
-    },
-    {
-      "item": "thaumaturge:ingot_void"
-    }
+    "thaumaturge:ingot_void",
+    "thaumaturge:ingot_void",
+    "thaumaturge:ingot_void",
+    "thaumaturge:ingot_void"
   ],
   "instability": 8,
   "research": {

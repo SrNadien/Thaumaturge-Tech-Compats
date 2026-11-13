@@ -40,15 +40,9 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "M": {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    "P": {
-      "item": "thaumaturge:plate_void"
-    },
-    "U": {
-      "item": "thaumaturgetechcompats:alchemical_brass_efficiency_upgrade"
-    }
+    "M": "thaumaturge:mechanism_complex",
+    "P": "thaumaturge:plate_void",
+    "U": "thaumaturgetechcompats:alchemical_brass_efficiency_upgrade"
   },
   "pattern": [
     " M ",

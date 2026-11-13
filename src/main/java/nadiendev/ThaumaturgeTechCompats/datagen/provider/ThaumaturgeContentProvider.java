@@ -7,6 +7,7 @@ import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOAspects;
 import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftAspects;
 import nadiendev.ThaumaturgeTechCompats.compats.botania.aspects.BotaniaAspects;
+import nadiendev.ThaumaturgeTechCompats.datagen.RecipeSaver;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
@@ -54,7 +55,7 @@ public class ThaumaturgeContentProvider implements DataProvider {
 
     private CompletableFuture<?> save(CachedOutput cache, String relativePath, JsonElement json) {
         Path path = output.getOutputFolder().resolve(relativePath);
-        return DataProvider.saveStable(cache, json, path);
+        return RecipeSaver.save(cache, json, path);
     }
 
     private static JsonObject terminusAspect() {

@@ -22,7 +22,7 @@ public final class StackUpgradeRegistry {
         for (SophisticatedTier tier : SophisticatedTier.values()) {
             UPGRADES.put(tier, ITEMS.registerItem(tier.stackUpgradeName(),
                     properties -> new TierStackUpgradeItem(tier, SophisticatedConfig.stackMultiplier(tier), UpgradeLimits.INSTANCE),
-                    new Item.Properties()));
+                    () -> new Item.Properties()));
         }
     }
 

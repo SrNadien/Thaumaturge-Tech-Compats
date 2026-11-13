@@ -50,8 +50,8 @@ public final class AvaritiaMachinesIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new AvaritiaMachinesAssets(output));
-        generator.addProvider(event.includeServer(), new AvaritiaMachinesContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new AvaritiaMachinesAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new AvaritiaMachinesContent(output));
     }
 
     private static void addValidBlocks(BlockEntityTypeAddBlocksEvent event) {

@@ -21,7 +21,7 @@ import net.p3pp3rf1y.sophisticatedcore.common.gui.UpgradeContainerType;
 public final class ArcaneUpgradeRegistry {
     private static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ThaumaturgeTechCompats.MOD_ID);
     private static final DeferredItem<ArcaneUpgradeItem> UPGRADE = ITEMS.registerItem(SophisticatedIntegration.ARCANE_UPGRADE_ITEM,
-            properties -> new ArcaneUpgradeItem(UpgradeLimits.INSTANCE), new Item.Properties());
+            properties -> new ArcaneUpgradeItem(UpgradeLimits.INSTANCE), () -> new Item.Properties());
     private static final UpgradeContainerType<ArcaneUpgradeWrapper, ArcaneUpgradeContainer> TYPE = new UpgradeContainerType<>(ArcaneUpgradeContainer::new);
 
     private ArcaneUpgradeRegistry() {
@@ -51,7 +51,7 @@ public final class ArcaneUpgradeRegistry {
             return;
         }
         UpgradeContainerRegistry.register(UPGRADE.getId(), TYPE);
-        if (FMLEnvironment.dist.isClient()) {
+        if (FMLEnvironment.getDist().isClient()) {
             ArcaneUpgradeClient.registerTab(TYPE);
         }
     }

@@ -32,34 +32,16 @@
       "aspect": "thaumaturge:machina"
     }
   ],
-  "catalyst": {
-    "item": "enderio:thaumium_capacitor_bank"
-  },
+  "catalyst": "enderio:thaumium_capacitor_bank",
   "components": [
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
-    },
-    {
-      "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
-    },
-    {
-      "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
-    },
-    {
-      "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
-    }
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturgetechcompats:alchemical_brass_capacitor",
+    "thaumaturgetechcompats:alchemical_brass_capacitor",
+    "thaumaturgetechcompats:alchemical_brass_capacitor",
+    "thaumaturgetechcompats:alchemical_brass_capacitor"
   ],
   "instability": 8,
   "research": {

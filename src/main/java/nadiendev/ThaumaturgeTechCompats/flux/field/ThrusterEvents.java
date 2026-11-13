@@ -25,7 +25,7 @@ public final class ThrusterEvents {
     @SubscribeEvent
     public static void onPlayerTick(PlayerTickEvent.Pre event) {
         Player player = event.getEntity();
-        boolean client = player.level().isClientSide;
+        boolean client = player.level().isClientSide();
         Map<UUID, ThrusterState> states = client ? CLIENT_STATES : SERVER_STATES;
         ItemStack stack = player.getItemBySlot(EquipmentSlot.CHEST);
         if (!(stack.getItem() instanceof FlightThrusterItem item) || !FieldConfig.thrusterEnabled() || !FieldIntegration.thrusterEnabled()) {

@@ -29,9 +29,6 @@ config = "thaumaturgetechcompats.voidminers.mixins.json"
 [[mixins]]
 config = "thaumaturgetechcompats.enderio.mixins.json"
 
-[[mixins]]
-config = "thaumaturgetechcompats.sophisticated.mixins.json"
-
 [[dependencies.${mod_id}]]
 modId = "neoforge"
 type = "required"
@@ -130,23 +127,3 @@ versionRange = "[${equivox_version},)"
 ordering = "AFTER"
 side = "BOTH"
 
-[[dependencies.${mod_id}]]
-modId = "sophisticatedcore"
-type = "optional"
-versionRange = "[${sophisticatedcore_version},)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.${mod_id}]]
-modId = "sophisticatedbackpacks"
-type = "optional"
-versionRange = "[${sophisticatedbackpacks_version},)"
-ordering = "AFTER"
-side = "BOTH"
-
-[[dependencies.${mod_id}]]
-modId = "sophisticatedstorage"
-type = "optional"
-versionRange = "[${sophisticatedstorage_version},)"
-ordering = "AFTER"
-side = "BOTH"

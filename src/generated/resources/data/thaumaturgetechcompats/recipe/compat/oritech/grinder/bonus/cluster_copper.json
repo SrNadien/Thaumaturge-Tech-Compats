@@ -19,9 +19,7 @@
   ],
   "type": "oritech:grinder",
   "ingredients": [
-    {
-      "item": "thaumaturge:cluster_copper"
-    }
+    "thaumaturge:cluster_copper"
   ],
   "results": [
     {

@@ -3,10 +3,11 @@ package nadiendev.ThaumaturgeTechCompats.auraconverter.client;
 import com.leclowndu93150.thaumaturge.client.screen.AbstractTTContainerScreen;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterStatus;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.gui.AuraConverterMenu;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
+import net.minecraft.client.renderer.RenderPipelines;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.entity.player.Inventory;
 
 import java.text.NumberFormat;
@@ -16,7 +17,7 @@ import java.util.Locale;
 
 public class AuraConverterScreen extends AbstractTTContainerScreen<AuraConverterMenu> {
     private static final String KEY = AuraConverterMenu.KEY;
-    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath("thaumaturge", "textures/gui/gui_void_siphon.png");
+    private static final Identifier TEXTURE = Identifier.fromNamespaceAndPath("thaumaturge", "textures/gui/gui_void_siphon.png");
     private static final int WIDTH = 176;
     private static final int HEIGHT = 166;
     private static final int TEXTURE_SIZE = 256;
@@ -63,17 +64,17 @@ public class AuraConverterScreen extends AbstractTTContainerScreen<AuraConverter
     }
 
     @Override
-    protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
+    protected void extractLabels(GuiGraphicsExtractor graphics, int mouseX, int mouseY) {
     }
 
     @Override
-    protected void renderBackgroundTexture(GuiGraphics graphics) {
-        graphics.blit(TEXTURE, leftPos, topPos + INVENTORY_V, 0.0F, (float) INVENTORY_V, WIDTH, INVENTORY_HEIGHT, TEXTURE_SIZE, TEXTURE_SIZE);
+    protected void extractBackgroundTexture(GuiGraphicsExtractor graphics) {
+        graphics.blit(RenderPipelines.GUI_TEXTURED, TEXTURE, leftPos, topPos + INVENTORY_V, 0.0F, (float) INVENTORY_V, WIDTH, INVENTORY_HEIGHT, TEXTURE_SIZE, TEXTURE_SIZE);
         drawPanel(graphics);
     }
 
     @Override
-    protected void renderBackgroundOverlay(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
+    protected void extractBackgroundOverlay(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
         drawTitle(graphics);
         drawBar(graphics, ENERGY_BAR_X, energyRatio(), ENERGY_TOP, ENERGY_BOTTOM, -1.0D);
         drawBar(graphics, AURA_BAR_X, auraRatio(), AURA_TOP, AURA_BOTTOM, floorRatio());
@@ -87,11 +88,11 @@ public class AuraConverterScreen extends AbstractTTContainerScreen<AuraConverter
     }
 
     @Override
-    public void render(GuiGraphics graphics, int mouseX, int mouseY, float partialTick) {
-        super.render(graphics, mouseX, mouseY, partialTick);
+    public void extractRenderState(GuiGraphicsExtractor graphics, int mouseX, int mouseY, float partialTick) {
+        super.extractRenderState(graphics, mouseX, mouseY, partialTick);
         List<Component> tooltip = hoverTooltip(mouseX, mouseY);
         if (!tooltip.isEmpty()) {
-            graphics.renderComponentTooltip(font, tooltip, mouseX, mouseY);
+            graphics.setComponentTooltipForNextFrame(font, tooltip, mouseX, mouseY);
         }
     }
 
@@ -118,7 +119,7 @@ public class AuraConverterScreen extends AbstractTTContainerScreen<AuraConverter
         return mouseX >= leftPos + x && mouseX < leftPos + x + width && mouseY >= topPos + y && mouseY < topPos + y + height;
     }
 
-    private void drawPanel(GuiGraphics graphics) {
+    private void drawPanel(GuiGraphicsExtractor graphics) {
         int left = leftPos + PANEL_LEFT;
         int top = topPos + PANEL_TOP;
         int right = leftPos + PANEL_RIGHT;
@@ -129,23 +130,23 @@ public class AuraConverterScreen extends AbstractTTContainerScreen<AuraConverter
         graphics.fillGradient(left + 3, top + 3, right - 3, bottom - 3, BODY_TOP, BODY_BOTTOM);
     }
 
-    private void drawTitle(GuiGraphics graphics) {
+    private void drawTitle(GuiGraphicsExtractor graphics) {
         Component title = getTitle();
         float scale = Math.min(1.0F, TITLE_WIDTH / Math.max(1, font.width(title)));
-        graphics.pose().pushPose();
-        graphics.pose().translate(leftPos + TITLE_X, topPos + TITLE_Y, 0.0F);
-        graphics.pose().scale(scale, scale, 1.0F);
-        graphics.drawString(font, title, 0, 0, TITLE, true);
-        graphics.pose().popPose();
+        graphics.pose().pushMatrix();
+        graphics.pose().translate(leftPos + TITLE_X, topPos + TITLE_Y);
+        graphics.pose().scale(scale, scale);
+        graphics.text(font, title, 0, 0, TITLE, true);
+        graphics.pose().popMatrix();
     }
 
-    private void drawLine(GuiGraphics graphics, Component text, int line) {
+    private void drawLine(GuiGraphicsExtractor graphics, Component text, int line) {
         if (line < LINES) {
-            graphics.drawString(font, text, leftPos + TEXT_X, topPos + TEXT_Y + line * LINE_HEIGHT, LABEL, false);
+            graphics.text(font, text, leftPos + TEXT_X, topPos + TEXT_Y + line * LINE_HEIGHT, LABEL, false);
         }
     }
 
-    private void drawBar(GuiGraphics graphics, int relativeX, double ratio, int top, int bottom, double floor) {
+    private void drawBar(GuiGraphicsExtractor graphics, int relativeX, double ratio, int top, int bottom, double floor) {
         int x = leftPos + relativeX;
         int y = topPos + BAR_TOP;
         graphics.fill(x - 1, y - 1, x + BAR_WIDTH + 1, y + BAR_HEIGHT + 1, OUTLINE);

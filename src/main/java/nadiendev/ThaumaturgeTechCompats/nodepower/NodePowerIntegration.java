@@ -29,7 +29,7 @@ public final class NodePowerIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new FluxJarAssets(output));
-        generator.addProvider(event.includeServer(), new FluxJarContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new FluxJarAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new FluxJarContent(output));
     }
 }

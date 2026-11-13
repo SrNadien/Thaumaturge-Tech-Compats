@@ -18,34 +18,16 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:neutronium_workbench_charger"
-  },
+  "catalyst": "thaumaturgetechcompats:neutronium_workbench_charger",
   "components": [
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:extremely_primordial_pearl"
-    }
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturge:vis_resonator",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
   "instability": 10,
   "research": {

@@ -6,42 +6,59 @@ import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
 import nadiendev.ThaumaturgeTechCompats.planetary.crucifix.CrucifixDisplayEntity;
 import nadiendev.ThaumaturgeTechCompats.planetary.crucifix.CrucifixRegistry;
 import nadiendev.ThaumaturgeTechCompats.planetary.crucifix.CrucifixTiming;
-import net.minecraft.client.renderer.LightTexture;
-import net.minecraft.client.renderer.MultiBufferSource;
+import net.minecraft.client.renderer.SubmitNodeCollector;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.entity.ItemRenderer;
+import net.minecraft.client.renderer.entity.state.EntityRenderState;
+import net.minecraft.client.renderer.item.ItemModelResolver;
+import net.minecraft.client.renderer.item.ItemStackRenderState;
+import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.client.renderer.texture.OverlayTexture;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.util.LightCoordsUtil;
 import net.minecraft.util.Mth;
-import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.minecraft.world.item.ItemStack;
 
 import java.util.EnumMap;
 import java.util.Map;
 
-public class CrucifixDisplayRenderer extends EntityRenderer<CrucifixDisplayEntity> {
-    private final ItemRenderer itemRenderer;
+public class CrucifixDisplayRenderer extends EntityRenderer<CrucifixDisplayEntity, CrucifixDisplayRenderer.State> {
+    private final ItemModelResolver itemModelResolver;
     private final Map<PlanetaryTier, ItemStack> stacks = new EnumMap<>(PlanetaryTier.class);
 
     public CrucifixDisplayRenderer(EntityRendererProvider.Context context) {
         super(context);
-        this.itemRenderer = context.getItemRenderer();
+        this.itemModelResolver = context.getItemModelResolver();
         this.shadowRadius = 0.0F;
     }
 
     @Override
-    public void render(CrucifixDisplayEntity entity, float entityYaw, float partialTick, PoseStack pose,
-                       MultiBufferSource buffers, int packedLight) {
+    public State createRenderState() {
+        return new State();
+    }
+
+    @Override
+    public void extractRenderState(CrucifixDisplayEntity entity, State state, float partialTick) {
+        super.extractRenderState(entity, state, partialTick);
         PlanetaryTier tier = entity.tier();
-        if (!CrucifixRegistry.has(tier)) {
+        state.visible = CrucifixRegistry.has(tier);
+        state.time = entity.tickCount + partialTick;
+        state.fx = CrucifixClient.displayFx(entity.getId(), partialTick);
+        state.item.clear();
+        if (state.visible) {
+            ItemStack stack = stacks.computeIfAbsent(tier, key -> new ItemStack(CrucifixRegistry.item(key)));
+            itemModelResolver.updateForNonLiving(state.item, stack, ItemDisplayContext.FIXED, entity);
+        }
+    }
+
+    @Override
+    public void submit(State state, PoseStack pose, SubmitNodeCollector collector, CameraRenderState camera) {
+        if (!state.visible) {
             return;
         }
-        ItemStack stack = stacks.computeIfAbsent(tier, key -> new ItemStack(CrucifixRegistry.item(key)));
-        float t = entity.tickCount + partialTick;
+        float t = state.time;
         float rate = CrucifixTiming.TREMBLE_RATE;
-        CrucifixClient.DisplayFx fx = CrucifixClient.displayFx(entity.getId(), partialTick);
+        CrucifixClient.DisplayFx fx = state.fx;
         float extra = fx.tremble() - 1.0F;
         pose.pushPose();
         pose.translate(0.0F, CrucifixTiming.DISPLAY_SIZE * 0.5F, 0.0F);
@@ -54,14 +71,15 @@ public class CrucifixDisplayRenderer extends EntityRenderer<CrucifixDisplayEntit
         float scale = CrucifixTiming.DISPLAY_SCALE * fx.swell();
         pose.scale(scale, scale, scale);
         int light = Math.round(15.0F * fx.glow());
-        itemRenderer.renderStatic(stack, ItemDisplayContext.FIXED, LightTexture.pack(light, light), OverlayTexture.NO_OVERLAY,
-                pose, buffers, entity.level(), entity.getId());
+        state.item.submit(pose, collector, LightCoordsUtil.pack(light, light), OverlayTexture.NO_OVERLAY, state.outlineColor);
         pose.popPose();
-        super.render(entity, entityYaw, partialTick, pose, buffers, packedLight);
+        super.submit(state, pose, collector, camera);
     }
 
-    @Override
-    public ResourceLocation getTextureLocation(CrucifixDisplayEntity entity) {
-        return InventoryMenu.BLOCK_ATLAS;
+    public static final class State extends EntityRenderState {
+        private final ItemStackRenderState item = new ItemStackRenderState();
+        private boolean visible;
+        private float time;
+        private CrucifixClient.DisplayFx fx = CrucifixClient.DisplayFx.CALM;
     }
 }

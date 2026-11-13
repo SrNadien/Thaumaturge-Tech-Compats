@@ -31,7 +31,7 @@ public final class BrainChargerIntegration {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
 
-        generator.addProvider(event.includeClient(), new BrainChargerAssets(output));
-        generator.addProvider(event.includeServer(), new BrainChargerContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new BrainChargerAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new BrainChargerContent(output));
     }
 }

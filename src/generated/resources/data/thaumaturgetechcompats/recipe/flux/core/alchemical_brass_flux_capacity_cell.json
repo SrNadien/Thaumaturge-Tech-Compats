@@ -32,28 +32,14 @@
       "aspect": "thaumaturge:ordo"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_flux_capacity_cell"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_flux_capacity_cell",
   "components": [
-    {
-      "item": "thaumaturge:ingot_brass"
-    },
-    {
-      "item": "thaumaturge:alumentum"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:ingot_brass"
-    },
-    {
-      "item": "thaumaturge:alumentum"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    }
+    "thaumaturge:ingot_brass",
+    "thaumaturge:alumentum",
+    "thaumaturge:plate_brass",
+    "thaumaturge:ingot_brass",
+    "thaumaturge:alumentum",
+    "thaumaturge:plate_brass"
   ],
   "instability": 7,
   "research": {

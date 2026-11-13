@@ -108,7 +108,7 @@ public final class SophisticatedIntegration {
         }
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new SophisticatedAssets(output));
-        generator.addProvider(event.includeServer(), new SophisticatedContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new SophisticatedAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new SophisticatedContent(output));
     }
 }

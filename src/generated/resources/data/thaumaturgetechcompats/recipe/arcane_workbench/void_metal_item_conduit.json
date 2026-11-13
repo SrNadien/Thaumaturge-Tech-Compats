@@ -25,22 +25,14 @@
     }
   ],
   "key": {
-    "B": {
-      "item": "enderio:conduit_binder"
-    },
+    "B": "enderio:conduit_binder",
     "C": {
       "type": "enderio:conduit",
       "conduit_type": "thaumaturgetechcompats:alchemical_brass_item"
     },
-    "E": {
-      "item": "enderio:pulsating_alloy_ingot"
-    },
-    "M": {
-      "item": "thaumaturge:void_seed"
-    },
-    "P": {
-      "item": "thaumaturge:plate_void"
-    }
+    "E": "enderio:pulsating_alloy_ingot",
+    "M": "thaumaturge:void_seed",
+    "P": "thaumaturge:plate_void"
   },
   "pattern": [
     "PEP",

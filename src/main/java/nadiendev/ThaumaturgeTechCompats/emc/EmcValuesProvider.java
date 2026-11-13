@@ -1,12 +1,12 @@
 package nadiendev.ThaumaturgeTechCompats.emc;
 
-import moze_intel.projecte.api.data.CustomConversionBuilder;
-import moze_intel.projecte.api.data.CustomConversionProvider;
-import moze_intel.projecte.api.nss.NSSItem;
+import com.yaskulsky.equivox.api.data.CustomConversionBuilder;
+import com.yaskulsky.equivox.api.data.CustomConversionProvider;
+import com.yaskulsky.equivox.api.nss.NSSItem;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -28,7 +28,7 @@ public class EmcValuesProvider extends CustomConversionProvider {
 
     private static void fill(CustomConversionBuilder builder, List<EmcValues.Value> values) {
         for (EmcValues.Value value : values) {
-            builder.before(NSSItem.createItem(ResourceLocation.parse(value.item())), value.emc());
+            builder.before(NSSItem.createItem(Identifier.parse(value.item())), value.emc());
         }
     }
 }

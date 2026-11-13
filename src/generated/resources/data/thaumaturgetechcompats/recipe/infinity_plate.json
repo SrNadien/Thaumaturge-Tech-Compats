@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "N": {
-      "item": "avaritia:infinity_ingot"
-    },
-    "P": {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    }
+    "N": "avaritia:infinity_ingot",
+    "P": "thaumaturgetechcompats:neutronium_plate"
   },
   "pattern": [
     "NNN",

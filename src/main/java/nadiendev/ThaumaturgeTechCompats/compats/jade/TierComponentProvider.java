@@ -1,12 +1,12 @@
 package nadiendev.ThaumaturgeTechCompats.compats.jade;
 
 import net.minecraft.ChatFormatting;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.network.chat.Style;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.Mth;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
@@ -24,7 +24,7 @@ public enum TierComponentProvider implements IBlockComponentProvider {
     private static final int RAINBOW_SPREAD = 30;
 
     @Override
-    public ResourceLocation getUid() {
+    public Identifier getUid() {
         return TierDataProvider.UID;
     }
 
@@ -34,17 +34,17 @@ public enum TierComponentProvider implements IBlockComponentProvider {
         if (!data.contains(JadeKeys.ROOT)) {
             return;
         }
-        CompoundTag tag = data.getCompound(JadeKeys.ROOT);
-        JadeTier tier = JadeTier.byOrdinal(tag.getInt(JadeKeys.TIER));
-        JadeFamily family = JadeFamily.byOption(tag.getString(JadeKeys.FAMILY));
+        CompoundTag tag = data.getCompoundOrEmpty(JadeKeys.ROOT);
+        JadeTier tier = JadeTier.byOrdinal(tag.getIntOr(JadeKeys.TIER, 0));
+        JadeFamily family = JadeFamily.byOption(tag.getStringOr(JadeKeys.FAMILY, ""));
         if (tier == null || family == null) {
             return;
         }
-        if (tag.getBoolean(JadeKeys.SHOW_TIER) && config.get(JadeFamily.TIER.optionId())) {
+        if (tag.getBooleanOr(JadeKeys.SHOW_TIER, false) && config.get(JadeFamily.TIER.optionId())) {
             tooltip.add(Component.translatable(PREFIX + "tier", tierName(tier)).withStyle(ChatFormatting.GRAY));
         }
         if (tag.contains(JadeKeys.STATS) && (!family.configurable() || config.get(family.optionId()))) {
-            stats(tooltip, family, tier, tag.getCompound(JadeKeys.STATS));
+            stats(tooltip, family, tier, tag.getCompoundOrEmpty(JadeKeys.STATS));
         }
     }
 
@@ -56,13 +56,13 @@ public enum TierComponentProvider implements IBlockComponentProvider {
                 line(tooltip, "stabilizer.settling", tier, stats.getInt(JadeKeys.SPEED));
             }
             case SMELTER -> {
-                int interval = stats.getInt(JadeKeys.INTERVAL);
+                int interval = stats.getIntOr(JadeKeys.INTERVAL, 0);
                 line(tooltip, "smelter.interval", tier, interval, number(interval / (double) TICKS_PER_SECOND));
-                line(tooltip, "smelter.efficiency", tier, number(stats.getFloat(JadeKeys.EFFICIENCY) * 100.0));
+                line(tooltip, "smelter.efficiency", tier, number(stats.getFloatOr(JadeKeys.EFFICIENCY, 0.0F) * 100.0));
             }
             case TRANSDUCER -> {
                 line(tooltip, "transducer.charge", tier, stats.getInt(JadeKeys.CHARGE));
-                int decay = stats.getInt(JadeKeys.DECAY);
+                int decay = stats.getIntOr(JadeKeys.DECAY, 0);
                 line(tooltip, decay <= 1 ? "transducer.decay_every_tick" : "transducer.decay", tier, decay);
             }
             case FURNACE -> {

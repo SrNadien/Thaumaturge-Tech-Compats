@@ -8,7 +8,7 @@ import nadiendev.voidminersremastered.world.block.entity.HaltReason;
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
 import snownee.jade.api.ITooltip;
@@ -21,7 +21,7 @@ public enum VoidMinersMagicalJadeComponent implements IBlockComponentProvider {
     private static final String VM = "jade.voidminers.";
 
     @Override
-    public ResourceLocation getUid() {
+    public Identifier getUid() {
         return VoidMinersMagicalJadeData.UID;
     }
 
@@ -36,15 +36,15 @@ public enum VoidMinersMagicalJadeComponent implements IBlockComponentProvider {
         if (!data.contains(VoidMinersMagicalJadeData.ROOT)) {
             return;
         }
-        CompoundTag tag = data.getCompound(VoidMinersMagicalJadeData.ROOT);
-        boolean solar = tag.getBoolean(VoidMinersMagicalJadeData.SOLAR);
-        NodeSourceKind source = NodeSourceKind.byId(tag.getString(VoidMinersMagicalJadeData.SOURCE));
-        MagicalPower.Failure failure = MagicalPower.Failure.byId(tag.getString(VoidMinersMagicalJadeData.FAILURE));
-        HaltReason halt = HaltReason.getHaltReasonFromInt(tag.getInt(VoidMinersMagicalJadeData.HALT));
+        CompoundTag tag = data.getCompoundOrEmpty(VoidMinersMagicalJadeData.ROOT);
+        boolean solar = tag.getBooleanOr(VoidMinersMagicalJadeData.SOLAR, false);
+        NodeSourceKind source = NodeSourceKind.byId(tag.getStringOr(VoidMinersMagicalJadeData.SOURCE, ""));
+        MagicalPower.Failure failure = MagicalPower.Failure.byId(tag.getStringOr(VoidMinersMagicalJadeData.FAILURE, ""));
+        HaltReason halt = HaltReason.getHaltReasonFromInt(tag.getIntOr(VoidMinersMagicalJadeData.HALT, 0));
         status(tooltip, halt, failure);
-        int max = tag.getInt(VoidMinersMagicalJadeData.MAX_PROGRESS);
+        int max = tag.getIntOr(VoidMinersMagicalJadeData.MAX_PROGRESS, 0);
         if (!solar && max > 0) {
-            int percent = (int) (tag.getInt(VoidMinersMagicalJadeData.PROGRESS) / (float) max * 100.0F);
+            int percent = (int) (tag.getIntOr(VoidMinersMagicalJadeData.PROGRESS, 0) / (float) max * 100.0F);
             tooltip.add(Component.translatable(VM + "progress", percent));
         }
         if (source == null) {
@@ -54,18 +54,18 @@ public enum VoidMinersMagicalJadeComponent implements IBlockComponentProvider {
                     Component.translatable(VoidMinersMagicalTranslations.sourceKey(source)).withStyle(ChatFormatting.LIGHT_PURPLE)));
         }
         tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_COST, tag.getInt(VoidMinersMagicalJadeData.UNITS),
-                tag.getInt(VoidMinersMagicalJadeData.INTERVAL), MagicalTooltip.number(tag.getFloat(VoidMinersMagicalJadeData.COST))));
+                tag.getIntOr(VoidMinersMagicalJadeData.INTERVAL, 0), MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.COST, 0.0F))));
         if (solar) {
             tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_GENERATION,
                     String.format("%,d", tag.getLong(VoidMinersMagicalJadeData.GENERATION))));
             tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_UPGRADES_SOLAR,
-                    MagicalTooltip.number(tag.getFloat(VoidMinersMagicalJadeData.GENERATION_FACTOR)),
-                    MagicalTooltip.number(tag.getFloat(VoidMinersMagicalJadeData.COST))));
+                    MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.GENERATION_FACTOR, 0.0F)),
+                    MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.COST, 0.0F))));
         } else {
             tooltip.add(Component.translatable(VoidMinersMagicalTranslations.JADE_UPGRADES_MINER,
-                    MagicalTooltip.number(tag.getFloat(VoidMinersMagicalJadeData.SPEED)),
-                    MagicalTooltip.number(tag.getFloat(VoidMinersMagicalJadeData.PRODUCTION)),
-                    MagicalTooltip.number(tag.getFloat(VoidMinersMagicalJadeData.COST))));
+                    MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.SPEED, 0.0F)),
+                    MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.PRODUCTION, 0.0F)),
+                    MagicalTooltip.number(tag.getFloatOr(VoidMinersMagicalJadeData.COST, 0.0F))));
         }
     }
 

@@ -1,40 +1,52 @@
 package nadiendev.ThaumaturgeTechCompats.jar;
 
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
-import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
-import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class JarBlockStates extends BlockStateProvider {
-    private static final ResourceLocation JAR_PARENT = ResourceLocation.fromNamespaceAndPath("thaumaturge", "block/jar_normal");
-    private static final ResourceLocation ITEM_PARENT = ResourceLocation.fromNamespaceAndPath("thaumaturge", "item/special_block_item_base");
+public class JarBlockStates extends ModelAssets {
+    private static final String JAR_PARENT = "thaumaturge:block/jar_normal";
 
-    public JarBlockStates(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+    public JarBlockStates(PackOutput output) {
+        super(output);
     }
 
     @Override
-    protected void registerStatesAndModels() {
+    protected void register() {
         for (JarTier tier : JarTier.values()) {
             String name = tier.jarName();
-            ResourceLocation side = modLoc("block/" + name + "_side");
-            BlockModelBuilder model = models().getBuilder("block/" + name)
-                    .parent(new ModelFile.UncheckedModelFile(JAR_PARENT))
-                    .renderType("minecraft:translucent")
-                    .texture("side", side)
-                    .texture("top", modLoc("block/" + name + "_top"))
-                    .texture("bottom", modLoc("block/" + name + "_bottom"))
-                    .texture("particle", side);
-            simpleBlock(JarRegistry.block(tier).get(), model);
-            itemModels().getBuilder(name).parent(new ModelFile.UncheckedModelFile(ITEM_PARENT));
+            String side = mod("block/" + name + "_side");
+            JsonObject model = model(JAR_PARENT, textures(
+                    "side", side,
+                    "top", mod("block/" + name + "_top"),
+                    "bottom", mod("block/" + name + "_bottom"),
+                    "particle", side));
+            model.addProperty("render_type", "minecraft:translucent");
+            blockModel(name, model);
+            simpleState(JarRegistry.block(tier).get(), mod("block/" + name));
+
+            JsonObject special = new JsonObject();
+            special.addProperty("type", "thaumaturge:jar");
+            JsonObject specialModel = new JsonObject();
+            specialModel.addProperty("type", "minecraft:special");
+            specialModel.addProperty("base", mod("block/" + name));
+            specialModel.add("model", special);
+            JsonObject plain = new JsonObject();
+            plain.addProperty("type", "minecraft:model");
+            plain.addProperty("model", mod("block/" + name));
+            JsonArray models = new JsonArray();
+            models.add(plain);
+            models.add(specialModel);
+            JsonObject composite = new JsonObject();
+            composite.addProperty("type", "minecraft:composite");
+            composite.add("models", models);
+            itemDefinition(name, definition(composite));
         }
     }
 
     @Override
     public String getName() {
-        return "Block States: " + ThaumaturgeTechCompats.MOD_ID + " jars";
+        return "Block States: " + MOD + " jars";
     }
 }

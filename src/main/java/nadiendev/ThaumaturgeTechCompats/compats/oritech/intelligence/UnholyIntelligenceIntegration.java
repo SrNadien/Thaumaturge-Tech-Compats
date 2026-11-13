@@ -19,6 +19,6 @@ public final class UnholyIntelligenceIntegration {
 
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
-        generator.addProvider(event.includeServer(), new UnholyIntelligenceContent(generator.getPackOutput()));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new UnholyIntelligenceContent(generator.getPackOutput()));
     }
 }

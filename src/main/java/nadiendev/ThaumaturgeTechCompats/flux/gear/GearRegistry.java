@@ -12,11 +12,9 @@ public final class GearRegistry {
 
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(ThaumaturgeTechCompats.MOD_ID);
 
-    public static final DeferredItem<PortableVoidSiphonItem> SIPHON = ITEMS.register(SIPHON_NAME,
-            () -> new PortableVoidSiphonItem(new Item.Properties().stacksTo(1).rarity(Rarity.RARE)));
+    public static final DeferredItem<PortableVoidSiphonItem> SIPHON = ITEMS.registerItem(SIPHON_NAME, properties -> new PortableVoidSiphonItem(properties.stacksTo(1).rarity(Rarity.RARE)));
 
-    public static final DeferredItem<DischargeCannonItem> CANNON = ITEMS.register(CANNON_NAME,
-            () -> new DischargeCannonItem(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
+    public static final DeferredItem<DischargeCannonItem> CANNON = ITEMS.registerItem(CANNON_NAME, properties -> new DischargeCannonItem(properties.stacksTo(1).rarity(Rarity.EPIC)));
 
     private GearRegistry() {
     }

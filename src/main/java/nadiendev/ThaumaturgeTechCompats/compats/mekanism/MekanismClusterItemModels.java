@@ -4,7 +4,6 @@ import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.common.ClusterMaterial;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class MekanismClusterItemModels extends ItemModelProvider {
     public MekanismClusterItemModels(PackOutput output, ExistingFileHelper helper) {

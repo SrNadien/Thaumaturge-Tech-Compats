@@ -3,7 +3,7 @@ package nadiendev.ThaumaturgeTechCompats.compats.enderio.capacitor.bank;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOTier;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,10 +30,10 @@ public final class CapacitorBankSupport {
         return EnderIOIntegration.MOD_ID + ":" + blockName(tier);
     }
 
-    public static List<ResourceLocation> blockIds() {
-        List<ResourceLocation> ids = new ArrayList<>();
+    public static List<Identifier> blockIds() {
+        List<Identifier> ids = new ArrayList<>();
         for (EnderIOTier tier : EnderIOTier.values()) {
-            ids.add(ResourceLocation.fromNamespaceAndPath(EnderIOIntegration.MOD_ID, blockName(tier)));
+            ids.add(Identifier.fromNamespaceAndPath(EnderIOIntegration.MOD_ID, blockName(tier)));
         }
         return ids;
     }

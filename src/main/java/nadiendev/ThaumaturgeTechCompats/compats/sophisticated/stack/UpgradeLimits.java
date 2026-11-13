@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.compats.sophisticated.stack;
 
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedConfig;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.p3pp3rf1y.sophisticatedcore.upgrades.IUpgradeCountLimitConfig;
 import net.p3pp3rf1y.sophisticatedcore.upgrades.UpgradeGroup;
 import net.p3pp3rf1y.sophisticatedcore.upgrades.stack.StackUpgradeItem;
@@ -15,7 +15,7 @@ public final class UpgradeLimits implements IUpgradeCountLimitConfig {
     }
 
     @Override
-    public int getMaxUpgradesPerStorage(String storageType, @Nullable ResourceLocation upgradeRegistryName) {
+    public int getMaxUpgradesPerStorage(String storageType, @Nullable Identifier upgradeRegistryName) {
         return Integer.MAX_VALUE;
     }
 

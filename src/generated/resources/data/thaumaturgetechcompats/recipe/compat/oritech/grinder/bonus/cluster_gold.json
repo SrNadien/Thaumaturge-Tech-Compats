@@ -19,9 +19,7 @@
   ],
   "type": "oritech:grinder",
   "ingredients": [
-    {
-      "item": "thaumaturge:cluster_gold"
-    }
+    "thaumaturge:cluster_gold"
   ],
   "results": [
     {

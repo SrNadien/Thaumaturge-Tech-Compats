@@ -22,34 +22,16 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:neutronium_node_stabilizer"
-  },
+  "catalyst": "thaumaturgetechcompats:neutronium_node_stabilizer",
   "components": [
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "thaumaturge:nitors"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturge:alumentum"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "tag": "thaumaturge:nitors"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturge:alumentum"
-    }
+    "avaritia:infinity_ingot",
+    "#thaumaturge:nitors",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturge:alumentum",
+    "avaritia:infinity_ingot",
+    "#thaumaturge:nitors",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturge:alumentum"
   ],
   "instability": 16,
   "research": {

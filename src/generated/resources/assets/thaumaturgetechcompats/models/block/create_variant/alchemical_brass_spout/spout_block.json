@@ -1,9 +1,0 @@
-{
-  "parent": "create:block/spout/block",
-  "render_type": "minecraft:cutout_mipped",
-  "textures": {
-    "0": "thaumaturgetechcompats:block/create_variant/alchemical_brass/spout",
-    "3": "thaumaturgetechcompats:block/create_variant/alchemical_brass/encased_pipe",
-    "particle": "thaumaturgetechcompats:block/create_variant/alchemical_brass/copper_underside"
-  }
-}

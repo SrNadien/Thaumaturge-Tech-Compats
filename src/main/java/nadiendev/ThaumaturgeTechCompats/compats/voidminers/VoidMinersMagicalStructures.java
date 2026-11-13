@@ -2,13 +2,13 @@ package nadiendev.ThaumaturgeTechCompats.compats.voidminers;
 
 import nadiendev.voidminersremastered.VoidMinersRemastered;
 import nadiendev.voidminersremastered.init.ModBlocks;
-import nadiendev.voidminersremastered.util.ColorUtil;
+import nadiendev.voidminersremastered.util.CustomColorUtil;
 import nadiendev.voidminersremastered.util.MiscUtil;
 import nadiendev.voidminersremastered.world.multiblock.MinerMultiblocks;
 import nadiendev.voidminersremastered.world.multiblock.MultiBlockAislePatternBuilder;
 import nadiendev.voidminersremastered.world.multiblock.SolarMultiblocks;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
@@ -21,35 +21,35 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public final class VoidMinersMagicalStructures {
-    public static final TagKey<Block> SOLAR_MODIFIERS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(VoidMinersRemastered.MODID, "solar_modifiers"));
+    public static final TagKey<Block> SOLAR_MODIFIERS = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(VoidMinersRemastered.MODID, "solar_modifiers"));
 
-    private static final TagKey<Block> MINER_MODIFIERS = TagKey.create(Registries.BLOCK, ResourceLocation.fromNamespaceAndPath(VoidMinersRemastered.MODID, "miner_modifiers"));
+    private static final TagKey<Block> MINER_MODIFIERS = TagKey.create(Registries.BLOCK, Identifier.fromNamespaceAndPath(VoidMinersRemastered.MODID, "miner_modifiers"));
     private static final char CONTROLLER = '*';
 
     private VoidMinersMagicalStructures() {
     }
 
-    public static ColorUtil color(VoidMinersMagicalTier tier) {
-        return new ColorUtil(VoidMinersMagicalConfig.hex(tier));
+    public static CustomColorUtil color(VoidMinersMagicalTier tier) {
+        return new CustomColorUtil(VoidMinersMagicalConfig.hex(tier));
     }
 
-    public static ResourceLocation minerStructure(VoidMinersMagicalTier tier) {
-        return ResourceLocation.fromNamespaceAndPath(VoidMinersRemastered.MODID, tier.minerStructure());
+    public static Identifier minerStructure(VoidMinersMagicalTier tier) {
+        return Identifier.fromNamespaceAndPath(VoidMinersRemastered.MODID, tier.minerStructure());
     }
 
-    public static ResourceLocation solarStructure(VoidMinersMagicalTier tier) {
-        return ResourceLocation.fromNamespaceAndPath(VoidMinersRemastered.MODID, tier.solarStructure());
+    public static Identifier solarStructure(VoidMinersMagicalTier tier) {
+        return Identifier.fromNamespaceAndPath(VoidMinersRemastered.MODID, tier.solarStructure());
     }
 
     public static void registerMiner(VoidMinersMagicalTier tier, Block controller, Block frame) {
-        MiscUtil.TIER_MAP.put(tier.minerStructure(), VoidMinersMagicalConfig.minerTier(tier));
+        MiscUtil.tierMap.put(tier.minerStructure(), VoidMinersMagicalConfig.minerTier(tier));
         MultiBlockAislePatternBuilder builder = MinerMultiblocks.createAccessiblePattern(
                 minerStructure(tier).toString(), minerAisles(tier), predicates(controller, frame, MINER_MODIFIERS, false), states(frame));
         MinerMultiblocks.MANAGER.register(tier.minerStructure(), builder.build());
     }
 
     public static void registerSolar(VoidMinersMagicalTier tier, Block controller, Block frame) {
-        MiscUtil.TIER_MAP.put(tier.solarStructure(), VoidMinersMagicalConfig.minerTier(tier));
+        MiscUtil.tierMap.put(tier.solarStructure(), VoidMinersMagicalConfig.minerTier(tier));
         MultiBlockAislePatternBuilder builder = SolarMultiblocks.createAccessiblePattern(
                 solarStructure(tier).toString(), solarAisles(tier), predicates(controller, frame, SOLAR_MODIFIERS, true), states(frame));
         SolarMultiblocks.MANAGER.register(tier.solarStructure(), builder.build());

@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.taintedfood;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +18,12 @@ public enum TaintedFoodType {
     ULTIMATE_STEW("avaritia:ultimate_stew", 64, TaintedFoodGender.MASCULINE),
     COSMIC_MEATBALLS("avaritia:cosmic_meatballs", 64, TaintedFoodGender.FEMININE_PLURAL);
 
-    private final ResourceLocation original;
+    private final Identifier original;
     private final int vitium;
     private final TaintedFoodGender gender;
 
     TaintedFoodType(String original, int vitium, TaintedFoodGender gender) {
-        this.original = ResourceLocation.parse(original);
+        this.original = Identifier.parse(original);
         this.vitium = vitium;
         this.gender = gender;
     }
@@ -36,7 +36,7 @@ public enum TaintedFoodType {
         return ids;
     }
 
-    public ResourceLocation original() {
+    public Identifier original() {
         return original;
     }
 
@@ -52,7 +52,7 @@ public enum TaintedFoodType {
         return "tainted_" + original.getPath();
     }
 
-    public ResourceLocation itemId() {
-        return ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, id());
+    public Identifier itemId() {
+        return Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, id());
     }
 }

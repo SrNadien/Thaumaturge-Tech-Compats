@@ -3,7 +3,6 @@ package nadiendev.ThaumaturgeTechCompats.planetary.crucifix;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.data.PackOutput;
 import net.minecraft.sounds.SoundEvent;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.SoundDefinition;
 import net.neoforged.neoforge.common.data.SoundDefinitionsProvider;
 import net.neoforged.neoforge.registries.DeferredHolder;
@@ -13,8 +12,8 @@ import java.util.function.UnaryOperator;
 public class CrucifixSoundProvider extends SoundDefinitionsProvider {
     public static final String SUBTITLE_PREFIX = "subtitles." + ThaumaturgeTechCompats.MOD_ID + ".";
 
-    public CrucifixSoundProvider(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+    public CrucifixSoundProvider(PackOutput output) {
+        super(output, ThaumaturgeTechCompats.MOD_ID);
     }
 
     @Override

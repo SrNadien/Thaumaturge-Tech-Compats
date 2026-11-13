@@ -57,7 +57,7 @@ public final class ShieldEvents {
         LivingEntity entity = event.getEntity();
         Level level = entity.level();
         double reduction = FieldConfig.shieldExplosionReduction();
-        if (level.isClientSide || reduction <= 0.0D || !event.getSource().is(DamageTypeTags.IS_EXPLOSION)) {
+        if (level.isClientSide() || reduction <= 0.0D || !event.getSource().is(DamageTypeTags.IS_EXPLOSION)) {
             return;
         }
         if (ShieldNetwork.covering(level, entity.position()).isEmpty()) {

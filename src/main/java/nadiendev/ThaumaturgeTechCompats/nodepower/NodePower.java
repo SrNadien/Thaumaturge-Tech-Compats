@@ -49,7 +49,7 @@ public final class NodePower {
     }
 
     public static boolean isHungry(BlockEntityNode node) {
-        return node.getNodeType() == NodeType.HUNGRY;
+        return node.kind() == NodeType.HUNGRY;
     }
 
     private static Optional<NodeSource> nearestNode(ServerLevel level, BlockPos origin, double radius, NodeSourceKind kind) {

@@ -16,9 +16,7 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "I": {
-      "tag": "c:ingots/redstone_alloy"
-    }
+    "I": "#c:ingots/redstone_alloy"
   },
   "pattern": [
     "III",

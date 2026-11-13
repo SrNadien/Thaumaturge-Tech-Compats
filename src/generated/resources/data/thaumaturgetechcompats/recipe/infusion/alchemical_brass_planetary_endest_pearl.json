@@ -56,22 +56,12 @@
       "aspect": "thaumaturge:auram"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_planetary_endest_pearl"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_planetary_endest_pearl",
   "components": [
-    {
-      "item": "thaumaturge:ingot_brass"
-    },
-    {
-      "item": "thaumaturge:ingot_brass"
-    },
-    {
-      "item": "thaumaturge:ingot_brass"
-    },
-    {
-      "item": "thaumaturge:ingot_brass"
-    }
+    "thaumaturge:ingot_brass",
+    "thaumaturge:ingot_brass",
+    "thaumaturge:ingot_brass",
+    "thaumaturge:ingot_brass"
   ],
   "instability": 7,
   "research": {

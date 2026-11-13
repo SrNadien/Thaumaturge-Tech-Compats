@@ -26,9 +26,7 @@
   ],
   "type": "oritech:pulverizer",
   "ingredients": [
-    {
-      "item": "thaumaturge:cluster_tin"
-    }
+    "thaumaturge:cluster_tin"
   ],
   "results": [
     {

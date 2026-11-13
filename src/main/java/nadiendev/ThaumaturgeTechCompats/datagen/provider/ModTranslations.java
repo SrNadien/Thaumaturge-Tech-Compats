@@ -21,7 +21,6 @@ import nadiendev.ThaumaturgeTechCompats.purity.PurityTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftTranslations;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOTranslations;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterTranslations;
-import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedTranslations;
 import nadiendev.ThaumaturgeTechCompats.emc.EmcTranslations;
 import nadiendev.ThaumaturgeTechCompats.essences.EssencesTranslations;
 import nadiendev.ThaumaturgeTechCompats.flux.charger.ChargerTranslations;
@@ -83,7 +82,6 @@ public final class ModTranslations {
         CrucifixTranslations.english(lang);
         EssencesTranslations.english(lang);
         EmcTranslations.english(lang);
-        SophisticatedTranslations.english(lang);
         TechCategory.english(lang);
         JadeTranslations.english(lang);
         PonderLang.english(lang);
@@ -158,7 +156,6 @@ public final class ModTranslations {
         CrucifixTranslations.spanish(lang);
         EssencesTranslations.spanish(lang);
         EmcTranslations.spanish(lang);
-        SophisticatedTranslations.spanish(lang);
         TechCategory.spanish(lang);
         JadeTranslations.spanish(lang);
         PonderLang.spanish(lang);

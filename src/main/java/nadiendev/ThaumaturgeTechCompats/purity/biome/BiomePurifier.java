@@ -71,8 +71,8 @@ public final class BiomePurifier {
         RandomSource random = level.getRandom();
         double horizontalSq = (double) radius * radius;
         double verticalSq = (double) vertical * vertical;
-        int minY = Math.max(level.getMinBuildHeight(), center.getY() - vertical);
-        int maxY = Math.min(level.getMaxBuildHeight() - 1, center.getY() + vertical);
+        int minY = Math.max(level.getMinY(), center.getY() - vertical);
+        int maxY = Math.min(level.getMaxY(), center.getY() + vertical);
         BlockPos.MutableBlockPos cursor = new BlockPos.MutableBlockPos();
         int cleaned = 0;
         for (int x = center.getX() - radius; x <= center.getX() + radius; x++) {

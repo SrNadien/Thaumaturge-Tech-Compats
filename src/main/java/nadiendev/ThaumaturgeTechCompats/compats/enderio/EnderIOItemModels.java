@@ -1,19 +1,16 @@
 package nadiendev.ThaumaturgeTechCompats.compats.enderio;
-
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class EnderIOItemModels extends ItemModelProvider {
-    public EnderIOItemModels(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+public class EnderIOItemModels extends ModelAssets {
+    public EnderIOItemModels(PackOutput output) {
+        super(output);
     }
 
     @Override
-    protected void registerModels() {
+    protected void register() {
         for (GrindingBall ball : EnderIORegistry.balls().keySet()) {
-            basicItem(ThaumaturgeTechCompats.id(ball.itemName()));
+            basicItem(ball.itemName());
         }
     }
 

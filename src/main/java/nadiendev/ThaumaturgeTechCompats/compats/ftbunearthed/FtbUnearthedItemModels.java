@@ -4,7 +4,6 @@ import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelBuilder;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class FtbUnearthedItemModels extends ItemModelProvider {
     private static final float[] BRUSHING = {0.25F, 0.5F, 0.75F};

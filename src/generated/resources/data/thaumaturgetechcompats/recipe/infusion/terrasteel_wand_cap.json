@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:praecantatio"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:manasteel_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:manasteel_wand_cap",
   "components": [
-    {
-      "item": "botania:terrasteel_ingot"
-    },
-    {
-      "item": "botania:terrasteel_ingot"
-    },
-    {
-      "item": "botania:terrasteel_ingot"
-    },
-    {
-      "item": "botania:mana_diamond"
-    }
+    "botania:terrasteel_ingot",
+    "botania:terrasteel_ingot",
+    "botania:terrasteel_ingot",
+    "botania:mana_diamond"
   ],
   "instability": 5,
   "research": {

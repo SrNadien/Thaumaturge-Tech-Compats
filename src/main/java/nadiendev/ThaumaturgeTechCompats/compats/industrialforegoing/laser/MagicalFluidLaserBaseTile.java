@@ -82,7 +82,7 @@ public class MagicalFluidLaserBaseTile extends IndustrialMachineTile<MagicalFlui
 
     private void produce() {
         ItemStack lens = catalyst.getStackInSlot(0);
-        if (level == null || level.isClientSide || lens.isEmpty() || !IndustrialForegoingConfig.enabled(LaserMachine.FLUID_BASE)) {
+        if (level == null || level.isClientSide() || lens.isEmpty() || !IndustrialForegoingConfig.enabled(LaserMachine.FLUID_BASE)) {
             return;
         }
         AABB area = Shapes.box(-1.0D, 0.0D, -1.0D, 2.0D, 3.0D, 2.0D)

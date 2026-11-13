@@ -27,7 +27,7 @@ public final class BrainChargerRegistry {
 
     static {
         for (BoostTier tier : BoostTier.values()) {
-            DeferredBlock<BlockBrainBox> box = BLOCKS.registerBlock(tier.boxName(), BlockBrainBox::new, BlockBehaviour.Properties.of()
+            DeferredBlock<BlockBrainBox> box = BLOCKS.registerBlock(tier.boxName(), BlockBrainBox::new, () -> BlockBehaviour.Properties.of()
                     .mapColor(MapColor.METAL)
                     .strength(2.0F + tier.ordinal(), 6.0F + 4.0F * tier.ordinal())
                     .sound(SoundType.METAL)
@@ -36,7 +36,7 @@ public final class BrainChargerRegistry {
             BOX_ITEMS.put(tier, ITEMS.registerSimpleBlockItem(box));
 
             DeferredBlock<TieredWorkbenchCharger> charger = BLOCKS.registerBlock(tier.chargerName(),
-                    properties -> new TieredWorkbenchCharger(properties, tier), BlockBehaviour.Properties.of()
+                    properties -> new TieredWorkbenchCharger(properties, tier), () -> BlockBehaviour.Properties.of()
                             .mapColor(MapColor.METAL)
                             .strength(2.0F + tier.ordinal(), 10.0F + 5.0F * tier.ordinal())
                             .sound(SoundType.METAL)

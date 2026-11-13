@@ -32,34 +32,16 @@
       "aspect": "thaumaturge:terra"
     }
   ],
-  "catalyst": {
-    "item": "oritech:resource_node_redstone"
-  },
+  "catalyst": "oritech:resource_node_redstone",
   "components": [
-    {
-      "item": "thaumaturge:ore_cinnabar"
-    },
-    {
-      "item": "thaumaturge:raw_cinnabar"
-    },
-    {
-      "item": "thaumaturge:ore_cinnabar"
-    },
-    {
-      "item": "thaumaturge:raw_cinnabar"
-    },
-    {
-      "item": "thaumaturge:ore_cinnabar"
-    },
-    {
-      "item": "thaumaturge:raw_cinnabar"
-    },
-    {
-      "item": "thaumaturge:ore_cinnabar"
-    },
-    {
-      "item": "thaumaturge:raw_cinnabar"
-    }
+    "thaumaturge:ore_cinnabar",
+    "thaumaturge:raw_cinnabar",
+    "thaumaturge:ore_cinnabar",
+    "thaumaturge:raw_cinnabar",
+    "thaumaturge:ore_cinnabar",
+    "thaumaturge:raw_cinnabar",
+    "thaumaturge:ore_cinnabar",
+    "thaumaturge:raw_cinnabar"
   ],
   "instability": 4,
   "research": {

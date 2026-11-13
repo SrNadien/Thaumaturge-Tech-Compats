@@ -8,7 +8,7 @@ import net.minecraft.core.dispenser.DispenseItemBehavior;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
@@ -62,7 +62,7 @@ public final class StorageTierRegistry {
                     () -> new BarrelBlock(SophisticatedConfig.barrelSlots(tier), SophisticatedConfig.barrelUpgrades(tier), EXPLOSION_RESISTANCE));
             BARRELS.put(tier, barrel);
             ALL_BLOCKS.add(barrel);
-            DeferredItem<? extends Item> barrelItem = ITEMS.register(tier.barrelName(), () -> new TierBarrelBlockItem(tier, barrel.get(), properties(tier)));
+            DeferredItem<? extends Item> barrelItem = ITEMS.registerItem(tier.barrelName(), properties -> new TierBarrelBlockItem(tier, barrel.get(), properties.useBlockDescriptionPrefix()), () -> properties(tier));
             BARREL_BY_TIER.put(tier, barrelItem);
             BARREL_ITEMS.add(barrelItem);
 
@@ -74,7 +74,7 @@ public final class StorageTierRegistry {
                         SophisticatedConfig.limitedBarrelMultiplier(tier, slots), SophisticatedConfig.limitedBarrelUpgrades(tier, slots), EXPLOSION_RESISTANCE));
                 limited.add(block);
                 ALL_BLOCKS.add(block);
-                DeferredItem<? extends Item> limitedItem = ITEMS.register(tier.limitedBarrelName(size), () -> new TierBarrelBlockItem(tier, block.get(), properties(tier)));
+                DeferredItem<? extends Item> limitedItem = ITEMS.registerItem(tier.limitedBarrelName(size), properties -> new TierBarrelBlockItem(tier, block.get(), properties.useBlockDescriptionPrefix()), () -> properties(tier));
                 limitedItems.add(limitedItem);
                 BARREL_ITEMS.add(limitedItem);
             }
@@ -85,7 +85,7 @@ public final class StorageTierRegistry {
                     () -> new TierChestBlock(tier, SophisticatedConfig.chestSlots(tier), SophisticatedConfig.chestUpgrades(tier), EXPLOSION_RESISTANCE));
             CHESTS.put(tier, chest);
             ALL_BLOCKS.add(chest);
-            DeferredItem<? extends Item> chestItem = ITEMS.register(tier.chestName(), () -> new TierChestBlockItem(tier, chest.get(), properties(tier)));
+            DeferredItem<? extends Item> chestItem = ITEMS.registerItem(tier.chestName(), properties -> new TierChestBlockItem(tier, chest.get(), properties.useBlockDescriptionPrefix()), () -> properties(tier));
             CHEST_BY_TIER.put(tier, chestItem);
             CHEST_ITEMS.add(chestItem);
 
@@ -93,7 +93,7 @@ public final class StorageTierRegistry {
                     SophisticatedConfig.shulkerBoxSlots(tier), SophisticatedConfig.shulkerBoxUpgrades(tier), EXPLOSION_RESISTANCE));
             SHULKER_BOXES.put(tier, shulker);
             ALL_BLOCKS.add(shulker);
-            DeferredItem<? extends Item> shulkerItem = ITEMS.register(tier.shulkerBoxName(), () -> new TierShulkerBoxItem(tier, shulker.get(), properties(tier).stacksTo(1)));
+            DeferredItem<? extends Item> shulkerItem = ITEMS.registerItem(tier.shulkerBoxName(), properties -> new TierShulkerBoxItem(tier, shulker.get(), properties.useBlockDescriptionPrefix().stacksTo(1)), () -> properties(tier));
             SHULKER_BY_TIER.put(tier, shulkerItem);
             SHULKER_ITEMS.add(shulkerItem);
         }
@@ -111,7 +111,7 @@ public final class StorageTierRegistry {
         ITEMS.register(modBus);
         modBus.addListener(StorageTierRegistry::addBlockEntityBlocks);
         modBus.addListener(StorageTierRegistry::commonSetup);
-        if (FMLEnvironment.dist.isClient()) {
+        if (FMLEnvironment.getDist().isClient()) {
             StorageTierClient.register(modBus);
         }
     }
@@ -238,11 +238,11 @@ public final class StorageTierRegistry {
     }
 
     private static ResourceKey<BlockEntityType<?>> key(String name) {
-        return ResourceKey.create(Registries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(STORAGE_MOD, name));
+        return ResourceKey.create(Registries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(STORAGE_MOD, name));
     }
 
     private static void commonSetup(FMLCommonSetupEvent event) {
-        ResourceLocation netherite = ResourceLocation.fromNamespaceAndPath(STORAGE_MOD, "netherite_shulker_box");
+        Identifier netherite = Identifier.fromNamespaceAndPath(STORAGE_MOD, "netherite_shulker_box");
         DispenseItemBehavior delegate = new DispenseItemBehavior() {
             @Override
             public ItemStack dispense(BlockSource source, ItemStack stack) {

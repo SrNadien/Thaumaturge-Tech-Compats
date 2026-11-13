@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.purity;
 
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.level.Level;
 
 public class PurificationPotionItem extends SplashPotionItem {

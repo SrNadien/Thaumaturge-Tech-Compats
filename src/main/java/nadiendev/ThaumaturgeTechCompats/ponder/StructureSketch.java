@@ -86,7 +86,7 @@ public final class StructureSketch {
         root.put("palette", paletteList);
         root.put("blocks", blockList);
         root.put("entities", new ListTag());
-        root.putInt("DataVersion", SharedConstants.getCurrentVersion().getDataVersion().getVersion());
+        root.putInt("DataVersion", SharedConstants.getCurrentVersion().dataVersion().version());
         return root;
     }
 }

@@ -28,28 +28,14 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_transmission_link"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_transmission_link",
   "components": [
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    {
-      "item": "thaumaturge:quicksilver"
-    }
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:mechanism_simple",
+    "thaumaturge:quicksilver"
   ],
   "instability": 3,
   "research": {

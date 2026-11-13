@@ -9,7 +9,7 @@ import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalConf
 import nadiendev.ThaumaturgeTechCompats.nodepower.NodeSourceKind;
 import nadiendev.voidminersremastered.world.block.entity.HaltReason;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IServerDataProvider;
@@ -17,7 +17,7 @@ import snownee.jade.api.IServerDataProvider;
 public enum VoidMinersMagicalJadeData implements IServerDataProvider<BlockAccessor> {
     INSTANCE;
 
-    public static final ResourceLocation UID = ThaumaturgeTechCompats.id("voidminers_aura");
+    public static final Identifier UID = ThaumaturgeTechCompats.id("voidminers_aura");
     public static final String ROOT = "ThaumaturgeTechCompatsAura";
     public static final String SOURCE = "Source";
     public static final String FAILURE = "Failure";
@@ -39,7 +39,7 @@ public enum VoidMinersMagicalJadeData implements IServerDataProvider<BlockAccess
     private static final String VM_HALT = "HaltReason";
 
     @Override
-    public ResourceLocation getUid() {
+    public Identifier getUid() {
         return UID;
     }
 

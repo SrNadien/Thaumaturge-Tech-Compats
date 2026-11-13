@@ -1,11 +1,12 @@
 package nadiendev.ThaumaturgeTechCompats.compats.enderio.capacitor.bank;
 
-import com.enderio.enderio.content.machines.capacitor_bank.CapacitorBankItem;
 import com.enderio.enderio.content.machines.capacitor_bank.CapacitorTier;
-import com.enderio.enderio.init.EIOBlocks;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOTier;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
-import net.neoforged.neoforge.registries.DeferredItem;
+
+import java.util.Locale;
 
 public final class CapacitorBankRegistry {
     private CapacitorBankRegistry() {
@@ -17,10 +18,8 @@ public final class CapacitorBankRegistry {
             if (bank == null) {
                 continue;
             }
-            DeferredItem<CapacitorBankItem> item = EIOBlocks.CAPACITOR_BANK_ITEMS.get(bank);
-            if (item != null) {
-                output.accept(item.get());
-            }
+            BuiltInRegistries.ITEM.get(Identifier.fromNamespaceAndPath("enderio", bank.name().toLowerCase(Locale.ROOT) + "_capacitor_bank"))
+                    .ifPresent(item -> output.accept(item.value()));
         }
     }
 

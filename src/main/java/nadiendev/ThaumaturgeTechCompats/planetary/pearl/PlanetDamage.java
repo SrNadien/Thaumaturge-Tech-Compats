@@ -6,7 +6,7 @@ import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.damagesource.DamageSource;
@@ -23,18 +23,18 @@ public final class PlanetDamage {
     public static final ResourceKey<DamageType> PLANETARY_TRUE = key("planetary_true");
     public static final String MESSAGE_ID = "planetary";
 
-    private static final TagKey<EntityType<?>> BOSSES = TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath("c", "bosses"));
+    private static final TagKey<EntityType<?>> BOSSES = TagKey.create(Registries.ENTITY_TYPE, Identifier.fromNamespaceAndPath("c", "bosses"));
 
     private PlanetDamage() {
     }
 
     private static ResourceKey<DamageType> key(String name) {
-        return ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, name));
+        return ResourceKey.create(Registries.DAMAGE_TYPE, Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, name));
     }
 
     public static boolean isBoss(LivingEntity entity) {
         EntityType<?> type = entity.getType();
-        if (entity instanceof WitherBoss || entity instanceof EnderDragon || type.is(BOSSES)) {
+        if (entity instanceof WitherBoss || entity instanceof EnderDragon || type.builtInRegistryHolder().is(BOSSES)) {
             return true;
         }
         String id = BuiltInRegistries.ENTITY_TYPE.getKey(type).toString();
@@ -44,7 +44,7 @@ public final class PlanetDamage {
     public static void hit(ServerLevel level, PlanetEntity planet, Player owner, LivingEntity victim, PlanetaryTier tier) {
         boolean killer = tier.killsBosses();
         ResourceKey<DamageType> typeKey = killer ? PLANETARY_TRUE : PLANETARY;
-        DamageSource source = new DamageSource(level.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(typeKey), planet, owner);
+        DamageSource source = new DamageSource(level.registryAccess().lookupOrThrow(Registries.DAMAGE_TYPE).getOrThrow(typeKey), planet, owner);
         float amount = (float) PearlConfig.damage(tier);
         if (!killer && isBoss(victim)) {
             amount = Math.min(amount, (float) PearlConfig.bossCap(tier));
@@ -53,12 +53,12 @@ public final class PlanetDamage {
         if (PearlConfig.resetInvulnerability()) {
             victim.invulnerableTime = 0;
         }
-        victim.hurt(source, amount);
+        victim.hurtServer(level, source, amount);
         Vec3 pushed = victim.getDeltaMovement();
         victim.setDeltaMovement(motion.add(pushed.subtract(motion).scale(PearlConfig.knockbackScale())));
         if (killer && PearlConfig.executeBosses() && victim.isAlive() && victim.getHealth() <= amount && !protectedPlayer(victim)) {
             victim.invulnerableTime = 0;
-            victim.kill();
+            victim.kill(level);
         }
         if (PearlConfig.hitParticles()) {
             Vec3 center = victim.getBoundingBox().getCenter();

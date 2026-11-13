@@ -1,19 +1,33 @@
 package nadiendev.ThaumaturgeTechCompats.focus.datagen;
 
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class FocusItemModelProvider extends ItemModelProvider {
-    public FocusItemModelProvider(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
+import net.minecraft.data.PackOutput;
+
+public class FocusItemModelProvider extends ModelAssets {
+    public FocusItemModelProvider(PackOutput output) {
+        super(output);
     }
 
     @Override
-    protected void registerModels() {
-        basicItem(ThaumaturgeTechCompats.id("matrix_focus"));
-        basicItem(ThaumaturgeTechCompats.id("blaze_cube_focus"));
+    protected void register() {
+        tinted("matrix_focus");
+        tinted("blaze_cube_focus");
+    }
+
+    private void tinted(String name) {
+        basicItem(name);
+        JsonObject tint = new JsonObject();
+        tint.addProperty("type", "thaumaturge:focus_color");
+        JsonArray tints = new JsonArray();
+        tints.add(tint);
+        JsonObject model = new JsonObject();
+        model.addProperty("type", "minecraft:model");
+        model.addProperty("model", mod("item/" + name));
+        model.add("tints", tints);
+        itemDefinition(name, definition(model));
     }
 
     @Override

@@ -1,9 +1,0 @@
-{
-  "parent": "create:block/depot/block",
-  "textures": {
-    "1": "thaumaturgetechcompats:block/create_variant/alchemical_brass/depot_side",
-    "2": "thaumaturgetechcompats:block/create_variant/alchemical_brass/depot_top",
-    "3": "thaumaturgetechcompats:block/create_variant/alchemical_brass/andesite_casing",
-    "particle": "thaumaturgetechcompats:block/create_variant/alchemical_brass/andesite_casing"
-  }
-}

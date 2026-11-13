@@ -30,8 +30,8 @@ public final class ScribingRegistry {
             properties.fireResistant();
         }
         DeferredItem<Item> item = tier == ScribingTier.INFINITY
-                ? ITEMS.registerItem(tier.toolsName(), InfinityScribingToolsItem::new, properties)
-                : ITEMS.registerItem(tier.toolsName(), Item::new, properties);
+                ? ITEMS.registerItem(tier.toolsName(), InfinityScribingToolsItem::new, () -> properties)
+                : ITEMS.registerItem(tier.toolsName(), Item::new, () -> properties);
         TOOLS.put(tier, item);
         return item;
     }

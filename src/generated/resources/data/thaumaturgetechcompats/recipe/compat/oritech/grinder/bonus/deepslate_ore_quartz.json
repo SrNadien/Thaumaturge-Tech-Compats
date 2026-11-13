@@ -19,9 +19,7 @@
   ],
   "type": "oritech:grinder",
   "ingredients": [
-    {
-      "item": "thaumaturge:deepslate_ore_quartz"
-    }
+    "thaumaturge:deepslate_ore_quartz"
   ],
   "results": [
     {

@@ -33,18 +33,18 @@ public final class AuraConverterRegistry {
 
     static {
         for (AuraConverterTier tier : AuraConverterTier.values()) {
-            DeferredBlock<AuraConverterBlock> block = BLOCKS.registerBlock(tier.blockName(), properties -> new AuraConverterBlock(properties, tier), BlockBehaviour.Properties.of()
+            DeferredBlock<AuraConverterBlock> block = BLOCKS.registerBlock(tier.blockName(), properties -> new AuraConverterBlock(properties, tier), () -> BlockBehaviour.Properties.of()
                     .mapColor(tier == AuraConverterTier.BRASS ? MapColor.GOLD : MapColor.COLOR_PURPLE)
                     .strength(3.5F + tier.ordinal(), 15.0F * (tier.ordinal() + 1))
                     .sound(SoundType.METAL)
                     .requiresCorrectToolForDrops());
             CONVERTERS.put(tier, block);
-            CONVERTER_ITEMS.put(tier, ITEMS.register(tier.blockName(), () -> new AuraConverterItem(block.get(), new Item.Properties())));
+            CONVERTER_ITEMS.put(tier, ITEMS.registerItem(tier.blockName(), properties -> new AuraConverterItem(block.get(), properties.useBlockDescriptionPrefix())));
         }
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<AuraConverterBlockEntity>> ENTITY = BLOCK_ENTITIES.register("aura_converter",
-            () -> BlockEntityType.Builder.of(AuraConverterBlockEntity::new, blocks().toArray(Block[]::new)).build(null));
+            () -> new BlockEntityType<>(AuraConverterBlockEntity::new, blocks().toArray(Block[]::new)));
 
     public static final DeferredHolder<MenuType<?>, MenuType<AuraConverterMenu>> MENU = MENUS.register("aura_converter",
             () -> IMenuTypeExtension.<AuraConverterMenu>create(AuraConverterMenu::new));

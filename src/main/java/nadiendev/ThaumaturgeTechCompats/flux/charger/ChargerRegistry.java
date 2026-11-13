@@ -31,19 +31,19 @@ public final class ChargerRegistry {
 
     static {
         for (FluxTier tier : FluxTier.values()) {
-            DeferredBlock<EnvironmentalChargerBlock> block = BLOCKS.registerBlock(blockName(tier), properties -> new EnvironmentalChargerBlock(properties, tier), BlockBehaviour.Properties.of()
+            DeferredBlock<EnvironmentalChargerBlock> block = BLOCKS.registerBlock(blockName(tier), properties -> new EnvironmentalChargerBlock(properties, tier), () -> BlockBehaviour.Properties.of()
                     .mapColor(tier == FluxTier.ALCHEMICAL_BRASS ? MapColor.GOLD : MapColor.COLOR_PURPLE)
                     .strength(3.5F + tier.ordinal(), 15.0F * (tier.ordinal() + 1))
                     .sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(EnvironmentalChargerBlock.ACTIVE) ? 8 : 0));
             CHARGERS.put(tier, block);
-            CHARGER_ITEMS.put(tier, ITEMS.register(blockName(tier), () -> new ChargerItem(block.get(), new Item.Properties().rarity(tier.rarity()))));
+            CHARGER_ITEMS.put(tier, ITEMS.registerItem(blockName(tier), properties -> new ChargerItem(block.get(), properties.useBlockDescriptionPrefix().rarity(tier.rarity()))));
         }
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<EnvironmentalChargerBlockEntity>> ENTITY = BLOCK_ENTITIES.register(NAME,
-            () -> BlockEntityType.Builder.of(EnvironmentalChargerBlockEntity::new, blocks().toArray(Block[]::new)).build(null));
+            () -> new BlockEntityType<>(EnvironmentalChargerBlockEntity::new, blocks().toArray(Block[]::new)));
 
     private ChargerRegistry() {
     }

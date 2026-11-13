@@ -18,31 +18,15 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:arcane_workbench_charger"
-  },
+  "catalyst": "thaumaturge:arcane_workbench_charger",
   "components": [
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    }
+    "thaumaturgetechcompats:matrix_plate",
+    "thaumaturgetechcompats:matrix_plate",
+    "thaumaturgetechcompats:matrix_plate",
+    "thaumaturgetechcompats:matrix_plate",
+    "thaumaturge:vis_resonator",
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot"
   ],
   "instability": 4,
   "research": {

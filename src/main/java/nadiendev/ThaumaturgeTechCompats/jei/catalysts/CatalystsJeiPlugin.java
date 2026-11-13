@@ -7,7 +7,7 @@ import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalIntegration;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import org.slf4j.Logger;
 
 @JeiPlugin
@@ -15,10 +15,10 @@ public class CatalystsJeiPlugin implements IModPlugin {
     public static final String TOGGLE = "jei_catalysts";
 
     private static final Logger LOGGER = LogUtils.getLogger();
-    private static final ResourceLocation ID = ThaumaturgeTechCompats.id("catalysts");
+    private static final Identifier ID = ThaumaturgeTechCompats.id("catalysts");
 
     @Override
-    public ResourceLocation getPluginUid() {
+    public Identifier getPluginUid() {
         return ID;
     }
 

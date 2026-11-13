@@ -21,7 +21,7 @@ public final class CapacitorRegistry {
         for (EnderIOTier tier : EnderIOTier.values()) {
             CAPACITORS.put(tier, ITEMS.registerItem(tier.capacitorName(),
                     properties -> new CapacitorItem(properties.component(EIODataComponents.CAPACITOR_DATA, CapacitorConfig.data(tier))),
-                    new Item.Properties().rarity(tier.rarity())));
+                    () -> new Item.Properties().rarity(tier.rarity())));
         }
     }
 

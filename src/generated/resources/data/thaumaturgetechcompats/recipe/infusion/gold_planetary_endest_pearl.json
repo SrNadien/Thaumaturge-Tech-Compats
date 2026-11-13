@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:praecantatio"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:iron_planetary_endest_pearl"
-  },
+  "catalyst": "thaumaturgetechcompats:iron_planetary_endest_pearl",
   "components": [
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    }
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot"
   ],
   "instability": 3,
   "research": {

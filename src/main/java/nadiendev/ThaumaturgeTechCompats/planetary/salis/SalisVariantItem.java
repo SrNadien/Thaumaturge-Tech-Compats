@@ -8,16 +8,18 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.Style;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.LevelReader;
 import net.neoforged.neoforge.event.entity.player.UseItemOnBlockEvent;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class SalisVariantItem extends Item {
     public static final String TOOLTIP_VARIANT = "tooltip." + ThaumaturgeTechCompats.MOD_ID + ".salis_variant";
@@ -45,7 +47,7 @@ public class SalisVariantItem extends Item {
         if (player == null || !player.isCrouching()) {
             return;
         }
-        event.cancelWithResult(ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION);
+        event.cancelWithResult(InteractionResult.PASS);
     }
 
     @Override
@@ -60,13 +62,13 @@ public class SalisVariantItem extends Item {
 
     @Override
     public Component getName(ItemStack stack) {
-        return Component.empty().append(Component.translatable(getDescriptionId(stack)).withStyle(Style.EMPTY.withColor(tier.color())));
+        return Component.empty().append(Component.translatable(getDescriptionId()).withStyle(Style.EMPTY.withColor(tier.color())));
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
         Component material = Component.translatable(TOOLTIP_VARIANT + "." + tier.id()).withStyle(Style.EMPTY.withColor(tier.color()));
-        tooltip.add(Component.translatable(TOOLTIP_VARIANT, material).withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable(TOOLTIP_SAME).withStyle(ChatFormatting.DARK_GRAY));
+        tooltip.accept(Component.translatable(TOOLTIP_VARIANT, material).withStyle(ChatFormatting.GRAY));
+        tooltip.accept(Component.translatable(TOOLTIP_SAME).withStyle(ChatFormatting.DARK_GRAY));
     }
 }

@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:motus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:vibrant_alloy_wand_rod"
-  },
+  "catalyst": "thaumaturgetechcompats:vibrant_alloy_wand_rod",
   "components": [
-    {
-      "item": "enderio:vibrant_crystal"
-    },
-    {
-      "item": "enderio:vibrant_crystal"
-    },
-    {
-      "item": "enderio:vibrant_crystal"
-    },
-    {
-      "item": "enderio:vibrant_crystal"
-    }
+    "enderio:vibrant_crystal",
+    "enderio:vibrant_crystal",
+    "enderio:vibrant_crystal",
+    "enderio:vibrant_crystal"
   ],
   "instability": 5,
   "research": {

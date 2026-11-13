@@ -5,15 +5,15 @@ import com.leclowndu93150.thaumaturge.api.aspect.IAspect;
 import com.leclowndu93150.thaumaturge.api.recipe.ArcaneCraftingTransaction;
 import com.leclowndu93150.thaumaturge.api.recipe.ArcaneWorkbenchContext;
 import com.leclowndu93150.thaumaturge.api.recipe.IArcaneCraftingStore;
-import com.leclowndu93150.thaumaturge.api.transaction.Transaction;
-import com.leclowndu93150.thaumaturge.api.transaction.TransactionContext;
+import net.neoforged.neoforge.transfer.transaction.Transaction;
+import net.neoforged.neoforge.transfer.transaction.TransactionContext;
 import com.leclowndu93150.thaumaturge.content.recipe.workbench.ArcaneCraftingInput;
 import com.leclowndu93150.thaumaturge.content.taint.item.ItemEssentiaCrystal;
 import com.leclowndu93150.thaumaturge.registry.TTRecipeTypes;
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedConfig;
 import net.minecraft.core.Holder;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Player;
@@ -186,10 +186,10 @@ public class ArcaneUpgradeContainer extends UpgradeContainerBase<ArcaneUpgradeWr
     @Override
     public void handlePacket(CompoundTag data) {
         if (data.contains(DATA_SHIFT_CLICK_INTO_STORAGE)) {
-            setShiftClickIntoStorage(data.getBoolean(DATA_SHIFT_CLICK_INTO_STORAGE));
+            setShiftClickIntoStorage(data.getBooleanOr(DATA_SHIFT_CLICK_INTO_STORAGE, false));
         }
         if (data.contains(DATA_REFILL_CRAFTING_GRID)) {
-            setRefillCraftingGrid(data.getBoolean(DATA_REFILL_CRAFTING_GRID));
+            setRefillCraftingGrid(data.getBooleanOr(DATA_REFILL_CRAFTING_GRID, false));
         }
     }
 
@@ -214,7 +214,7 @@ public class ArcaneUpgradeContainer extends UpgradeContainerBase<ArcaneUpgradeWr
     }
 
     @Override
-    public void setRecipeUsed(ResourceLocation recipeId) {
+    public void setRecipeUsed(Identifier recipeId) {
     }
 
     @Override

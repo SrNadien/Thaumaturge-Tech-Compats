@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.braincharger;
 
 import com.leclowndu93150.thaumaturge.api.aura.AuraHelper;
-import com.leclowndu93150.thaumaturge.api.transaction.TransactionContext;
+import net.neoforged.neoforge.transfer.transaction.TransactionContext;
 import com.leclowndu93150.thaumaturge.content.workbench.BlockEntityArcaneWorkbench;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.ChunkPos;
@@ -47,7 +47,7 @@ public final class ChargerBoost {
             return true;
         }
         Level level = workbench.getLevel();
-        if (level == null || level.isClientSide) {
+        if (level == null || level.isClientSide()) {
             return false;
         }
         double remaining = Math.ceil(amount * (100 - BrainChargerConfig.discountPercent(tier)) / 100.0);
@@ -80,11 +80,11 @@ public final class ChargerBoost {
     }
 
     private static List<BlockPos> anchors(Level level, BlockPos origin, int radius) {
-        ChunkPos center = new ChunkPos(origin);
+        ChunkPos center = ChunkPos.containing(origin);
         List<BlockPos> anchors = new ArrayList<>();
         for (int dx = -radius; dx <= radius; dx++) {
             for (int dz = -radius; dz <= radius; dz++) {
-                BlockPos middle = new ChunkPos(center.x + dx, center.z + dz).getMiddleBlockPosition(origin.getY());
+                BlockPos middle = new ChunkPos(center.x() + dx, center.z() + dz).getMiddleBlockPosition(origin.getY());
                 if (level.hasChunkAt(middle)) {
                     anchors.add(middle);
                 }

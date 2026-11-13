@@ -88,7 +88,7 @@ public class PearlContent implements DataProvider {
 
     private static JsonObject damageTag() {
         JsonArray values = new JsonArray();
-        values.add(PlanetDamage.PLANETARY_TRUE.location().toString());
+        values.add(PlanetDamage.PLANETARY_TRUE.identifier().toString());
         JsonObject json = new JsonObject();
         json.addProperty("replace", false);
         json.add("values", values);

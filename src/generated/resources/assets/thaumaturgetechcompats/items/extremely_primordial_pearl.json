@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "avaritia:halo",
+    "color": -3628801,
+    "model": "thaumaturgetechcompats:item/extremely_primordial_pearl",
+    "pulse": true,
+    "size": 4,
+    "texture": "avaritia:misc/halo"
+  },
+  "oversized_in_gui": true
+}

@@ -11,7 +11,6 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 public final class PurityIntegration {
@@ -53,9 +52,8 @@ public final class PurityIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new PurityItemModels(output, helper));
-        generator.addProvider(event.includeServer(), new PurityContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new PurityItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new PurityContent(output));
     }
 }

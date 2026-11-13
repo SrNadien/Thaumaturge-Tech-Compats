@@ -7,9 +7,12 @@ import nadiendev.ThaumaturgeTechCompats.flux.FluxTier;
 import nadiendev.ThaumaturgeTechCompats.flux.IFluxStorage;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
+import net.minecraft.core.component.DataComponentGetter;
 import net.minecraft.core.component.DataComponentMap;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -82,7 +85,7 @@ public class StorageCoreBlockEntity extends BlockEntity {
 
     public void refresh() {
         scanTimer = 0;
-        if (level == null || level.isClientSide) {
+        if (level == null || level.isClientSide()) {
             return;
         }
         CoreScan scan = enabled() ? CoreStructure.scan(level, worldPosition, tier()) : CoreScan.EMPTY;
@@ -191,7 +194,7 @@ public class StorageCoreBlockEntity extends BlockEntity {
         if (CoreConfig.overloadWarn()) {
             Component warning = Component.translatable(CoreTranslations.WARNING, getBlockState().getBlock().getName());
             for (ServerPlayer player : level.getEntitiesOfClass(ServerPlayer.class, new AABB(worldPosition).inflate(radius * 2.0D))) {
-                player.displayClientMessage(warning, true);
+                player.sendOverlayMessage(warning);
             }
         }
         if (CoreConfig.explosionEnabled() && fraction >= CoreConfig.explosionThreshold() && pulses >= CoreConfig.explosionPulses()) {
@@ -206,23 +209,26 @@ public class StorageCoreBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        CompoundTag tag = new CompoundTag();
         tag.putLong(STORED_KEY, stored);
         tag.putBoolean(FORMED_KEY, formed);
         tag.putInt(CELLS_KEY, cells);
         tag.putLong(CELL_CAPACITY_KEY, cellCapacity);
         tag.putInt(PULSES_KEY, pulses);
+        output.store("data", CompoundTag.CODEC, tag);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
-        stored = Math.max(0L, tag.getLong(STORED_KEY));
-        formed = tag.getBoolean(FORMED_KEY);
-        cells = tag.getInt(CELLS_KEY);
-        cellCapacity = tag.getLong(CELL_CAPACITY_KEY);
-        pulses = tag.getInt(PULSES_KEY);
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        CompoundTag tag = input.read("data", CompoundTag.CODEC).orElseGet(CompoundTag::new);
+        stored = Math.max(0L, tag.getLongOr(STORED_KEY, 0L));
+        formed = tag.getBooleanOr(FORMED_KEY, false);
+        cells = tag.getIntOr(CELLS_KEY, 0);
+        cellCapacity = tag.getLongOr(CELL_CAPACITY_KEY, 0L);
+        pulses = tag.getIntOr(PULSES_KEY, 0);
     }
 
     @Override
@@ -232,7 +238,7 @@ public class StorageCoreBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void applyImplicitComponents(BlockEntity.DataComponentInput input) {
+    protected void applyImplicitComponents(DataComponentGetter input) {
         super.applyImplicitComponents(input);
         Long value = input.get(FluxComponents.STORED.get());
         if (value != null) {

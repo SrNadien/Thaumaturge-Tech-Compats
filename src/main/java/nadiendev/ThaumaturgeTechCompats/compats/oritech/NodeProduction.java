@@ -5,12 +5,13 @@ import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeHolder;
-import net.minecraft.world.item.crafting.RecipeManager;
+
 import net.neoforged.neoforge.event.OnDatapackSyncEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 import org.slf4j.Logger;
 
 import java.lang.reflect.Method;
+import java.util.Collection;
 import java.util.List;
 
 public final class NodeProduction {
@@ -22,19 +23,19 @@ public final class NodeProduction {
     }
 
     public static void onServerStarted(ServerStartedEvent event) {
-        apply(event.getServer().getRecipeManager());
+        apply(event.getServer().getRecipeManager().getRecipes());
     }
 
     public static void onDatapackSync(OnDatapackSyncEvent event) {
-        apply(event.getPlayerList().getServer().getRecipeManager());
+        apply(event.getPlayerList().getServer().getRecipeManager().getRecipes());
     }
 
-    public static void apply(RecipeManager manager) {
-        for (RecipeHolder<?> holder : manager.getRecipes()) {
-            if (!holder.id().getNamespace().equals(ThaumaturgeTechCompats.MOD_ID) || !holder.id().getPath().startsWith(RECIPE_FOLDER)) {
+    public static void apply(Collection<RecipeHolder<?>> recipes) {
+        for (RecipeHolder<?> holder : recipes) {
+            if (!holder.id().identifier().getNamespace().equals(ThaumaturgeTechCompats.MOD_ID) || !holder.id().identifier().getPath().startsWith(RECIPE_FOLDER)) {
                 continue;
             }
-            OritechNode node = OritechNode.byId(holder.id().getPath().substring(RECIPE_FOLDER.length()));
+            OritechNode node = OritechNode.byId(holder.id().identifier().getPath().substring(RECIPE_FOLDER.length()));
             if (node == null) {
                 continue;
             }

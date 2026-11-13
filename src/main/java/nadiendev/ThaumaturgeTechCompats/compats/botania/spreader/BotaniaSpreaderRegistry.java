@@ -4,7 +4,7 @@ import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.botania.BotaniaIntegration;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -29,7 +29,7 @@ public final class BotaniaSpreaderRegistry {
     private static final Map<SpreaderTier, DeferredBlock<TieredSpreaderBlock>> SPREADERS = new EnumMap<>(SpreaderTier.class);
     private static final Map<SpreaderTier, DeferredItem<BlockItem>> SPREADER_ITEMS = new EnumMap<>(SpreaderTier.class);
     private static final ResourceKey<BlockEntityType<?>> SPREADER_ENTITY = ResourceKey.create(
-            Registries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(BotaniaIntegration.MOD_ID, "mana_spreader"));
+            Registries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(BotaniaIntegration.MOD_ID, "mana_spreader"));
 
     private BotaniaSpreaderRegistry() {
     }
@@ -42,13 +42,13 @@ public final class BotaniaSpreaderRegistry {
             DeferredBlock<TieredSpreaderBlock> block = BLOCKS.registerBlock(
                     tier.blockName(),
                     properties -> new TieredSpreaderBlock(tier, properties),
-                    BlockBehaviour.Properties.of()
+                    () -> BlockBehaviour.Properties.of()
                             .mapColor(MapColor.METAL)
                             .strength(3.0F, 10.0F)
                             .sound(SoundType.METAL)
                             .isValidSpawn((state, level, pos, entity) -> false));
             SPREADERS.put(tier, block);
-            SPREADER_ITEMS.put(tier, ITEMS.register(tier.blockName(), () -> new BlockItem(block.get(), itemProperties(tier))));
+            SPREADER_ITEMS.put(tier, ITEMS.registerItem(tier.blockName(), properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix()), () -> itemProperties(tier)));
         }
         BLOCKS.register(modBus);
         ITEMS.register(modBus);

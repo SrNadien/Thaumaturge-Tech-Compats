@@ -68,6 +68,7 @@ def absentCompats = [
     'compats/industrialforegoing',
     'compats/ftbunearthed',
     'compats/solarflux',
+    'compats/sophisticated',
     'taintedfood/farmersdelight',
     'jei/catalysts/FarmersDelightCatalysts.java',
     'jei/catalysts/IndustrialForegoingCatalysts.java',
@@ -76,7 +77,7 @@ def absentCompats = [
 
 sourceSets.main.java {
     absentCompats.each { path ->
-        exclude(path.endsWith('.java') ? "**/[object Object]" : "**/[object Object]/**")
+        exclude(path.endsWith('.java') ? "**/${path}" : "**/${path}/**")
     }
 }
 
@@ -167,15 +168,15 @@ dependencies {
 
     implementation "curse.maven:botania-revived-${botania_project_id}:${botania_version_id}"
 
+    runtimeOnly "maven.modrinth:patchouli:${patchouli_version_id}"
+
+    runtimeOnly "maven.modrinth:athena-ctm:${athena_version_id}"
+
+    runtimeOnly "maven.modrinth:geckolib:${geckolib_version_id}"
+
     compileOnly "curse.maven:equivox-${equivox_project_id}:${equivox_version_id}"
     runtimeOnly "curse.maven:equivox-${equivox_project_id}:${equivox_version_id}"
 
-    compileOnly("maven.modrinth:sophisticated-core:${sophisticatedcore_version_id}") { transitive = false }
-    runtimeOnly("maven.modrinth:sophisticated-core:${sophisticatedcore_version_id}") { transitive = false }
-    compileOnly("maven.modrinth:sophisticated-backpacks:${sophisticatedbackpacks_version_id}") { transitive = false }
-    runtimeOnly("maven.modrinth:sophisticated-backpacks:${sophisticatedbackpacks_version_id}") { transitive = false }
-    compileOnly("maven.modrinth:sophisticated-storage:${sophisticatedstorage_version_id}") { transitive = false }
-    runtimeOnly("maven.modrinth:sophisticated-storage:${sophisticatedstorage_version_id}") { transitive = false }
 }
 
 tasks.withType(ProcessResources).configureEach {
@@ -206,9 +207,6 @@ tasks.withType(ProcessResources).configureEach {
         botania_version          : botania_version,
         voidminers_version       : voidminers_version,
         equivox_version          : equivox_version,
-        sophisticatedcore_version: sophisticatedcore_version,
-        sophisticatedbackpacks_version: sophisticatedbackpacks_version,
-        sophisticatedstorage_version: sophisticatedstorage_version,
     ]
 
     inputs.properties replaceProperties

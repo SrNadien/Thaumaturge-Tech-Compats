@@ -16,9 +16,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "I": {
-      "tag": "c:ingots/thaumium"
-    }
+    "I": "#c:ingots/thaumium"
   },
   "pattern": [
     " I ",

@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.compats.forcecraft;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.HashSet;
@@ -30,7 +30,7 @@ public final class ForceCraftConfig {
     private static final ModConfigSpec.BooleanValue FLASK_ENABLED;
     private static final ModConfigSpec.ConfigValue<List<? extends String>> FLASK_BLOCKED;
 
-    private static Set<ResourceLocation> blockedCache = Set.of();
+    private static Set<Identifier> blockedCache = Set.of();
     private static List<? extends String> blockedSource = List.of();
 
     static {
@@ -67,7 +67,7 @@ public final class ForceCraftConfig {
     }
 
     private static boolean validId(Object value) {
-        return value instanceof String text && ResourceLocation.tryParse(text) != null;
+        return value instanceof String text && Identifier.tryParse(text) != null;
     }
 
     private static <T> T read(ModConfigSpec.ConfigValue<T> value) {
@@ -110,12 +110,12 @@ public final class ForceCraftConfig {
                 && read(FLASK_ENABLED);
     }
 
-    public static boolean flaskBlocks(ResourceLocation entity) {
+    public static boolean flaskBlocks(Identifier entity) {
         List<? extends String> source = read(FLASK_BLOCKED);
         if (source != blockedSource) {
-            Set<ResourceLocation> parsed = new HashSet<>();
+            Set<Identifier> parsed = new HashSet<>();
             for (String text : source) {
-                ResourceLocation id = ResourceLocation.tryParse(text);
+                Identifier id = Identifier.tryParse(text);
                 if (id != null) {
                     parsed.add(id);
                 }

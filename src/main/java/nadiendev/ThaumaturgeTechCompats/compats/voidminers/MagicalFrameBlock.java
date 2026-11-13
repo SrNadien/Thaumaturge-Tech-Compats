@@ -1,6 +1,6 @@
 package nadiendev.ThaumaturgeTechCompats.compats.voidminers;
 
-import nadiendev.voidminersremastered.util.ColorUtil;
+import nadiendev.voidminersremastered.util.CustomColorUtil;
 import nadiendev.voidminersremastered.world.block.ColoredBlock;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -23,7 +23,7 @@ public class MagicalFrameBlock extends ColoredBlock {
     }
 
     @Override
-    public ColorUtil getColor() {
+    public CustomColorUtil getColor() {
         return VoidMinersMagicalStructures.color(tier);
     }
 }

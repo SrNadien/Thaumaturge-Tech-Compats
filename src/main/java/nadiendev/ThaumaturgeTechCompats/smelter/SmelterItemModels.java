@@ -1,25 +1,22 @@
 package nadiendev.ThaumaturgeTechCompats.smelter;
 
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.client.model.generators.ModelFile;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class SmelterItemModels extends ItemModelProvider {
-    public SmelterItemModels(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+public class SmelterItemModels extends ModelAssets {
+    public SmelterItemModels(PackOutput output) {
+        super(output);
     }
 
     @Override
     public String getName() {
-        return "Smelter Item Models: " + ThaumaturgeTechCompats.MOD_ID;
+        return "Smelter Item Models: " + MOD;
     }
 
     @Override
-    protected void registerModels() {
+    protected void register() {
         for (SmelterTier tier : SmelterTier.values()) {
-            getBuilder(tier.blockName()).parent(new ModelFile.UncheckedModelFile(modLoc("block/" + tier.blockName() + "_off")));
+            blockItem(tier.blockName(), mod("block/" + tier.blockName() + "_off"));
         }
     }
 }

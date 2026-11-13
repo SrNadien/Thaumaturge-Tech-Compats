@@ -54,7 +54,7 @@ public class RiftExtractorBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return null;
         }
         return createTickerHelper(type, LinkRegistry.EXTRACTOR_ENTITY.get(), RiftExtractorBlockEntity::tick);
@@ -66,23 +66,23 @@ public class RiftExtractorBlock extends BaseEntityBlock {
             if (level instanceof ServerLevel server) {
                 report(server, player, extractor);
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }
 
     private void report(ServerLevel level, Player player, RiftExtractorBlockEntity extractor) {
         boolean found = extractor.nearestRift(level) != null;
-        player.displayClientMessage(getName().withStyle(ChatFormatting.LIGHT_PURPLE), false);
-        player.displayClientMessage(Component.translatable(LinkTranslations.EXTRACTOR_FLUX,
+        player.sendSystemMessage(getName().withStyle(ChatFormatting.LIGHT_PURPLE));
+        player.sendSystemMessage(Component.translatable(LinkTranslations.EXTRACTOR_FLUX,
                 String.format(Locale.ROOT, "%,d", extractor.storage().stored()),
-                String.format(Locale.ROOT, "%,d", extractor.storage().capacity())).withStyle(ChatFormatting.GRAY), false);
-        player.displayClientMessage(Component.translatable(LinkTranslations.EXTRACTOR_RIFT,
+                String.format(Locale.ROOT, "%,d", extractor.storage().capacity())).withStyle(ChatFormatting.GRAY));
+        player.sendSystemMessage(Component.translatable(LinkTranslations.EXTRACTOR_RIFT,
                 Component.translatable(found ? LinkTranslations.EXTRACTOR_RIFT_FOUND : LinkTranslations.EXTRACTOR_RIFT_MISSING)
-                        .withStyle(found ? ChatFormatting.GREEN : ChatFormatting.RED)).withStyle(ChatFormatting.GRAY), false);
-        player.displayClientMessage(Component.translatable(LinkTranslations.EXTRACTOR_RATE,
+                        .withStyle(found ? ChatFormatting.GREEN : ChatFormatting.RED)).withStyle(ChatFormatting.GRAY));
+        player.sendSystemMessage(Component.translatable(LinkTranslations.EXTRACTOR_RATE,
                 String.format(Locale.ROOT, "%,d", FluxConfig.riftFluxPerSize()),
                 FluxConfig.riftExtractInterval(),
-                FluxConfig.riftExtractRadius()).withStyle(ChatFormatting.GRAY), false);
+                FluxConfig.riftExtractRadius()).withStyle(ChatFormatting.GRAY));
     }
 }

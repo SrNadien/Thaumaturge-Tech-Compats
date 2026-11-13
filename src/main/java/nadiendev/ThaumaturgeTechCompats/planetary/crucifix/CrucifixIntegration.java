@@ -8,7 +8,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 public final class CrucifixIntegration {
@@ -51,10 +50,9 @@ public final class CrucifixIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
-        generator.addProvider(event.includeClient(), new CrucifixAssets(output));
-        generator.addProvider(event.includeClient(), new CrucifixSoundProvider(output, helper));
-        generator.addProvider(event.includeClient(), new CrucifixParticleProvider(output, helper));
-        generator.addProvider(event.includeServer(), new CrucifixContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new CrucifixAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new CrucifixSoundProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new CrucifixParticleProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new CrucifixContent(output));
     }
 }

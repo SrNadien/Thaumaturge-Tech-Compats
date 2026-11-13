@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:motus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:pulsating_crystal_wand_rod"
-  },
+  "catalyst": "thaumaturgetechcompats:pulsating_crystal_wand_rod",
   "components": [
-    {
-      "tag": "c:ingots/vibrant_alloy"
-    },
-    {
-      "tag": "c:ingots/vibrant_alloy"
-    },
-    {
-      "tag": "c:ingots/vibrant_alloy"
-    },
-    {
-      "tag": "c:ingots/vibrant_alloy"
-    }
+    "#c:ingots/vibrant_alloy",
+    "#c:ingots/vibrant_alloy",
+    "#c:ingots/vibrant_alloy",
+    "#c:ingots/vibrant_alloy"
   ],
   "instability": 4,
   "research": {

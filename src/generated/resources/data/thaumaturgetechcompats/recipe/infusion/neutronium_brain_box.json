@@ -18,25 +18,13 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:matrix_brain_box"
-  },
+  "catalyst": "thaumaturgetechcompats:matrix_brain_box",
   "components": [
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturge:mind_biothaumic"
-    }
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturge:mind_biothaumic"
   ],
   "instability": 7,
   "research": {

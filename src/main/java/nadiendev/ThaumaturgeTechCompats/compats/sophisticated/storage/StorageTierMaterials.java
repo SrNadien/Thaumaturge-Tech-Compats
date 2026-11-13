@@ -3,8 +3,8 @@ package nadiendev.ThaumaturgeTechCompats.compats.sophisticated.storage;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedTier;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.client.resources.model.Material;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.state.properties.ChestType;
 
 import java.util.HashMap;
@@ -24,11 +24,11 @@ public final class StorageTierMaterials {
             default -> "";
         };
         return CHEST.computeIfAbsent(prefix + tier.chestTexture(), name -> new Material(Sheets.CHEST_SHEET,
-                ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "entity/chest/" + name)));
+                Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "entity/chest/" + name)));
     }
 
     public static Material shulkerBox(SophisticatedTier tier) {
         return SHULKER_BOX.computeIfAbsent(tier, key -> new Material(Sheets.SHULKER_SHEET,
-                ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "entity/shulker_box/" + key.chestTexture())));
+                Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "entity/shulker_box/" + key.chestTexture())));
     }
 }

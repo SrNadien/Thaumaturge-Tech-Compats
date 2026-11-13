@@ -22,7 +22,7 @@ public final class ChunkBudget {
         if (chunks.size() > PURGE_SIZE) {
             chunks.values().removeIf(entry -> entry.tick < now - STALE_TICKS);
         }
-        Entry entry = chunks.computeIfAbsent(ChunkPos.asLong(pos), key -> new Entry());
+        Entry entry = chunks.computeIfAbsent(ChunkPos.pack(pos), key -> new Entry());
         if (entry.tick != now) {
             entry.tick = now;
             entry.used = 0.0F;
@@ -40,7 +40,7 @@ public final class ChunkBudget {
         if (chunks == null) {
             return;
         }
-        Entry entry = chunks.get(ChunkPos.asLong(pos));
+        Entry entry = chunks.get(ChunkPos.pack(pos));
         if (entry != null && entry.tick == level.getGameTime()) {
             entry.used = Math.max(0.0F, entry.used - unused);
         }

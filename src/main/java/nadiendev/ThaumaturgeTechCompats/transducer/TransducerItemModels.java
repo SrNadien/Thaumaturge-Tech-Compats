@@ -1,27 +1,26 @@
 package nadiendev.ThaumaturgeTechCompats.transducer;
 
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
 import nadiendev.ThaumaturgeTechCompats.device.DeviceTier;
 import nadiendev.ThaumaturgeTechCompats.device.EntityItemModels;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class TransducerItemModels extends ItemModelProvider {
-    public TransducerItemModels(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+public class TransducerItemModels extends ModelAssets {
+    public TransducerItemModels(PackOutput output) {
+        super(output);
     }
 
     @Override
     public String getName() {
-        return "Transducer Item Models: " + ThaumaturgeTechCompats.MOD_ID;
+        return "Transducer Item Models: " + MOD;
     }
 
     @Override
-    protected void registerModels() {
+    protected void register() {
         for (DeviceTier tier : DeviceTier.values()) {
             String name = TransducerIntegration.blockName(tier);
-            EntityItemModels.nodeDevice(this, name, modLoc("block/" + name));
+            itemModel(name, EntityItemModels.nodeDeviceModel(mod("block/" + name)));
+            itemDefinition(name, EntityItemModels.nodeDeviceDefinition(mod("item/" + name), true));
         }
     }
 }

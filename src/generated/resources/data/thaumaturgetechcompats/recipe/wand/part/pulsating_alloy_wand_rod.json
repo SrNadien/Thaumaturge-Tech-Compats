@@ -16,9 +16,7 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "I": {
-      "tag": "c:ingots/pulsating_alloy"
-    }
+    "I": "#c:ingots/pulsating_alloy"
   },
   "pattern": [
     "  I",

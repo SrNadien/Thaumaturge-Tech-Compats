@@ -42,6 +42,6 @@ public final class ForceCraftIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeServer(), new ForceCraftContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new ForceCraftContent(output));
     }
 }

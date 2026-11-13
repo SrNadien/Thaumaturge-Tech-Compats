@@ -40,22 +40,12 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:diamond_planetary_endest_pearl"
-  },
+  "catalyst": "thaumaturgetechcompats:diamond_planetary_endest_pearl",
   "components": [
-    {
-      "item": "minecraft:emerald"
-    },
-    {
-      "item": "minecraft:emerald"
-    },
-    {
-      "item": "minecraft:emerald"
-    },
-    {
-      "item": "minecraft:emerald"
-    }
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald"
   ],
   "instability": 4,
   "research": {

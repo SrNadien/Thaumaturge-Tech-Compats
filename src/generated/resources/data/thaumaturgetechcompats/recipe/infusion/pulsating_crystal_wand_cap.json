@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:soularium_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:soularium_wand_cap",
   "components": [
-    {
-      "item": "enderio:pulsating_crystal"
-    },
-    {
-      "item": "enderio:pulsating_crystal"
-    },
-    {
-      "item": "enderio:pulsating_crystal"
-    },
-    {
-      "item": "enderio:pulsating_crystal"
-    }
+    "enderio:pulsating_crystal",
+    "enderio:pulsating_crystal",
+    "enderio:pulsating_crystal",
+    "enderio:pulsating_crystal"
   ],
   "instability": 4,
   "research": {

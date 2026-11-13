@@ -28,34 +28,16 @@
       "aspect": "thaumaturge:machina"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_capacitor",
   "components": [
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "enderio:vibrant_alloy_ingot"
-    },
-    {
-      "item": "enderio:vibrant_alloy_ingot"
-    },
-    {
-      "item": "enderio:vibrant_crystal"
-    },
-    {
-      "item": "thaumaturge:void_seed"
-    }
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "enderio:vibrant_alloy_ingot",
+    "enderio:vibrant_alloy_ingot",
+    "enderio:vibrant_crystal",
+    "thaumaturge:void_seed"
   ],
   "instability": 9,
   "research": {

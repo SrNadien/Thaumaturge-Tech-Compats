@@ -60,7 +60,7 @@ public class StorageCoreBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return null;
         }
         return createTickerHelper(type, CoreRegistry.CORE_ENTITY.get(), StorageCoreBlockEntity::tick);
@@ -71,12 +71,12 @@ public class StorageCoreBlock extends BaseEntityBlock {
         if (!(level.getBlockEntity(pos) instanceof StorageCoreBlockEntity core)) {
             return InteractionResult.PASS;
         }
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             core.refresh();
             for (Component line : CoreTooltip.chatLines(core.status())) {
                 player.sendSystemMessage(line);
             }
         }
-        return InteractionResult.sidedSuccess(level.isClientSide);
+        return InteractionResult.SUCCESS;
     }
 }

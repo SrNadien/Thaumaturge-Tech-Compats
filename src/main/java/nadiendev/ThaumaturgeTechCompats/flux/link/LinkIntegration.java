@@ -40,8 +40,8 @@ public final class LinkIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new LinkAssets(output));
-        generator.addProvider(event.includeServer(), new LinkContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new LinkAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new LinkContent(output));
     }
 
     public static List<Block> blocks() {

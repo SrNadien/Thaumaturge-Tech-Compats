@@ -44,22 +44,12 @@
       "aspect": "thaumaturge:auram"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:diamond_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:diamond_star_crucifix",
   "components": [
-    {
-      "item": "minecraft:emerald"
-    },
-    {
-      "item": "minecraft:emerald"
-    },
-    {
-      "item": "minecraft:emerald"
-    },
-    {
-      "item": "minecraft:emerald"
-    }
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald",
+    "minecraft:emerald"
   ],
   "instability": 5,
   "research": {

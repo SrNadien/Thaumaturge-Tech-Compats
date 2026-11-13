@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.compats.voidminers;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.AbstractPackResources;
 import net.minecraft.server.packs.PackLocationInfo;
 import net.minecraft.server.packs.PackResources;
@@ -111,11 +111,10 @@ public class VoidMinersMagicalPack extends AbstractPackResources {
     }
 
     private static byte[] readSource(String name) throws IOException {
-        Path file = ModList.get().getModContainerById(VoidMinersMagicalIntegration.MOD_ID)
+        return ModList.get().getModContainerById(VoidMinersMagicalIntegration.MOD_ID)
                 .orElseThrow(() -> new IOException(VoidMinersMagicalIntegration.MOD_ID))
-                .getModInfo().getOwningFile().getFile()
-                .findResource("assets", VoidMinersMagicalIntegration.MOD_ID, "textures", "block", SOURCE_TIER, name + ".png");
-        return Files.readAllBytes(file);
+                .getModInfo().getOwningFile().getFile().getContents()
+                .readFile("assets/" + VoidMinersMagicalIntegration.MOD_ID + "/textures/block/" + SOURCE_TIER + "/" + name + ".png");
     }
 
     private static byte[] tint(byte[] source, int rgb) throws IOException {
@@ -159,7 +158,7 @@ public class VoidMinersMagicalPack extends AbstractPackResources {
     }
 
     @Override
-    public IoSupplier<InputStream> getResource(PackType type, ResourceLocation location) {
+    public IoSupplier<InputStream> getResource(PackType type, Identifier location) {
         if (type != PackType.CLIENT_RESOURCES || !location.getNamespace().equals(MOD) || tierOf(location.getPath()) == null) {
             return null;
         }
@@ -175,7 +174,7 @@ public class VoidMinersMagicalPack extends AbstractPackResources {
             for (String name : new String[]{MINER, FRAME, CORE}) {
                 String path = texturePath(tier, name);
                 if (path.startsWith(prefix)) {
-                    output.accept(ResourceLocation.fromNamespaceAndPath(MOD, path), textureSupplier(path));
+                    output.accept(Identifier.fromNamespaceAndPath(MOD, path), textureSupplier(path));
                 }
             }
         }

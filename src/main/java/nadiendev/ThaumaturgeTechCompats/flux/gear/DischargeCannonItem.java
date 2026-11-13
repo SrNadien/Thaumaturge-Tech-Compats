@@ -9,14 +9,14 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.projectile.ProjectileUtil;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
@@ -26,13 +26,14 @@ import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class DischargeCannonItem extends FluxGearItem {
     public static final String TOOLTIP = "tooltip.thaumaturgetechcompats.discharge_cannon.";
 
     private static final int USE_DURATION = 72_000;
     private static final double TRACER_STEP = 0.75D;
-    private static final DustParticleOptions TRACER = new DustParticleOptions(Vec3.fromRGB24(FluxTier.THAUMIUM.color()).toVector3f(), 1.2F);
+    private static final DustParticleOptions TRACER = new DustParticleOptions(FluxTier.THAUMIUM.color(), 1.2F);
 
     public DischargeCannonItem(Properties properties) {
         super(properties);
@@ -44,19 +45,19 @@ public class DischargeCannonItem extends FluxGearItem {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!GearConfig.cannonEnabled()) {
-            return InteractionResultHolder.pass(stack);
+            return InteractionResult.PASS;
         }
         if (fluxStored(stack) < GearConfig.cannonCost()) {
-            if (!level.isClientSide) {
-                player.displayClientMessage(Component.translatable(MESSAGE_EMPTY).withStyle(ChatFormatting.RED), true);
+            if (!level.isClientSide()) {
+                player.sendOverlayMessage(Component.translatable(MESSAGE_EMPTY).withStyle(ChatFormatting.RED));
             }
-            return InteractionResultHolder.fail(stack);
+            return InteractionResult.FAIL;
         }
         player.startUsingItem(hand);
-        return InteractionResultHolder.consume(stack);
+        return InteractionResult.CONSUME;
     }
 
     @Override
@@ -65,26 +66,27 @@ public class DischargeCannonItem extends FluxGearItem {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.BOW;
+    public ItemUseAnimation getUseAnimation(ItemStack stack) {
+        return ItemUseAnimation.BOW;
     }
 
     @Override
-    public void releaseUsing(ItemStack stack, Level level, LivingEntity entity, int remaining) {
+    public boolean releaseUsing(ItemStack stack, Level level, LivingEntity entity, int remaining) {
         if (!(entity instanceof Player player) || !(level instanceof ServerLevel serverLevel) || !GearConfig.cannonEnabled()) {
-            return;
+            return false;
         }
         if (USE_DURATION - remaining < GearConfig.cannonChargeTicks()) {
-            return;
+            return false;
         }
         long cost = GearConfig.cannonCost();
         if (extractFlux(stack, cost, true) < cost) {
-            player.displayClientMessage(Component.translatable(MESSAGE_EMPTY).withStyle(ChatFormatting.RED), true);
-            return;
+            player.sendOverlayMessage(Component.translatable(MESSAGE_EMPTY).withStyle(ChatFormatting.RED));
+            return false;
         }
         extractFlux(stack, cost, false);
         fire(serverLevel, player);
-        player.getCooldowns().addCooldown(this, GearConfig.cannonCooldown());
+        player.getCooldowns().addCooldown(stack, GearConfig.cannonCooldown());
+        return true;
     }
 
     private static void fire(ServerLevel level, Player player) {
@@ -130,9 +132,9 @@ public class DischargeCannonItem extends FluxGearItem {
     }
 
     @Override
-    protected void appendDetails(List<Component> tooltip) {
-        tooltip.add(Component.translatable(TOOLTIP + "description").withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable(TOOLTIP + "shot", format(GearConfig.cannonCost()), GearConfig.cannonDamage()).withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable(TOOLTIP + "range", GearConfig.cannonRange(), String.format("%.1f", GearConfig.cannonCooldown() / 20.0D)).withStyle(ChatFormatting.GRAY));
+    protected void appendDetails(Consumer<Component> tooltip) {
+        tooltip.accept(Component.translatable(TOOLTIP + "description").withStyle(ChatFormatting.GRAY));
+        tooltip.accept(Component.translatable(TOOLTIP + "shot", format(GearConfig.cannonCost()), GearConfig.cannonDamage()).withStyle(ChatFormatting.GRAY));
+        tooltip.accept(Component.translatable(TOOLTIP + "range", GearConfig.cannonRange(), String.format("%.1f", GearConfig.cannonCooldown() / 20.0D)).withStyle(ChatFormatting.GRAY));
     }
 }

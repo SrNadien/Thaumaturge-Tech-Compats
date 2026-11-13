@@ -7,7 +7,6 @@ import nadiendev.ThaumaturgeTechCompats.compats.voidminers.VoidMinersMagicalInte
 import nadiendev.ThaumaturgeTechCompats.compats.avaritia.machines.AvaritiaMachinesIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.oritech.OritechFeatures;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
-import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedIntegration;
 import nadiendev.ThaumaturgeTechCompats.emc.EmcIntegration;
 import nadiendev.ThaumaturgeTechCompats.essences.EssencesIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.FluxTier;
@@ -78,10 +77,7 @@ public final class CompatToggles {
         }
         define(builder, GearIntegration.SIPHON_TOGGLE, "The Portable Void Siphon. Needs a game restart.");
         define(builder, GearIntegration.CANNON_TOGGLE, "The Discharge Cannon. Needs a game restart.");
-        for (String id : SophisticatedIntegration.toggleIds()) {
-            define(builder, id, "A feature of the Sophisticated Backpacks and Sophisticated Storage compat. Needs a game restart.");
-        }
-        define(builder, EmcIntegration.TOGGLE, "ProjectE integration: EMC for Thaumaturge recipes and base values. Recipes apply when data packs reload; base values need a game restart.");
+        define(builder, EmcIntegration.TOGGLE, "Equivox integration: EMC for Thaumaturge recipes and base values. Recipes apply when data packs reload; base values need a game restart.");
         define(builder, EssencesIntegration.TOGGLE, "The Tech Compats essences (sol, nuclear, cosmic and terminus) on base items, inherited through recipes. Needs a game restart.");
         define(builder, SalisIntegration.TOGGLE, "The Salis Mundus variants made of Avaritia materials. Needs a game restart.");
         for (PlanetaryTier tier : PlanetaryTier.values()) {

@@ -10,7 +10,6 @@ public enum CreativeSection {
     MATRICES(CreativeParent.MAIN, "avaritia_matrices", "Avar. Matrices", "Avar. Matrices"),
     PEARLS(CreativeParent.MAIN, "avaritia_pearls", "Pearls & Cruc.", "Perlas y Cruc."),
     ORITECH(CreativeParent.MAIN, "oritech", "Oritech", "Oritech"),
-    SOPHISTICATED(CreativeParent.MAIN, "sophisticated", "Sophisticated", "Sophisticated"),
     BOTANIA(CreativeParent.MAIN, "botania", "Botania", "Botania"),
     VOID(CreativeParent.MAIN, "void_miners", "Void Miners", "Void Miners"),
     NODES(CreativeParent.MAIN, "nodes", "Nodes & Flux", "Nodos y flujo"),

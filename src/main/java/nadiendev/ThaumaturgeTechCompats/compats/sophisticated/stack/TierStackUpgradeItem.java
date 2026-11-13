@@ -6,11 +6,13 @@ import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.p3pp3rf1y.sophisticatedcore.upgrades.IUpgradeCountLimitConfig;
 import net.p3pp3rf1y.sophisticatedcore.upgrades.stack.StackUpgradeItem;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class TierStackUpgradeItem extends StackUpgradeItem {
     private static final double[] UNIT_VALUES = {1.0E12D, 1.0E9D, 1.0E6D, 1.0E3D};
@@ -27,8 +29,8 @@ public class TierStackUpgradeItem extends StackUpgradeItem {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable(SophisticatedTranslations.STACK_TOOLTIP, compact(getStackSizeMultiplier())).withStyle(ChatFormatting.DARK_GRAY));
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
+        tooltip.accept(Component.translatable(SophisticatedTranslations.STACK_TOOLTIP, compact(getStackSizeMultiplier())).withStyle(ChatFormatting.DARK_GRAY));
     }
 
     private static Component compact(double value) {

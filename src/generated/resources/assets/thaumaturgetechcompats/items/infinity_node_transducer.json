@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "thaumaturgetechcompats:item/infinity_node_transducer",
+    "model": {
+      "type": "thaumaturge:node_stabilizer",
+      "advanced": false,
+      "transducer": true
+    }
+  }
+}

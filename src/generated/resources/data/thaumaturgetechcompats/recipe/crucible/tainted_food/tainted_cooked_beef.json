@@ -16,9 +16,7 @@
       "aspect": "thaumaturge:vitium"
     }
   ],
-  "catalyst": {
-    "item": "minecraft:cooked_beef"
-  },
+  "catalyst": "minecraft:cooked_beef",
   "research": {
     "entry": "thaumaturgetechcompats:tainted_food"
   },

@@ -2,12 +2,8 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "I": {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    "P": {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    }
+    "I": "avaritia:crystal_matrix_ingot",
+    "P": "thaumaturgetechcompats:matrix_plate"
   },
   "pattern": [
     "III",

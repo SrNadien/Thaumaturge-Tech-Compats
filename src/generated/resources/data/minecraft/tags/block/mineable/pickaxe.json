@@ -1,15 +1,136 @@
 {
   "values": [
+    "thaumaturgetechcompats:matrix_smelter",
+    "thaumaturgetechcompats:neutronium_smelter",
+    "thaumaturgetechcompats:infinity_smelter",
+    "thaumaturgetechcompats:matrix_node_stabilizer",
+    "thaumaturgetechcompats:neutronium_node_stabilizer",
+    "thaumaturgetechcompats:infinity_node_stabilizer",
+    "thaumaturgetechcompats:matrix_node_transducer",
+    "thaumaturgetechcompats:neutronium_node_transducer",
+    "thaumaturgetechcompats:infinity_node_transducer",
+    "thaumaturgetechcompats:matrix_alchemical_furnace",
+    "thaumaturgetechcompats:neutronium_alchemical_furnace",
+    "thaumaturgetechcompats:infinity_alchemical_furnace",
+    "thaumaturgetechcompats:thaumium_spreader",
+    "thaumaturgetechcompats:alchemical_brass_spreader",
+    "thaumaturgetechcompats:void_metal_spreader",
+    "thaumaturgetechcompats:matrix_infusion_matrix",
+    "thaumaturgetechcompats:neutronium_infusion_matrix",
+    "thaumaturgetechcompats:infinity_infusion_matrix",
+    "thaumaturgetechcompats:matrix_infusion_cost_stone",
+    "thaumaturgetechcompats:matrix_infusion_speed_stone",
+    "thaumaturgetechcompats:neutronium_infusion_cost_stone",
+    "thaumaturgetechcompats:neutronium_infusion_speed_stone",
+    "thaumaturgetechcompats:infinity_infusion_cost_stone",
+    "thaumaturgetechcompats:infinity_infusion_speed_stone",
+    "thaumaturgetechcompats:matrix_pillar_stone",
+    "thaumaturgetechcompats:matrix_infusion_pillar",
+    "thaumaturgetechcompats:matrix_infusion_pedestal",
+    "thaumaturgetechcompats:neutronium_pillar_stone",
+    "thaumaturgetechcompats:neutronium_infusion_pillar",
+    "thaumaturgetechcompats:neutronium_infusion_pedestal",
+    "thaumaturgetechcompats:infinity_pillar_stone",
+    "thaumaturgetechcompats:infinity_infusion_pillar",
+    "thaumaturgetechcompats:infinity_infusion_pedestal",
+    "thaumaturgetechcompats:thaumium_miner",
+    "thaumaturgetechcompats:alchemical_brass_miner",
+    "thaumaturgetechcompats:void_metal_miner",
+    "thaumaturgetechcompats:thaumium_solar_panel",
+    "thaumaturgetechcompats:alchemical_brass_solar_panel",
+    "thaumaturgetechcompats:void_metal_solar_panel",
+    "thaumaturgetechcompats:thaumium_miner_frame",
+    "thaumaturgetechcompats:alchemical_brass_miner_frame",
+    "thaumaturgetechcompats:void_metal_miner_frame",
+    "thaumaturgetechcompats:thaumium_solar_frame",
+    "thaumaturgetechcompats:alchemical_brass_solar_frame",
+    "thaumaturgetechcompats:void_metal_solar_frame",
+    "thaumaturgetechcompats:thaumium_speed_upgrade",
+    "thaumaturgetechcompats:thaumium_production_upgrade",
+    "thaumaturgetechcompats:thaumium_efficiency_upgrade",
+    "thaumaturgetechcompats:thaumium_solar_generation_upgrade",
+    "thaumaturgetechcompats:thaumium_solar_saving_upgrade",
+    "thaumaturgetechcompats:alchemical_brass_speed_upgrade",
+    "thaumaturgetechcompats:alchemical_brass_production_upgrade",
+    "thaumaturgetechcompats:alchemical_brass_efficiency_upgrade",
+    "thaumaturgetechcompats:alchemical_brass_solar_generation_upgrade",
+    "thaumaturgetechcompats:alchemical_brass_solar_saving_upgrade",
+    "thaumaturgetechcompats:void_metal_speed_upgrade",
+    "thaumaturgetechcompats:void_metal_production_upgrade",
+    "thaumaturgetechcompats:void_metal_efficiency_upgrade",
+    "thaumaturgetechcompats:void_metal_solar_generation_upgrade",
+    "thaumaturgetechcompats:void_metal_solar_saving_upgrade",
+    "thaumaturgetechcompats:thaumium_neutron_collector",
+    "thaumaturgetechcompats:alchemical_brass_neutron_collector",
+    "thaumaturgetechcompats:void_metal_neutron_collector",
+    "thaumaturgetechcompats:thaumium_neutron_compressor",
+    "thaumaturgetechcompats:alchemical_brass_neutron_compressor",
+    "thaumaturgetechcompats:void_metal_neutron_compressor",
+    "thaumaturgetechcompats:thaumium_aura_converter",
+    "thaumaturgetechcompats:alchemical_brass_aura_converter",
+    "thaumaturgetechcompats:void_metal_aura_converter",
+    "thaumaturgetechcompats:thaumium_flux_storage_core",
+    "thaumaturgetechcompats:alchemical_brass_flux_storage_core",
+    "thaumaturgetechcompats:void_metal_flux_storage_core",
+    "thaumaturgetechcompats:thaumium_transmission_link",
+    "thaumaturgetechcompats:alchemical_brass_transmission_link",
+    "thaumaturgetechcompats:void_metal_transmission_link",
+    "thaumaturgetechcompats:rift_extractor",
+    "thaumaturgetechcompats:thaumium_environmental_charger",
+    "thaumaturgetechcompats:alchemical_brass_environmental_charger",
+    "thaumaturgetechcompats:void_metal_environmental_charger",
+    "thaumaturgetechcompats:thaumium_shield_generator",
+    "thaumaturgetechcompats:alchemical_brass_shield_generator",
+    "thaumaturgetechcompats:void_metal_shield_generator",
+    "thaumaturgetechcompats:thaumium_arcane_terraformer",
+    "thaumaturgetechcompats:alchemical_brass_arcane_terraformer",
+    "thaumaturgetechcompats:void_metal_arcane_terraformer",
     {
-      "id": "thaumaturgetechcompats:thaumium_shulker_box",
+      "id": "enderio:thaumium_capacitor_bank",
       "required": false
     },
     {
-      "id": "thaumaturgetechcompats:alchemical_brass_shulker_box",
+      "id": "enderio:alchemical_brass_capacitor_bank",
       "required": false
     },
     {
-      "id": "thaumaturgetechcompats:void_metal_shulker_box",
+      "id": "enderio:void_metal_capacitor_bank",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_brass_speed_addon",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_brass_efficiency_addon",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_brass_capacitor_addon",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_thaumium_speed_addon",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_thaumium_efficiency_addon",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_thaumium_capacitor_addon",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_void_speed_addon",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_void_efficiency_addon",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:oritech_void_capacitor_addon",
       "required": false
     }
   ]

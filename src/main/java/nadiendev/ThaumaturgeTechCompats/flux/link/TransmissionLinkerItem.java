@@ -8,15 +8,16 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 
 import java.util.List;
+import java.util.function.Consumer;
 import java.util.Locale;
 
 public class TransmissionLinkerItem extends Item {
@@ -33,7 +34,7 @@ public class TransmissionLinkerItem extends Item {
             return InteractionResult.PASS;
         }
         if (!(level instanceof ServerLevel server)) {
-            return InteractionResult.sidedSuccess(true);
+            return InteractionResult.SUCCESS;
         }
         ItemStack stack = context.getItemInHand();
         if (!CompatToggles.enabled(link.tier().toggle())) {
@@ -43,20 +44,20 @@ public class TransmissionLinkerItem extends Item {
         } else {
             connect(server, player, stack, link, pos);
         }
-        return InteractionResult.sidedSuccess(false);
+        return InteractionResult.SUCCESS;
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (player.isShiftKeyDown() && stack.has(LinkComponents.SELECTED.get())) {
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 stack.remove(LinkComponents.SELECTED.get());
                 message(player, LinkTranslations.LINKER_CLEARED);
             }
-            return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
-        return InteractionResultHolder.pass(stack);
+        return InteractionResult.PASS;
     }
 
     @Override
@@ -65,13 +66,13 @@ public class TransmissionLinkerItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay display, Consumer<Component> tooltip, TooltipFlag flag) {
         GlobalPos selected = stack.get(LinkComponents.SELECTED.get());
         if (selected != null) {
-            tooltip.add(Component.translatable(LinkTranslations.LINKER_TOOLTIP_SELECTED, selected.pos().toShortString()).withStyle(ChatFormatting.AQUA));
+            tooltip.accept(Component.translatable(LinkTranslations.LINKER_TOOLTIP_SELECTED, selected.pos().toShortString()).withStyle(ChatFormatting.AQUA));
         }
-        tooltip.add(Component.translatable(LinkTranslations.LINKER_TOOLTIP_USE).withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable(LinkTranslations.LINKER_TOOLTIP_SNEAK).withStyle(ChatFormatting.DARK_GRAY));
+        tooltip.accept(Component.translatable(LinkTranslations.LINKER_TOOLTIP_USE).withStyle(ChatFormatting.GRAY));
+        tooltip.accept(Component.translatable(LinkTranslations.LINKER_TOOLTIP_SNEAK).withStyle(ChatFormatting.DARK_GRAY));
     }
 
     private static void connect(ServerLevel level, Player player, ItemStack stack, TransmissionLinkBlockEntity link, BlockPos pos) {
@@ -122,6 +123,6 @@ public class TransmissionLinkerItem extends Item {
     }
 
     private static void message(Player player, String key, Object... arguments) {
-        player.displayClientMessage(Component.translatable(key, arguments), true);
+        player.sendOverlayMessage(Component.translatable(key, arguments));
     }
 }

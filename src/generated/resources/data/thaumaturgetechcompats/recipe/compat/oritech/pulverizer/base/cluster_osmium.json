@@ -34,9 +34,7 @@
   ],
   "type": "oritech:pulverizer",
   "ingredients": [
-    {
-      "item": "thaumaturgetechcompats:osmium_cluster"
-    }
+    "thaumaturgetechcompats:osmium_cluster"
   ],
   "results": [
     {

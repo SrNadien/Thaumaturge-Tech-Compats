@@ -16,9 +16,7 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "I": {
-      "tag": "c:ingots/conductive_alloy"
-    }
+    "I": "#c:ingots/conductive_alloy"
   },
   "pattern": [
     "  I",

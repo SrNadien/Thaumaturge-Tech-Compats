@@ -12,7 +12,6 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -34,7 +33,7 @@ public final class SmelterIntegration {
 
     static {
         for (SmelterTier tier : SmelterTier.values()) {
-            DeferredBlock<BlockSmelter> block = BLOCKS.registerBlock(tier.blockName(), BlockSmelter::new, BlockBehaviour.Properties.of()
+            DeferredBlock<BlockSmelter> block = BLOCKS.registerBlock(tier.blockName(), BlockSmelter::new, () -> BlockBehaviour.Properties.of()
                     .mapColor(MapColor.METAL)
                     .strength(tier.hardness(), tier.resistance())
                     .sound(SoundType.METAL)
@@ -76,13 +75,12 @@ public final class SmelterIntegration {
     public static void addProviders(GatherDataEvent event) {
         var generator = event.getGenerator();
         var output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookup = event.getLookupProvider();
 
-        generator.addProvider(event.includeClient(), new SmelterBlockStates(output, helper));
-        generator.addProvider(event.includeClient(), new SmelterItemModels(output, helper));
-        generator.addProvider(event.includeServer(), new SmelterStatsProvider(output, lookup));
-        generator.addProvider(event.includeServer(), new SmelterContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new SmelterBlockStates(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new SmelterItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new SmelterStatsProvider(output, lookup));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new SmelterContent(output));
     }
 
     private static void addBlocksToBlockEntity(BlockEntityTypeAddBlocksEvent event) {

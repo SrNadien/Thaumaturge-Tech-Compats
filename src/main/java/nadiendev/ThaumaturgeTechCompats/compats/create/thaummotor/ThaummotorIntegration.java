@@ -50,8 +50,8 @@ public final class ThaummotorIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new ThaummotorAssets(output));
-        generator.addProvider(event.includeServer(), new ThaummotorContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new ThaummotorAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new ThaummotorContent(output));
     }
 
     private static void setup(FMLCommonSetupEvent event) {

@@ -3,9 +3,9 @@ package nadiendev.ThaumaturgeTechCompats.ponder.scene;
 import nadiendev.ThaumaturgeTechCompats.ponder.PonderBlocks;
 import nadiendev.ThaumaturgeTechCompats.ponder.PonderScripts;
 import nadiendev.ThaumaturgeTechCompats.ponder.StructureSketch;
-import net.createmod.ponder.api.PonderPalette;
-import net.createmod.ponder.api.scene.SceneBuilder;
-import net.createmod.ponder.api.scene.SceneBuildingUtil;
+import net.createmod.ponder.api.client.PonderPalette;
+import net.createmod.ponder.api.client.scene.SceneBuilder;
+import net.createmod.ponder.api.client.scene.SceneBuildingUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 

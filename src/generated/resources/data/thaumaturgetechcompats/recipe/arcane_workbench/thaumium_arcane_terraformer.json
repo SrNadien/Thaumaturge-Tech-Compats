@@ -17,21 +17,11 @@
     }
   ],
   "key": {
-    "g": {
-      "item": "minecraft:grass_block"
-    },
-    "m": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "p": {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    "s": {
-      "item": "minecraft:sand"
-    },
-    "v": {
-      "item": "thaumaturge:vis_resonator"
-    }
+    "g": "minecraft:grass_block",
+    "m": "thaumaturge:mechanism_simple",
+    "p": "thaumaturge:plate_thaumium",
+    "s": "minecraft:sand",
+    "v": "thaumaturge:vis_resonator"
   },
   "pattern": [
     "pgp",

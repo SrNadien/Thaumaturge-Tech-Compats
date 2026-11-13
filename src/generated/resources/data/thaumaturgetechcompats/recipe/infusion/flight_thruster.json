@@ -32,34 +32,16 @@
       "aspect": "thaumaturge:vacuos"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:thaumium_chest"
-  },
+  "catalyst": "thaumaturge:thaumium_chest",
   "components": [
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    {
-      "item": "thaumaturge:void_seed"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    }
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:mechanism_complex",
+    "thaumaturge:mechanism_complex",
+    "thaumaturge:void_seed",
+    "thaumaturge:vis_resonator",
+    "thaumaturge:vis_resonator"
   ],
   "instability": 4,
   "research": {

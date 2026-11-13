@@ -20,15 +20,9 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "F": {
-      "item": "voidminersremastered:frame_base"
-    },
-    "O": {
-      "item": "minecraft:obsidian"
-    },
-    "P": {
-      "item": "thaumaturge:plate_thaumium"
-    }
+    "F": "voidminersremastered:frame_base",
+    "O": "minecraft:obsidian",
+    "P": "thaumaturge:plate_thaumium"
   },
   "pattern": [
     "POP",

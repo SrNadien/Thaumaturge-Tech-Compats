@@ -27,9 +27,7 @@
   ],
   "type": "oritech:pulverizer",
   "ingredients": [
-    {
-      "item": "thaumaturgetechcompats:uranium_cluster"
-    }
+    "thaumaturgetechcompats:uranium_cluster"
   ],
   "results": [
     {

@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.planetary.pearl;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public enum PlanetBody {
     MERCURY("mercury", "Mercury", "Mercurio", 0.30F, 1.7F, 20.0D, false, 2.0F),
@@ -78,7 +78,7 @@ public enum PlanetBody {
         return "planet." + ThaumaturgeTechCompats.MOD_ID + "." + id;
     }
 
-    public ResourceLocation texture() {
-        return ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "textures/entity/planet/" + ordinal() + ".png");
+    public Identifier texture() {
+        return Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "textures/entity/planet/" + ordinal() + ".png");
     }
 }

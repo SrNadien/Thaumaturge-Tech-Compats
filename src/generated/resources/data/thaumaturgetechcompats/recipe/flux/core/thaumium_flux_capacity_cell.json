@@ -21,15 +21,9 @@
     }
   ],
   "key": {
-    "a": {
-      "item": "thaumaturge:alumentum"
-    },
-    "j": {
-      "item": "thaumaturge:jar_normal"
-    },
-    "p": {
-      "item": "thaumaturge:plate_thaumium"
-    }
+    "a": "thaumaturge:alumentum",
+    "j": "thaumaturge:jar_normal",
+    "p": "thaumaturge:plate_thaumium"
   },
   "pattern": [
     "pap",

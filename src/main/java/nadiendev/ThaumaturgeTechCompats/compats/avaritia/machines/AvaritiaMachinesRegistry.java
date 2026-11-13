@@ -33,8 +33,8 @@ public final class AvaritiaMachinesRegistry {
                     tier.compressorName(), properties -> new TieredCompressorBlock(tier));
             COLLECTORS.put(tier, collector);
             COMPRESSORS.put(tier, compressor);
-            COLLECTOR_ITEMS.put(tier, ITEMS.registerItem(tier.collectorName(), properties -> new BlockItem(collector.get(), properties), itemProperties(tier)));
-            COMPRESSOR_ITEMS.put(tier, ITEMS.registerItem(tier.compressorName(), properties -> new BlockItem(compressor.get(), properties), itemProperties(tier)));
+            COLLECTOR_ITEMS.put(tier, ITEMS.registerItem(tier.collectorName(), properties -> new BlockItem(collector.get(), properties.useBlockDescriptionPrefix()), () -> itemProperties(tier)));
+            COMPRESSOR_ITEMS.put(tier, ITEMS.registerItem(tier.compressorName(), properties -> new BlockItem(compressor.get(), properties.useBlockDescriptionPrefix()), () -> itemProperties(tier)));
         }
         BLOCKS.register(modBus);
         ITEMS.register(modBus);

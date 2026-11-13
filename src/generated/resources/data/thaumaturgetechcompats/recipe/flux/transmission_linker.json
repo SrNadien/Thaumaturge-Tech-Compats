@@ -17,15 +17,9 @@
     }
   ],
   "key": {
-    "m": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "p": {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    "q": {
-      "item": "thaumaturge:quicksilver"
-    }
+    "m": "thaumaturge:mechanism_simple",
+    "p": "thaumaturge:plate_thaumium",
+    "q": "thaumaturge:quicksilver"
   },
   "pattern": [
     "q",

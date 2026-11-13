@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:motus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:pulsating_alloy_wand_rod"
-  },
+  "catalyst": "thaumaturgetechcompats:pulsating_alloy_wand_rod",
   "components": [
-    {
-      "tag": "c:ingots/energetic_alloy"
-    },
-    {
-      "tag": "c:ingots/energetic_alloy"
-    },
-    {
-      "tag": "c:ingots/energetic_alloy"
-    },
-    {
-      "tag": "c:ingots/energetic_alloy"
-    }
+    "#c:ingots/energetic_alloy",
+    "#c:ingots/energetic_alloy",
+    "#c:ingots/energetic_alloy",
+    "#c:ingots/energetic_alloy"
   ],
   "instability": 2,
   "research": {

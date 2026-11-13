@@ -14,7 +14,6 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.LivingEntity;
@@ -287,27 +286,27 @@ public class MagicalInfinityDrillItem extends Item {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!MagicalInfinityDrillConfig.enabled()) {
-            return InteractionResultHolder.pass(stack);
+            return InteractionResult.PASS;
         }
         if (player.isShiftKeyDown()) {
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 cycleArea(stack, player);
             }
-            return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
         BlockHitResult hit = getPlayerPOVHitResult(level, player, ClipContext.Fluid.SOURCE_ONLY);
         if (hit.getType() == HitResult.Type.BLOCK && scoop(level, player, stack, hit.getBlockPos())) {
-            return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             boolean charging = !isCharging(stack);
             stack.set(MagicalInfinityDrillRegistry.CHARGING.get(), charging);
-            player.displayClientMessage(Component.translatable(MESSAGE + (charging ? "charging_on" : "charging_off")), true);
+            player.sendOverlayMessage(Component.translatable(MESSAGE + (charging ? "charging_on" : "charging_off")));
         }
-        return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
+        return InteractionResult.SUCCESS;
     }
 
     private static void cycleArea(ItemStack stack, Player player) {
@@ -315,7 +314,7 @@ public class MagicalInfinityDrillItem extends Item {
         DrillTier current = selectedTier(stack);
         DrillTier next = current.ordinal() == 0 ? unlocked : DrillTier.byOrdinal(current.ordinal() - 1);
         stack.set(MagicalInfinityDrillRegistry.SELECTED_LEVEL.get(), next.ordinal());
-        player.displayClientMessage(Component.translatable(MESSAGE + "area", formatArea(next)), true);
+        player.sendOverlayMessage(Component.translatable(MESSAGE + "area", formatArea(next)));
     }
 
     private static boolean scoop(Level level, Player player, ItemStack stack, BlockPos pos) {
@@ -328,7 +327,7 @@ public class MagicalInfinityDrillItem extends Item {
         if (capacity - liquid(stack) < amount) {
             return false;
         }
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return true;
         }
         BlockState state = level.getBlockState(pos);
@@ -348,7 +347,7 @@ public class MagicalInfinityDrillItem extends Item {
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean selected) {
-        if (level.isClientSide || !(entity instanceof Player player) || !MagicalInfinityDrillConfig.enabled() || !isCharging(stack)) {
+        if (level.isClientSide() || !(entity instanceof Player player) || !MagicalInfinityDrillConfig.enabled() || !isCharging(stack)) {
             return;
         }
         if (level.getGameTime() % MagicalInfinityDrillConfig.rechargeInterval() != 0 || RechargeAccess.roomFor(stack) <= 0) {

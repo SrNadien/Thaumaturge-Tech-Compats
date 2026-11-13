@@ -52,7 +52,7 @@ public final class IndustrialForegoingIntegration {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
 
-        generator.addProvider(event.includeClient(), new IndustrialForegoingAssets(output));
-        generator.addProvider(event.includeServer(), new IndustrialForegoingContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new IndustrialForegoingAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new IndustrialForegoingContent(output));
     }
 }

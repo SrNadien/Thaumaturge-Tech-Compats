@@ -18,22 +18,12 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:matrix_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:matrix_wand_cap",
   "components": [
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    }
+    "avaritia:neutron_ingot",
+    "thaumaturgetechcompats:neutronium_plate",
+    "avaritia:neutron_ingot",
+    "thaumaturgetechcompats:neutronium_plate"
   ],
   "instability": 6,
   "research": {

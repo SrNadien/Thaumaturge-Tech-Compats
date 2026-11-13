@@ -8,7 +8,7 @@ import net.minecraft.core.dispenser.DispenseItemBehavior;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -67,7 +67,7 @@ public final class BackpackTierRegistry {
         modBus.addListener(BackpackTierRegistry::addBlockEntityBlocks);
         modBus.addListener(BackpackTierRegistry::registerCapabilities);
         modBus.addListener(BackpackTierRegistry::commonSetup);
-        if (FMLEnvironment.dist.isClient()) {
+        if (FMLEnvironment.getDist().isClient()) {
             BackpackTierClient.register(modBus);
         }
     }
@@ -94,7 +94,7 @@ public final class BackpackTierRegistry {
 
     private static void addBlockEntityBlocks(BlockEntityTypeAddBlocksEvent event) {
         ResourceKey<BlockEntityType<?>> key = ResourceKey.create(Registries.BLOCK_ENTITY_TYPE,
-                ResourceLocation.fromNamespaceAndPath(BACKPACKS_MOD, "backpack"));
+                Identifier.fromNamespaceAndPath(BACKPACKS_MOD, "backpack"));
         event.modify(key, blocks().toArray(new Block[0]));
     }
 
@@ -118,7 +118,7 @@ public final class BackpackTierRegistry {
     }
 
     private static void commonSetup(FMLCommonSetupEvent event) {
-        ResourceLocation netherite = ResourceLocation.fromNamespaceAndPath(BACKPACKS_MOD, "netherite_backpack");
+        Identifier netherite = Identifier.fromNamespaceAndPath(BACKPACKS_MOD, "netherite_backpack");
         DispenseItemBehavior delegate = new DispenseItemBehavior() {
             @Override
             public ItemStack dispense(BlockSource source, ItemStack stack) {

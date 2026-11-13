@@ -88,7 +88,7 @@ public class MagicalLaserDrillTile extends IndustrialAreaWorkingTile<MagicalLase
     }
 
     private void refill(int units) {
-        if (level == null || level.isClientSide || units <= 0) {
+        if (level == null || level.isClientSide() || units <= 0) {
             return;
         }
         VisStorageComponent<MagicalLaserDrillTile> store = vis();

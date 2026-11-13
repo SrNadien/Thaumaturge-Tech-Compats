@@ -19,9 +19,7 @@
   ],
   "type": "oritech:pulverizer",
   "ingredients": [
-    {
-      "item": "thaumaturge:ore_quartz"
-    }
+    "thaumaturge:ore_quartz"
   ],
   "results": [
     {

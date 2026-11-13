@@ -18,22 +18,12 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:focus_3"
-  },
+  "catalyst": "thaumaturge:focus_3",
   "components": [
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    }
+    "avaritia:blaze_cube",
+    "thaumaturgetechcompats:matrix_plate",
+    "avaritia:blaze_cube",
+    "thaumaturgetechcompats:matrix_plate"
   ],
   "instability": 10,
   "research": {

@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:praemunio"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:blaze_cube_salis_mundus"
-  },
+  "catalyst": "thaumaturgetechcompats:blaze_cube_salis_mundus",
   "components": [
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    }
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot",
+    "avaritia:crystal_matrix_ingot"
   ],
   "instability": 6,
   "research": {

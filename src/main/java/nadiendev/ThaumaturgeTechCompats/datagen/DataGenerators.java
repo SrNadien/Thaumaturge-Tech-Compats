@@ -23,7 +23,6 @@ import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftIntegration
 import nadiendev.ThaumaturgeTechCompats.compats.tags.TagAspectsIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterIntegration;
-import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedIntegration;
 import nadiendev.ThaumaturgeTechCompats.emc.EmcIntegration;
 import nadiendev.ThaumaturgeTechCompats.essences.EssencesIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.charger.ChargerIntegration;
@@ -47,28 +46,35 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
-@EventBusSubscriber(modid = ThaumaturgeTechCompats.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = ThaumaturgeTechCompats.MOD_ID)
 public final class DataGenerators {
     private DataGenerators() {
     }
 
     @SubscribeEvent
-    public static void gatherData(GatherDataEvent event) {
+    public static void gatherClientData(GatherDataEvent.Client event) {
+        gatherData(event);
+    }
+
+    @SubscribeEvent
+    public static void gatherServerData(GatherDataEvent.Server event) {
+        gatherData(event);
+    }
+
+    private static void gatherData(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new HaloItemModelProvider(output));
-        generator.addProvider(event.includeClient(), new PonderSchematicProvider(output));
-        generator.addProvider(event.includeClient(), new ModLanguageProvider(output, "en_us", ModTranslations::english));
-        generator.addProvider(event.includeClient(), new ModLanguageProvider(output, "es_es", ModTranslations::spanish));
-        generator.addProvider(event.includeClient(), new ModLanguageProvider(output, "es_ar", ModTranslations::spanish));
-        generator.addProvider(event.includeClient(), new ModLanguageProvider(output, "es_mx", ModTranslations::spanish));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new HaloItemModelProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new PonderSchematicProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new ModLanguageProvider(output, "en_us", ModTranslations::english));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new ModLanguageProvider(output, "es_es", ModTranslations::spanish));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new ModLanguageProvider(output, "es_ar", ModTranslations::spanish));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new ModLanguageProvider(output, "es_mx", ModTranslations::spanish));
 
-        generator.addProvider(event.includeServer(), new ThaumaturgeContentProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new ThaumaturgeContentProvider(output));
 
         JarIntegration.addProviders(event);
         NodePowerIntegration.addProviders(event);
@@ -89,7 +95,7 @@ public final class DataGenerators {
         BrainChargerIntegration.addProviders(event);
         CreativeIntegration.addProviders(event);
         SingularityIntegration.addProviders(event);
-        generator.addProvider(event.includeServer(), new TechCategory(generator.getPackOutput()));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new TechCategory(generator.getPackOutput()));
         OritechIntegration.addProviders(event);
         PurityIntegration.addProviders(event);
         ForceCraftIntegration.addProviders(event);
@@ -106,6 +112,5 @@ public final class DataGenerators {
         CrucifixIntegration.addProviders(event);
         EssencesIntegration.addProviders(event);
         EmcIntegration.addProviders(event);
-        SophisticatedIntegration.addProviders(event);
     }
 }

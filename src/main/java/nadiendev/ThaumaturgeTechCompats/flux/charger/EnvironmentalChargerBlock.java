@@ -68,7 +68,7 @@ public class EnvironmentalChargerBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return null;
         }
         return createTickerHelper(type, ChargerRegistry.ENTITY.get(), EnvironmentalChargerBlockEntity::tick);
@@ -77,13 +77,13 @@ public class EnvironmentalChargerBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (level.getBlockEntity(pos) instanceof EnvironmentalChargerBlockEntity charger) {
-            if (!level.isClientSide) {
+            if (!level.isClientSide()) {
                 NumberFormat format = NumberFormat.getIntegerInstance();
-                player.displayClientMessage(Component.translatable(MESSAGE + "status", getName(), Component.translatable(MESSAGE + "status." + charger.status(level).id())), false);
-                player.displayClientMessage(Component.translatable(MESSAGE + "flux", format.format(charger.storage().stored()), format.format(charger.storage().capacity())), false);
-                player.displayClientMessage(Component.translatable(MESSAGE + "area", FluxConfig.chargerRadius(tier), format.format(FluxConfig.chargerRate(tier))), false);
+                player.sendSystemMessage(Component.translatable(MESSAGE + "status", getName(), Component.translatable(MESSAGE + "status." + charger.status(level).id())));
+                player.sendSystemMessage(Component.translatable(MESSAGE + "flux", format.format(charger.storage().stored()), format.format(charger.storage().capacity())));
+                player.sendSystemMessage(Component.translatable(MESSAGE + "area", FluxConfig.chargerRadius(tier), format.format(FluxConfig.chargerRate(tier))));
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }
@@ -93,7 +93,7 @@ public class EnvironmentalChargerBlock extends BaseEntityBlock {
         if (!state.getValue(ACTIVE) || !ChargerConfig.particles()) {
             return;
         }
-        DustParticleOptions dust = new DustParticleOptions(Vec3.fromRGB24(tier.color()).toVector3f(), 0.8F);
+        DustParticleOptions dust = new DustParticleOptions(tier.color(), 0.8F);
         for (int i = 0; i < 2; i++) {
             double x = pos.getX() + 0.5D + (random.nextDouble() - 0.5D) * 2.2D;
             double y = pos.getY() + 0.5D + (random.nextDouble() - 0.5D) * 2.2D;

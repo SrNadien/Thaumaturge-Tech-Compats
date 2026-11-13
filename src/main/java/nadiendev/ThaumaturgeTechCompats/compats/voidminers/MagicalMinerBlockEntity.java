@@ -5,7 +5,7 @@ import nadiendev.voidminersremastered.common.energy.MinerEnergyStorage;
 import nadiendev.voidminersremastered.world.block.entity.MinerControllerBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 
@@ -30,7 +30,7 @@ public class MagicalMinerBlockEntity extends MinerControllerBE {
     }
 
     @Override
-    public void tick(Level level, BlockPos pos, BlockState state, ResourceLocation structure, String name) {
+    public void tick(Level level, BlockPos pos, BlockState state, Identifier structure, String name) {
         MinerEnergyStorage internal = super.getEnergyStorage();
         if (internal != null) {
             internal.setEnergy(0);

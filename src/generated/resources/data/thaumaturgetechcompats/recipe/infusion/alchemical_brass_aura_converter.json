@@ -28,28 +28,14 @@
       "aspect": "thaumaturge:auram"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_aura_converter"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_aura_converter",
   "components": [
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    }
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:mechanism_simple",
+    "thaumaturge:vis_resonator"
   ],
   "instability": 3,
   "research": {

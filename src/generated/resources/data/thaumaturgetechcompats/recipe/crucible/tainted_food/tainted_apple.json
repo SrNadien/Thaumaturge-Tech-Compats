@@ -16,9 +16,7 @@
       "aspect": "thaumaturge:vitium"
     }
   ],
-  "catalyst": {
-    "item": "minecraft:apple"
-  },
+  "catalyst": "minecraft:apple",
   "research": {
     "entry": "thaumaturgetechcompats:tainted_food"
   },

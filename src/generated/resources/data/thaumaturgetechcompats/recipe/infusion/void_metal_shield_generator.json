@@ -32,34 +32,16 @@
       "aspect": "thaumaturge:machina"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_shield_generator"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_shield_generator",
   "components": [
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "thaumaturge:mirrored_glass"
-    }
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:mechanism_complex",
+    "thaumaturge:vis_resonator",
+    "thaumaturge:vis_resonator",
+    "thaumaturge:mirrored_glass"
   ],
   "instability": 4,
   "research": {

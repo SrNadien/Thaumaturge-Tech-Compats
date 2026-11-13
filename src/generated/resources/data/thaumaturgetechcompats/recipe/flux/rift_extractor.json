@@ -28,28 +28,14 @@
       "aspect": "thaumaturge:praemunio"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:flux_jar"
-  },
+  "catalyst": "thaumaturgetechcompats:flux_jar",
   "components": [
-    {
-      "item": "thaumaturge:void_seed"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    }
+    "thaumaturge:void_seed",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:mechanism_complex"
   ],
   "instability": 4,
   "research": {

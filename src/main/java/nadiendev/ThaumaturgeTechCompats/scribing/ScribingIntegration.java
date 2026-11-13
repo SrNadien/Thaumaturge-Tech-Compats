@@ -6,7 +6,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 public final class ScribingIntegration {
@@ -27,9 +26,8 @@ public final class ScribingIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new ScribingItemModels(output, helper));
-        generator.addProvider(event.includeServer(), new ScribingDataProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new ScribingItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new ScribingDataProvider(output));
     }
 }

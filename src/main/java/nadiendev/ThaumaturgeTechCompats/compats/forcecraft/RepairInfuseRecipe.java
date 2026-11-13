@@ -1,29 +1,50 @@
 package nadiendev.ThaumaturgeTechCompats.compats.forcecraft;
 
-import com.mrbysco.forcecraft.blockentities.InfuserBlockEntity;
-import com.mrbysco.forcecraft.blockentities.InfuserModifierType;
-import com.mrbysco.forcecraft.items.infuser.UpgradeBookTier;
+import com.mojang.serialization.MapCodec;
+import com.mrbysco.forcecraft.blockentity.infuser.InfuserUpgrade;
+import com.mrbysco.forcecraft.upgrade.UpgradeBookData;
+import com.mrbysco.forcecraft.upgrade.UpgradeBookTier;
 import com.mrbysco.forcecraft.recipe.InfuseRecipe;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.item.crafting.RecipeInput;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 
+import java.util.Optional;
+
 public class RepairInfuseRecipe extends InfuseRecipe {
+    private static final InfuserUpgrade MARK = new InfuserUpgrade() {
+        @Override
+        public MapCodec<? extends InfuserUpgrade> codec() {
+            return MapCodec.unit(this);
+        }
+
+        @Override
+        public boolean apply(ItemStack stack, UpgradeBookData data) {
+            return false;
+        }
+
+        @Override
+        public int levelCap(ItemStack stack) {
+            return 0;
+        }
+    };
+
     public RepairInfuseRecipe(Ingredient center, Ingredient input, UpgradeBookTier tier, int time) {
-        super(center, input, InfuserModifierType.ITEM, tier, ItemStack.EMPTY, time);
+        super(center, input, MARK, tier, Optional.empty(), 0, time, "");
     }
 
     @Override
     public boolean matchesTool(ItemStack toolStack, boolean ignoreInfused) {
-        return this.center.test(toolStack) && !ForceCraftRepair.isMarked(toolStack);
+        return getCenter().test(toolStack) && !ForceCraftRepair.isMarked(toolStack);
     }
 
     @Override
-    public boolean matchesModifier(RecipeInput inv, ItemStack modifier, boolean ignoreInfused) {
-        boolean matched = super.matchesModifier(inv, modifier, ignoreInfused);
+    public boolean matchesModifier(ItemStack tool, ItemStack modifier, UpgradeBookData data, boolean ignoreInfused) {
+        boolean matched = super.matchesModifier(tool, modifier, data, ignoreInfused);
         if (matched && ignoreInfused) {
-            ForceCraftRepair.mark(inv.getItem(InfuserBlockEntity.SLOT_TOOL));
+            ForceCraftRepair.mark(tool);
         }
         return matched;
     }
@@ -34,7 +55,7 @@ public class RepairInfuseRecipe extends InfuseRecipe {
     }
 
     @Override
-    public RecipeSerializer<?> getSerializer() {
+    public RecipeSerializer<? extends Recipe<RecipeInput>> getSerializer() {
         return ForceCraftRegistry.REPAIR_SERIALIZER.get();
     }
 }

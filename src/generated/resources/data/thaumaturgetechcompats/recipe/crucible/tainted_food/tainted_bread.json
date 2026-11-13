@@ -16,9 +16,7 @@
       "aspect": "thaumaturge:vitium"
     }
   ],
-  "catalyst": {
-    "item": "minecraft:bread"
-  },
+  "catalyst": "minecraft:bread",
   "research": {
     "entry": "thaumaturgetechcompats:tainted_food"
   },

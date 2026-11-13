@@ -15,9 +15,9 @@ public class InfinityRodUpdate implements IWandRodOnUpdate {
         if (!ThaumaturgeTechCompatsConfig.INFINITY_ROD_REFILLS_VIS.get()) {
             return;
         }
-        int max = WandVisHelper.getMaxVis(stack);
+        int max = WandVisHelper.capacityOf(stack);
         for (ResourceKey<IAspect> primal : TTAspects.PRIMALS) {
-            if (WandVisHelper.getVis(stack, primal) < max) {
+            if (WandVisHelper.storedIn(stack, primal) < max) {
                 WandVisHelper.fill(stack);
                 return;
             }

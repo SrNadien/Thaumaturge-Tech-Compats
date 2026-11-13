@@ -25,7 +25,7 @@ public final class CreateCasings {
 
     static {
         for (CasingTier tier : CasingTier.values()) {
-            DeferredBlock<Block> block = BLOCKS.registerBlock(tier.blockName(), Block::new, BlockBehaviour.Properties.of()
+            DeferredBlock<Block> block = BLOCKS.registerBlock(tier.blockName(), Block::new, () -> BlockBehaviour.Properties.of()
                     .mapColor(color(tier))
                     .strength(3.5F, 6.0F)
                     .sound(SoundType.METAL)

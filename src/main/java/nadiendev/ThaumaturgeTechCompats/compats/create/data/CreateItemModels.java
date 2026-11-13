@@ -4,7 +4,6 @@ import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.create.seal.CreateSeals;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 public class CreateItemModels extends ItemModelProvider {
     public CreateItemModels(PackOutput output, ExistingFileHelper helper) {

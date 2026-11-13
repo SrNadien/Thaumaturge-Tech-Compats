@@ -11,7 +11,7 @@ import net.minecraft.network.chat.Style;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
@@ -70,16 +70,16 @@ public class TransmissionLinkBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return null;
         }
         return createTickerHelper(type, LinkRegistry.LINK_ENTITY.get(), TransmissionLinkBlockEntity::tick);
     }
 
     @Override
-    protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
+    protected InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hit) {
         if (stack.getItem() instanceof TransmissionLinkerItem) {
-            return ItemInteractionResult.SKIP_DEFAULT_BLOCK_INTERACTION;
+            return InteractionResult.PASS;
         }
         return super.useItemOn(stack, state, level, pos, player, hand, hit);
     }
@@ -90,36 +90,28 @@ public class TransmissionLinkBlock extends BaseEntityBlock {
             if (level instanceof ServerLevel server) {
                 report(server, player, link);
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }
 
-    @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (!state.is(newState.getBlock()) && !level.isClientSide && level.getBlockEntity(pos) instanceof TransmissionLinkBlockEntity link) {
-            link.breakLink();
-        }
-        super.onRemove(state, level, pos, newState, movedByPiston);
-    }
-
     private void report(ServerLevel level, Player player, TransmissionLinkBlockEntity link) {
         TransmissionLinkBlockEntity.Status status = link.status(level);
-        player.displayClientMessage(getName().withStyle(Style.EMPTY.withColor(tier.color())), false);
-        player.displayClientMessage(Component.translatable(LinkTranslations.LINK_STATUS,
-                Component.translatable(LinkTranslations.status(status)).withStyle(statusColor(status))).withStyle(ChatFormatting.GRAY), false);
+        player.sendSystemMessage(getName().withStyle(Style.EMPTY.withColor(tier.color())));
+        player.sendSystemMessage(Component.translatable(LinkTranslations.LINK_STATUS,
+                Component.translatable(LinkTranslations.status(status)).withStyle(statusColor(status))).withStyle(ChatFormatting.GRAY));
         TransmissionLinkBlockEntity other = link.partnerEntity(level);
         if (link.partner() != null) {
             double distance = other == null ? Math.sqrt(link.getBlockPos().distSqr(link.partner())) : Math.sqrt(link.getBlockPos().distSqr(other.getBlockPos()));
             int range = other == null ? FluxConfig.linkRange(tier) : link.range(other);
-            player.displayClientMessage(Component.translatable(LinkTranslations.LINK_PARTNER,
-                    link.partner().toShortString(), String.format(Locale.ROOT, "%.1f", distance), range).withStyle(ChatFormatting.GRAY), false);
+            player.sendSystemMessage(Component.translatable(LinkTranslations.LINK_PARTNER,
+                    link.partner().toShortString(), String.format(Locale.ROOT, "%.1f", distance), range).withStyle(ChatFormatting.GRAY));
         }
-        player.displayClientMessage(Component.translatable(LinkTranslations.LINK_FLUX,
+        player.sendSystemMessage(Component.translatable(LinkTranslations.LINK_FLUX,
                 String.format(Locale.ROOT, "%,d", link.storage().stored()),
-                String.format(Locale.ROOT, "%,d", link.storage().capacity())).withStyle(ChatFormatting.GRAY), false);
-        player.displayClientMessage(Component.translatable(LinkTranslations.LINK_RATE,
-                String.format(Locale.ROOT, "%,d", FluxConfig.linkRate(tier))).withStyle(ChatFormatting.GRAY), false);
+                String.format(Locale.ROOT, "%,d", link.storage().capacity())).withStyle(ChatFormatting.GRAY));
+        player.sendSystemMessage(Component.translatable(LinkTranslations.LINK_RATE,
+                String.format(Locale.ROOT, "%,d", FluxConfig.linkRate(tier))).withStyle(ChatFormatting.GRAY));
     }
 
     private static ChatFormatting statusColor(TransmissionLinkBlockEntity.Status status) {

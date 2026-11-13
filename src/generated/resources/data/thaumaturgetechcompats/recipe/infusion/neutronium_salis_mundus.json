@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:perditio"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:matrix_salis_mundus"
-  },
+  "catalyst": "thaumaturgetechcompats:matrix_salis_mundus",
   "components": [
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    }
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot"
   ],
   "instability": 8,
   "research": {

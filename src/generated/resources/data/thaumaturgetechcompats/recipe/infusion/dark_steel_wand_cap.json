@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:energetic_alloy_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:energetic_alloy_wand_cap",
   "components": [
-    {
-      "tag": "c:ingots/dark_steel"
-    },
-    {
-      "tag": "c:ingots/dark_steel"
-    },
-    {
-      "tag": "c:ingots/dark_steel"
-    },
-    {
-      "tag": "c:ingots/dark_steel"
-    }
+    "#c:ingots/dark_steel",
+    "#c:ingots/dark_steel",
+    "#c:ingots/dark_steel",
+    "#c:ingots/dark_steel"
   ],
   "instability": 3,
   "research": {

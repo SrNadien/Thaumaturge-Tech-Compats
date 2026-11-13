@@ -29,9 +29,7 @@
   ],
   "type": "oritech:grinder",
   "ingredients": [
-    {
-      "tag": "c:ores/cinnabar"
-    }
+    "#c:ores/cinnabar"
   ],
   "results": [
     {

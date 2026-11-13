@@ -21,21 +21,11 @@
     }
   ],
   "key": {
-    "B": {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    "C": {
-      "tag": "c:ingots/copper"
-    },
-    "M": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "S": {
-      "tag": "c:dusts/redstone"
-    },
-    "V": {
-      "item": "thaumaturge:vis_resonator"
-    }
+    "B": "thaumaturge:plate_thaumium",
+    "C": "#c:ingots/copper",
+    "M": "thaumaturge:mechanism_simple",
+    "S": "#c:dusts/redstone",
+    "V": "thaumaturge:vis_resonator"
   },
   "pattern": [
     "BSB",

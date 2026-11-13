@@ -19,9 +19,7 @@
   ],
   "type": "oritech:deep_drill",
   "ingredients": [
-    {
-      "item": "thaumaturgetechcompats:resource_node_quartz"
-    }
+    "thaumaturgetechcompats:resource_node_quartz"
   ],
   "results": [
     {

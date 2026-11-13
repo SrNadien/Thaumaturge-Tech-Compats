@@ -25,18 +25,10 @@
     }
   ],
   "key": {
-    "c": {
-      "item": "oritech:machine_capacitor_addon"
-    },
-    "m": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "p": {
-      "item": "thaumaturge:plate_brass"
-    },
-    "s": {
-      "item": "oritech:energite_ingot"
-    }
+    "c": "oritech:machine_capacitor_addon",
+    "m": "thaumaturge:mechanism_simple",
+    "p": "thaumaturge:plate_brass",
+    "s": "oritech:energite_ingot"
   },
   "pattern": [
     "pmp",

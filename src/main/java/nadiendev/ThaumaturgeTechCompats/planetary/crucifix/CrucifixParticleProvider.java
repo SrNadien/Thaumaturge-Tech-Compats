@@ -2,12 +2,11 @@ package nadiendev.ThaumaturgeTechCompats.planetary.crucifix;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
-import net.neoforged.neoforge.common.data.ParticleDescriptionProvider;
+import net.neoforged.neoforge.client.data.ParticleDescriptionProvider;
 
 public class CrucifixParticleProvider extends ParticleDescriptionProvider {
-    public CrucifixParticleProvider(PackOutput output, ExistingFileHelper helper) {
-        super(output, helper);
+    public CrucifixParticleProvider(PackOutput output) {
+        super(output);
     }
 
     @Override

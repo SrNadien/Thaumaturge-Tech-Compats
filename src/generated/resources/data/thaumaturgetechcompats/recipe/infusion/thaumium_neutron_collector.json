@@ -24,25 +24,13 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "avaritia:densest_neutron_collector"
-  },
+  "catalyst": "avaritia:densest_neutron_collector",
   "components": [
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    }
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:mechanism_simple"
   ],
   "instability": 3,
   "research": {

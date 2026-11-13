@@ -7,21 +7,11 @@
     }
   ],
   "key": {
-    "C": {
-      "item": "minecraft:comparator"
-    },
-    "I": {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    "N": {
-      "tag": "thaumaturge:nitors"
-    },
-    "P": {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    "S": {
-      "item": "thaumaturge:node_transducer"
-    }
+    "C": "minecraft:comparator",
+    "I": "avaritia:crystal_matrix_ingot",
+    "N": "#thaumaturge:nitors",
+    "P": "thaumaturgetechcompats:matrix_plate",
+    "S": "thaumaturge:node_transducer"
   },
   "pattern": [
     "PCP",

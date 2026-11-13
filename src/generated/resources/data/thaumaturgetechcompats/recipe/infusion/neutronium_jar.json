@@ -18,22 +18,12 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:matrix_jar"
-  },
+  "catalyst": "thaumaturgetechcompats:matrix_jar",
   "components": [
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    }
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot"
   ],
   "instability": 6,
   "research": {

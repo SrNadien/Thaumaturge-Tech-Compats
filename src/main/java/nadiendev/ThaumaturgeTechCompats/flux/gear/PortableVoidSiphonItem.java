@@ -8,19 +8,20 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ExperienceOrb;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.ItemUseAnimation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
 import java.util.List;
+import java.util.function.Consumer;
 
 public class PortableVoidSiphonItem extends FluxGearItem {
     public static final String TOOLTIP = "tooltip.thaumaturgetechcompats.portable_void_siphon.";
@@ -38,19 +39,19 @@ public class PortableVoidSiphonItem extends FluxGearItem {
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public InteractionResult use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
         if (!GearConfig.siphonEnabled()) {
-            return InteractionResultHolder.pass(stack);
+            return InteractionResult.PASS;
         }
         if (fluxStored(stack) < costPerPulse()) {
-            if (!level.isClientSide) {
-                player.displayClientMessage(Component.translatable(MESSAGE_EMPTY).withStyle(ChatFormatting.RED), true);
+            if (!level.isClientSide()) {
+                player.sendOverlayMessage(Component.translatable(MESSAGE_EMPTY).withStyle(ChatFormatting.RED));
             }
-            return InteractionResultHolder.fail(stack);
+            return InteractionResult.FAIL;
         }
         player.startUsingItem(hand);
-        return InteractionResultHolder.consume(stack);
+        return InteractionResult.CONSUME;
     }
 
     @Override
@@ -59,8 +60,8 @@ public class PortableVoidSiphonItem extends FluxGearItem {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack stack) {
-        return UseAnim.BLOCK;
+    public ItemUseAnimation getUseAnimation(ItemStack stack) {
+        return ItemUseAnimation.BLOCK;
     }
 
     @Override
@@ -75,7 +76,7 @@ public class PortableVoidSiphonItem extends FluxGearItem {
         int used = USE_DURATION - remaining;
         if (used % GearConfig.siphonInterval() == 0 && !pulse(serverLevel, player, stack)) {
             player.stopUsingItem();
-            player.displayClientMessage(Component.translatable(MESSAGE_EMPTY).withStyle(ChatFormatting.RED), true);
+            player.sendOverlayMessage(Component.translatable(MESSAGE_EMPTY).withStyle(ChatFormatting.RED));
             return;
         }
         absorb(serverLevel, player);
@@ -161,11 +162,11 @@ public class PortableVoidSiphonItem extends FluxGearItem {
     }
 
     @Override
-    protected void appendDetails(List<Component> tooltip) {
-        tooltip.add(Component.translatable(TOOLTIP + "description").withStyle(ChatFormatting.GRAY));
-        tooltip.add(Component.translatable(TOOLTIP + "usage", format(GearConfig.siphonCostPerSecond()), GearConfig.siphonRadius()).withStyle(ChatFormatting.GRAY));
+    protected void appendDetails(Consumer<Component> tooltip) {
+        tooltip.accept(Component.translatable(TOOLTIP + "description").withStyle(ChatFormatting.GRAY));
+        tooltip.accept(Component.translatable(TOOLTIP + "usage", format(GearConfig.siphonCostPerSecond()), GearConfig.siphonRadius()).withStyle(ChatFormatting.GRAY));
         if (GearConfig.siphonResidual()) {
-            tooltip.add(Component.translatable(TOOLTIP + "residual", GearConfig.siphonFluxPerSecond(), format(GearConfig.siphonFluxRatio())).withStyle(ChatFormatting.GRAY));
+            tooltip.accept(Component.translatable(TOOLTIP + "residual", GearConfig.siphonFluxPerSecond(), format(GearConfig.siphonFluxRatio())).withStyle(ChatFormatting.GRAY));
         }
     }
 }

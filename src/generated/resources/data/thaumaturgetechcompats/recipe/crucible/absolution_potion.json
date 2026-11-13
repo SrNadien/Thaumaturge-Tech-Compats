@@ -56,9 +56,7 @@
       "aspect": "thaumaturge:perditio"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:eldritch_eye"
-  },
+  "catalyst": "thaumaturge:eldritch_eye",
   "research": {
     "entry": "thaumaturgetechcompats:absolution_potion"
   },

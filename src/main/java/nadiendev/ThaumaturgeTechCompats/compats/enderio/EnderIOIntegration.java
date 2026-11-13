@@ -18,7 +18,7 @@ import nadiendev.ThaumaturgeTechCompats.compats.enderio.wand.EnderIOWandRegistry
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -85,21 +85,21 @@ public final class EnderIOIntegration {
         }
     }
 
-    public static List<ResourceLocation> blockIds() {
+    public static List<Identifier> blockIds() {
         return CapacitorBankSupport.blockIds();
     }
 
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new EnderIOItemModels(output, event.getExistingFileHelper()));
-        generator.addProvider(event.includeClient(), new CapacitorItemModels(output));
-        generator.addProvider(event.includeClient(), new EnderIOWandItemModels(output));
-        generator.addProvider(event.includeClient(), new CapacitorBankAssets(output));
-        generator.addProvider(event.includeServer(), new EnderIOContent(output));
-        generator.addProvider(event.includeServer(), new ConduitContent(output));
-        generator.addProvider(event.includeServer(), new CapacitorContent(output));
-        generator.addProvider(event.includeServer(), new CapacitorBankContent(output));
-        generator.addProvider(event.includeServer(), new EnderIOWandContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new EnderIOItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new CapacitorItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new EnderIOWandItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new CapacitorBankAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new EnderIOContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new ConduitContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new CapacitorContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new CapacitorBankContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new EnderIOWandContent(output));
     }
 }

@@ -56,22 +56,12 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_star_crucifix",
   "components": [
-    {
-      "item": "thaumaturge:ingot_brass"
-    },
-    {
-      "item": "thaumaturge:ingot_brass"
-    },
-    {
-      "item": "thaumaturge:ingot_brass"
-    },
-    {
-      "item": "thaumaturge:ingot_brass"
-    }
+    "thaumaturge:ingot_brass",
+    "thaumaturge:ingot_brass",
+    "thaumaturge:ingot_brass",
+    "thaumaturge:ingot_brass"
   ],
   "instability": 7,
   "research": {

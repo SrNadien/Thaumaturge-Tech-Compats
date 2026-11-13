@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:alienis"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:manasteel_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:manasteel_wand_cap",
   "components": [
-    {
-      "item": "botania:elementium_ingot"
-    },
-    {
-      "item": "botania:elementium_ingot"
-    },
-    {
-      "item": "botania:elementium_ingot"
-    },
-    {
-      "item": "botania:pixie_dust"
-    }
+    "botania:elementium_ingot",
+    "botania:elementium_ingot",
+    "botania:elementium_ingot",
+    "botania:pixie_dust"
   ],
   "instability": 3,
   "research": {

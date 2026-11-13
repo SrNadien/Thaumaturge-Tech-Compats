@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import nadiendev.ThaumaturgeTechCompats.datagen.RecipeSaver;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
@@ -11,6 +12,8 @@ import net.minecraft.data.PackOutput;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public final class ContentJson {
     public static final String MOD = ThaumaturgeTechCompats.MOD_ID;
@@ -18,12 +21,25 @@ public final class ContentJson {
     public static final String CATEGORY_ELDRITCH = "thaumaturge:eldritch";
     public static final String CATEGORY_AVARITIA = MOD + ":avaritia";
 
+    private static final Pattern ITEM_MODEL = Pattern.compile("assets/([^/]+)/models/item/(.+)\\.json");
+
     private ContentJson() {
     }
 
     public static CompletableFuture<?> save(PackOutput output, CachedOutput cache, String relativePath, JsonElement json) {
         Path path = output.getOutputFolder().resolve(relativePath);
-        return DataProvider.saveStable(cache, json, path);
+        CompletableFuture<?> saved = RecipeSaver.save(cache, json, path);
+        Matcher matcher = ITEM_MODEL.matcher(relativePath.replace('\\', '/'));
+        if (!matcher.matches()) {
+            return saved;
+        }
+        JsonObject model = new JsonObject();
+        model.addProperty("type", "minecraft:model");
+        model.addProperty("model", matcher.group(1) + ":item/" + matcher.group(2));
+        JsonObject definition = new JsonObject();
+        definition.add("model", model);
+        Path definitionPath = output.getOutputFolder().resolve("assets/" + matcher.group(1) + "/items/" + matcher.group(2) + ".json");
+        return CompletableFuture.allOf(saved, DataProvider.saveStable(cache, definition, definitionPath));
     }
 
     public static JsonObject item(String id) {

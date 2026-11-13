@@ -1,10 +1,10 @@
 package nadiendev.ThaumaturgeTechCompats.emc;
 
-import moze_intel.projecte.api.mapper.EMCMapper;
-import moze_intel.projecte.api.mapper.IEMCMapper;
-import moze_intel.projecte.api.mapper.collector.IMappingCollector;
-import moze_intel.projecte.api.nss.NSSItem;
-import moze_intel.projecte.api.nss.NormalizedSimpleStack;
+import com.yaskulsky.equivox.api.mapper.EMCMapper;
+import com.yaskulsky.equivox.api.mapper.IEMCMapper;
+import com.yaskulsky.equivox.api.mapper.collector.IMappingCollector;
+import com.yaskulsky.equivox.api.nss.NSSItem;
+import com.yaskulsky.equivox.api.nss.NormalizedSimpleStack;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.RegistryAccess;
@@ -42,7 +42,7 @@ public class EmcExclusionMapper implements IEMCMapper<NormalizedSimpleStack, Lon
         if (!EmcIntegration.enabled()) {
             return;
         }
-        Optional<HolderSet.Named<Item>> tag = BuiltInRegistries.ITEM.getTag(EmcIntegration.NO_EMC);
+        Optional<HolderSet.Named<Item>> tag = BuiltInRegistries.ITEM.get(EmcIntegration.NO_EMC);
         if (tag.isEmpty()) {
             return;
         }

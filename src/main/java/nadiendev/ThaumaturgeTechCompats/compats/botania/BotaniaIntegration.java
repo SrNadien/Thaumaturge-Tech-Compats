@@ -107,9 +107,9 @@ public final class BotaniaIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new BotaniaSpreaderAssets(output));
-        generator.addProvider(event.includeClient(), new BotaniaWandItemModels(output));
-        generator.addProvider(event.includeServer(), new BotaniaSpreaderContent(output));
-        generator.addProvider(event.includeServer(), new BotaniaWandContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new BotaniaSpreaderAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new BotaniaWandItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new BotaniaSpreaderContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new BotaniaWandContent(output));
     }
 }

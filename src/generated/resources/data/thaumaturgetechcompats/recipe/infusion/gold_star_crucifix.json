@@ -32,22 +32,12 @@
       "aspect": "thaumaturge:lux"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:iron_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:iron_star_crucifix",
   "components": [
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    },
-    {
-      "item": "minecraft:gold_ingot"
-    }
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot",
+    "minecraft:gold_ingot"
   ],
   "instability": 3,
   "research": {

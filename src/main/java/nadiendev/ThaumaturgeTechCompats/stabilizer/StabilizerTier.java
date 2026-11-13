@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.stabilizer;
 
 import nadiendev.ThaumaturgeTechCompats.device.DeviceTier;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 
 public enum StabilizerTier {
@@ -71,11 +71,11 @@ public enum StabilizerTier {
         return auram;
     }
 
-    public ResourceLocation baseTexture() {
+    public Identifier baseTexture() {
         return ThaumaturgeTechCompats.id("textures/block/" + blockName() + ".png");
     }
 
-    public ResourceLocation overlayTexture() {
+    public Identifier overlayTexture() {
         return ThaumaturgeTechCompats.id("textures/block/" + blockName() + "_over.png");
     }
 }

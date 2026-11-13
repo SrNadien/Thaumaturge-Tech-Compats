@@ -16,9 +16,7 @@
       "aspect": "thaumaturge:vitium"
     }
   ],
-  "catalyst": {
-    "item": "minecraft:baked_potato"
-  },
+  "catalyst": "minecraft:baked_potato",
   "research": {
     "entry": "thaumaturgetechcompats:tainted_food"
   },

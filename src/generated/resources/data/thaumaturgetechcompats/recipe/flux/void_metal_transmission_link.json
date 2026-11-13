@@ -36,28 +36,14 @@
       "aspect": "thaumaturge:alienis"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_transmission_link"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_transmission_link",
   "components": [
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    {
-      "item": "thaumaturge:void_seed"
-    }
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:mechanism_complex",
+    "thaumaturge:void_seed"
   ],
   "instability": 4,
   "research": {

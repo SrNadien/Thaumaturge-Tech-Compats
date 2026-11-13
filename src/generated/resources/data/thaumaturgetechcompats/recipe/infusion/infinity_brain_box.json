@@ -18,25 +18,13 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:neutronium_brain_box"
-  },
+  "catalyst": "thaumaturgetechcompats:neutronium_brain_box",
   "components": [
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:extremely_primordial_pearl"
-    }
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
   ],
   "instability": 10,
   "research": {

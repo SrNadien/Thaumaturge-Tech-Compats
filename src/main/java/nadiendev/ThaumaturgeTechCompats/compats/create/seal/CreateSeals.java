@@ -12,7 +12,7 @@ import nadiendev.ThaumaturgeTechCompats.compats.create.CreateIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.create.CreateToggles;
 import nadiendev.ThaumaturgeTechCompats.compats.create.variant.CasingVariant;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -42,7 +42,7 @@ public final class CreateSeals {
         if (block instanceof CasingVariant) {
             return true;
         }
-        ResourceLocation key = BuiltInRegistries.BLOCK.getKey(block);
+        Identifier key = BuiltInRegistries.BLOCK.getKey(block);
         return CreateIntegration.MOD_ID.equals(key.getNamespace());
     };
 

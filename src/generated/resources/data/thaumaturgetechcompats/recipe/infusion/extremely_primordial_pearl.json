@@ -38,31 +38,15 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:primordial_pearl"
-  },
+  "catalyst": "thaumaturge:primordial_pearl",
   "components": [
-    {
-      "item": "thaumaturge:primordial_pearl"
-    },
-    {
-      "item": "thaumaturge:primordial_pearl"
-    },
-    {
-      "item": "thaumaturge:primordial_pearl"
-    },
-    {
-      "item": "thaumaturge:primordial_pearl"
-    },
-    {
-      "item": "thaumaturge:primordial_pearl"
-    },
-    {
-      "item": "thaumaturge:primordial_pearl"
-    },
-    {
-      "item": "thaumaturge:primordial_pearl"
-    }
+    "thaumaturge:primordial_pearl",
+    "thaumaturge:primordial_pearl",
+    "thaumaturge:primordial_pearl",
+    "thaumaturge:primordial_pearl",
+    "thaumaturge:primordial_pearl",
+    "thaumaturge:primordial_pearl",
+    "thaumaturge:primordial_pearl"
   ],
   "instability": 12,
   "research": {

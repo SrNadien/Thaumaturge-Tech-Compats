@@ -2,10 +2,10 @@ package nadiendev.ThaumaturgeTechCompats.ponder.scene;
 
 import nadiendev.ThaumaturgeTechCompats.ponder.PonderBlocks;
 import nadiendev.ThaumaturgeTechCompats.ponder.PonderScript;
-import net.createmod.catnip.math.Pointing;
-import net.createmod.ponder.api.element.TextElementBuilder;
-import net.createmod.ponder.api.scene.SceneBuilder;
-import net.createmod.ponder.api.scene.SceneBuildingUtil;
+import net.createmod.catnip.api.math.Pointing;
+import net.createmod.ponder.api.client.element.TextElementBuilder;
+import net.createmod.ponder.api.client.scene.SceneBuilder;
+import net.createmod.ponder.api.client.scene.SceneBuildingUtil;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;

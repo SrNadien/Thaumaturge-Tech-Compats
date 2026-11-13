@@ -44,31 +44,15 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_miner"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_miner",
   "components": [
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    {
-      "item": "thaumaturgetechcompats:flux_jar"
-    },
-    {
-      "item": "thaumaturgetechcompats:flux_jar"
-    },
-    {
-      "item": "thaumaturge:void_seed"
-    }
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:mechanism_complex",
+    "thaumaturgetechcompats:flux_jar",
+    "thaumaturgetechcompats:flux_jar",
+    "thaumaturge:void_seed"
   ],
   "instability": 6,
   "research": {

@@ -24,15 +24,9 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "M": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "P": {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    "U": {
-      "item": "voidminersremastered:rubetine_energy_modifier"
-    }
+    "M": "thaumaturge:mechanism_simple",
+    "P": "thaumaturge:plate_thaumium",
+    "U": "voidminersremastered:rubetine_energy_modifier"
   },
   "pattern": [
     " M ",

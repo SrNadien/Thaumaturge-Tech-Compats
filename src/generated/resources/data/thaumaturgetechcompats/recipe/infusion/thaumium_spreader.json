@@ -36,25 +36,13 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "botania:gaia_spreader"
-  },
+  "catalyst": "botania:gaia_spreader",
   "components": [
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    }
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:mechanism_simple"
   ],
   "instability": 4,
   "research": {

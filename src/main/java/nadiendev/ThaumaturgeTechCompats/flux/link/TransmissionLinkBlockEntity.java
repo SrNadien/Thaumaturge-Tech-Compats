@@ -9,13 +9,15 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.nbt.Tag;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.Vec3;
-import org.joml.Vector3f;
+import net.minecraft.util.ARGB;
 
 public class TransmissionLinkBlockEntity extends BlockEntity {
     public enum Status {
@@ -200,31 +202,39 @@ public class TransmissionLinkBlockEntity extends BlockEntity {
         }
     }
 
-    private static Vector3f particleColor(FluxTier tier) {
+    private static int particleColor(FluxTier tier) {
         int color = tier.color();
         float red = (color >> 16 & 255) / 255.0F;
         float green = (color >> 8 & 255) / 255.0F;
         float blue = (color & 255) / 255.0F;
-        return new Vector3f(
-                red + (1.0F - red) * PARTICLE_WHITE_MIX,
-                green + (1.0F - green) * PARTICLE_WHITE_MIX,
-                blue + (1.0F - blue) * PARTICLE_WHITE_MIX);
+        return ARGB.colorFromFloat(1.0F, red + (1.0F - red) * PARTICLE_WHITE_MIX, green + (1.0F - green) * PARTICLE_WHITE_MIX, blue + (1.0F - blue) * PARTICLE_WHITE_MIX);
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        CompoundTag tag = new CompoundTag();
         buffer.save(tag);
         if (partner != null) {
             tag.putLong(PARTNER_KEY, partner.asLong());
         }
+        output.store("data", CompoundTag.CODEC, tag);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        CompoundTag tag = input.read("data", CompoundTag.CODEC).orElseGet(CompoundTag::new);
         buffer.load(tag);
-        partner = tag.contains(PARTNER_KEY, Tag.TAG_LONG) ? BlockPos.of(tag.getLong(PARTNER_KEY)) : null;
+        partner = tag.contains(PARTNER_KEY) ? BlockPos.of(tag.getLongOr(PARTNER_KEY, 0L)) : null;
         partnerCache = null;
+    }
+
+    @Override
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        super.preRemoveSideEffects(pos, state);
+        if (level != null && !level.isClientSide()) {
+            breakLink();
+        }
     }
 }

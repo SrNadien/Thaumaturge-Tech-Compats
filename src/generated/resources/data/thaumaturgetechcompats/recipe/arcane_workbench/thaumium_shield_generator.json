@@ -17,18 +17,10 @@
     }
   ],
   "key": {
-    "g": {
-      "item": "thaumaturge:mirrored_glass"
-    },
-    "m": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "p": {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    "r": {
-      "item": "thaumaturge:vis_resonator"
-    }
+    "g": "thaumaturge:mirrored_glass",
+    "m": "thaumaturge:mechanism_simple",
+    "p": "thaumaturge:plate_thaumium",
+    "r": "thaumaturge:vis_resonator"
   },
   "pattern": [
     "pgp",

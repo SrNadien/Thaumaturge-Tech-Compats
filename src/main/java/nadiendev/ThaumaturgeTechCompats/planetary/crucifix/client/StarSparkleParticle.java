@@ -3,16 +3,16 @@ package nadiendev.ThaumaturgeTechCompats.planetary.crucifix.client;
 import net.minecraft.client.multiplayer.ClientLevel;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.particle.ParticleProvider;
-import net.minecraft.client.particle.ParticleRenderType;
+import net.minecraft.client.particle.SingleQuadParticle;
 import net.minecraft.client.particle.SpriteSet;
-import net.minecraft.client.particle.TextureSheetParticle;
 import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.util.RandomSource;
 
-public class StarSparkleParticle extends TextureSheetParticle {
+public class StarSparkleParticle extends SingleQuadParticle {
     private final SpriteSet sprites;
 
     protected StarSparkleParticle(ClientLevel level, double x, double y, double z, double dx, double dy, double dz, SpriteSet sprites) {
-        super(level, x, y, z);
+        super(level, x, y, z, dx, dy, dz, sprites.first());
         this.sprites = sprites;
         this.xd = dx;
         this.yd = dy;
@@ -38,12 +38,12 @@ public class StarSparkleParticle extends TextureSheetParticle {
     }
 
     @Override
-    public ParticleRenderType getRenderType() {
-        return ParticleRenderType.PARTICLE_SHEET_TRANSLUCENT;
+    public SingleQuadParticle.Layer getLayer() {
+        return SingleQuadParticle.Layer.TRANSLUCENT;
     }
 
     @Override
-    protected int getLightColor(float partialTick) {
+    public int getLightCoords(float partialTick) {
         return 0xF000F0;
     }
 
@@ -55,7 +55,7 @@ public class StarSparkleParticle extends TextureSheetParticle {
         }
 
         @Override
-        public Particle createParticle(SimpleParticleType type, ClientLevel level, double x, double y, double z, double dx, double dy, double dz) {
+        public Particle createParticle(SimpleParticleType type, ClientLevel level, double x, double y, double z, double dx, double dy, double dz, RandomSource random) {
             StarSparkleParticle particle = new StarSparkleParticle(level, x, y, z, dx, dy, dz, this.sprites);
             particle.friction = 0.96F;
             particle.gravity = 0.6F;
@@ -74,7 +74,7 @@ public class StarSparkleParticle extends TextureSheetParticle {
         }
 
         @Override
-        public Particle createParticle(SimpleParticleType type, ClientLevel level, double x, double y, double z, double dx, double dy, double dz) {
+        public Particle createParticle(SimpleParticleType type, ClientLevel level, double x, double y, double z, double dx, double dy, double dz, RandomSource random) {
             return new StarSparkleParticle(level, x, y, z, dx, dy, dz, this.sprites);
         }
     }

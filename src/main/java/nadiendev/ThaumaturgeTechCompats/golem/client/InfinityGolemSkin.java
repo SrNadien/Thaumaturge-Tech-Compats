@@ -7,8 +7,8 @@ import nadiendev.ThaumaturgeTechCompats.golem.GolemMaterials;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.texture.AbstractTexture;
 import net.minecraft.client.renderer.texture.DynamicTexture;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.FastColor;
+import net.minecraft.resources.Identifier;
+import net.minecraft.util.ARGB;
 import net.minecraft.util.Mth;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -44,8 +44,8 @@ public final class InfinityGolemSkin {
             return;
         }
         try {
-            ResourceLocation material = GolemMaterials.INFINITY.get().texture();
-            ResourceLocation skin = GolemSkins.forMaterial(material);
+            Identifier material = GolemMaterials.INFINITY.get().texture();
+            Identifier skin = GolemSkins.forMaterial(material);
             if (skin.equals(GolemSkins.COPPER)) {
                 return;
             }
@@ -71,8 +71,8 @@ public final class InfinityGolemSkin {
                     float t = Mth.clamp((shade[index] - minShade) / span, 0.0F, 1.0F);
                     float hue = (x * 5.0F + y * 3.0F + time) % 360.0F;
                     int rgb = Mth.hsvToRgb(hue / 360.0F, 0.5F, 0.3F + 0.7F * t);
-                    int argb = FastColor.ARGB32.color(alpha[index], FastColor.ARGB32.red(rgb), FastColor.ARGB32.green(rgb), FastColor.ARGB32.blue(rgb));
-                    pixels.setPixelRGBA(x, y, FastColor.ABGR32.fromArgb32(argb));
+                    int argb = ARGB.color(alpha[index], ARGB.red(rgb), ARGB.green(rgb), ARGB.blue(rgb));
+                    pixels.setPixel(x, y, argb);
                 }
             }
             dynamic.upload();
@@ -92,13 +92,13 @@ public final class InfinityGolemSkin {
             maxShade = -Float.MAX_VALUE;
             for (int y = 0; y < height; y++) {
                 for (int x = 0; x < width; x++) {
-                    int pixel = image.getPixelRGBA(x, y);
+                    int pixel = image.getPixel(x, y);
                     int index = y * width + x;
-                    alpha[index] = FastColor.ABGR32.alpha(pixel);
+                    alpha[index] = ARGB.alpha(pixel);
                     if (alpha[index] == 0) {
                         continue;
                     }
-                    float value = 0.299F * FastColor.ABGR32.red(pixel) + 0.587F * FastColor.ABGR32.green(pixel) + 0.114F * FastColor.ABGR32.blue(pixel);
+                    float value = 0.299F * ARGB.red(pixel) + 0.587F * ARGB.green(pixel) + 0.114F * ARGB.blue(pixel);
                     shade[index] = value;
                     minShade = Math.min(minShade, value);
                     maxShade = Math.max(maxShade, value);

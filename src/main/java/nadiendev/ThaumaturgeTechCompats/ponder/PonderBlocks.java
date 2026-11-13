@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.ponder;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -13,7 +13,7 @@ public final class PonderBlocks {
     }
 
     public static Block block(String id) {
-        ResourceLocation key = ResourceLocation.parse(id);
+        Identifier key = Identifier.parse(id);
         return BuiltInRegistries.BLOCK.getOptional(key).orElseThrow(() -> new IllegalStateException("Unknown block " + id));
     }
 
@@ -31,8 +31,11 @@ public final class PonderBlocks {
     }
 
     public static ItemStack stack(String id) {
-        ResourceLocation key = ResourceLocation.parse(id);
+        Identifier key = Identifier.parse(id);
         Item item = BuiltInRegistries.ITEM.getOptional(key).orElseThrow(() -> new IllegalStateException("Unknown item " + id));
+        if (!BuiltInRegistries.ITEM.wrapAsHolder(item).areComponentsBound()) {
+            return ItemStack.EMPTY;
+        }
         return new ItemStack(item);
     }
 

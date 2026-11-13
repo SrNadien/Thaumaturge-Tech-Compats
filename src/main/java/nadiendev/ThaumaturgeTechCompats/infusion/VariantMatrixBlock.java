@@ -57,7 +57,7 @@ public class VariantMatrixBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        BlockEntityTicker<BlockEntityInfusionMatrix> ticker = level.isClientSide
+        BlockEntityTicker<BlockEntityInfusionMatrix> ticker = level.isClientSide()
                 ? BlockEntityInfusionMatrix::clientTick
                 : BlockEntityInfusionMatrix::serverTick;
         return createTickerHelper(type, TTBlockEntities.INFUSION_MATRIX.get(), ticker);

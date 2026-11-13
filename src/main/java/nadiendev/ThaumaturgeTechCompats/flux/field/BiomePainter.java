@@ -32,14 +32,14 @@ public final class BiomePainter {
     public static void paint(ServerLevel level, Holder<Biome> biome, Map<ChunkPos, Set<Long>> columns) {
         List<ChunkAccess> changed = new ArrayList<>();
         for (Map.Entry<ChunkPos, Set<Long>> entry : columns.entrySet()) {
-            LevelChunk chunk = level.getChunkSource().getChunkNow(entry.getKey().x, entry.getKey().z);
+            LevelChunk chunk = level.getChunkSource().getChunkNow(entry.getKey().x(), entry.getKey().z());
             if (chunk == null) {
                 continue;
             }
             Set<Long> cells = entry.getValue();
             BiomeResolver resolver = (x, y, z, sampler) -> cells.contains(pack(x, z)) ? biome : chunk.getNoiseBiome(x, y, z);
             chunk.fillBiomesFromNoise(resolver, level.getChunkSource().randomState().sampler());
-            chunk.setUnsaved(true);
+            chunk.markUnsaved();
             changed.add(chunk);
         }
         if (!changed.isEmpty()) {

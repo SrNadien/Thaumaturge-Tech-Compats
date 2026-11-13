@@ -51,6 +51,6 @@ public class SimpleFluxStorage implements IFluxStorage {
     }
 
     public void load(CompoundTag tag) {
-        stored = tag.getLong(KEY);
+        stored = tag.getLongOr(KEY, 0L);
     }
 }

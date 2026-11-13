@@ -39,43 +39,43 @@ public final class LinkRegistry {
             DeferredBlock<TransmissionLinkBlock> block = BLOCKS.registerBlock(
                     linkName(tier),
                     properties -> new TransmissionLinkBlock(properties, tier),
-                    BlockBehaviour.Properties.of()
+                    () -> BlockBehaviour.Properties.of()
                             .mapColor(MapColor.METAL)
                             .strength(3.0F, 6.0F)
                             .sound(SoundType.METAL)
                             .requiresCorrectToolForDrops()
                             .noOcclusion());
             LINK_BLOCKS.put(tier, block);
-            LINK_ITEMS.put(tier, ITEMS.registerSimpleBlockItem(block, new Item.Properties().rarity(tier.rarity())));
+            LINK_ITEMS.put(tier, ITEMS.registerSimpleBlockItem(block, () -> new Item.Properties().rarity(tier.rarity())));
         }
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<TransmissionLinkBlockEntity>> LINK_ENTITY = BLOCK_ENTITIES.register(
             "transmission_link",
-            (Supplier<BlockEntityType<TransmissionLinkBlockEntity>>) () -> BlockEntityType.Builder.of(
+            (Supplier<BlockEntityType<TransmissionLinkBlockEntity>>) () -> new BlockEntityType<>(
                     TransmissionLinkBlockEntity::new,
-                    LINK_BLOCKS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)).build(null));
+                    LINK_BLOCKS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
 
     public static final DeferredBlock<RiftExtractorBlock> EXTRACTOR = BLOCKS.registerBlock(
             EXTRACTOR_NAME,
             RiftExtractorBlock::new,
-            BlockBehaviour.Properties.of()
+            () -> BlockBehaviour.Properties.of()
                     .mapColor(MapColor.COLOR_PURPLE)
                     .strength(3.5F, 6.0F)
                     .sound(SoundType.METAL)
                     .requiresCorrectToolForDrops()
                     .noOcclusion());
 
-    public static final DeferredItem<BlockItem> EXTRACTOR_ITEM = ITEMS.registerSimpleBlockItem(EXTRACTOR, new Item.Properties().rarity(Rarity.RARE));
+    public static final DeferredItem<BlockItem> EXTRACTOR_ITEM = ITEMS.registerSimpleBlockItem(EXTRACTOR, () -> new Item.Properties().rarity(Rarity.RARE));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RiftExtractorBlockEntity>> EXTRACTOR_ENTITY = BLOCK_ENTITIES.register(
             EXTRACTOR_NAME,
-            (Supplier<BlockEntityType<RiftExtractorBlockEntity>>) () -> BlockEntityType.Builder.of(RiftExtractorBlockEntity::new, EXTRACTOR.get()).build(null));
+            (Supplier<BlockEntityType<RiftExtractorBlockEntity>>) () -> new BlockEntityType<>(RiftExtractorBlockEntity::new, EXTRACTOR.get()));
 
     public static final DeferredItem<TransmissionLinkerItem> LINKER = ITEMS.registerItem(
             LINKER_NAME,
             TransmissionLinkerItem::new,
-            new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
+            () -> new Item.Properties().stacksTo(1).rarity(Rarity.UNCOMMON));
 
     private LinkRegistry() {
     }

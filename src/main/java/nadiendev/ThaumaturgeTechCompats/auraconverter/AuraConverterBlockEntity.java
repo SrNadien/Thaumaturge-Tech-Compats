@@ -5,18 +5,23 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.energy.IEnergyStorage;
+import net.neoforged.neoforge.transfer.energy.EnergyHandler;
+import net.neoforged.neoforge.transfer.transaction.SnapshotJournal;
+import net.neoforged.neoforge.transfer.transaction.Transaction;
+import net.neoforged.neoforge.transfer.transaction.TransactionContext;
 
 public class AuraConverterBlockEntity extends BlockEntity {
     private static final float EPSILON = 0.0001F;
     private static final double RATE_SMOOTHING = 0.2D;
 
     private final AuraConverterTier tier;
-    private final IEnergyStorage storage = new Storage();
+    private final EnergyHandler storage = new Storage();
     private long energy;
     private long outputTick = Long.MIN_VALUE;
     private long outputUsed;
@@ -31,7 +36,7 @@ public class AuraConverterBlockEntity extends BlockEntity {
         this.tier = ((AuraConverterBlock) state.getBlock()).tier();
     }
 
-    public IEnergyStorage energyStorage() {
+    public EnergyHandler energyStorage() {
         return storage;
     }
 
@@ -139,16 +144,19 @@ public class AuraConverterBlockEntity extends BlockEntity {
             if (!level.isLoaded(neighbour)) {
                 continue;
             }
-            IEnergyStorage target = level.getCapability(Capabilities.EnergyStorage.BLOCK, neighbour, direction.getOpposite());
-            if (target == null || !target.canReceive()) {
+            EnergyHandler target = level.getCapability(Capabilities.Energy.BLOCK, neighbour, direction.getOpposite());
+            if (target == null) {
                 continue;
             }
-            int accepted = target.receiveEnergy((int) Math.min(available, Integer.MAX_VALUE), false);
-            if (accepted > 0) {
-                energy -= accepted;
-                outputUsed += accepted;
-                outputAccumulated += accepted;
-                setChanged();
+            try (Transaction transaction = Transaction.openRoot()) {
+                int accepted = target.insert((int) Math.min(available, Integer.MAX_VALUE), transaction);
+                if (accepted > 0) {
+                    transaction.commit();
+                    energy -= accepted;
+                    outputUsed += accepted;
+                    outputAccumulated += accepted;
+                    setChanged();
+                }
             }
         }
     }
@@ -170,56 +178,68 @@ public class AuraConverterBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        CompoundTag tag = new CompoundTag();
         tag.putLong("energy", energy);
+        output.store("data", CompoundTag.CODEC, tag);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
-        energy = Math.max(0L, Math.min(tag.getLong("energy"), AuraConverterConfig.buffer(tier)));
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        CompoundTag tag = input.read("data", CompoundTag.CODEC).orElseGet(CompoundTag::new);
+        energy = Math.max(0L, Math.min(tag.getLongOr("energy", 0L), AuraConverterConfig.buffer(tier)));
     }
 
-    private final class Storage implements IEnergyStorage {
+    private final class Storage implements EnergyHandler {
+        private final Journal journal = new Journal();
+
         @Override
-        public int receiveEnergy(int toReceive, boolean simulate) {
+        public long getAmountAsLong() {
+            return energy;
+        }
+
+        @Override
+        public long getCapacityAsLong() {
+            return capacity();
+        }
+
+        @Override
+        public int insert(int amount, TransactionContext transaction) {
             return 0;
         }
 
         @Override
-        public int extractEnergy(int toExtract, boolean simulate) {
-            long extracted = Math.min(Math.min(toExtract, energy), remainingOutput());
+        public int extract(int amount, TransactionContext transaction) {
+            long extracted = Math.min(Math.min(amount, energy), remainingOutput());
             if (extracted <= 0L) {
                 return 0;
             }
-            if (!simulate) {
-                energy -= extracted;
-                outputUsed += extracted;
-                outputAccumulated += extracted;
-                setChanged();
-            }
+            journal.updateSnapshots(transaction);
+            energy -= extracted;
+            outputUsed += extracted;
+            outputAccumulated += extracted;
             return (int) extracted;
         }
+    }
 
+    private final class Journal extends SnapshotJournal<long[]> {
         @Override
-        public int getEnergyStored() {
-            return (int) Math.min(energy, Integer.MAX_VALUE);
+        protected long[] createSnapshot() {
+            return new long[]{energy, outputUsed, outputAccumulated};
         }
 
         @Override
-        public int getMaxEnergyStored() {
-            return (int) Math.min(capacity(), Integer.MAX_VALUE);
+        protected void revertToSnapshot(long[] snapshot) {
+            energy = snapshot[0];
+            outputUsed = snapshot[1];
+            outputAccumulated = snapshot[2];
         }
 
         @Override
-        public boolean canExtract() {
-            return true;
-        }
-
-        @Override
-        public boolean canReceive() {
-            return false;
+        protected void onRootCommit(long[] originalState) {
+            setChanged();
         }
     }
 }

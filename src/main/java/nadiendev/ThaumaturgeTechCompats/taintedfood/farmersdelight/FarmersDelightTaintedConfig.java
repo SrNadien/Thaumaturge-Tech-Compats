@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.EnumMap;
@@ -193,20 +193,20 @@ public final class FarmersDelightTaintedConfig {
     }
 
     private static boolean validId(Object value) {
-        return value instanceof String text && ResourceLocation.tryParse(text) != null;
+        return value instanceof String text && Identifier.tryParse(text) != null;
     }
 
     private static boolean validOptionalId(Object value) {
-        return value instanceof String text && (text.isBlank() || ResourceLocation.tryParse(text) != null);
+        return value instanceof String text && (text.isBlank() || Identifier.tryParse(text) != null);
     }
 
     private static <T> T read(ModConfigSpec.ConfigValue<T> value) {
         return SPEC.isLoaded() ? value.get() : value.getDefault();
     }
 
-    private static ResourceLocation effect(ModConfigSpec.ConfigValue<String> value) {
-        ResourceLocation id = ResourceLocation.tryParse(read(value));
-        return id == null ? ResourceLocation.parse(DEFAULT_EFFECT) : id;
+    private static Identifier effect(ModConfigSpec.ConfigValue<String> value) {
+        Identifier id = Identifier.tryParse(read(value));
+        return id == null ? Identifier.parse(DEFAULT_EFFECT) : id;
     }
 
     public static boolean foodEnabled() {
@@ -225,7 +225,7 @@ public final class FarmersDelightTaintedConfig {
         return read(SATURATION_MULTIPLIER).floatValue();
     }
 
-    public static ResourceLocation foodEffectId() {
+    public static Identifier foodEffectId() {
         return effect(FOOD_EFFECT_ID);
     }
 
@@ -249,7 +249,7 @@ public final class FarmersDelightTaintedConfig {
         return read(KNIVES).contains(knife.id());
     }
 
-    public static ResourceLocation knifeEffectId() {
+    public static Identifier knifeEffectId() {
         return effect(KNIFE_EFFECT_ID);
     }
 

@@ -44,9 +44,7 @@
       "aspect": "thaumaturge:herba"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:purification_potion"
-  },
+  "catalyst": "thaumaturgetechcompats:purification_potion",
   "research": {
     "entry": "thaumaturgetechcompats:biome_purification_potion"
   },

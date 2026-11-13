@@ -79,7 +79,7 @@ public final class FarmersDelightTaintedIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new FarmersDelightTaintedAssets(output));
-        generator.addProvider(event.includeServer(), new FarmersDelightTaintedContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new FarmersDelightTaintedAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new FarmersDelightTaintedContent(output));
     }
 }

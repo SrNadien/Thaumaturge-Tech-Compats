@@ -18,28 +18,14 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:neutronium_wand_cap"
-  },
+  "catalyst": "thaumaturgetechcompats:neutronium_wand_cap",
   "components": [
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "avaritia:infinity_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:infinity_plate"
-    }
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "avaritia:infinity_ingot",
+    "thaumaturgetechcompats:infinity_plate",
+    "thaumaturgetechcompats:infinity_plate"
   ],
   "instability": 10,
   "research": {

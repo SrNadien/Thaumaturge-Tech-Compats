@@ -8,12 +8,8 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "j": {
-      "item": "thaumaturge:jar_normal"
-    },
-    "p": {
-      "item": "thaumaturge:plate_void"
-    }
+    "j": "thaumaturge:jar_normal",
+    "p": "thaumaturge:plate_void"
   },
   "pattern": [
     " p ",

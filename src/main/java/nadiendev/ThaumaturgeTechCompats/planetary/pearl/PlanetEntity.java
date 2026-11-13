@@ -3,7 +3,6 @@ package nadiendev.ThaumaturgeTechCompats.planetary.pearl;
 import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
-import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -17,8 +16,11 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.world.phys.Vec3;
 import org.joml.Vector3f;
+import org.joml.Vector3fc;
 
 import java.util.List;
 import java.util.UUID;
@@ -32,7 +34,7 @@ public class PlanetEntity extends Entity {
     private static final EntityDataAccessor<Long> BORN = SynchedEntityData.defineId(PlanetEntity.class, EntityDataSerializers.LONG);
     private static final EntityDataAccessor<Float> RADIUS = SynchedEntityData.defineId(PlanetEntity.class, EntityDataSerializers.FLOAT);
     private static final EntityDataAccessor<Float> SPEED = SynchedEntityData.defineId(PlanetEntity.class, EntityDataSerializers.FLOAT);
-    private static final EntityDataAccessor<Vector3f> ANCHOR = SynchedEntityData.defineId(PlanetEntity.class, EntityDataSerializers.VECTOR3);
+    private static final EntityDataAccessor<Vector3fc> ANCHOR = SynchedEntityData.defineId(PlanetEntity.class, EntityDataSerializers.VECTOR3);
 
     private static final double BASE_ANGULAR_SPEED = 0.11D;
     private static final double GOLDEN_ANGLE = 137.5D;
@@ -81,11 +83,11 @@ public class PlanetEntity extends Entity {
     }
 
     @Override
-    protected void readAdditionalSaveData(CompoundTag tag) {
+    protected void readAdditionalSaveData(ValueInput input) {
     }
 
     @Override
-    protected void addAdditionalSaveData(CompoundTag tag) {
+    protected void addAdditionalSaveData(ValueOutput output) {
     }
 
     @Override
@@ -109,7 +111,7 @@ public class PlanetEntity extends Entity {
     }
 
     @Override
-    public boolean hurt(DamageSource source, float amount) {
+    public boolean hurtServer(ServerLevel level, DamageSource source, float amount) {
         return false;
     }
 
@@ -160,7 +162,7 @@ public class PlanetEntity extends Entity {
     }
 
     private Vec3 anchor() {
-        Vector3f anchor = entityData.get(ANCHOR);
+        Vector3fc anchor = entityData.get(ANCHOR);
         return new Vec3(anchor.x(), anchor.y(), anchor.z());
     }
 
@@ -176,7 +178,7 @@ public class PlanetEntity extends Entity {
             lastCenter = target.position().add(0.0D, target.getBbHeight() * 0.5D, 0.0D);
             return lastCenter;
         }
-        if (level().isClientSide) {
+        if (level().isClientSide()) {
             return lastCenter != null ? lastCenter : anchor();
         }
         return null;
@@ -242,7 +244,7 @@ public class PlanetEntity extends Entity {
 
     private void dissipate(ServerLevel server, PlanetaryTier tier) {
         Vec3 center = getBoundingBox().getCenter();
-        Vector3f color = Vec3.fromRGB24(PearlColors.planetColor(tier, index())).toVector3f();
+        int color = PearlColors.planetColor(tier, index());
         server.sendParticles(new DustParticleOptions(color, 1.2F), center.x, center.y, center.z, 12, 0.2D, 0.2D, 0.2D, 0.05D);
         server.sendParticles(ParticleTypes.END_ROD, center.x, center.y, center.z, 6, 0.15D, 0.15D, 0.15D, 0.05D);
         if (index() == 0 && PearlConfig.sounds()) {
@@ -257,7 +259,7 @@ public class PlanetEntity extends Entity {
             return;
         }
         Vec3 center = getBoundingBox().getCenter();
-        Vector3f color = Vec3.fromRGB24(PearlColors.planetColor(tier(), index())).toVector3f();
+        int color = PearlColors.planetColor(tier(), index());
         DustParticleOptions dust = new DustParticleOptions(color, 0.8F);
         double spread = body().size() * 0.3D;
         for (int i = 0; i < density; i++) {

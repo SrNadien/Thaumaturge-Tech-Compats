@@ -13,7 +13,6 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -34,7 +33,7 @@ public final class FurnaceIntegration {
 
     static {
         for (DeviceTier tier : DeviceTier.values()) {
-            DeferredBlock<BlockAdvancedAlchemicalFurnace> block = BLOCKS.registerBlock(blockName(tier), BlockAdvancedAlchemicalFurnace::new, BlockBehaviour.Properties.of()
+            DeferredBlock<BlockAdvancedAlchemicalFurnace> block = BLOCKS.registerBlock(blockName(tier), BlockAdvancedAlchemicalFurnace::new, () -> BlockBehaviour.Properties.of()
                     .mapColor(MapColor.METAL)
                     .strength(5.0F + tier.ordinal(), 12.0F * (tier.ordinal() + 1))
                     .sound(SoundType.METAL)
@@ -42,7 +41,7 @@ public final class FurnaceIntegration {
                     .requiresCorrectToolForDrops()
                     .lightLevel(state -> state.getValue(BlockAdvancedAlchemicalFurnace.LIT) ? 13 : 0));
             FURNACES.put(tier, block);
-            FURNACE_ITEMS.put(tier, ITEMS.register(blockName(tier), () -> new FurnacePlacerItem(block.get(), blockName(tier), new Item.Properties())));
+            FURNACE_ITEMS.put(tier, ITEMS.registerItem(blockName(tier), properties -> new FurnacePlacerItem(block.get(), blockName(tier), properties.useBlockDescriptionPrefix())));
         }
     }
 
@@ -97,11 +96,10 @@ public final class FurnaceIntegration {
     public static void addProviders(GatherDataEvent event) {
         var generator = event.getGenerator();
         var output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new FurnaceBlockStates(output, helper));
-        generator.addProvider(event.includeClient(), new FurnaceItemModels(output, helper));
-        generator.addProvider(event.includeServer(), new FurnaceContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new FurnaceBlockStates(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new FurnaceItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new FurnaceContent(output));
     }
 
     private static void addBlocksToBlockEntity(BlockEntityTypeAddBlocksEvent event) {

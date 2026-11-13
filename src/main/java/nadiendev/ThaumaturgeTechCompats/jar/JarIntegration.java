@@ -6,7 +6,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModLoadingContext;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 public final class JarIntegration {
@@ -28,9 +27,8 @@ public final class JarIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new JarBlockStates(output, helper));
-        generator.addProvider(event.includeServer(), new JarDataProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new JarBlockStates(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new JarDataProvider(output));
     }
 }

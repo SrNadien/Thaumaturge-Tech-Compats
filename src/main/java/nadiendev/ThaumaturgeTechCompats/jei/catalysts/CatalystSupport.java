@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.jei.catalysts;
 
 import com.mojang.logging.LogUtils;
-import mezz.jei.api.recipe.RecipeType;
+import mezz.jei.api.recipe.types.IRecipeType;
 import mezz.jei.api.registration.IRecipeCatalystRegistration;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -20,15 +20,15 @@ final class CatalystSupport {
         return ModList.get() != null && ModList.get().isLoaded(modId);
     }
 
-    static void add(IRecipeCatalystRegistration registration, String itemName, RecipeType<?> type) {
+    static void add(IRecipeCatalystRegistration registration, String itemName, IRecipeType<?> type) {
         BuiltInRegistries.ITEM.getOptional(ThaumaturgeTechCompats.id(itemName))
                 .ifPresent(item -> registration.addRecipeCatalyst(item, type));
     }
 
-    static Optional<RecipeType<?>> staticType(String className, String fieldName) {
+    static Optional<IRecipeType<?>> staticType(String className, String fieldName) {
         try {
             Object value = Class.forName(className).getField(fieldName).get(null);
-            if (value instanceof RecipeType<?> type) {
+            if (value instanceof IRecipeType<?> type) {
                 return Optional.of(type);
             }
         } catch (ReflectiveOperationException | LinkageError exception) {

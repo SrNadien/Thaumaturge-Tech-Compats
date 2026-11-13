@@ -6,7 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.server.packs.repository.Pack;
 import net.minecraft.server.packs.repository.PackSource;
@@ -19,7 +19,7 @@ import net.neoforged.neoforge.event.AddPackFindersEvent;
 
 public final class EmcIntegration {
     public static final String TOGGLE = "projecte_emc";
-    public static final String MOD_ID = "projecte";
+    public static final String MOD_ID = "equivox";
     public static final String PACK_PATH = "resourcepacks/projecte_emc";
     public static final String ENTRY = "projecte_emc";
     public static final String RECIPE_MAPPER_KEY = "emc." + ThaumaturgeTechCompats.MOD_ID + ".recipes";
@@ -47,20 +47,20 @@ public final class EmcIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeServer(), new EmcExclusionTags(output));
-        generator.addProvider(event.includeServer(), new EmcPackProvider(output));
-        generator.addProvider(event.includeServer(), new EmcContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new EmcExclusionTags(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new EmcPackProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new EmcContent(output));
         if (loaded()) {
             PackOutput packOutput = new PackOutput(output.getOutputFolder().resolve(PACK_PATH));
-            generator.addProvider(event.includeServer(), new EmcValuesProvider(packOutput, event.getLookupProvider()));
+            generator.addProvider(event instanceof GatherDataEvent.Server, new EmcValuesProvider(packOutput, event.getLookupProvider()));
         }
     }
 
     private static void addPacks(AddPackFindersEvent event) {
         event.addPackFinders(
-                ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, PACK_PATH),
+                Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, PACK_PATH),
                 PackType.SERVER_DATA,
-                Component.literal("Thaumaturge Tech Compats ProjectE values"),
+                Component.literal("Thaumaturge Tech Compats Equivox values"),
                 PackSource.BUILT_IN,
                 true,
                 Pack.Position.BOTTOM);

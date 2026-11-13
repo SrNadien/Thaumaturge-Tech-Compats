@@ -1,6 +1,0 @@
-{
-  "parent": "ftbunearthed:item/unearther_item",
-  "textures": {
-    "1": "thaumaturgetechcompats:block/thaumium_unearther_side"
-  }
-}

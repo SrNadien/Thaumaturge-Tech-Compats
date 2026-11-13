@@ -22,7 +22,7 @@ final class SalisRegistry {
             if (tier != PlanetaryTier.MATRIX) {
                 properties.fireResistant();
             }
-            VARIANTS.put(tier, ITEMS.registerItem(SalisIntegration.itemName(tier), itemProperties -> new SalisVariantItem(tier, itemProperties), properties));
+            VARIANTS.put(tier, ITEMS.registerItem(SalisIntegration.itemName(tier), itemProperties -> new SalisVariantItem(tier, itemProperties), () -> properties));
         }
     }
 

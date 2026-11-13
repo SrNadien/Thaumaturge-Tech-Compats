@@ -13,7 +13,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 public final class ThrusterClient {
     private static volatile ThrusterInput current = ThrusterInput.NONE;
@@ -21,7 +21,7 @@ public final class ThrusterClient {
     private ThrusterClient() {
     }
 
-    @EventBusSubscriber(modid = ThaumaturgeTechCompats.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+    @EventBusSubscriber(modid = ThaumaturgeTechCompats.MOD_ID, value = Dist.CLIENT)
     public static final class Setup {
         private Setup() {
         }
@@ -49,7 +49,7 @@ public final class ThrusterClient {
             }
             current = next;
             if (minecraft.getConnection() != null) {
-                PacketDistributor.sendToServer(new ThrusterInputPayload(next.up(), next.forward()));
+                ClientPacketDistributor.sendToServer(new ThrusterInputPayload(next.up(), next.forward()));
             }
         }
     }

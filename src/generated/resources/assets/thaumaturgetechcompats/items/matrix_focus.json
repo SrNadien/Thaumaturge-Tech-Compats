@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "thaumaturgetechcompats:item/matrix_focus",
+    "tints": [
+      {
+        "type": "thaumaturge:focus_color"
+      }
+    ]
+  }
+}

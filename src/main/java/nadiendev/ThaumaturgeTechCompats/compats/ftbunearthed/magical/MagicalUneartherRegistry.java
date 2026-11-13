@@ -34,7 +34,7 @@ public final class MagicalUneartherRegistry {
             DeferredBlock<MagicalUneartherBlock> block = BLOCKS.registerBlock(
                     tier.blockName(),
                     properties -> new MagicalUneartherBlock(properties, tier),
-                    BlockBehaviour.Properties.of()
+                    () -> BlockBehaviour.Properties.of()
                             .mapColor(MapColor.METAL)
                             .strength(3.0F, 10.0F)
                             .sound(SoundType.METAL));

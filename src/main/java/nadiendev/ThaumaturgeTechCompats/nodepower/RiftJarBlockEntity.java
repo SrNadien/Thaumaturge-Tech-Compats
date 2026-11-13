@@ -2,9 +2,12 @@ package nadiendev.ThaumaturgeTechCompats.nodepower;
 
 import com.leclowndu93150.thaumaturge.content.entity.EntityFluxRift;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
+import com.leclowndu93150.thaumaturge.api.aura.AuraHelper;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -88,14 +91,25 @@ public class RiftJarBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        CompoundTag tag = new CompoundTag();
         tag.putFloat(POWER_KEY, power);
+        output.store("data", CompoundTag.CODEC, tag);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
-        power = tag.getFloat(POWER_KEY);
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        CompoundTag tag = input.read("data", CompoundTag.CODEC).orElseGet(CompoundTag::new);
+        power = tag.getFloatOr(POWER_KEY, 0.0F);
+    }
+
+    @Override
+    public void preRemoveSideEffects(BlockPos pos, BlockState state) {
+        super.preRemoveSideEffects(pos, state);
+        if (level != null && !level.isClientSide() && power() > 0.0F) {
+            AuraHelper.addFlux(level, pos, power() * NodePowerConfig.riftJarReleaseRatio());
+        }
     }
 }

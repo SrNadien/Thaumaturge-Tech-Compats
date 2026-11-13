@@ -36,22 +36,12 @@
       "aspect": "thaumaturge:potentia"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:gold_planetary_endest_pearl"
-  },
+  "catalyst": "thaumaturgetechcompats:gold_planetary_endest_pearl",
   "components": [
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    }
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond"
   ],
   "instability": 3,
   "research": {

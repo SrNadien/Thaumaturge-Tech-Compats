@@ -46,7 +46,7 @@ public final class TaintedFoodIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new TaintedFoodAssets(output));
-        generator.addProvider(event.includeServer(), new TaintedFoodContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new TaintedFoodAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new TaintedFoodContent(output));
     }
 }

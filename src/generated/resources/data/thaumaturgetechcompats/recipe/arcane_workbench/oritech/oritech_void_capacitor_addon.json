@@ -33,18 +33,10 @@
     }
   ],
   "key": {
-    "c": {
-      "item": "thaumaturgetechcompats:oritech_thaumium_capacitor_addon"
-    },
-    "m": {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    "p": {
-      "item": "thaumaturge:plate_void"
-    },
-    "s": {
-      "item": "oritech:heisenberg_compensator"
-    }
+    "c": "thaumaturgetechcompats:oritech_thaumium_capacitor_addon",
+    "m": "thaumaturge:mechanism_complex",
+    "p": "thaumaturge:plate_void",
+    "s": "oritech:heisenberg_compensator"
   },
   "pattern": [
     "pmp",

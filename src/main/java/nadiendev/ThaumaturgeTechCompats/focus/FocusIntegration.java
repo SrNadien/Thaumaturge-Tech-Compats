@@ -25,7 +25,7 @@ public final class FocusIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new FocusItemModelProvider(output, event.getExistingFileHelper()));
-        generator.addProvider(event.includeServer(), new FocusContentProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new FocusItemModelProvider(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new FocusContentProvider(output));
     }
 }

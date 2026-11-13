@@ -36,28 +36,14 @@
       "aspect": "thaumaturge:alkimia"
     }
   ],
-  "catalyst": {
-    "item": "voidminersremastered:solar_rubetine_panel"
-  },
+  "catalyst": "voidminersremastered:solar_rubetine_panel",
   "components": [
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    {
-      "item": "thaumaturge:jar_node"
-    },
-    {
-      "item": "thaumaturge:jar_node"
-    }
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:mechanism_simple",
+    "thaumaturge:jar_node",
+    "thaumaturge:jar_node"
   ],
   "instability": 2,
   "research": {

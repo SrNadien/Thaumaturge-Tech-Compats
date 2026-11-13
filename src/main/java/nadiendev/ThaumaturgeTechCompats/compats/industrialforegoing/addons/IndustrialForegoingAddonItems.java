@@ -5,7 +5,7 @@ import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
 import net.minecraft.core.component.DataComponentPatch;
 import net.minecraft.core.component.DataComponentType;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
@@ -57,7 +57,7 @@ public final class IndustrialForegoingAddonItems {
     @SuppressWarnings("unchecked")
     private static void augment(Entry entry, DataComponentPatch.Builder builder) {
         Optional<DataComponentType<?>> type = BuiltInRegistries.DATA_COMPONENT_TYPE
-                .getOptional(ResourceLocation.parse(IndustrialForegoingAddonsIntegration.TITANIUM_AUGMENTS));
+                .getOptional(Identifier.parse(IndustrialForegoingAddonsIntegration.TITANIUM_AUGMENTS));
         if (type.isEmpty()) {
             return;
         }

@@ -42,14 +42,14 @@ public final class InfusionRegistry {
                 DeferredBlock<VariantMatrixBlock> block = BLOCKS.registerBlock(
                         variant.matrixName(),
                         properties -> new VariantMatrixBlock(properties, variant),
-                        BlockBehaviour.Properties.of()
+                        () -> BlockBehaviour.Properties.of()
                                 .mapColor(MapColor.STONE)
                                 .strength(5.0F, 10.0F)
                                 .sound(SoundType.STONE)
                                 .noOcclusion());
                 MATRICES.put(variant, block);
                 MATRIX_ITEMS.put(variant, ITEMS.registerItem(variant.matrixName(),
-                        properties -> new VariantMatrixItem(block.get(), properties, variant), itemProperties(variant)));
+                        properties -> new VariantMatrixItem(block.get(), properties, variant), () -> itemProperties(variant)));
             }
             if (stones) {
                 Map<StoneKind, DeferredBlock<VariantStoneBlock>> blocks = new EnumMap<>(StoneKind.class);
@@ -58,14 +58,14 @@ public final class InfusionRegistry {
                     DeferredBlock<VariantStoneBlock> block = BLOCKS.registerBlock(
                             variant.stoneName(kind),
                             properties -> new VariantStoneBlock(properties, variant, kind),
-                            BlockBehaviour.Properties.of()
+                            () -> BlockBehaviour.Properties.of()
                                     .mapColor(MapColor.STONE)
                                     .strength(2.0F, 10.0F)
                                     .sound(SoundType.STONE)
                                     .requiresCorrectToolForDrops());
                     blocks.put(kind, block);
                     items.put(kind, ITEMS.registerItem(variant.stoneName(kind),
-                            properties -> new VariantStoneItem(block.get(), properties, variant, kind), itemProperties(variant)));
+                            properties -> new VariantStoneItem(block.get(), properties, variant, kind), () -> itemProperties(variant)));
                 }
                 STONES.put(variant, blocks);
                 STONE_ITEMS.put(variant, items);
@@ -76,12 +76,12 @@ public final class InfusionRegistry {
                 for (AltarPart part : AltarPart.values()) {
                     String name = variant.altarName(part);
                     DeferredBlock<? extends Block> block = switch (part) {
-                        case STONE -> BLOCKS.registerBlock(name, Block::new, altarProperties(false));
-                        case PILLAR -> BLOCKS.registerBlock(name, BlockPillar::new, altarProperties(true));
-                        case PEDESTAL -> BLOCKS.registerBlock(name, BlockPedestal::new, altarProperties(true));
+                        case STONE -> BLOCKS.registerBlock(name, Block::new, () -> altarProperties(false));
+                        case PILLAR -> BLOCKS.registerBlock(name, BlockPillar::new, () -> altarProperties(true));
+                        case PEDESTAL -> BLOCKS.registerBlock(name, properties -> new BlockPedestal(BlockPedestal.Variant.ELDRITCH, properties), () -> altarProperties(true));
                     };
                     blocks.put(part, block);
-                    items.put(part, ITEMS.registerItem(name, properties -> new BlockItem(block.get(), properties), itemProperties(variant)));
+                    items.put(part, ITEMS.registerItem(name, properties -> new BlockItem(block.get(), properties.useBlockDescriptionPrefix()), () -> itemProperties(variant)));
                 }
                 ALTAR.put(variant, blocks);
                 ALTAR_ITEMS.put(variant, items);

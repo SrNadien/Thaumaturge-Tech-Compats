@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodGender;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,13 +23,13 @@ public enum FarmersDelightFood {
     BEEF_PATTY("beef_patty", 10, TaintedFoodGender.FEMININE, false),
     DUMPLINGS("dumplings", 12, TaintedFoodGender.FEMININE_PLURAL, false);
 
-    private final ResourceLocation original;
+    private final Identifier original;
     private final int vitium;
     private final TaintedFoodGender gender;
     private final boolean bowl;
 
     FarmersDelightFood(String path, int vitium, TaintedFoodGender gender, boolean bowl) {
-        this.original = ResourceLocation.fromNamespaceAndPath(FarmersDelightTaintedIntegration.MOD_ID, path);
+        this.original = Identifier.fromNamespaceAndPath(FarmersDelightTaintedIntegration.MOD_ID, path);
         this.vitium = vitium;
         this.gender = gender;
         this.bowl = bowl;
@@ -43,7 +43,7 @@ public enum FarmersDelightFood {
         return ids;
     }
 
-    public ResourceLocation original() {
+    public Identifier original() {
         return original;
     }
 
@@ -63,7 +63,7 @@ public enum FarmersDelightFood {
         return "tainted_" + original.getPath();
     }
 
-    public ResourceLocation itemId() {
-        return ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, id());
+    public Identifier itemId() {
+        return Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, id());
     }
 }

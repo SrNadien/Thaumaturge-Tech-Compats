@@ -23,7 +23,6 @@ public final class FieldIntegration {
         FieldRegistry.BLOCKS.register(modBus);
         FieldRegistry.ITEMS.register(modBus);
         FieldRegistry.BLOCK_ENTITIES.register(modBus);
-        FieldRegistry.ARMOR_MATERIALS.register(modBus);
         modBus.addListener(ThrusterNetwork::register);
         ModLoadingContext.get().getActiveContainer().registerConfig(ModConfig.Type.COMMON, FieldConfig.SPEC, FieldConfig.FILE_NAME);
     }
@@ -65,7 +64,7 @@ public final class FieldIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new FieldAssets(output));
-        generator.addProvider(event.includeServer(), new FieldContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new FieldAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new FieldContent(output));
     }
 }

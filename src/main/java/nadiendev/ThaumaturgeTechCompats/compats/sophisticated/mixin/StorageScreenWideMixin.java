@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.compats.sophisticated.mixin;
 
 import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.gui.WideStorageLayout;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.p3pp3rf1y.sophisticatedcore.client.gui.StorageScreenBase;
 import net.p3pp3rf1y.sophisticatedcore.common.gui.StorageBackgroundProperties;
 import net.p3pp3rf1y.sophisticatedcore.common.gui.StorageContainerMenuBase;
@@ -46,7 +46,7 @@ public abstract class StorageScreenWideMixin {
     }
 
     @Inject(method = "drawInventoryBg", at = @At("HEAD"), cancellable = true, require = 0)
-    private void thaumaturgetechcompats$drawBackground(GuiGraphics graphics, int x, int y, ResourceLocation texture, CallbackInfo ci) {
+    private void thaumaturgetechcompats$drawBackground(GuiGraphics graphics, int x, int y, Identifier texture, CallbackInfo ci) {
         StorageScreenBase<?> screen = (StorageScreenBase<?>) (Object) this;
         if (WideStorageLayout.drawBackground(graphics, x, y, screen.getXSize(), screen.getYSize() - WideStorageLayout.HEIGHT_WITHOUT_STORAGE_SLOTS, texture)) {
             ci.cancel();

@@ -32,40 +32,40 @@ public final class NodePowerRegistry {
             DeferredBlock<FluxJarBlock> block = BLOCKS.registerBlock(
                     tier.blockName(),
                     properties -> new FluxJarBlock(properties, tier),
-                    BlockBehaviour.Properties.of()
+                    () -> BlockBehaviour.Properties.of()
                             .mapColor(MapColor.NONE)
                             .strength(0.3F)
-                            .sound(TTSoundTypes.JAR)
+                            .sound(TTSoundTypes.JAR.get())
                             .noOcclusion());
             Item.Properties itemProperties = new Item.Properties().rarity(tier.rarity());
             if (tier.fireResistant()) {
                 itemProperties.fireResistant();
             }
             JAR_BLOCKS.put(tier, block);
-            JAR_ITEMS.put(tier, ITEMS.registerSimpleBlockItem(block, itemProperties));
+            JAR_ITEMS.put(tier, ITEMS.registerSimpleBlockItem(block, () -> itemProperties));
         }
     }
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<FluxJarBlockEntity>> FLUX_JAR_ENTITY = BLOCK_ENTITIES.register(
             "flux_jar",
-            (Supplier<BlockEntityType<FluxJarBlockEntity>>) () -> BlockEntityType.Builder.of(
+            (Supplier<BlockEntityType<FluxJarBlockEntity>>) () -> new BlockEntityType<>(
                     FluxJarBlockEntity::new,
-                    JAR_BLOCKS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)).build(null));
+                    JAR_BLOCKS.values().stream().map(DeferredBlock::get).toArray(Block[]::new)));
 
     public static final DeferredBlock<RiftJarBlock> RIFT_JAR = BLOCKS.registerBlock(
             "rift_jar",
             RiftJarBlock::new,
-            BlockBehaviour.Properties.of()
+            () -> BlockBehaviour.Properties.of()
                     .mapColor(MapColor.NONE)
                     .strength(0.3F)
-                    .sound(TTSoundTypes.JAR)
+                    .sound(TTSoundTypes.JAR.get())
                     .noOcclusion());
 
-    public static final DeferredItem<BlockItem> RIFT_JAR_ITEM = ITEMS.registerSimpleBlockItem(RIFT_JAR, new Item.Properties().rarity(Rarity.RARE));
+    public static final DeferredItem<BlockItem> RIFT_JAR_ITEM = ITEMS.registerSimpleBlockItem(RIFT_JAR, () -> new Item.Properties().rarity(Rarity.RARE));
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<RiftJarBlockEntity>> RIFT_JAR_ENTITY = BLOCK_ENTITIES.register(
             "rift_jar",
-            (Supplier<BlockEntityType<RiftJarBlockEntity>>) () -> BlockEntityType.Builder.of(RiftJarBlockEntity::new, RIFT_JAR.get()).build(null));
+            (Supplier<BlockEntityType<RiftJarBlockEntity>>) () -> new BlockEntityType<>(RiftJarBlockEntity::new, RIFT_JAR.get()));
 
     private NodePowerRegistry() {
     }

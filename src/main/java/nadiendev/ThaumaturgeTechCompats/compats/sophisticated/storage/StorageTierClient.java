@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.compats.sophisticated.storage;
 
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
@@ -18,8 +18,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class StorageTierClient {
-    private static final ResourceLocation REFERENCE_BARREL = ResourceLocation.fromNamespaceAndPath(StorageTierRegistry.STORAGE_MOD, "netherite_barrel");
-    private static final ResourceLocation REFERENCE_CHEST = ResourceLocation.fromNamespaceAndPath(StorageTierRegistry.STORAGE_MOD, "netherite_chest");
+    private static final Identifier REFERENCE_BARREL = Identifier.fromNamespaceAndPath(StorageTierRegistry.STORAGE_MOD, "netherite_barrel");
+    private static final Identifier REFERENCE_CHEST = Identifier.fromNamespaceAndPath(StorageTierRegistry.STORAGE_MOD, "netherite_chest");
 
     private StorageTierClient() {
     }

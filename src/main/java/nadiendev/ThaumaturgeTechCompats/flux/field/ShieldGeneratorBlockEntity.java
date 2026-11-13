@@ -9,6 +9,8 @@ import net.minecraft.core.particles.DustColorTransitionOptions;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.level.storage.ValueInput;
+import net.minecraft.world.level.storage.ValueOutput;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -24,13 +26,13 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.Tags;
-import org.joml.Vector3f;
+import net.minecraft.util.ARGB;
 
 import java.text.NumberFormat;
 
 public class ShieldGeneratorBlockEntity extends BlockEntity {
     private static final String ACTIVE_KEY = "active";
-    private static final Vector3f SHELL_BLUE = new Vector3f(0.30F, 0.55F, 1.0F);
+    private static final int SHELL_BLUE = ARGB.colorFromFloat(1.0F, 0.30F, 0.55F, 1.0F);
     private static final float SHELL_LIGHTEN = 0.35F;
     private static final double PARTICLE_VIEW_MARGIN = 24.0D;
     private static final double PUSH_LIFT = 0.04D;
@@ -81,17 +83,20 @@ public class ShieldGeneratorBlockEntity extends BlockEntity {
     }
 
     @Override
-    protected void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.saveAdditional(tag, registries);
+    protected void saveAdditional(ValueOutput output) {
+        super.saveAdditional(output);
+        CompoundTag tag = new CompoundTag();
         storage.save(tag);
         tag.putBoolean(ACTIVE_KEY, active);
+        output.store("data", CompoundTag.CODEC, tag);
     }
 
     @Override
-    protected void loadAdditional(CompoundTag tag, HolderLookup.Provider registries) {
-        super.loadAdditional(tag, registries);
+    protected void loadAdditional(ValueInput input) {
+        super.loadAdditional(input);
+        CompoundTag tag = input.read("data", CompoundTag.CODEC).orElseGet(CompoundTag::new);
         storage.load(tag);
-        active = tag.getBoolean(ACTIVE_KEY);
+        active = tag.getBooleanOr(ACTIVE_KEY, false);
     }
 
     @Override
@@ -105,7 +110,7 @@ public class ShieldGeneratorBlockEntity extends BlockEntity {
     @Override
     public void setRemoved() {
         super.setRemoved();
-        if (level != null && !level.isClientSide) {
+        if (level != null && !level.isClientSide()) {
             ShieldNetwork.remove(level.dimension(), this);
         }
     }
@@ -113,7 +118,7 @@ public class ShieldGeneratorBlockEntity extends BlockEntity {
     @Override
     public void onChunkUnloaded() {
         super.onChunkUnloaded();
-        if (level != null && !level.isClientSide) {
+        if (level != null && !level.isClientSide()) {
             ShieldNetwork.remove(level.dimension(), this);
         }
     }
@@ -148,7 +153,7 @@ public class ShieldGeneratorBlockEntity extends BlockEntity {
         }
         Component message = Component.translatable(FieldTranslations.SHIELD_SHUTDOWN, worldPosition.toShortString()).withStyle(ChatFormatting.RED);
         for (ServerPlayer player : level.getEntitiesOfClass(ServerPlayer.class, new AABB(worldPosition).inflate(range))) {
-            player.displayClientMessage(message, true);
+            player.sendOverlayMessage(message);
         }
     }
 
@@ -200,7 +205,7 @@ public class ShieldGeneratorBlockEntity extends BlockEntity {
                 }
                 level.sendParticles(ParticleTypes.ELECTRIC_SPARK, projectile.getX(), projectile.getY(), projectile.getZ(), 6, 0.1D, 0.1D, 0.1D, 0.05D);
                 projectile.discard();
-            } else if (push && entity instanceof Mob mob && mob instanceof Enemy && !mob.getType().is(Tags.EntityTypes.BOSSES) && !mob.isPassenger()) {
+            } else if (push && entity instanceof Mob mob && mob instanceof Enemy && !mob.getType().builtInRegistryHolder().is(Tags.EntityTypes.BOSSES) && !mob.isPassenger()) {
                 pushOut(level, mob, center);
             }
         }
@@ -214,7 +219,7 @@ public class ShieldGeneratorBlockEntity extends BlockEntity {
     private static void pushOut(ServerLevel level, Mob mob, Vec3 center) {
         Vec3 away = mob.position().add(0.0D, mob.getBbHeight() * 0.5D, 0.0D).subtract(center);
         if (away.lengthSqr() < 1.0E-4D) {
-            away = new Vec3(level.random.nextDouble() - 0.5D, 0.0D, level.random.nextDouble() - 0.5D);
+            away = new Vec3(level.getRandom().nextDouble() - 0.5D, 0.0D, level.getRandom().nextDouble() - 0.5D);
         }
         double strength = FieldConfig.shieldPushStrength();
         away = away.normalize();
@@ -228,7 +233,7 @@ public class ShieldGeneratorBlockEntity extends BlockEntity {
         if (nearest == null) {
             return;
         }
-        RandomSource random = level.random;
+        RandomSource random = level.getRandom();
         Vec3 toward = nearest.position().subtract(center);
         if (toward.lengthSqr() < 1.0E-4D) {
             toward = new Vec3(0.0D, 1.0D, 0.0D);
@@ -245,28 +250,28 @@ public class ShieldGeneratorBlockEntity extends BlockEntity {
         }
     }
 
-    private Vector3f shellViolet() {
+    private int shellViolet() {
         int rgb = tier.color();
         float red = (rgb >> 16 & 255) / 255.0F;
         float green = (rgb >> 8 & 255) / 255.0F;
         float blue = (rgb & 255) / 255.0F;
-        return new Vector3f(red + (1.0F - red) * SHELL_LIGHTEN, green + (1.0F - green) * SHELL_LIGHTEN, blue + (1.0F - blue) * SHELL_LIGHTEN);
+        return ARGB.colorFromFloat(1.0F, red + (1.0F - red) * SHELL_LIGHTEN, green + (1.0F - green) * SHELL_LIGHTEN, blue + (1.0F - blue) * SHELL_LIGHTEN);
     }
 
     public void report(Player player) {
         NumberFormat format = NumberFormat.getIntegerInstance();
         long cost = FieldConfig.shieldCost(tier);
-        player.displayClientMessage(getBlockState().getBlock().getName().withStyle(ChatFormatting.LIGHT_PURPLE), false);
+        player.sendSystemMessage(getBlockState().getBlock().getName().withStyle(ChatFormatting.LIGHT_PURPLE));
         if (!FieldIntegration.enabled(tier) || !FieldConfig.shieldEnabled()) {
-            player.displayClientMessage(Component.translatable(FieldTranslations.SHIELD_DISABLED).withStyle(ChatFormatting.RED), false);
+            player.sendSystemMessage(Component.translatable(FieldTranslations.SHIELD_DISABLED).withStyle(ChatFormatting.RED));
             return;
         }
-        player.displayClientMessage(Component.translatable(active ? FieldTranslations.SHIELD_STATE_ON : FieldTranslations.SHIELD_STATE_OFF)
-                .withStyle(active ? ChatFormatting.GREEN : ChatFormatting.RED), false);
-        player.displayClientMessage(Component.translatable(FieldTranslations.SHIELD_RADIUS, radius()).withStyle(ChatFormatting.GRAY), false);
-        player.displayClientMessage(Component.translatable(FieldTranslations.FLUX, format.format(storage.stored()), format.format(storage.capacity())).withStyle(ChatFormatting.GRAY), false);
+        player.sendSystemMessage(Component.translatable(active ? FieldTranslations.SHIELD_STATE_ON : FieldTranslations.SHIELD_STATE_OFF)
+                .withStyle(active ? ChatFormatting.GREEN : ChatFormatting.RED));
+        player.sendSystemMessage(Component.translatable(FieldTranslations.SHIELD_RADIUS, radius()).withStyle(ChatFormatting.GRAY));
+        player.sendSystemMessage(Component.translatable(FieldTranslations.FLUX, format.format(storage.stored()), format.format(storage.capacity())).withStyle(ChatFormatting.GRAY));
         if (cost > 0L) {
-            player.displayClientMessage(Component.translatable(FieldTranslations.SHIELD_COST, format.format(cost), format.format(storage.stored() / cost / 20L)).withStyle(ChatFormatting.GRAY), false);
+            player.sendSystemMessage(Component.translatable(FieldTranslations.SHIELD_COST, format.format(cost), format.format(storage.stored() / cost / 20L)).withStyle(ChatFormatting.GRAY));
         }
     }
 }

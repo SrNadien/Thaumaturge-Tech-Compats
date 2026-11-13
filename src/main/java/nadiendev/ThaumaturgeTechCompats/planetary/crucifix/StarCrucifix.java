@@ -5,7 +5,9 @@ import nadiendev.ThaumaturgeTechCompats.planetary.PlanetaryTier;
 import nadiendev.ThaumaturgeTechCompats.planetary.crucifix.CrucifixEffectPayload.Phase;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
+import net.minecraft.core.particles.ColorParticleOption;
 import net.minecraft.core.particles.ItemParticleOption;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
@@ -106,7 +108,7 @@ public final class StarCrucifix {
     }
 
     public static boolean isBoss(LivingEntity entity) {
-        return entity.getType().is(CrucifixTags.IMMUNE);
+        return entity.getType().builtInRegistryHolder().is(CrucifixTags.IMMUNE);
     }
 
     public static boolean isImmune(LivingEntity entity, PlanetaryTier tier) {
@@ -239,14 +241,14 @@ public final class StarCrucifix {
         boolean success = !isImmune(target, tier);
         boolean broken = false;
         if (stack.isDamageableItem() && !player.hasInfiniteMaterials()) {
-            stack.hurtAndBreak(1, player, LivingEntity.getSlotForHand(hand));
+            stack.hurtAndBreak(1, player, hand.asEquipmentSlot());
             broken = stack.isEmpty();
         }
 
         Vec3 center = displayCenter(level, player, target);
         CrucifixDisplayEntity display = new CrucifixDisplayEntity(CrucifixRegistry.DISPLAY.get(), level);
         display.setTier(tier);
-        display.moveTo(center.x, center.y - CrucifixTiming.DISPLAY_SIZE * 0.5, center.z, 0.0F, 0.0F);
+        display.snapTo(center.x, center.y - CrucifixTiming.DISPLAY_SIZE * 0.5, center.z, 0.0F, 0.0F);
         Binding binding = new Binding(player, target, level, tier, success, broken, display);
         BINDINGS.put(player.getUUID(), binding);
         level.addFreshEntity(display);
@@ -313,10 +315,10 @@ public final class StarCrucifix {
             return;
         }
         if (entity instanceof LivingEntity living && living.getPersistentData().contains(BOUND_TAG) && !isBound(living)) {
-            CompoundTag saved = living.getPersistentData().getCompound(BOUND_TAG);
+            CompoundTag saved = living.getPersistentData().getCompoundOrEmpty(BOUND_TAG);
             release(living);
             if (saved.contains("AnchorY")) {
-                living.setPos(saved.getDouble("AnchorX"), saved.getDouble("AnchorY"), saved.getDouble("AnchorZ"));
+                living.setPos(saved.getDoubleOr("AnchorX", 0.0D), saved.getDoubleOr("AnchorY", 0.0D), saved.getDoubleOr("AnchorZ", 0.0D));
             }
         }
     }
@@ -347,13 +349,13 @@ public final class StarCrucifix {
     }
 
     private static void release(LivingEntity target) {
-        CompoundTag saved = target.getPersistentData().getCompound(BOUND_TAG);
+        CompoundTag saved = target.getPersistentData().getCompoundOrEmpty(BOUND_TAG);
         target.getPersistentData().remove(BOUND_TAG);
         if (target instanceof Mob mob) {
-            mob.setNoAi(saved.getBoolean("NoAI"));
+            mob.setNoAi(saved.getBooleanOr("NoAI", false));
         }
-        target.setNoGravity(saved.getBoolean("NoGravity"));
-        target.setInvulnerable(saved.getBoolean("Invulnerable"));
+        target.setNoGravity(saved.getBooleanOr("NoGravity", false));
+        target.setInvulnerable(saved.getBooleanOr("Invulnerable", false));
         target.noPhysics = false;
     }
 
@@ -425,9 +427,9 @@ public final class StarCrucifix {
 
     private static void strike(LivingEntity target, DamageSource source, float amount) {
         if (target instanceof EnderDragon dragon) {
-            dragon.hurt(dragon.head, source, amount);
+            dragon.hurt((ServerLevel) target.level(), dragon.head, source, amount);
         } else {
-            target.hurt(source, amount);
+            target.hurtServer((ServerLevel) target.level(), source, amount);
         }
     }
 
@@ -451,9 +453,9 @@ public final class StarCrucifix {
             binding.cracked = true;
             Vec3 c = binding.display.getBoundingBox().getCenter();
             CrucifixSounds.crack(level, c);
-            level.sendParticles(ParticleTypes.FLASH, c.x, c.y, c.z, 1, 0.0, 0.0, 0.0, 0.0);
+            level.sendParticles(ColorParticleOption.create(ParticleTypes.FLASH, 0xFFFFFFFF), c.x, c.y, c.z, 1, 0.0, 0.0, 0.0, 0.0);
             level.sendParticles(ParticleTypes.ELECTRIC_SPARK, c.x, c.y, c.z, 14, 0.1, 0.2, 0.1, 0.25);
-            level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, particleStack(binding.tier)),
+            level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, ItemStackTemplate.fromNonEmptyStack(particleStack(binding.tier))),
                     c.x, c.y, c.z, 6, 0.05, 0.15, 0.05, 0.05);
         }
     }
@@ -463,9 +465,9 @@ public final class StarCrucifix {
         CrucifixDisplayEntity display = binding.display;
         Vec3 c = display.getBoundingBox().getCenter();
         CrucifixSounds.explode(level, c);
-        level.sendParticles(ParticleTypes.FLASH, c.x, c.y, c.z, 1, 0.0, 0.0, 0.0, 0.0);
+        level.sendParticles(ColorParticleOption.create(ParticleTypes.FLASH, 0xFFFFFFFF), c.x, c.y, c.z, 1, 0.0, 0.0, 0.0, 0.0);
         level.sendParticles(ParticleTypes.EXPLOSION, c.x, c.y, c.z, 1, 0.0, 0.0, 0.0, 0.0);
-        level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, particleStack(binding.tier)),
+        level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, ItemStackTemplate.fromNonEmptyStack(particleStack(binding.tier))),
                 c.x, c.y, c.z, 36, 0.1, 0.15, 0.1, 0.3);
         level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, splinters()),
                 c.x, c.y, c.z, 24, 0.15, 0.2, 0.15, 0.3);
@@ -488,15 +490,14 @@ public final class StarCrucifix {
                 holder.setDeltaMovement(away.x * CrucifixTiming.KNOCKBACK_HORIZONTAL * push,
                         Math.max(holder.getDeltaMovement().y, CrucifixTiming.KNOCKBACK_VERTICAL * push),
                         away.z * CrucifixTiming.KNOCKBACK_HORIZONTAL * push);
-                holder.hasImpulse = true;
                 holder.hurtMarked = true;
             }
-            holder.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, CrucifixTiming.SHAKEN_TICKS,
+            holder.addEffect(new MobEffectInstance(MobEffects.SLOWNESS, CrucifixTiming.SHAKEN_TICKS,
                     CrucifixTiming.SHAKEN_SLOWNESS_AMPLIFIER), boss);
             holder.addEffect(new MobEffectInstance(MobEffects.DARKNESS, CrucifixTiming.SHAKEN_TICKS, 0), boss);
         }
         if (boss.isAlive()) {
-            boss.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, CrucifixTiming.BOSS_FURY_TICKS,
+            boss.addEffect(new MobEffectInstance(MobEffects.STRENGTH, CrucifixTiming.BOSS_FURY_TICKS,
                     CrucifixTiming.BOSS_FURY_AMPLIFIER), holder);
         }
     }
@@ -522,9 +523,9 @@ public final class StarCrucifix {
             display.discard();
             return;
         }
-        level.playSound(null, c.x, c.y, c.z, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 0.9F, 0.8F + level.random.nextFloat() * 0.4F);
-        level.playSound(null, c.x, c.y, c.z, CrucifixRegistry.BREAK.get(), SoundSource.PLAYERS, 0.8F, 0.9F + level.random.nextFloat() * 0.2F);
-        level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, particleStack(binding.tier)),
+        level.playSound(null, c.x, c.y, c.z, SoundEvents.ITEM_BREAK, SoundSource.PLAYERS, 0.9F, 0.8F + level.getRandom().nextFloat() * 0.4F);
+        level.playSound(null, c.x, c.y, c.z, CrucifixRegistry.BREAK.get(), SoundSource.PLAYERS, 0.8F, 0.9F + level.getRandom().nextFloat() * 0.2F);
+        level.sendParticles(new ItemParticleOption(ParticleTypes.ITEM, ItemStackTemplate.fromNonEmptyStack(particleStack(binding.tier))),
                 c.x, c.y, c.z, 18, 0.12, 0.2, 0.12, 0.08);
         level.sendParticles(new BlockParticleOption(ParticleTypes.BLOCK, splinters()),
                 c.x, c.y, c.z, 8, 0.12, 0.2, 0.12, 0.1);

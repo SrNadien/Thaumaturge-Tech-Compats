@@ -5,7 +5,7 @@ import nadiendev.ThaumaturgeTechCompats.flux.core.CoreStatus;
 import nadiendev.ThaumaturgeTechCompats.flux.core.CoreTooltip;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
 import snownee.jade.api.ITooltip;
@@ -15,7 +15,7 @@ public enum CoreJadeComponent implements IBlockComponentProvider {
     INSTANCE;
 
     @Override
-    public ResourceLocation getUid() {
+    public Identifier getUid() {
         return CoreJadeData.UID;
     }
 
@@ -25,7 +25,7 @@ public enum CoreJadeComponent implements IBlockComponentProvider {
         if (!JadeConfig.enabled() || !data.contains(CoreJadeData.ROOT)) {
             return;
         }
-        CoreStatus status = CoreStatus.fromTag(data.getCompound(CoreJadeData.ROOT));
+        CoreStatus status = CoreStatus.fromTag(data.getCompoundOrEmpty(CoreJadeData.ROOT));
         for (Component line : CoreTooltip.jadeLines(status)) {
             tooltip.add(line);
         }

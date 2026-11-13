@@ -9,6 +9,6 @@ public final class CreativeIntegration {
 
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
-        generator.addProvider(event.includeServer(), new CreativeContent(generator.getPackOutput()));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new CreativeContent(generator.getPackOutput()));
     }
 }

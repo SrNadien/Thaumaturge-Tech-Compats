@@ -6,7 +6,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -26,7 +26,7 @@ public final class MagicalUneartherIntegration {
     public static final String TOGGLE_VOID = "ftbunearthed_magical_void";
 
     private static final ResourceKey<BlockEntityType<?>> CORE_ENTITY = ResourceKey.create(
-            Registries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(FtbUnearthedIntegration.MOD_ID, "core"));
+            Registries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(FtbUnearthedIntegration.MOD_ID, "core"));
 
     private MagicalUneartherIntegration() {
     }
@@ -75,8 +75,8 @@ public final class MagicalUneartherIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new MagicalUneartherAssets(output));
-        generator.addProvider(event.includeServer(), new MagicalUneartherContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new MagicalUneartherAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new MagicalUneartherContent(output));
     }
 
     private static void addValidBlocks(BlockEntityTypeAddBlocksEvent event) {

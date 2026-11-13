@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.ponder.client;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.createmod.ponder.foundation.PonderIndex;
+import net.createmod.ponder.api.client.PonderIndex;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;

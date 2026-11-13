@@ -7,18 +7,10 @@
     }
   ],
   "key": {
-    "C": {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    "F": {
-      "item": "thaumaturge:advanced_alchemical_construct"
-    },
-    "P": {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    "R": {
-      "item": "thaumaturge:smelter_void"
-    }
+    "C": "thaumaturgetechcompats:matrix_plate",
+    "F": "thaumaturge:advanced_alchemical_construct",
+    "P": "avaritia:crystal_matrix_ingot",
+    "R": "thaumaturge:smelter_void"
   },
   "pattern": [
     "PRP",

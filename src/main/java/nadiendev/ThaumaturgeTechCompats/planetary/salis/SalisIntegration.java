@@ -64,7 +64,7 @@ public final class SalisIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new SalisAssets(output));
-        generator.addProvider(event.includeServer(), new SalisContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new SalisAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new SalisContent(output));
     }
 }

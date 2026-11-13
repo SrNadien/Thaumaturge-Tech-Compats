@@ -40,7 +40,7 @@ public class TieredCollectorBlock extends NeutronCollectorBlock {
 
     @Override
     public InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
-        if (!level.isClientSide && level.getBlockEntity(pos) instanceof NeutronCollectorTile tile) {
+        if (!level.isClientSide() && level.getBlockEntity(pos) instanceof NeutronCollectorTile tile) {
             ensureTier(tile);
             player.openMenu(new SimpleMenuProvider((id, inventory, user) -> tile.createMenu(id, inventory), getName()), pos);
         }

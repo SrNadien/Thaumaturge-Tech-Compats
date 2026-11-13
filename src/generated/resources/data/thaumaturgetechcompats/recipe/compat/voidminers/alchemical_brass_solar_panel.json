@@ -40,28 +40,14 @@
       "aspect": "thaumaturge:machina"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_solar_panel"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_solar_panel",
   "components": [
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    {
-      "item": "thaumaturge:jar_node"
-    },
-    {
-      "item": "thaumaturge:jar_node"
-    }
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:plate_brass",
+    "thaumaturge:mechanism_simple",
+    "thaumaturge:jar_node",
+    "thaumaturge:jar_node"
   ],
   "instability": 4,
   "research": {

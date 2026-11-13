@@ -63,13 +63,13 @@ public final class OritechRegistry {
     }
 
     private static void registerNode(OritechNode node) {
-        DeferredBlock<Block> block = BLOCKS.registerBlock(node.blockName(), Block::new, BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK));
+        DeferredBlock<Block> block = BLOCKS.registerBlock(node.blockName(), Block::new, () -> BlockBehaviour.Properties.ofFullCopy(Blocks.BEDROCK));
         ITEM_HOLDERS.add(ITEMS.registerSimpleBlockItem(block));
     }
 
     private static void registerAddon(OritechTier tier, OritechAddon addon) {
         BlockBehaviour.Properties properties = BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).noOcclusion();
-        DeferredBlock<Block> block = BLOCKS.registerBlock(addon.blockName(tier), blockProperties -> AddonBridge.create(blockProperties, tier, addon), properties);
+        DeferredBlock<Block> block = BLOCKS.registerBlock(addon.blockName(tier), blockProperties -> AddonBridge.create(blockProperties, tier, addon), () -> properties);
         ADDON_BLOCKS.add(block);
         ITEM_HOLDERS.add(ITEMS.registerSimpleBlockItem(block));
     }

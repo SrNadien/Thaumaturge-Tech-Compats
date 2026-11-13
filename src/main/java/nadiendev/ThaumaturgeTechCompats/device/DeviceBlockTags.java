@@ -18,22 +18,21 @@ import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerIntegration;
 import nadiendev.ThaumaturgeTechCompats.transducer.TransducerIntegration;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
-import net.minecraft.data.tags.IntrinsicHolderTagsProvider;
+import net.minecraft.data.tags.TagAppender;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
 import java.util.concurrent.CompletableFuture;
 
 public class DeviceBlockTags extends BlockTagsProvider {
-    public DeviceBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup, ExistingFileHelper helper) {
-        super(output, lookup, ThaumaturgeTechCompats.MOD_ID, helper);
+    public DeviceBlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookup) {
+        super(output, lookup, ThaumaturgeTechCompats.MOD_ID);
     }
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
-        IntrinsicHolderTagsProvider.IntrinsicTagAppender<Block> pickaxe = tag(BlockTags.MINEABLE_WITH_PICKAXE);
+        TagAppender<Block, Block> pickaxe = tag(BlockTags.MINEABLE_WITH_PICKAXE);
         SmelterIntegration.blocks().forEach(pickaxe::add);
         StabilizerIntegration.blocks().forEach(pickaxe::add);
         TransducerIntegration.blocks().forEach(pickaxe::add);
@@ -47,7 +46,7 @@ public class DeviceBlockTags extends BlockTagsProvider {
         LinkIntegration.blocks().forEach(pickaxe::add);
         ChargerIntegration.blocks().forEach(pickaxe::add);
         FieldIntegration.blocks().forEach(pickaxe::add);
-        EnderIOIntegration.blockIds().forEach(pickaxe::addOptional);
-        OritechIntegration.blockIds().forEach(pickaxe::addOptional);
+        EnderIOIntegration.blockIds().forEach(id -> getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_PICKAXE).addOptionalElement(id));
+        OritechIntegration.blockIds().forEach(id -> getOrCreateRawBuilder(BlockTags.MINEABLE_WITH_PICKAXE).addOptionalElement(id));
     }
 }

@@ -51,7 +51,7 @@ public final class ForceCraftRepair {
     }
 
     private static void pulse(ServerPlayer player) {
-        ServerLevel level = player.serverLevel();
+        ServerLevel level = player.level();
         BlockPos pos = player.blockPosition();
         float cost = ForceCraftConfig.repairVisPerPoint();
         if (cost > 0.0F && ForceCraftConfig.repairRespectPreservation() && AuraHelper.shouldPreserveAura(level, player, pos)) {

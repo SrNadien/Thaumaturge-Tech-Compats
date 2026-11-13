@@ -44,7 +44,7 @@ public class ShieldGeneratorBlock extends BaseEntityBlock {
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return InteractionResult.SUCCESS;
         }
         if (level.getBlockEntity(pos) instanceof ShieldGeneratorBlockEntity shield) {
@@ -60,7 +60,7 @@ public class ShieldGeneratorBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return null;
         }
         return createTickerHelper(type, FieldRegistry.SHIELD_ENTITY.get(), ShieldGeneratorBlockEntity::serverTick);

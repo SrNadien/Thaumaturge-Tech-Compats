@@ -24,22 +24,12 @@
       "aspect": "thaumaturge:vinculum"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:salis_mundus"
-  },
+  "catalyst": "thaumaturge:salis_mundus",
   "components": [
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "avaritia:blaze_cube"
-    },
-    {
-      "item": "avaritia:blaze_cube"
-    }
+    "avaritia:blaze_cube",
+    "avaritia:blaze_cube",
+    "avaritia:blaze_cube",
+    "avaritia:blaze_cube"
   ],
   "instability": 4,
   "research": {

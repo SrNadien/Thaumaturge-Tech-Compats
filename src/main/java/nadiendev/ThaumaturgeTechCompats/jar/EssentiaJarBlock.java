@@ -30,7 +30,7 @@ public final class EssentiaJarBlock extends AbstractBlockJar {
     }
 
     @Override
-    public BlockEntityType<AbstractBlockEntityJar> jarType() {
+    protected BlockEntityType<? extends AbstractBlockEntityJar> jarType() {
         return TTBlockEntities.JAR.get();
     }
 

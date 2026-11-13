@@ -24,7 +24,6 @@ import nadiendev.ThaumaturgeTechCompats.compats.forcecraft.ForceCraftIntegration
 import nadiendev.ThaumaturgeTechCompats.compats.tags.TagAspectsIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.auraconverter.AuraConverterIntegration;
-import nadiendev.ThaumaturgeTechCompats.compats.sophisticated.SophisticatedIntegration;
 import nadiendev.ThaumaturgeTechCompats.emc.EmcIntegration;
 import nadiendev.ThaumaturgeTechCompats.essences.EssencesIntegration;
 import nadiendev.ThaumaturgeTechCompats.flux.charger.ChargerIntegration;
@@ -44,7 +43,7 @@ import nadiendev.ThaumaturgeTechCompats.stabilizer.StabilizerIntegration;
 import nadiendev.ThaumaturgeTechCompats.wandtier.WandTierIntegration;
 import nadiendev.ThaumaturgeTechCompats.registry.ModItems;
 import nadiendev.ThaumaturgeTechCompats.registry.ModWandParts;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -79,7 +78,6 @@ public class ThaumaturgeTechCompats {
         CrucifixIntegration.register(modBus);
         EssencesIntegration.register(modBus);
         EmcIntegration.register(modBus);
-        SophisticatedIntegration.register(modBus);
         BotaniaIntegration.register(modBus);
         InfusionIntegration.register(modBus);
         VoidMinersMagicalIntegration.register(modBus);
@@ -104,7 +102,7 @@ public class ThaumaturgeTechCompats {
         JadeIntegration.register();
     }
 
-    public static ResourceLocation id(String path) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
+    public static Identifier id(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 }

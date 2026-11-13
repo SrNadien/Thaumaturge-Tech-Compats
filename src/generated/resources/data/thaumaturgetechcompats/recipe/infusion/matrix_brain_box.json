@@ -18,25 +18,13 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:brain_box"
-  },
+  "catalyst": "thaumaturge:brain_box",
   "components": [
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "thaumaturge:mind_clockwork"
-    }
+    "thaumaturgetechcompats:matrix_plate",
+    "thaumaturgetechcompats:matrix_plate",
+    "thaumaturgetechcompats:matrix_plate",
+    "thaumaturgetechcompats:matrix_plate",
+    "thaumaturge:mind_clockwork"
   ],
   "instability": 4,
   "research": {

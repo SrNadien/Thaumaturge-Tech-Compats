@@ -18,22 +18,12 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:focus_3"
-  },
+  "catalyst": "thaumaturge:focus_3",
   "components": [
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    },
-    {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    {
-      "item": "thaumaturgetechcompats:matrix_plate"
-    }
+    "avaritia:crystal_matrix_ingot",
+    "thaumaturgetechcompats:matrix_plate",
+    "avaritia:crystal_matrix_ingot",
+    "thaumaturgetechcompats:matrix_plate"
   ],
   "instability": 8,
   "research": {

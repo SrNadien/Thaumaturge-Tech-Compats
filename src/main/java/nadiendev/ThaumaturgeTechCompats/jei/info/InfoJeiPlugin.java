@@ -6,7 +6,7 @@ import mezz.jei.api.registration.IRecipeRegistration;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -16,10 +16,10 @@ import java.util.Set;
 
 @JeiPlugin
 public class InfoJeiPlugin implements IModPlugin {
-    private static final ResourceLocation ID = ThaumaturgeTechCompats.id("info");
+    private static final Identifier ID = ThaumaturgeTechCompats.id("info");
 
     @Override
-    public ResourceLocation getPluginUid() {
+    public Identifier getPluginUid() {
         return ID;
     }
 

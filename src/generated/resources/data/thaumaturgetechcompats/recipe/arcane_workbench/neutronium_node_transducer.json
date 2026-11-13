@@ -7,21 +7,11 @@
     }
   ],
   "key": {
-    "C": {
-      "item": "minecraft:comparator"
-    },
-    "I": {
-      "item": "avaritia:neutron_ingot"
-    },
-    "N": {
-      "tag": "thaumaturge:nitors"
-    },
-    "P": {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    "S": {
-      "item": "thaumaturgetechcompats:matrix_node_transducer"
-    }
+    "C": "minecraft:comparator",
+    "I": "avaritia:neutron_ingot",
+    "N": "#thaumaturge:nitors",
+    "P": "thaumaturgetechcompats:neutronium_plate",
+    "S": "thaumaturgetechcompats:matrix_node_transducer"
   },
   "pattern": [
     "PCP",

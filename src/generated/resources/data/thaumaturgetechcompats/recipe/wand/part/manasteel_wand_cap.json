@@ -16,9 +16,7 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "I": {
-      "item": "botania:manasteel_ingot"
-    }
+    "I": "botania:manasteel_ingot"
   },
   "pattern": [
     "III",

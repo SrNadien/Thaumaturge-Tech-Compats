@@ -35,6 +35,6 @@ public final class SolarFluxIntegration {
 
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
-        generator.addProvider(event.includeServer(), new SolarFluxContent(generator.getPackOutput()));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new SolarFluxContent(generator.getPackOutput()));
     }
 }

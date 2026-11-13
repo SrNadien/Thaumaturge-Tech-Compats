@@ -3,12 +3,12 @@
   "values": {
     "before": [
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 4096,
         "id": "thaumaturgetechcompats:copper_planetary_endest_pearl"
       },
       {
-        "type": "projecte:item",
+        "type": "equivox:item",
         "emc_value": 4096,
         "id": "thaumaturgetechcompats:copper_star_crucifix"
       }

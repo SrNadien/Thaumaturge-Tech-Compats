@@ -44,7 +44,7 @@ public final class GearIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new GearAssets(output));
-        generator.addProvider(event.includeServer(), new GearContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new GearAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new GearContent(output));
     }
 }

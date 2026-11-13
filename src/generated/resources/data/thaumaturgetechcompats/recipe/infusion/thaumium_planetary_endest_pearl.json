@@ -52,22 +52,12 @@
       "aspect": "thaumaturge:auram"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:netherite_planetary_endest_pearl"
-  },
+  "catalyst": "thaumaturgetechcompats:netherite_planetary_endest_pearl",
   "components": [
-    {
-      "item": "thaumaturge:ingot_thaumium"
-    },
-    {
-      "item": "thaumaturge:ingot_thaumium"
-    },
-    {
-      "item": "thaumaturge:ingot_thaumium"
-    },
-    {
-      "item": "thaumaturge:ingot_thaumium"
-    }
+    "thaumaturge:ingot_thaumium",
+    "thaumaturge:ingot_thaumium",
+    "thaumaturge:ingot_thaumium",
+    "thaumaturge:ingot_thaumium"
   ],
   "instability": 6,
   "research": {

@@ -36,31 +36,15 @@
       "aspect": "thaumaturge:vacuos"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_aura_converter"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_aura_converter",
   "components": [
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    }
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:mechanism_complex",
+    "thaumaturge:vis_resonator",
+    "thaumaturge:vis_resonator"
   ],
   "instability": 4,
   "research": {

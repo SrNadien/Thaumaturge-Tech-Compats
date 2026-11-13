@@ -25,18 +25,10 @@
     }
   ],
   "key": {
-    "c": {
-      "item": "oritech:machine_speed_addon"
-    },
-    "m": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "p": {
-      "item": "thaumaturge:plate_brass"
-    },
-    "s": {
-      "item": "oritech:magnetic_coil"
-    }
+    "c": "oritech:machine_speed_addon",
+    "m": "thaumaturge:mechanism_simple",
+    "p": "thaumaturge:plate_brass",
+    "s": "oritech:magnetic_coil"
   },
   "pattern": [
     "pmp",

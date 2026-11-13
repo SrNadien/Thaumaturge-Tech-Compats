@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.taintedfood;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.neoforge.common.ModConfigSpec;
 
 import java.util.List;
@@ -61,7 +61,7 @@ public final class TaintedFoodConfig {
     }
 
     private static boolean validId(Object value) {
-        return value instanceof String text && ResourceLocation.tryParse(text) != null;
+        return value instanceof String text && Identifier.tryParse(text) != null;
     }
 
     private static <T> T read(ModConfigSpec.ConfigValue<T> value) {
@@ -84,9 +84,9 @@ public final class TaintedFoodConfig {
         return read(SATURATION_MULTIPLIER).floatValue();
     }
 
-    public static ResourceLocation effectId() {
-        ResourceLocation id = ResourceLocation.tryParse(read(EFFECT_ID));
-        return id == null ? ResourceLocation.parse(DEFAULT_EFFECT) : id;
+    public static Identifier effectId() {
+        Identifier id = Identifier.tryParse(read(EFFECT_ID));
+        return id == null ? Identifier.parse(DEFAULT_EFFECT) : id;
     }
 
     public static int effectDuration() {

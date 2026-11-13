@@ -3,7 +3,7 @@ package nadiendev.ThaumaturgeTechCompats.jei.info;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.neoforged.neoforge.common.data.LanguageProvider;
@@ -30,7 +30,7 @@ public final class JeiInfoTranslations {
     private static Map<String, Boolean> paths() {
         Map<String, Boolean> paths = new LinkedHashMap<>();
         for (Map.Entry<ResourceKey<Item>, Item> entry : BuiltInRegistries.ITEM.entrySet()) {
-            ResourceLocation id = entry.getKey().location();
+            Identifier id = entry.getKey().identifier();
             if (ThaumaturgeTechCompats.MOD_ID.equals(id.getNamespace())) {
                 paths.put(id.getPath(), entry.getValue() instanceof BlockItem);
             }

@@ -16,9 +16,7 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "T": {
-      "item": "botania:livingwood_twig"
-    }
+    "T": "botania:livingwood_twig"
   },
   "pattern": [
     "  T",

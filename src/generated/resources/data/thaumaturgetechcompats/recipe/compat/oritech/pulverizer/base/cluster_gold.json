@@ -22,9 +22,7 @@
   ],
   "type": "oritech:pulverizer",
   "ingredients": [
-    {
-      "item": "thaumaturge:cluster_gold"
-    }
+    "thaumaturge:cluster_gold"
   ],
   "results": [
     {

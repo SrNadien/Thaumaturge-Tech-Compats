@@ -44,31 +44,15 @@
       "aspect": "thaumaturge:praecantatio"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_solar_panel"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_solar_panel",
   "components": [
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    {
-      "item": "thaumaturge:jar_node"
-    },
-    {
-      "item": "thaumaturge:jar_node"
-    },
-    {
-      "item": "thaumaturge:void_seed"
-    }
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:mechanism_complex",
+    "thaumaturge:jar_node",
+    "thaumaturge:jar_node",
+    "thaumaturge:void_seed"
   ],
   "instability": 6,
   "research": {

@@ -26,9 +26,7 @@
   ],
   "type": "oritech:grinder",
   "ingredients": [
-    {
-      "tag": "c:ores/amber"
-    }
+    "#c:ores/amber"
   ],
   "results": [
     {

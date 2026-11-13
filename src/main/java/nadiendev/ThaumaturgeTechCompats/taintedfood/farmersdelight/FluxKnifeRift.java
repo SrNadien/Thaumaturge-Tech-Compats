@@ -8,7 +8,7 @@ import net.minecraft.core.particles.ParticleType;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
@@ -47,7 +47,7 @@ public final class FluxKnifeRift {
             return InteractionResult.PASS;
         }
         if (!(level instanceof ServerLevel server)) {
-            return InteractionResult.sidedSuccess(true);
+            return InteractionResult.SUCCESS;
         }
         ItemStack stack = context.getItemInHand();
         if (player.getCooldowns().isOnCooldown(stack.getItem())) {
@@ -58,7 +58,7 @@ public final class FluxKnifeRift {
         float cost = size * size / AURA_SIZE_DIVISOR * FarmersDelightTaintedConfig.riftCostFactor();
         String mode = FarmersDelightTaintedConfig.riftCostMode();
         if (cost > 0.0F && !canPay(server, target, mode, cost)) {
-            player.displayClientMessage(Component.translatable(FluxKnife.NO_AURA_KEY), true);
+            player.sendOverlayMessage(Component.translatable(FluxKnife.NO_AURA_KEY));
             return InteractionResult.FAIL;
         }
         if (!spawn(server, target, size)) {
@@ -76,7 +76,7 @@ public final class FluxKnifeRift {
             player.getCooldowns().addCooldown(stack.getItem(), cooldown);
         }
         effects(server, target);
-        return InteractionResult.sidedSuccess(false);
+        return InteractionResult.SUCCESS;
     }
 
     private static boolean canPay(ServerLevel level, BlockPos pos, String mode, float cost) {
@@ -113,13 +113,13 @@ public final class FluxKnifeRift {
         double x = pos.getX() + CELL_CENTER;
         double y = pos.getY() + CELL_CENTER;
         double z = pos.getZ() + CELL_CENTER;
-        ResourceLocation soundId = ResourceLocation.tryParse(FarmersDelightTaintedConfig.riftSound());
+        Identifier soundId = Identifier.tryParse(FarmersDelightTaintedConfig.riftSound());
         float volume = FarmersDelightTaintedConfig.riftSoundVolume();
         if (soundId != null && volume > 0.0F) {
             Optional<SoundEvent> sound = BuiltInRegistries.SOUND_EVENT.getOptional(soundId);
             sound.ifPresent(event -> level.playSound(null, pos, event, SoundSource.PLAYERS, volume, 1.0F));
         }
-        ResourceLocation particleId = ResourceLocation.tryParse(FarmersDelightTaintedConfig.riftParticle());
+        Identifier particleId = Identifier.tryParse(FarmersDelightTaintedConfig.riftParticle());
         int count = FarmersDelightTaintedConfig.riftParticleCount();
         if (particleId != null && count > 0) {
             Optional<ParticleType<?>> particle = BuiltInRegistries.PARTICLE_TYPE.getOptional(particleId);

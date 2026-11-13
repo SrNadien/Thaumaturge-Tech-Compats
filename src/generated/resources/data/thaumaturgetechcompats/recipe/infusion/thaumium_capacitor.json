@@ -28,31 +28,15 @@
       "aspect": "thaumaturge:machina"
     }
   ],
-  "catalyst": {
-    "item": "enderio:octadic_capacitor"
-  },
+  "catalyst": "enderio:octadic_capacitor",
   "components": [
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "thaumaturge:plate_thaumium"
-    },
-    {
-      "item": "enderio:vibrant_alloy_ingot"
-    },
-    {
-      "item": "enderio:vibrant_alloy_ingot"
-    },
-    {
-      "item": "enderio:vibrant_crystal"
-    }
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "thaumaturge:plate_thaumium",
+    "enderio:vibrant_alloy_ingot",
+    "enderio:vibrant_alloy_ingot",
+    "enderio:vibrant_crystal"
   ],
   "instability": 3,
   "research": {

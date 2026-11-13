@@ -8,15 +8,9 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "I": {
-      "item": "avaritia:infinity_ingot"
-    },
-    "P": {
-      "item": "thaumaturgetechcompats:extremely_primordial_pearl"
-    },
-    "S": {
-      "item": "thaumaturgetechcompats:neutronium_pillar_stone"
-    }
+    "I": "avaritia:infinity_ingot",
+    "P": "thaumaturgetechcompats:extremely_primordial_pearl",
+    "S": "thaumaturgetechcompats:neutronium_pillar_stone"
   },
   "pattern": [
     "ISI",

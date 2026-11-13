@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.compats.jade;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public enum JadeFamily {
     TIER("tier", "tier_line", true),
@@ -35,7 +35,7 @@ public enum JadeFamily {
         return configurable;
     }
 
-    public ResourceLocation optionId() {
+    public Identifier optionId() {
         return ThaumaturgeTechCompats.id(option);
     }
 

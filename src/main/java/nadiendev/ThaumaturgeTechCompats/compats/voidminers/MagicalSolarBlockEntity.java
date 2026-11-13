@@ -8,11 +8,12 @@ import nadiendev.voidminersremastered.world.block.entity.SolarControllerBE;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.neoforge.energy.IEnergyStorage;
+import net.neoforged.neoforge.transfer.energy.EnergyHandler;
+import net.neoforged.neoforge.transfer.transaction.Transaction;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
@@ -46,8 +47,8 @@ public class MagicalSolarBlockEntity extends SolarControllerBE {
     }
 
     @Override
-    public void tick(Level level, BlockPos pos, BlockState state, ResourceLocation structure, String name) {
-        if (level.isClientSide) {
+    public void tick(Level level, BlockPos pos, BlockState state, Identifier structure, String name) {
+        if (level.isClientSide()) {
             return;
         }
         long time = level.getGameTime();
@@ -132,14 +133,17 @@ public class MagicalSolarBlockEntity extends SolarControllerBE {
             if (storage.getLongEnergyStored() <= 0) {
                 return;
             }
-            IEnergyStorage target = level.getCapability(Capabilities.EnergyStorage.BLOCK, pos.relative(direction), direction.getOpposite());
+            EnergyHandler target = level.getCapability(Capabilities.Energy.BLOCK, pos.relative(direction), direction.getOpposite());
             if (target == null) {
                 continue;
             }
             int offered = (int) Math.min(storage.getLongEnergyStored(), Integer.MAX_VALUE);
-            int accepted = target.receiveEnergy(offered, false);
-            if (accepted > 0) {
-                storage.removeLongEnergy(accepted);
+            try (Transaction transaction = Transaction.openRoot()) {
+                int accepted = target.insert(offered, transaction);
+                if (accepted > 0) {
+                    transaction.commit();
+                    storage.removeLongEnergy(accepted);
+                }
             }
         }
     }

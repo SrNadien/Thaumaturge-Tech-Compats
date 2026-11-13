@@ -29,9 +29,7 @@
   ],
   "type": "oritech:pulverizer",
   "ingredients": [
-    {
-      "tag": "c:ores/amber"
-    }
+    "#c:ores/amber"
   ],
   "results": [
     {

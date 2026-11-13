@@ -1,6 +1,9 @@
 {
   "variants": {
-    "": {
+    "lit=false": {
+      "model": "thaumaturge:block/empty"
+    },
+    "lit=true": {
       "model": "thaumaturge:block/empty"
     }
   }

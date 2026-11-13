@@ -20,22 +20,12 @@
       "aspect": "thaumaturge:spiritus"
     }
   ],
-  "catalyst": {
-    "item": "minecraft:totem_of_undying"
-  },
+  "catalyst": "minecraft:totem_of_undying",
   "components": [
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    },
-    {
-      "item": "minecraft:copper_ingot"
-    }
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot",
+    "minecraft:copper_ingot"
   ],
   "instability": 1,
   "research": {

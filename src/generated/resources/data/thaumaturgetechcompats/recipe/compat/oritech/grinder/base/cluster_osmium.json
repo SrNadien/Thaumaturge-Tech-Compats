@@ -34,9 +34,7 @@
   ],
   "type": "oritech:grinder",
   "ingredients": [
-    {
-      "item": "thaumaturgetechcompats:osmium_cluster"
-    }
+    "thaumaturgetechcompats:osmium_cluster"
   ],
   "results": [
     {

@@ -16,9 +16,7 @@
       "aspect": "thaumaturge:vitium"
     }
   ],
-  "catalyst": {
-    "item": "avaritia:ultimate_stew"
-  },
+  "catalyst": "avaritia:ultimate_stew",
   "research": {
     "entry": "thaumaturgetechcompats:tainted_food"
   },

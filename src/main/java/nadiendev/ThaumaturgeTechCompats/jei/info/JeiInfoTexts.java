@@ -2,9 +2,9 @@ package nadiendev.ThaumaturgeTechCompats.jei.info;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.taintedfood.TaintedFoodType;
-import net.minecraft.Util;
+import net.minecraft.util.Util;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;
@@ -30,7 +30,7 @@ public final class JeiInfoTexts {
     private static final Name INFINITY = new Name("Infinity", "Infinito");
 
     private static final Map<String, Text> EXACT = new HashMap<>();
-    private static final Map<String, ResourceLocation> TAINTED = new LinkedHashMap<>();
+    private static final Map<String, Identifier> TAINTED = new LinkedHashMap<>();
 
     private static final Text GENERIC_BLOCK = new Text(
             "A block added by Thaumaturge Tech Compats. Its recipe and what it does are written in the research of the Thaumonomicon.",
@@ -53,12 +53,12 @@ public final class JeiInfoTexts {
         return KEY_PREFIX + path;
     }
 
-    public static Map<String, ResourceLocation> taintedFoods() {
+    public static Map<String, Identifier> taintedFoods() {
         return TAINTED;
     }
 
     public static Component[] components(String path, boolean block) {
-        ResourceLocation original = TAINTED.get(path);
+        Identifier original = TAINTED.get(path);
         if (original != null) {
             return new Component[]{Component.translatable(key(path), Component.translatable(Util.makeDescriptionId("item", original)))};
         }

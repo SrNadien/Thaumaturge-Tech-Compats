@@ -18,31 +18,15 @@
       "aspect": "thaumaturgetechcompats:terminus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:matrix_workbench_charger"
-  },
+  "catalyst": "thaumaturgetechcompats:matrix_workbench_charger",
   "components": [
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturgetechcompats:neutronium_plate"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    },
-    {
-      "item": "avaritia:neutron_ingot"
-    }
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturgetechcompats:neutronium_plate",
+    "thaumaturge:vis_resonator",
+    "avaritia:neutron_ingot",
+    "avaritia:neutron_ingot"
   ],
   "instability": 7,
   "research": {

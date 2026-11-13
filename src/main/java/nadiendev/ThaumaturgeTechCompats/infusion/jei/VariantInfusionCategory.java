@@ -8,10 +8,10 @@ import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
 import mezz.jei.api.recipe.IFocusGroup;
-import mezz.jei.api.recipe.RecipeType;
+import mezz.jei.api.recipe.types.IRecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
 import nadiendev.ThaumaturgeTechCompats.infusion.InfusionTranslations;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.crafting.RecipeHolder;
@@ -21,11 +21,11 @@ public class VariantInfusionCategory implements IRecipeCategory<RecipeHolder<Inf
     private static final String BASE_TITLE = "gui.thaumaturge.recipe_type.infusion";
 
     private final InfusionCategory<InfusionRecipe> delegate;
-    private final RecipeType<RecipeHolder<InfusionRecipe>> type;
+    private final IRecipeType<RecipeHolder<InfusionRecipe>> type;
     private final Component title;
     private final IDrawable icon;
 
-    public VariantInfusionCategory(IGuiHelper helper, RecipeType<RecipeHolder<InfusionRecipe>> type, Block matrix) {
+    public VariantInfusionCategory(IGuiHelper helper, IRecipeType<RecipeHolder<InfusionRecipe>> type, Block matrix) {
         this.delegate = new InfusionCategory<>(helper, InfusionCategory.RECIPE_TYPE, BASE_TITLE);
         this.type = type;
         this.title = InfusionTranslations.jeiTitle(matrix);
@@ -33,7 +33,7 @@ public class VariantInfusionCategory implements IRecipeCategory<RecipeHolder<Inf
     }
 
     @Override
-    public RecipeType<RecipeHolder<InfusionRecipe>> getRecipeType() {
+    public IRecipeType<RecipeHolder<InfusionRecipe>> getRecipeType() {
         return type;
     }
 
@@ -68,7 +68,7 @@ public class VariantInfusionCategory implements IRecipeCategory<RecipeHolder<Inf
     }
 
     @Override
-    public void draw(RecipeHolder<InfusionRecipe> recipe, IRecipeSlotsView slots, GuiGraphics graphics, double mouseX, double mouseY) {
+    public void draw(RecipeHolder<InfusionRecipe> recipe, IRecipeSlotsView slots, GuiGraphicsExtractor graphics, double mouseX, double mouseY) {
         delegate.draw(recipe, slots, graphics, mouseX, mouseY);
     }
 }

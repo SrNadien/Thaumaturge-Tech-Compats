@@ -16,9 +16,7 @@
       "aspect": "thaumaturge:vitium"
     }
   ],
-  "catalyst": {
-    "item": "minecraft:pumpkin_pie"
-  },
+  "catalyst": "minecraft:pumpkin_pie",
   "research": {
     "entry": "thaumaturgetechcompats:tainted_food"
   },

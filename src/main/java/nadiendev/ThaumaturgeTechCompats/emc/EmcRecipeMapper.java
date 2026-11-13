@@ -2,19 +2,23 @@ package nadiendev.ThaumaturgeTechCompats.emc;
 
 import com.leclowndu93150.thaumaturge.content.infusion.InfusionRecipe;
 import com.leclowndu93150.thaumaturge.content.recipe.crucible.CrucibleRecipe;
-import com.leclowndu93150.thaumaturge.content.recipe.workbench.ArcaneCraftingRecipe;
+import com.leclowndu93150.thaumaturge.content.recipe.workbench.ArcaneShapedCraftingRecipe;
+import com.leclowndu93150.thaumaturge.content.recipe.workbench.ArcaneShapelessCraftingRecipe;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
-import moze_intel.projecte.api.mapper.collector.IMappingCollector;
-import moze_intel.projecte.api.mapper.recipe.INSSFakeGroupManager;
-import moze_intel.projecte.api.mapper.recipe.IRecipeTypeMapper;
-import moze_intel.projecte.api.mapper.recipe.RecipeTypeMapper;
-import moze_intel.projecte.api.nss.NSSItem;
-import moze_intel.projecte.api.nss.NormalizedSimpleStack;
+import com.yaskulsky.equivox.api.mapper.collector.IMappingCollector;
+import com.yaskulsky.equivox.api.mapper.recipe.INSSFakeGroupManager;
+import com.yaskulsky.equivox.api.mapper.recipe.IRecipeTypeMapper;
+import com.yaskulsky.equivox.api.mapper.recipe.RecipeTypeMapper;
+import com.yaskulsky.equivox.api.nss.NSSItem;
+import com.yaskulsky.equivox.api.nss.NormalizedSimpleStack;
+import net.minecraft.core.Holder;
 import net.minecraft.core.RegistryAccess;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
@@ -28,10 +32,10 @@ import java.util.Set;
 
 @RecipeTypeMapper(requiredMods = {"thaumaturge"})
 public class EmcRecipeMapper implements IRecipeTypeMapper {
-    private static final Set<ResourceLocation> TYPES = Set.of(
-            ResourceLocation.fromNamespaceAndPath("thaumaturge", "arcane_workbench"),
-            ResourceLocation.fromNamespaceAndPath("thaumaturge", "crucible"),
-            ResourceLocation.fromNamespaceAndPath("thaumaturge", "infusion"));
+    private static final Set<Identifier> TYPES = Set.of(
+            Identifier.fromNamespaceAndPath("thaumaturge", "arcane_workbench"),
+            Identifier.fromNamespaceAndPath("thaumaturge", "crucible"),
+            Identifier.fromNamespaceAndPath("thaumaturge", "infusion"));
 
     @Override
     public String getName() {
@@ -58,7 +62,7 @@ public class EmcRecipeMapper implements IRecipeTypeMapper {
         if (!EmcIntegration.enabled()) {
             return false;
         }
-        ResourceLocation key = BuiltInRegistries.RECIPE_TYPE.getKey(recipeType);
+        Identifier key = BuiltInRegistries.RECIPE_TYPE.getKey(recipeType);
         return key != null && TYPES.contains(key);
     }
 
@@ -67,12 +71,15 @@ public class EmcRecipeMapper implements IRecipeTypeMapper {
         Recipe<?> recipe = holder.value();
         List<Ingredient> ingredients = new ArrayList<>();
         ItemStack output;
-        if (recipe instanceof ArcaneCraftingRecipe arcane) {
-            ingredients.addAll(arcane.getIngredients());
-            output = arcane.getResultItem(access);
+        if (recipe instanceof ArcaneShapedCraftingRecipe shaped) {
+            shaped.getIngredients().forEach(ingredient -> ingredient.ifPresent(ingredients::add));
+            output = shaped.result().create();
+        } else if (recipe instanceof ArcaneShapelessCraftingRecipe shapeless) {
+            ingredients.addAll(shapeless.ingredients());
+            output = shapeless.result().create();
         } else if (recipe instanceof CrucibleRecipe crucible) {
             ingredients.add(crucible.catalyst());
-            output = crucible.getResultItem(access);
+            output = crucible.rawResult().create();
         } else if (recipe instanceof InfusionRecipe infusion) {
             ingredients.add(infusion.catalyst());
             ingredients.addAll(infusion.components());
@@ -92,18 +99,16 @@ public class EmcRecipeMapper implements IRecipeTypeMapper {
             if (ingredient.isEmpty()) {
                 continue;
             }
-            List<ItemStack> candidates = candidates(ingredient);
+            List<Holder<Item>> candidates = candidates(ingredient);
             if (candidates.isEmpty()) {
                 return true;
             }
             if (candidates.size() == 1) {
-                if (!addInput(inputs, candidates.getFirst())) {
-                    return true;
-                }
+                addInput(inputs, candidates.getFirst());
                 continue;
             }
             Set<NormalizedSimpleStack> options = new LinkedHashSet<>();
-            for (ItemStack candidate : candidates) {
+            for (Holder<Item> candidate : candidates) {
                 options.add(NSSItem.createItem(candidate));
             }
             inputs.mergeInt(groups.getOrCreateFakeGroup(options).dummy(), 1, Integer::sum);
@@ -116,38 +121,33 @@ public class EmcRecipeMapper implements IRecipeTypeMapper {
     }
 
     private static boolean rewritesCatalyst(Ingredient catalyst, ItemStack output) {
-        for (ItemStack stack : candidates(catalyst)) {
-            if (stack.getItem() == output.getItem()) {
+        for (Holder<Item> holder : candidates(catalyst)) {
+            if (holder.value() == output.getItem()) {
                 return true;
             }
         }
         return false;
     }
 
-    private static List<ItemStack> candidates(Ingredient ingredient) {
-        List<ItemStack> result = new ArrayList<>();
+    private static List<Holder<Item>> candidates(Ingredient ingredient) {
+        List<Holder<Item>> result = new ArrayList<>();
         try {
-            for (ItemStack stack : ingredient.getItems()) {
-                if (!stack.isEmpty() && !stack.is(Items.BARRIER)) {
-                    result.add(stack);
+            ingredient.items().forEach(holder -> {
+                if (holder.value() != Items.BARRIER && holder.value() != Items.AIR) {
+                    result.add(holder);
                 }
-            }
+            });
         } catch (RuntimeException exception) {
             return List.of();
         }
         return result;
     }
 
-    private static boolean addInput(Object2IntMap<NormalizedSimpleStack> inputs, ItemStack stack) {
-        try {
-            ItemStack remainder = stack.getCraftingRemainingItem();
-            if (!remainder.isEmpty()) {
-                inputs.mergeInt(NSSItem.createItem(remainder), -1, Integer::sum);
-            }
-        } catch (RuntimeException exception) {
-            return false;
+    private static void addInput(Object2IntMap<NormalizedSimpleStack> inputs, Holder<Item> holder) {
+        ItemStackTemplate remainder = holder.value().getCraftingRemainder();
+        if (remainder != null) {
+            inputs.mergeInt(NSSItem.createItem(remainder.typeHolder()), -remainder.count(), Integer::sum);
         }
-        inputs.mergeInt(NSSItem.createItem(stack), 1, Integer::sum);
-        return true;
+        inputs.mergeInt(NSSItem.createItem(holder), 1, Integer::sum);
     }
 }

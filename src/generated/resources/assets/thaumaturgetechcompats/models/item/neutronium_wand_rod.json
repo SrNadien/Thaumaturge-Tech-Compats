@@ -1,14 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
-  "halo": {
-    "color": -1711276033,
-    "pulse": false,
-    "size": 6,
-    "texture": "#halo"
-  },
-  "loader": "avaritia:halo",
   "textures": {
-    "halo": "avaritia:misc/halo_noise",
     "layer0": "thaumaturgetechcompats:item/neutronium_wand_rod"
   }
 }

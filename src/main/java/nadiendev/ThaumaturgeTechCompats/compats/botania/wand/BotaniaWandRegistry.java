@@ -8,7 +8,7 @@ import com.leclowndu93150.thaumaturge.content.wands.ItemWandRod;
 import com.leclowndu93150.thaumaturge.content.wands.WandVisHelper;
 import com.leclowndu93150.thaumaturge.registry.TTItems;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -22,7 +22,7 @@ import java.util.Map;
 
 public final class BotaniaWandRegistry {
     public static final String ENTRY = "botania_wand";
-    public static final ResourceLocation RESEARCH = ThaumaturgeTechCompats.id(ENTRY);
+    public static final Identifier RESEARCH = ThaumaturgeTechCompats.id(ENTRY);
 
     private static final DeferredRegister<WandRod> RODS = DeferredRegister.create(WandRod.REGISTRY_KEY, ThaumaturgeTechCompats.MOD_ID);
     private static final DeferredRegister<WandCap> CAPS = DeferredRegister.create(WandCap.REGISTRY_KEY, ThaumaturgeTechCompats.MOD_ID);
@@ -45,7 +45,7 @@ public final class BotaniaWandRegistry {
                     RESEARCH));
             ROD_PARTS.put(rod, part);
             ROD_ITEMS.put(rod, ITEMS.registerItem(rod.itemName(), properties -> new ItemWandRod(properties, part),
-                    new Item.Properties().rarity(rod.rarity())));
+                    () -> new Item.Properties().rarity(rod.rarity())));
         }
         for (BotaniaWandCap cap : BotaniaWandCap.values()) {
             DeferredHolder<WandCap, WandCap> part = CAPS.register(cap.id(), () -> new WandCap(
@@ -56,7 +56,7 @@ public final class BotaniaWandRegistry {
                     ThaumaturgeTechCompats.id("textures/models/wand_cap_" + cap.id() + ".png")));
             CAP_PARTS.put(cap, part);
             CAP_ITEMS.put(cap, ITEMS.registerItem(cap.itemName(), properties -> new ItemWandCap(properties, part),
-                    new Item.Properties().rarity(cap.rarity())));
+                    () -> new Item.Properties().rarity(cap.rarity())));
         }
     }
 

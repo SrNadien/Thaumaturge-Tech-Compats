@@ -1,25 +1,25 @@
 package nadiendev.ThaumaturgeTechCompats.stabilizer;
 
-import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
+import nadiendev.ThaumaturgeTechCompats.datagen.model.ModelAssets;
 import nadiendev.ThaumaturgeTechCompats.device.EntityItemModels;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
-public class StabilizerItemModels extends ItemModelProvider {
-    public StabilizerItemModels(PackOutput output, ExistingFileHelper helper) {
-        super(output, ThaumaturgeTechCompats.MOD_ID, helper);
+public class StabilizerItemModels extends ModelAssets {
+    public StabilizerItemModels(PackOutput output) {
+        super(output);
     }
 
     @Override
     public String getName() {
-        return "Stabilizer Item Models: " + ThaumaturgeTechCompats.MOD_ID;
+        return "Stabilizer Item Models: " + MOD;
     }
 
     @Override
-    protected void registerModels() {
+    protected void register() {
         for (StabilizerTier tier : StabilizerTier.values()) {
-            EntityItemModels.nodeDevice(this, tier.blockName(), modLoc("block/" + tier.blockName()));
+            String name = tier.blockName();
+            itemModel(name, EntityItemModels.nodeDeviceModel(mod("block/" + name)));
+            itemDefinition(name, EntityItemModels.nodeDeviceDefinition(mod("item/" + name), false));
         }
     }
 }

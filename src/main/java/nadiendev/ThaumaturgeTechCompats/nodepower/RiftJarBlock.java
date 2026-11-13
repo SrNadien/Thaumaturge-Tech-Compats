@@ -60,7 +60,7 @@ public class RiftJarBlock extends BaseEntityBlock {
 
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level level, BlockState state, BlockEntityType<T> type) {
-        if (level.isClientSide) {
+        if (level.isClientSide()) {
             return null;
         }
         return createTickerHelper(type, NodePowerRegistry.RIFT_JAR_ENTITY.get(), RiftJarBlockEntity::tick);
@@ -69,20 +69,13 @@ public class RiftJarBlock extends BaseEntityBlock {
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
         if (level.getBlockEntity(pos) instanceof RiftJarBlockEntity jar) {
-            if (!level.isClientSide) {
-                player.displayClientMessage(Component.translatable("message.thaumaturgetechcompats.rift_jar",
-                        String.format("%.0f", jar.power()), String.format("%.0f", jar.capacity())), true);
+            if (!level.isClientSide()) {
+                player.sendOverlayMessage(Component.translatable("message.thaumaturgetechcompats.rift_jar",
+                        String.format("%.0f", jar.power()), String.format("%.0f", jar.capacity())));
             }
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
         return InteractionResult.PASS;
     }
 
-    @Override
-    protected void onRemove(BlockState state, Level level, BlockPos pos, BlockState newState, boolean movedByPiston) {
-        if (!state.is(newState.getBlock()) && !level.isClientSide && level.getBlockEntity(pos) instanceof RiftJarBlockEntity jar && jar.power() > 0.0F) {
-            AuraHelper.addFlux(level, pos, jar.power() * NodePowerConfig.riftJarReleaseRatio());
-        }
-        super.onRemove(state, level, pos, newState, movedByPiston);
-    }
 }

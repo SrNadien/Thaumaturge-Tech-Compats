@@ -7,6 +7,6 @@ public final class OritechProcessingIntegration {
     }
 
     public static void addProviders(GatherDataEvent event) {
-        event.getGenerator().addProvider(event.includeServer(), new OritechProcessingRecipes(event.getGenerator().getPackOutput()));
+        event.getGenerator().addProvider(event instanceof GatherDataEvent.Server, new OritechProcessingRecipes(event.getGenerator().getPackOutput()));
     }
 }

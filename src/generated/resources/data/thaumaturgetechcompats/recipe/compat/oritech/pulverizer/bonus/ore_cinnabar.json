@@ -26,9 +26,7 @@
   ],
   "type": "oritech:pulverizer",
   "ingredients": [
-    {
-      "tag": "c:ores/cinnabar"
-    }
+    "#c:ores/cinnabar"
   ],
   "results": [
     {

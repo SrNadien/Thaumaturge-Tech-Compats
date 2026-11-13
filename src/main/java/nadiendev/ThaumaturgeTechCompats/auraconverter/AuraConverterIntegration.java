@@ -9,7 +9,6 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.List;
@@ -42,14 +41,13 @@ public final class AuraConverterIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        ExistingFileHelper helper = event.getExistingFileHelper();
 
-        generator.addProvider(event.includeClient(), new AuraConverterBlockStates(output, helper));
-        generator.addProvider(event.includeClient(), new AuraConverterItemModels(output, helper));
-        generator.addProvider(event.includeServer(), new AuraConverterContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new AuraConverterBlockStates(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new AuraConverterItemModels(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new AuraConverterContent(output));
     }
 
     private static void registerCapabilities(RegisterCapabilitiesEvent event) {
-        event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, AuraConverterRegistry.ENTITY.get(), (converter, side) -> converter.energyStorage());
+        event.registerBlockEntity(Capabilities.Energy.BLOCK, AuraConverterRegistry.ENTITY.get(), (converter, side) -> converter.energyStorage());
     }
 }

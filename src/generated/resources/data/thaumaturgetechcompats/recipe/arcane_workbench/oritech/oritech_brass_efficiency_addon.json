@@ -25,18 +25,10 @@
     }
   ],
   "key": {
-    "c": {
-      "item": "oritech:machine_efficiency_addon"
-    },
-    "m": {
-      "item": "thaumaturge:mechanism_simple"
-    },
-    "p": {
-      "item": "thaumaturge:plate_brass"
-    },
-    "s": {
-      "item": "oritech:electrum_ingot"
-    }
+    "c": "oritech:machine_efficiency_addon",
+    "m": "thaumaturge:mechanism_simple",
+    "p": "thaumaturge:plate_brass",
+    "s": "oritech:electrum_ingot"
   },
   "pattern": [
     "pmp",

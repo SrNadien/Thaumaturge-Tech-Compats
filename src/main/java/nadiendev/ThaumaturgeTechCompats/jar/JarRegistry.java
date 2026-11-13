@@ -43,10 +43,10 @@ public final class JarRegistry {
         DeferredBlock<EssentiaJarBlock> block = BLOCKS.registerBlock(
                 tier.jarName(),
                 properties -> new EssentiaJarBlock(properties, tier),
-                BlockBehaviour.Properties.of()
+                () -> BlockBehaviour.Properties.of()
                         .mapColor(MapColor.NONE)
                         .strength(0.3F)
-                        .sound(TTSoundTypes.JAR)
+                        .sound(TTSoundTypes.JAR.get())
                         .noOcclusion());
         JAR_BLOCKS.put(tier, block);
         return block;
@@ -58,7 +58,7 @@ public final class JarRegistry {
             properties.fireResistant();
         }
         DeferredBlock<EssentiaJarBlock> block = JAR_BLOCKS.get(tier);
-        DeferredItem<JarItem> item = ITEMS.registerItem(tier.jarName(), itemProperties -> new JarItem(block.get(), itemProperties), properties);
+        DeferredItem<JarItem> item = ITEMS.registerItem(tier.jarName(), itemProperties -> new JarItem(block.get(), itemProperties), () -> properties);
         JAR_ITEMS.put(tier, item);
         return item;
     }

@@ -23,9 +23,7 @@
   ],
   "type": "oritech:grinder",
   "ingredients": [
-    {
-      "item": "thaumaturge:cluster_tin"
-    }
+    "thaumaturge:cluster_tin"
   ],
   "results": [
     {

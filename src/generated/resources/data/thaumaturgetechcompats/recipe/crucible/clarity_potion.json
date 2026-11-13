@@ -36,9 +36,7 @@
       "aspect": "thaumaturge:alienis"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturge:sanity_soap"
-  },
+  "catalyst": "thaumaturge:sanity_soap",
   "research": {
     "entry": "thaumaturgetechcompats:clarity_potion"
   },

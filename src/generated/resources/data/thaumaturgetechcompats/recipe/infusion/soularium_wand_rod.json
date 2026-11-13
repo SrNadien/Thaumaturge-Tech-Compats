@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:motus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:dark_steel_wand_rod"
-  },
+  "catalyst": "thaumaturgetechcompats:dark_steel_wand_rod",
   "components": [
-    {
-      "tag": "c:ingots/soularium"
-    },
-    {
-      "tag": "c:ingots/soularium"
-    },
-    {
-      "tag": "c:ingots/soularium"
-    },
-    {
-      "tag": "c:ingots/soularium"
-    }
+    "#c:ingots/soularium",
+    "#c:ingots/soularium",
+    "#c:ingots/soularium",
+    "#c:ingots/soularium"
   ],
   "instability": 3,
   "research": {

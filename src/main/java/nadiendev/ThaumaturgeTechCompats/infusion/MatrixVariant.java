@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.infusion;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.tiercontent.Tier;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.item.Rarity;
 
@@ -78,8 +78,8 @@ public enum MatrixVariant implements StringRepresentable {
         return tier.id() + "_" + part.id();
     }
 
-    public ResourceLocation texture() {
-        return ResourceLocation.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "textures/block/" + tier.id() + "_infuser.png");
+    public Identifier texture() {
+        return Identifier.fromNamespaceAndPath(ThaumaturgeTechCompats.MOD_ID, "textures/block/" + tier.id() + "_infuser.png");
     }
 
     public String materialEnglish() {

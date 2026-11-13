@@ -88,7 +88,7 @@ public class MagicalOreLaserBaseTile extends IndustrialMachineTile<MagicalOreLas
     }
 
     private void produce() {
-        if (level == null || level.isClientSide || !IndustrialForegoingConfig.enabled(LaserMachine.ORE_BASE) || ItemStackUtils.isInventoryFull(output)) {
+        if (level == null || level.isClientSide() || !IndustrialForegoingConfig.enabled(LaserMachine.ORE_BASE) || ItemStackUtils.isInventoryFull(output)) {
             return;
         }
         AABB area = Shapes.box(-1.0D, 0.0D, -1.0D, 2.0D, 3.0D, 2.0D)

@@ -37,7 +37,7 @@ public final class PlanetSwarm {
         if (owner != null && owner.isAlliedTo(victim)) {
             return false;
         }
-        return !(PearlConfig.sparePets() && ownerId != null && victim instanceof TamableAnimal pet && ownerId.equals(pet.getOwnerUUID()));
+        return !(PearlConfig.sparePets() && ownerId != null && victim instanceof TamableAnimal pet && pet.getOwnerReference() != null && ownerId.equals(pet.getOwnerReference().getUUID()));
     }
 
     public static LivingEntity findTarget(ServerLevel level, UUID ownerId, Vec3 at, double radius) {

@@ -5,7 +5,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -28,9 +28,9 @@ public final class VoidMinersMagicalIntegration {
     public static final String TOGGLE_SOLAR = "voidminers_magical_solar";
 
     private static final ResourceKey<BlockEntityType<?>> MINER_ENTITY = ResourceKey.create(
-            Registries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(MOD_ID, "controller_base"));
+            Registries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "controller_base"));
     private static final ResourceKey<BlockEntityType<?>> SOLAR_ENTITY = ResourceKey.create(
-            Registries.BLOCK_ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(MOD_ID, "solar_base"));
+            Registries.BLOCK_ENTITY_TYPE, Identifier.fromNamespaceAndPath(MOD_ID, "solar_base"));
 
     private VoidMinersMagicalIntegration() {
     }
@@ -119,7 +119,7 @@ public final class VoidMinersMagicalIntegration {
         VoidMinersMagicalRegistry.register(modBus);
         modBus.addListener(VoidMinersMagicalIntegration::addValidBlocks);
         modBus.addListener(VoidMinersMagicalIntegration::setup);
-        if (FMLEnvironment.dist.isClient()) {
+        if (FMLEnvironment.getDist().isClient()) {
             modBus.addListener(VoidMinersMagicalPack::register);
         }
     }
@@ -143,8 +143,8 @@ public final class VoidMinersMagicalIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new VoidMinersMagicalAssets(output));
-        generator.addProvider(event.includeServer(), new VoidMinersMagicalContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new VoidMinersMagicalAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new VoidMinersMagicalContent(output));
     }
 
     private static void addValidBlocks(BlockEntityTypeAddBlocksEvent event) {

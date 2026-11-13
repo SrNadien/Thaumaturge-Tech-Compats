@@ -24,15 +24,9 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "F": {
-      "item": "thaumaturgetechcompats:thaumium_solar_frame"
-    },
-    "O": {
-      "item": "minecraft:obsidian"
-    },
-    "P": {
-      "item": "thaumaturge:plate_brass"
-    }
+    "F": "thaumaturgetechcompats:thaumium_solar_frame",
+    "O": "minecraft:obsidian",
+    "P": "thaumaturge:plate_brass"
   },
   "pattern": [
     "POP",

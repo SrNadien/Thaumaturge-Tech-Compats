@@ -15,7 +15,7 @@ import nadiendev.ThaumaturgeTechCompats.compats.create.variant.block.PressVarian
 import nadiendev.ThaumaturgeTechCompats.compats.create.variant.block.SawVariantBlock;
 import nadiendev.ThaumaturgeTechCompats.compats.create.variant.block.SpoutVariantBlock;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -59,8 +59,8 @@ public final class CreateVariants {
         return kind.blockName(tier);
     }
 
-    public static ResourceLocation baseId(VariantKind kind) {
-        return ResourceLocation.fromNamespaceAndPath(CreateIntegration.MOD_ID, kind.id());
+    public static Identifier baseId(VariantKind kind) {
+        return Identifier.fromNamespaceAndPath(CreateIntegration.MOD_ID, kind.id());
     }
 
     public static Block baseBlock(VariantKind kind) {

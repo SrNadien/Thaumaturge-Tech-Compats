@@ -25,21 +25,11 @@
     }
   ],
   "key": {
-    "c": {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    "d": {
-      "item": "oritech:dubios_container"
-    },
-    "j": {
-      "item": "thaumaturge:jar_brain"
-    },
-    "m": {
-      "item": "thaumaturge:mind_clockwork"
-    },
-    "t": {
-      "tag": "c:plates/thaumium"
-    }
+    "c": "thaumaturge:mechanism_complex",
+    "d": "oritech:dubios_container",
+    "j": "thaumaturge:jar_brain",
+    "m": "thaumaturge:mind_clockwork",
+    "t": "#c:plates/thaumium"
   },
   "pattern": [
     "tmt",

@@ -29,7 +29,7 @@ public final class InfusionOutcomes {
         List<Holder.Reference<InstabilityOutcome>> candidates = access.lookupOrThrow(InstabilityOutcome.REGISTRY_KEY)
                 .listElements()
                 .filter(holder -> holder.value().weight() > 0 && allowed(holder.value().effect(), current))
-                .sorted(Comparator.comparing((Holder.Reference<InstabilityOutcome> holder) -> holder.key().location()))
+                .sorted(Comparator.comparing((Holder.Reference<InstabilityOutcome> holder) -> holder.key().identifier()))
                 .toList();
         int total = 0;
         for (Holder.Reference<InstabilityOutcome> holder : candidates) {

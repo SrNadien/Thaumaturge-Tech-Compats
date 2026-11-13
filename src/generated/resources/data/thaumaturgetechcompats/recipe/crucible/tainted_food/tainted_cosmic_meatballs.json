@@ -16,9 +16,7 @@
       "aspect": "thaumaturge:vitium"
     }
   ],
-  "catalyst": {
-    "item": "avaritia:cosmic_meatballs"
-  },
+  "catalyst": "avaritia:cosmic_meatballs",
   "research": {
     "entry": "thaumaturgetechcompats:tainted_food"
   },

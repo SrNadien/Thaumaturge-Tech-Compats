@@ -1,0 +1,11 @@
+{
+  "model": {
+    "type": "avaritia:halo",
+    "color": -16777216,
+    "model": "thaumaturgetechcompats:item/infinity_focus",
+    "pulse": true,
+    "size": 10,
+    "texture": "avaritia:misc/halo"
+  },
+  "oversized_in_gui": true
+}

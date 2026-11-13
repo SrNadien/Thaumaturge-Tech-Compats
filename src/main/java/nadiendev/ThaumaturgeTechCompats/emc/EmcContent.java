@@ -30,7 +30,7 @@ public class EmcContent implements DataProvider {
 
     @Override
     public String getName() {
-        return "Thaumaturge Tech Compats ProjectE research";
+        return "Thaumaturge Tech Compats Equivox research";
     }
 
     private static JsonObject entry() {

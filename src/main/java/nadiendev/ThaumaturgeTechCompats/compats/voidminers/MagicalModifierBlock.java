@@ -1,7 +1,7 @@
 package nadiendev.ThaumaturgeTechCompats.compats.voidminers;
 
 import nadiendev.voidminersremastered.init.ModifierType;
-import nadiendev.voidminersremastered.util.ColorUtil;
+import nadiendev.voidminersremastered.util.CustomColorUtil;
 import nadiendev.voidminersremastered.world.block.ModifierBlock;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
@@ -10,9 +10,9 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 
-import java.util.List;
+import java.util.function.Consumer;
 
-public class MagicalModifierBlock extends ModifierBlock {
+public class MagicalModifierBlock extends ModifierBlock implements MagicalTooltipBlock {
     private final VoidMinersMagicalTier tier;
     private final MagicalUpgrade upgrade;
 
@@ -46,12 +46,12 @@ public class MagicalModifierBlock extends ModifierBlock {
     }
 
     @Override
-    public ColorUtil getColor() {
+    public CustomColorUtil getColor() {
         return VoidMinersMagicalStructures.color(tier);
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flag) {
-        tooltip.add(Component.translatable(upgrade.tooltipKey(), VoidMinersMagicalConfig.upgrade(tier, upgrade)).withStyle(ChatFormatting.LIGHT_PURPLE));
+    public void appendTooltip(Consumer<Component> tooltip) {
+        tooltip.accept(Component.translatable(upgrade.tooltipKey(), VoidMinersMagicalConfig.upgrade(tier, upgrade)).withStyle(ChatFormatting.LIGHT_PURPLE));
     }
 }

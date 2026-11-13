@@ -40,22 +40,12 @@
       "aspect": "thaumaturge:auram"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:gold_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:gold_star_crucifix",
   "components": [
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    },
-    {
-      "item": "minecraft:diamond"
-    }
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond",
+    "minecraft:diamond"
   ],
   "instability": 4,
   "research": {

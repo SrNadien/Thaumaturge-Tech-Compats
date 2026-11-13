@@ -30,7 +30,7 @@ public final class PearlIntegration {
     public static void addProviders(GatherDataEvent event) {
         DataGenerator generator = event.getGenerator();
         PackOutput output = generator.getPackOutput();
-        generator.addProvider(event.includeClient(), new PearlAssets(output));
-        generator.addProvider(event.includeServer(), new PearlContent(output));
+        generator.addProvider(event instanceof GatherDataEvent.Client, new PearlAssets(output));
+        generator.addProvider(event instanceof GatherDataEvent.Server, new PearlContent(output));
     }
 }

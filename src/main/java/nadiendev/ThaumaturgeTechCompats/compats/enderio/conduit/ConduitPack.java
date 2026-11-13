@@ -5,7 +5,7 @@ import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOIntegration;
 import nadiendev.ThaumaturgeTechCompats.compats.enderio.EnderIOTier;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.server.packs.AbstractPackResources;
 import net.minecraft.server.packs.PackLocationInfo;
 import net.minecraft.server.packs.PackResources;
@@ -104,7 +104,7 @@ public class ConduitPack extends AbstractPackResources {
     }
 
     @Override
-    public IoSupplier<InputStream> getResource(PackType type, ResourceLocation location) {
+    public IoSupplier<InputStream> getResource(PackType type, Identifier location) {
         if (type != PackType.SERVER_DATA || !location.getNamespace().equals(MOD)) {
             return null;
         }
@@ -120,7 +120,7 @@ public class ConduitPack extends AbstractPackResources {
             for (EnderIOTier tier : EnderIOTier.values()) {
                 String path = path(kind, tier);
                 if (path.startsWith(prefix)) {
-                    output.accept(ResourceLocation.fromNamespaceAndPath(MOD, path), supplier(kind, tier));
+                    output.accept(Identifier.fromNamespaceAndPath(MOD, path), supplier(kind, tier));
                 }
             }
         }

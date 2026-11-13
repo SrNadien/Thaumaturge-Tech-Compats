@@ -2,7 +2,7 @@ package nadiendev.ThaumaturgeTechCompats.ponder;
 
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
 import nadiendev.ThaumaturgeTechCompats.ponder.client.TuuPonderPlugin;
-import net.createmod.ponder.foundation.PonderIndex;
+import net.createmod.ponder.api.client.PonderIndex;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 import java.util.HashMap;

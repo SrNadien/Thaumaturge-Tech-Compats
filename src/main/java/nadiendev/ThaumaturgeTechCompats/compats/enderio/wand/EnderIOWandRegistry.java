@@ -8,7 +8,7 @@ import com.leclowndu93150.thaumaturge.content.wands.ItemWandRod;
 import com.leclowndu93150.thaumaturge.content.wands.WandVisHelper;
 import com.leclowndu93150.thaumaturge.registry.TTItems;
 import nadiendev.ThaumaturgeTechCompats.ThaumaturgeTechCompats;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -22,7 +22,7 @@ import java.util.Map;
 
 public final class EnderIOWandRegistry {
     public static final String ENTRY = "enderio_wand_parts";
-    public static final ResourceLocation RESEARCH = ThaumaturgeTechCompats.id(ENTRY);
+    public static final Identifier RESEARCH = ThaumaturgeTechCompats.id(ENTRY);
 
     private static final DeferredRegister<WandRod> RODS = DeferredRegister.create(WandRod.REGISTRY_KEY, ThaumaturgeTechCompats.MOD_ID);
     private static final DeferredRegister<WandCap> CAPS = DeferredRegister.create(WandCap.REGISTRY_KEY, ThaumaturgeTechCompats.MOD_ID);
@@ -45,7 +45,7 @@ public final class EnderIOWandRegistry {
                     RESEARCH));
             ROD_PARTS.put(material, rod);
             ROD_ITEMS.put(material, ITEMS.registerItem(material.rodName(), properties -> new ItemWandRod(properties, rod),
-                    new Item.Properties().rarity(material.rarity())));
+                    () -> new Item.Properties().rarity(material.rarity())));
 
             DeferredHolder<WandCap, WandCap> cap = CAPS.register(material.id(), () -> new WandCap(
                     EnderIOWandConfig.capBaseCost(material),
@@ -55,7 +55,7 @@ public final class EnderIOWandRegistry {
                     ThaumaturgeTechCompats.id("textures/models/wand_cap_" + material.id() + ".png")));
             CAP_PARTS.put(material, cap);
             CAP_ITEMS.put(material, ITEMS.registerItem(material.capName(), properties -> new ItemWandCap(properties, cap),
-                    new Item.Properties().rarity(material.rarity())));
+                    () -> new Item.Properties().rarity(material.rarity())));
         }
     }
 

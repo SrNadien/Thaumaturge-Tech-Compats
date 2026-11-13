@@ -32,34 +32,16 @@
       "aspect": "thaumaturge:vacuos"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:alchemical_brass_arcane_terraformer"
-  },
+  "catalyst": "thaumaturgetechcompats:alchemical_brass_arcane_terraformer",
   "components": [
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:plate_void"
-    },
-    {
-      "item": "thaumaturge:mechanism_complex"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "thaumaturge:vis_resonator"
-    },
-    {
-      "item": "minecraft:red_mushroom"
-    }
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:plate_void",
+    "thaumaturge:mechanism_complex",
+    "thaumaturge:vis_resonator",
+    "thaumaturge:vis_resonator",
+    "minecraft:red_mushroom"
   ],
   "instability": 4,
   "research": {

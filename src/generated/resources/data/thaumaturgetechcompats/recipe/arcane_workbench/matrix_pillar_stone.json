@@ -8,12 +8,8 @@
   "type": "thaumaturge:arcane_workbench_shaped",
   "crystals": [],
   "key": {
-    "I": {
-      "item": "avaritia:crystal_matrix_ingot"
-    },
-    "S": {
-      "item": "thaumaturge:stone_eldritch_tile"
-    }
+    "I": "avaritia:crystal_matrix_ingot",
+    "S": "thaumaturge:stone_eldritch_tile"
   },
   "pattern": [
     "ISI",

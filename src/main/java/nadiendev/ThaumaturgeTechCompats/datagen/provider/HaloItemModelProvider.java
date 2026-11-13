@@ -49,21 +49,26 @@ public class HaloItemModelProvider implements DataProvider {
     private CompletableFuture<?> save(CachedOutput cache, String item, String parent, int color, int size, boolean pulse, String haloTexture) {
         JsonObject textures = new JsonObject();
         textures.addProperty("layer0", ThaumaturgeTechCompats.MOD_ID + ":item/" + item);
-        textures.addProperty("halo", haloTexture);
+
+        JsonObject model = new JsonObject();
+        model.addProperty("parent", parent);
+        model.add("textures", textures);
 
         JsonObject halo = new JsonObject();
-        halo.addProperty("texture", "#halo");
+        halo.addProperty("type", "avaritia:halo");
         halo.addProperty("color", color);
-        halo.addProperty("size", size);
+        halo.addProperty("model", ThaumaturgeTechCompats.MOD_ID + ":item/" + item);
         halo.addProperty("pulse", pulse);
+        halo.addProperty("size", size);
+        halo.addProperty("texture", haloTexture);
 
-        JsonObject json = new JsonObject();
-        json.addProperty("parent", parent);
-        json.add("textures", textures);
-        json.addProperty("loader", "avaritia:halo");
-        json.add("halo", halo);
+        JsonObject definition = new JsonObject();
+        definition.add("model", halo);
+        definition.addProperty("oversized_in_gui", true);
 
-        Path path = output.getOutputFolder().resolve("assets/" + ThaumaturgeTechCompats.MOD_ID + "/models/item/" + item + ".json");
-        return DataProvider.saveStable(cache, json, path);
+        Path assets = output.getOutputFolder().resolve("assets/" + ThaumaturgeTechCompats.MOD_ID);
+        return CompletableFuture.allOf(
+                DataProvider.saveStable(cache, model, assets.resolve("models/item/" + item + ".json")),
+                DataProvider.saveStable(cache, definition, assets.resolve("items/" + item + ".json")));
     }
 }

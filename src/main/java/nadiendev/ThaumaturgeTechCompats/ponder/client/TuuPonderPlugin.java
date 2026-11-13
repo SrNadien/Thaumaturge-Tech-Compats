@@ -9,12 +9,14 @@ import nadiendev.ThaumaturgeTechCompats.ponder.scene.InfusionScenes;
 import nadiendev.ThaumaturgeTechCompats.ponder.scene.NodeScenes;
 import nadiendev.ThaumaturgeTechCompats.ponder.scene.TieredScenes;
 import nadiendev.ThaumaturgeTechCompats.ponder.scene.WorkbenchScenes;
-import net.createmod.ponder.api.registration.PonderPlugin;
-import net.createmod.ponder.api.registration.PonderSceneRegistrationHelper;
-import net.createmod.ponder.api.registration.PonderTagRegistrationHelper;
-import net.createmod.ponder.api.scene.PonderStoryBoard;
+import net.createmod.ponder.api.client.registration.PonderPlugin;
+import net.createmod.ponder.api.client.registration.PonderSceneRegistrationHelper;
+import net.createmod.ponder.api.client.registration.PonderTagRegistrationHelper;
+import net.createmod.ponder.api.client.scene.PonderStoryBoard;
+import net.createmod.ponder.api.client.registration.TagBuilder;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
+import net.minecraft.world.item.Item;
 
 import java.util.ArrayList;
 import java.util.LinkedHashSet;
@@ -23,10 +25,10 @@ import java.util.Set;
 import java.util.function.IntFunction;
 
 public final class TuuPonderPlugin implements PonderPlugin {
-    private static final ResourceLocation TAG = ThaumaturgeTechCompats.id(PonderScripts.MULTIBLOCKS_TAG);
+    private static final Identifier TAG = ThaumaturgeTechCompats.id(PonderScripts.MULTIBLOCKS_TAG);
     private static final String BASE = "thaumaturge";
 
-    private record Entry(PonderScript script, PonderStoryBoard board, List<ResourceLocation> components) {
+    private record Entry(PonderScript script, PonderStoryBoard board, List<Identifier> components) {
     }
 
     @Override
@@ -35,30 +37,35 @@ public final class TuuPonderPlugin implements PonderPlugin {
     }
 
     @Override
-    public void registerScenes(PonderSceneRegistrationHelper<ResourceLocation> helper) {
+    public void registerScenes(PonderSceneRegistrationHelper<Identifier> helper) {
         for (Entry entry : enabledEntries()) {
             helper.forComponents(entry.components()).addStoryBoard(entry.script().id(), entry.board(), TAG);
         }
     }
 
     @Override
-    public void registerTags(PonderTagRegistrationHelper<ResourceLocation> helper) {
+    public void registerTags(PonderTagRegistrationHelper<Identifier> helper) {
         List<Entry> entries = enabledEntries();
         if (entries.isEmpty()) {
             return;
         }
-        helper.registerTag(TAG)
-                .addToIndex()
-                .item(BuiltInRegistries.ITEM.get(base("infusion_matrix")), true, false)
+        Item icon = BuiltInRegistries.ITEM.getValue(base("infusion_matrix"));
+        TagBuilder tag = helper.registerTag(TAG).addToIndex();
+        if (BuiltInRegistries.ITEM.wrapAsHolder(icon).areComponentsBound()) {
+            tag = tag.item(icon, true, false);
+        } else {
+            tag = tag.idAsIcon();
+        }
+        tag
                 .title(PonderScripts.MULTIBLOCKS_TITLE)
                 .description(PonderScripts.MULTIBLOCKS_DESCRIPTION)
                 .register();
 
-        Set<ResourceLocation> components = new LinkedHashSet<>();
+        Set<Identifier> components = new LinkedHashSet<>();
         for (Entry entry : entries) {
             components.addAll(entry.components());
         }
-        for (ResourceLocation component : components) {
+        for (Identifier component : components) {
             helper.addToTag(TAG).add(component);
         }
     }
@@ -102,7 +109,7 @@ public final class TuuPonderPlugin implements PonderPlugin {
                 tiers(TieredScenes::stabilizer)));
         entries.add(new Entry(PonderScripts.TIERED_TRANSDUCERS, TieredScenes::transducers,
                 tiers(TieredScenes::transducer)));
-        List<ResourceLocation> furnaces = tiers(TieredScenes::furnace);
+        List<Identifier> furnaces = tiers(TieredScenes::furnace);
         furnaces.addAll(tiers(TieredScenes::smelter));
         entries.add(new Entry(PonderScripts.TIERED_FURNACES, TieredScenes::furnaces, furnaces));
         entries.add(new Entry(PonderScripts.TIERED_MATRICES, TieredScenes::matrices,
@@ -112,14 +119,14 @@ public final class TuuPonderPlugin implements PonderPlugin {
         return entries;
     }
 
-    private static ResourceLocation base(String name) {
-        return ResourceLocation.fromNamespaceAndPath(BASE, name);
+    private static Identifier base(String name) {
+        return Identifier.fromNamespaceAndPath(BASE, name);
     }
 
-    private static List<ResourceLocation> tiers(IntFunction<String> name) {
-        List<ResourceLocation> components = new ArrayList<>();
+    private static List<Identifier> tiers(IntFunction<String> name) {
+        List<Identifier> components = new ArrayList<>();
         for (int tier = 0; tier < 3; tier++) {
-            components.add(ResourceLocation.parse(name.apply(tier)));
+            components.add(Identifier.parse(name.apply(tier)));
         }
         return components;
     }

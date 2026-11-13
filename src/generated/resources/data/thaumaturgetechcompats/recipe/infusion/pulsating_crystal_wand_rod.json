@@ -28,22 +28,12 @@
       "aspect": "thaumaturge:motus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:soularium_wand_rod"
-  },
+  "catalyst": "thaumaturgetechcompats:soularium_wand_rod",
   "components": [
-    {
-      "item": "enderio:pulsating_crystal"
-    },
-    {
-      "item": "enderio:pulsating_crystal"
-    },
-    {
-      "item": "enderio:pulsating_crystal"
-    },
-    {
-      "item": "enderio:pulsating_crystal"
-    }
+    "enderio:pulsating_crystal",
+    "enderio:pulsating_crystal",
+    "enderio:pulsating_crystal",
+    "enderio:pulsating_crystal"
   ],
   "instability": 4,
   "research": {

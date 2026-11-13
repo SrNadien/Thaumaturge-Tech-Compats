@@ -34,7 +34,7 @@ public final class CoreRegistry {
             DeferredBlock<StorageCoreBlock> block = BLOCKS.registerBlock(
                     coreName(tier),
                     properties -> new StorageCoreBlock(properties, tier),
-                    BlockBehaviour.Properties.of()
+                    () -> BlockBehaviour.Properties.of()
                             .mapColor(mapColor(tier))
                             .strength(5.0F + 2.0F * tier.ordinal(), 10.0F + 10.0F * tier.ordinal())
                             .sound(SoundType.METAL)
@@ -48,7 +48,7 @@ public final class CoreRegistry {
 
     public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<StorageCoreBlockEntity>> CORE_ENTITY = BLOCK_ENTITIES.register(
             "flux_storage_core",
-            (Supplier<BlockEntityType<StorageCoreBlockEntity>>) () -> BlockEntityType.Builder.of(StorageCoreBlockEntity::new, blocks().toArray(Block[]::new)).build(null));
+            (Supplier<BlockEntityType<StorageCoreBlockEntity>>) () -> new BlockEntityType<>(StorageCoreBlockEntity::new, blocks().toArray(Block[]::new)));
 
     private CoreRegistry() {
     }

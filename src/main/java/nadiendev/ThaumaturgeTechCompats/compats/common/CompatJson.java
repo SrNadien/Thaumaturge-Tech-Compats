@@ -4,6 +4,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import nadiendev.ThaumaturgeTechCompats.config.CompatToggles;
+import nadiendev.ThaumaturgeTechCompats.datagen.RecipeSaver;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
@@ -90,6 +91,6 @@ public final class CompatJson {
 
     public static CompletableFuture<?> save(PackOutput output, CachedOutput cache, String relativePath, JsonElement json) {
         Path path = output.getOutputFolder().resolve(relativePath);
-        return DataProvider.saveStable(cache, json, path);
+        return RecipeSaver.save(cache, json, path);
     }
 }

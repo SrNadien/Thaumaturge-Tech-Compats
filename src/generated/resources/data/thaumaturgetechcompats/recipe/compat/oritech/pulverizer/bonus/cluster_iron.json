@@ -19,9 +19,7 @@
   ],
   "type": "oritech:pulverizer",
   "ingredients": [
-    {
-      "item": "thaumaturge:cluster_iron"
-    }
+    "thaumaturge:cluster_iron"
   ],
   "results": [
     {

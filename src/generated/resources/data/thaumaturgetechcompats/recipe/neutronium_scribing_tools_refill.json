@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "D": {
-      "tag": "c:dyes/black"
-    },
-    "T": {
-      "item": "thaumaturgetechcompats:neutronium_scribing_tools"
-    }
+    "D": "#c:dyes/black",
+    "T": "thaumaturgetechcompats:neutronium_scribing_tools"
   },
   "pattern": [
     "T",

@@ -15,10 +15,13 @@ import nadiendev.ThaumaturgeTechCompats.compats.tags.TagAspectEntry;
 import nadiendev.ThaumaturgeTechCompats.compats.tags.TagAspectTable;
 import nadiendev.ThaumaturgeTechCompats.compats.tags.ThaumaturgeAspects;
 import net.neoforged.fml.ModList;
+import net.neoforged.fml.jarcontents.JarContents;
 import net.neoforged.neoforgespi.language.IModFileInfo;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.Reader;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
@@ -59,11 +62,12 @@ public final class EssenceBaselines {
         if (file == null) {
             return;
         }
-        Path path = file.getFile().findResource("data", THAUMATURGE, "data_maps", "item", "base_aspects.json");
-        if (!Files.isRegularFile(path)) {
+        JarContents contents = file.getFile().getContents();
+        String path = "data/" + THAUMATURGE + "/data_maps/item/base_aspects.json";
+        if (!contents.containsFile(path)) {
             return;
         }
-        try (Reader reader = Files.newBufferedReader(path)) {
+        try (Reader reader = new InputStreamReader(contents.openFile(path), StandardCharsets.UTF_8)) {
             JsonObject values = JsonParser.parseReader(reader).getAsJsonObject().getAsJsonObject("values");
             readValues(values, baselines);
         } catch (IOException | RuntimeException exception) {

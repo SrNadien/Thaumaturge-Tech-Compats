@@ -20,7 +20,7 @@ public class EmcPackProvider implements DataProvider {
     @Override
     public CompletableFuture<?> run(CachedOutput cache) {
         JsonObject pack = new JsonObject();
-        pack.addProperty("description", "Base EMC values of Thaumaturge Tech Compats for ProjectE.");
+        pack.addProperty("description", "Base EMC values of Thaumaturge Tech Compats for Equivox.");
         pack.addProperty("pack_format", DATA_PACK_FORMAT);
         JsonObject json = new JsonObject();
         json.add("pack", pack);
@@ -29,6 +29,6 @@ public class EmcPackProvider implements DataProvider {
 
     @Override
     public String getName() {
-        return "Thaumaturge Tech Compats ProjectE pack";
+        return "Thaumaturge Tech Compats Equivox pack";
     }
 }

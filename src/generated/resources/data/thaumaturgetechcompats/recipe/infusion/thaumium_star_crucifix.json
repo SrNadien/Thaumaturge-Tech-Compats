@@ -52,22 +52,12 @@
       "aspect": "thaumaturge:spiritus"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:netherite_star_crucifix"
-  },
+  "catalyst": "thaumaturgetechcompats:netherite_star_crucifix",
   "components": [
-    {
-      "item": "thaumaturge:ingot_thaumium"
-    },
-    {
-      "item": "thaumaturge:ingot_thaumium"
-    },
-    {
-      "item": "thaumaturge:ingot_thaumium"
-    },
-    {
-      "item": "thaumaturge:ingot_thaumium"
-    }
+    "thaumaturge:ingot_thaumium",
+    "thaumaturge:ingot_thaumium",
+    "thaumaturge:ingot_thaumium",
+    "thaumaturge:ingot_thaumium"
   ],
   "instability": 6,
   "research": {

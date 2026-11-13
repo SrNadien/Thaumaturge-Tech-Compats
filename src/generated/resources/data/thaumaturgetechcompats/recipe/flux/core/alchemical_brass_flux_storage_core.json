@@ -32,34 +32,16 @@
       "aspect": "thaumaturge:ordo"
     }
   ],
-  "catalyst": {
-    "item": "thaumaturgetechcompats:thaumium_flux_storage_core"
-  },
+  "catalyst": "thaumaturgetechcompats:thaumium_flux_storage_core",
   "components": [
-    {
-      "item": "thaumaturge:metal_brass"
-    },
-    {
-      "tag": "thaumaturge:nitors"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:alumentum"
-    },
-    {
-      "item": "thaumaturge:metal_brass"
-    },
-    {
-      "tag": "thaumaturge:nitors"
-    },
-    {
-      "item": "thaumaturge:plate_brass"
-    },
-    {
-      "item": "thaumaturge:alumentum"
-    }
+    "thaumaturge:metal_brass",
+    "#thaumaturge:nitors",
+    "thaumaturge:plate_brass",
+    "thaumaturge:alumentum",
+    "thaumaturge:metal_brass",
+    "#thaumaturge:nitors",
+    "thaumaturge:plate_brass",
+    "thaumaturge:alumentum"
   ],
   "instability": 9,
   "research": {

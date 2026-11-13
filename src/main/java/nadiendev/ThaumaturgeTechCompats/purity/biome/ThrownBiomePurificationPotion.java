@@ -4,8 +4,9 @@ import nadiendev.ThaumaturgeTechCompats.purity.PurityRegistry;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
 
@@ -17,11 +18,11 @@ public class ThrownBiomePurificationPotion extends ThrowableItemProjectile {
     }
 
     public ThrownBiomePurificationPotion(Level level, LivingEntity owner) {
-        super(PurityRegistry.THROWN_BIOME_POTION.get(), owner, level);
+        super(PurityRegistry.THROWN_BIOME_POTION.get(), owner, level, new ItemStack(PurityRegistry.BIOME_POTION.get()));
     }
 
     public ThrownBiomePurificationPotion(Level level, double x, double y, double z) {
-        super(PurityRegistry.THROWN_BIOME_POTION.get(), x, y, z, level);
+        super(PurityRegistry.THROWN_BIOME_POTION.get(), x, y, z, level, new ItemStack(PurityRegistry.BIOME_POTION.get()));
     }
 
     @Override

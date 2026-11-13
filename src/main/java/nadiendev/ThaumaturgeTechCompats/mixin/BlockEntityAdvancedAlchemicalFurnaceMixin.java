@@ -4,15 +4,13 @@ import com.leclowndu93150.thaumaturge.content.essentia.advancedfurnace.BlockEnti
 import nadiendev.ThaumaturgeTechCompats.device.DeviceConfig;
 import nadiendev.ThaumaturgeTechCompats.device.DeviceTier;
 import nadiendev.ThaumaturgeTechCompats.furnace.FurnaceIntegration;
-import net.minecraft.core.BlockPos;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(BlockEntityAdvancedAlchemicalFurnace.class)
 public abstract class BlockEntityAdvancedAlchemicalFurnaceMixin {
@@ -36,17 +34,21 @@ public abstract class BlockEntityAdvancedAlchemicalFurnaceMixin {
     @Unique
     private int avaritia$cost;
 
+    @Unique
+    private int avaritia$cooldownBefore;
+
     @Shadow
     public abstract int inputCost();
 
     @Inject(method = "tryProcessInput", at = @At("HEAD"), require = 0)
-    private void avaritia$rememberCost(ServerLevel level, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
+    private void avaritia$rememberCost(CallbackInfo ci) {
         this.avaritia$cost = this.inputCost();
+        this.avaritia$cooldownBefore = this.cooldown;
     }
 
     @Inject(method = "tryProcessInput", at = @At("RETURN"), require = 0)
-    private void avaritia$tieredCycle(ServerLevel level, BlockPos pos, CallbackInfoReturnable<Boolean> cir) {
-        if (!cir.getReturnValueZ() || !DeviceConfig.furnacesEnabled()) {
+    private void avaritia$tieredCycle(CallbackInfo ci) {
+        if (this.cooldown <= this.avaritia$cooldownBefore || !DeviceConfig.furnacesEnabled()) {
             return;
         }
         DeviceTier tier = FurnaceIntegration.tierOf(((BlockEntity) (Object) this).getBlockState().getBlock());

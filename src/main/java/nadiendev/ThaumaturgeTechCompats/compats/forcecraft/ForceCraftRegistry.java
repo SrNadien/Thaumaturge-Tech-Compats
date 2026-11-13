@@ -11,7 +11,7 @@ public final class ForceCraftRegistry {
 
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS = DeferredRegister.create(Registries.RECIPE_SERIALIZER, ThaumaturgeTechCompats.MOD_ID);
 
-    public static final DeferredHolder<RecipeSerializer<?>, RepairInfuseSerializer> REPAIR_SERIALIZER = SERIALIZERS.register(REPAIR_SERIALIZER_ID, RepairInfuseSerializer::new);
+    public static final DeferredHolder<RecipeSerializer<?>, RecipeSerializer<RepairInfuseRecipe>> REPAIR_SERIALIZER = SERIALIZERS.register(REPAIR_SERIALIZER_ID, RepairInfuseSerializer::create);
 
     private ForceCraftRegistry() {
     }
