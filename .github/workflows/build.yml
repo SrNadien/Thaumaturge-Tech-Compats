@@ -74,8 +74,8 @@ jobs:
           set -euo pipefail
           : "${CURSEFORGE_TOKEN:?Add the CURSEFORGE_TOKEN secret to the repository}"
           : "${CURSEFORGE_PROJECT_ID:?Add the CURSEFORGE_PROJECT_ID variable to the repository}"
-          : "${CURSEFORGE_THAUMATURGE_SLUG:?Add the CURSEFORGE_THAUMATURGE_SLUG variable to the repository}"
-          : "${CURSEFORGE_AVARITIA_SLUG:?Add the CURSEFORGE_AVARITIA_SLUG variable to the repository}"
+          CURSEFORGE_THAUMATURGE_SLUG="${CURSEFORGE_THAUMATURGE_SLUG:-thaumaturge}"
+          CURSEFORGE_AVARITIA_SLUG="${CURSEFORGE_AVARITIA_SLUG:-re-avaritia}"
           MC="1.21.1"
 
           RELEASE_TYPE=release
