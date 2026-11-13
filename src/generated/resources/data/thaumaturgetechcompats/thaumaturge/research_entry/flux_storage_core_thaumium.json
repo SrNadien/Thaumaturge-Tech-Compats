@@ -1,0 +1,63 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_storage_core"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 50,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_flux_storage_core"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.flux_storage_core_thaumium.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:auram"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:base_artifice",
+    "thaumaturge:metallurgy@2"
+  ],
+  "row": 8,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.flux_storage_core_thaumium.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:flux/core/thaumium_flux_storage_core",
+        "thaumaturgetechcompats:flux/core/thaumium_flux_capacity_cell"
+      ],
+      "text": "research.thaumaturgetechcompats.flux_storage_core_thaumium.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botania"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania_wand"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 48,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:terrasteel_wand_cap"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.botania_wand.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:herba"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:rod_greatwood",
+    "thaumaturge:cap_thaumium"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:auromancy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.botania_wand.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:wand/part/livingwood_wand_rod",
+        "thaumaturgetechcompats:infusion/dreamwood_wand_rod",
+        "thaumaturgetechcompats:wand/part/manasteel_wand_cap",
+        "thaumaturgetechcompats:infusion/elementium_wand_cap",
+        "thaumaturgetechcompats:infusion/terrasteel_wand_cap",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_manasteel_thaumaturgetechcompats_livingwood",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_manasteel_thaumaturgetechcompats_dreamwood",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_elementium_thaumaturgetechcompats_livingwood",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_elementium_thaumaturgetechcompats_dreamwood",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_terrasteel_thaumaturgetechcompats_livingwood",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_terrasteel_thaumaturgetechcompats_dreamwood"
+      ],
+      "text": "research.thaumaturgetechcompats.botania_wand.stage_1"
+    }
+  ]
+}

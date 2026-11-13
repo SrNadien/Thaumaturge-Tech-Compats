@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "thaumaturgetechcompats:block/neutronium_pillar_stone"
+  }
+}

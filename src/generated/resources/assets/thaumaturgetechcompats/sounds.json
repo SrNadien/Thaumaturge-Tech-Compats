@@ -1,0 +1,90 @@
+{
+  "item.star_crucifix.banish": {
+    "sounds": [
+      "thaumaturgetechcompats:crucifix/banish1"
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.banish"
+  },
+  "item.star_crucifix.bind": {
+    "sounds": [
+      "thaumaturgetechcompats:crucifix/bind1"
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.bind"
+  },
+  "item.star_crucifix.break": {
+    "sounds": [
+      "thaumaturgetechcompats:crucifix/break1",
+      "thaumaturgetechcompats:crucifix/break2"
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.break"
+  },
+  "item.star_crucifix.chains": {
+    "sounds": [
+      {
+        "name": "thaumaturgetechcompats:crucifix/chains1",
+        "volume": 0.8
+      },
+      {
+        "name": "thaumaturgetechcompats:crucifix/chains2",
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.chains"
+  },
+  "item.star_crucifix.crack": {
+    "sounds": [
+      "thaumaturgetechcompats:crucifix/crack1",
+      "thaumaturgetechcompats:crucifix/crack2"
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.crack"
+  },
+  "item.star_crucifix.drag": {
+    "sounds": [
+      "thaumaturgetechcompats:crucifix/drag1",
+      "thaumaturgetechcompats:crucifix/drag2"
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.drag"
+  },
+  "item.star_crucifix.explode": {
+    "sounds": [
+      "thaumaturgetechcompats:crucifix/explode1"
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.explode"
+  },
+  "item.star_crucifix.roar": {
+    "sounds": [
+      "thaumaturgetechcompats:crucifix/roar1",
+      "thaumaturgetechcompats:crucifix/roar2"
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.roar"
+  },
+  "item.star_crucifix.shatter": {
+    "sounds": [
+      "thaumaturgetechcompats:crucifix/shatter1",
+      "thaumaturgetechcompats:crucifix/shatter2"
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.shatter"
+  },
+  "item.star_crucifix.strain": {
+    "sounds": [
+      {
+        "name": "thaumaturgetechcompats:crucifix/strain1",
+        "volume": 0.9
+      },
+      {
+        "name": "thaumaturgetechcompats:crucifix/strain2",
+        "volume": 0.9
+      }
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.strain"
+  },
+  "item.star_crucifix.tremble": {
+    "sounds": [
+      {
+        "name": "thaumaturgetechcompats:crucifix/tremble1",
+        "volume": 0.7
+      }
+    ],
+    "subtitle": "subtitles.thaumaturgetechcompats.item.star_crucifix.tremble"
+  }
+}

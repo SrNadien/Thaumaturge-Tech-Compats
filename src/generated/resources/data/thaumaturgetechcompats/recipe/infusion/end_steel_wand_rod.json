@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_wand_parts"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 36,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 27,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 18,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:vibrant_crystal_wand_rod"
+  },
+  "components": [
+    {
+      "tag": "c:ingots/end_steel"
+    },
+    {
+      "tag": "c:ingots/end_steel"
+    },
+    {
+      "tag": "c:ingots/end_steel"
+    },
+    {
+      "tag": "c:ingots/end_steel"
+    }
+  ],
+  "instability": 5,
+  "research": {
+    "entry": "thaumaturgetechcompats:enderio_wand_parts"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:end_steel_wand_rod"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 59,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:flight_thruster"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.field_flight_thruster.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:volatus"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:vacuos"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:infusion",
+    "thaumaturge:base_eldritch"
+  ],
+  "row": 8,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.field_flight_thruster.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/flight_thruster"
+      ],
+      "text": "research.thaumaturgetechcompats.field_flight_thruster.stage_1"
+    }
+  ]
+}

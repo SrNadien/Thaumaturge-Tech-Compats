@@ -1,0 +1,25 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.infusion.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockEntityInfusionMatrixMixin",
+    "BlockPedestalMixin",
+    "BlueprintBlockSourceMixin",
+    "InstabilityEventsMixin",
+    "InfusionCraftingTransactionsMixin",
+    "InfusionRecipeMixin",
+    "InstabilityOutcomeMixin",
+    "MatrixEnvironmentMixin"
+  ],
+  "client": [
+    "InfusionCategoryMixin",
+    "InfusionMatrixRendererMixin",
+    "PedestalRendererMixin",
+    "RecipeDisplayWidgetMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

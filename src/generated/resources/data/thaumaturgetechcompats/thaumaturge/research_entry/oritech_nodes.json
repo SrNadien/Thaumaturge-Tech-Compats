@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_nodes"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 9,
+  "complexity": 2,
+  "icons": [
+    "oritech:resource_node_uranium"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.oritech_nodes.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:permutatio"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:base_infusion"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.oritech_nodes.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/oritech/resource_node_cinnabar",
+        "thaumaturgetechcompats:infusion/oritech/resource_node_amber",
+        "thaumaturgetechcompats:infusion/oritech/resource_node_quartz"
+      ],
+      "text": "research.thaumaturgetechcompats.oritech_nodes.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "thaumaturgetechcompats:block/matrix_infusion_speed_stone"
+  }
+}

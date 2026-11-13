@@ -1,0 +1,9 @@
+{
+  "color": 12124160,
+  "components": [
+    "thaumaturge:desiderium",
+    "thaumaturge:alienis"
+  ],
+  "tag": "terminus",
+  "texture": "thaumaturgetechcompats:textures/aspects/terminus.png"
+}

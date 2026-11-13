@@ -1,0 +1,46 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_scribing_tools"
+  },
+  "components": [
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    }
+  ],
+  "instability": 5,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_scribing"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_scribing_tools"
+  }
+}

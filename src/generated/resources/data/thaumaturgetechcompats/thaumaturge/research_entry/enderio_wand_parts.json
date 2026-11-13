@@ -1,0 +1,95 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_wand_parts"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 73,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:end_steel_wand_cap"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.enderio_wand_parts.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:rod_greatwood",
+    "thaumaturge:cap_thaumium"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:auromancy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.enderio_wand_parts.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:wand/part/redstone_alloy_wand_rod",
+        "thaumaturgetechcompats:wand/part/redstone_alloy_wand_cap",
+        "thaumaturgetechcompats:wand/part/conductive_alloy_wand_rod",
+        "thaumaturgetechcompats:wand/part/conductive_alloy_wand_cap",
+        "thaumaturgetechcompats:wand/part/pulsating_alloy_wand_rod",
+        "thaumaturgetechcompats:wand/part/pulsating_alloy_wand_cap",
+        "thaumaturgetechcompats:infusion/energetic_alloy_wand_rod",
+        "thaumaturgetechcompats:infusion/energetic_alloy_wand_cap",
+        "thaumaturgetechcompats:infusion/dark_steel_wand_rod",
+        "thaumaturgetechcompats:infusion/dark_steel_wand_cap",
+        "thaumaturgetechcompats:infusion/soularium_wand_rod",
+        "thaumaturgetechcompats:infusion/soularium_wand_cap",
+        "thaumaturgetechcompats:infusion/pulsating_crystal_wand_rod",
+        "thaumaturgetechcompats:infusion/pulsating_crystal_wand_cap",
+        "thaumaturgetechcompats:infusion/vibrant_alloy_wand_rod",
+        "thaumaturgetechcompats:infusion/vibrant_alloy_wand_cap",
+        "thaumaturgetechcompats:infusion/vibrant_crystal_wand_rod",
+        "thaumaturgetechcompats:infusion/vibrant_crystal_wand_cap",
+        "thaumaturgetechcompats:infusion/end_steel_wand_rod",
+        "thaumaturgetechcompats:infusion/end_steel_wand_cap",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_redstone_alloy_thaumaturgetechcompats_redstone_alloy",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_conductive_alloy_thaumaturgetechcompats_conductive_alloy",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_pulsating_alloy_thaumaturgetechcompats_pulsating_alloy",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_energetic_alloy_thaumaturgetechcompats_energetic_alloy",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_dark_steel_thaumaturgetechcompats_dark_steel",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_soularium_thaumaturgetechcompats_soularium",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_pulsating_crystal_thaumaturgetechcompats_pulsating_crystal",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_vibrant_alloy_thaumaturgetechcompats_vibrant_alloy",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_vibrant_crystal_thaumaturgetechcompats_vibrant_crystal",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_end_steel_thaumaturgetechcompats_end_steel"
+      ],
+      "text": "research.thaumaturgetechcompats.enderio_wand_parts.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "down": "thaumaturgetechcompats:block/void_metal_neutron_collector_frame",
+    "east": "thaumaturgetechcompats:block/void_metal_neutron_collector_side_right",
+    "north": "thaumaturgetechcompats:block/void_metal_neutron_collector_front",
+    "particle": "thaumaturgetechcompats:block/void_metal_neutron_collector_front",
+    "south": "thaumaturgetechcompats:block/void_metal_neutron_collector_frame",
+    "up": "thaumaturgetechcompats:block/void_metal_neutron_collector_top",
+    "west": "thaumaturgetechcompats:block/void_metal_neutron_collector_side_left"
+  }
+}

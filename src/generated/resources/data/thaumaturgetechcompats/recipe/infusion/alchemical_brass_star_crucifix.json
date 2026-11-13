@@ -1,0 +1,84 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_netherite"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_alchemical_brass"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 36,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 28,
+      "aspect": "thaumaturge:mortuus"
+    },
+    {
+      "amount": 28,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:exanimis"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:thaumium_star_crucifix"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:ingot_brass"
+    },
+    {
+      "item": "thaumaturge:ingot_brass"
+    },
+    {
+      "item": "thaumaturge:ingot_brass"
+    },
+    {
+      "item": "thaumaturge:ingot_brass"
+    }
+  ],
+  "instability": 7,
+  "research": {
+    "entry": "thaumaturgetechcompats:star_crucifix"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_star_crucifix"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:netherite_planetary_endest_pearl",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:void_metal_planetary_endest_pearl",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:infinity_planetary_endest_pearl",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:creative_planetary_endest_pearl",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:netherite_star_crucifix",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:void_metal_star_crucifix",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:infinity_star_crucifix",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:creative_star_crucifix",
+      "required": false
+    },
+    {
+      "id": "thaumaturge:creative_flux_sponge",
+      "required": false
+    },
+    {
+      "id": "thaumaturge:creative_node_placer",
+      "required": false
+    },
+    {
+      "id": "thaumaturge:thaumonomicon_cheat",
+      "required": false
+    },
+    {
+      "id": "thaumaturge:jar_creative",
+      "required": false
+    },
+    {
+      "id": "thaumaturge:jar_node",
+      "required": false
+    },
+    {
+      "id": "thaumaturge:wand",
+      "required": false
+    },
+    {
+      "id": "thaumaturge:wand_staff",
+      "required": false
+    }
+  ]
+}

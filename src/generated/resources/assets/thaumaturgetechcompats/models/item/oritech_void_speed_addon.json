@@ -1,0 +1,6 @@
+{
+  "parent": "oritech:item/machine_speed_addon",
+  "textures": {
+    "1": "thaumaturgetechcompats:block/oritech_void_speed_addon_off"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_capacitors"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_capacitor_banks"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "catalyst": {
+    "item": "enderio:vibrant_capacitor_bank"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturgetechcompats:thaumium_capacitor"
+    },
+    {
+      "item": "thaumaturgetechcompats:thaumium_capacitor"
+    },
+    {
+      "item": "thaumaturgetechcompats:thaumium_capacitor"
+    },
+    {
+      "item": "thaumaturgetechcompats:thaumium_capacitor"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:enderio_capacitor_banks"
+  },
+  "result": {
+    "count": 1,
+    "id": "enderio:thaumium_capacitor_bank"
+  }
+}

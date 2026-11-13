@@ -1,0 +1,57 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 0,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:matrix_smelter"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_smelters.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:alkimia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:essentia_smelter_void"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_smelters.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/matrix_smelter",
+        "thaumaturgetechcompats:arcane_workbench/neutronium_smelter",
+        "thaumaturgetechcompats:arcane_workbench/infinity_smelter"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_smelters.stage_1"
+    }
+  ]
+}

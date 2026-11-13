@@ -1,0 +1,62 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 0,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:neutronium_plate"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_golems.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:humanus"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:mat_stud_thaumium",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_golems.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:matrix_plate",
+        "thaumaturgetechcompats:neutronium_plate",
+        "thaumaturgetechcompats:infinity_plate"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_golems.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_copper"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:praecantatio"
+    }
+  ],
+  "catalyst": {
+    "item": "avaritia:endest_pearl"
+  },
+  "components": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "instability": 1,
+  "research": {
+    "entry": "thaumaturgetechcompats:planetary_endest_pearl"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:copper_planetary_endest_pearl"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botania"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania_spreaders"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania_spreader_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania_spreader_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania_spreader_thaumium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:alchemical_brass_spreader"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:void_seed"
+    }
+  ],
+  "instability": 10,
+  "research": {
+    "entry": "thaumaturgetechcompats:botania_spreaders"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_spreader"
+  }
+}

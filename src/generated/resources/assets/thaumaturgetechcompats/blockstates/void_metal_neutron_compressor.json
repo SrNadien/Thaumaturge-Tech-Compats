@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thaumaturgetechcompats:block/void_metal_neutron_compressor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thaumaturgetechcompats:block/void_metal_neutron_compressor"
+    },
+    "facing=south": {
+      "model": "thaumaturgetechcompats:block/void_metal_neutron_compressor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumaturgetechcompats:block/void_metal_neutron_compressor",
+      "y": 270
+    }
+  }
+}

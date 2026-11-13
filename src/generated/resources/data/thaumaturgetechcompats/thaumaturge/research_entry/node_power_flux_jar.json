@@ -1,0 +1,58 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 12,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:flux_jar"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.node_power_flux_jar.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:vitreus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:warded_jars",
+    "thaumaturge:base_eldritch"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.node_power_flux_jar.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:nodepower/flux_jar"
+      ],
+      "text": "research.thaumaturgetechcompats.node_power_flux_jar.stage_1"
+    }
+  ]
+}

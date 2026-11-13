@@ -1,0 +1,11 @@
+{
+  "athena:loader": "athena:ctm",
+  "ctm_textures": {
+    "center": "thaumaturgetechcompats:block/ctm/alchemical_brass_capacitor_bank_center",
+    "empty": "thaumaturgetechcompats:block/ctm/alchemical_brass_capacitor_bank_empty",
+    "horizontal": "thaumaturgetechcompats:block/ctm/alchemical_brass_capacitor_bank_horizontal",
+    "particle": "thaumaturgetechcompats:block/alchemical_brass_capacitor_bank",
+    "vertical": "thaumaturgetechcompats:block/ctm/alchemical_brass_capacitor_bank_vertical"
+  },
+  "loader": "athena:athena"
+}

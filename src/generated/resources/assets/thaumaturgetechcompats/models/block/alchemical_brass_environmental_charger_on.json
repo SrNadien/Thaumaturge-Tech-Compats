@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "thaumaturge:block/metal_brass",
+    "particle": "thaumaturge:block/metal_brass",
+    "side": "thaumaturge:block/metal_brass",
+    "top": "thaumaturge:block/metal_brass"
+  }
+}

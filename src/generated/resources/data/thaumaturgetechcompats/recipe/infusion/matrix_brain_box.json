@@ -1,0 +1,49 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:brain_box"
+  },
+  "components": [
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "thaumaturge:mind_clockwork"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_brain_box"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_brain_box"
+  }
+}

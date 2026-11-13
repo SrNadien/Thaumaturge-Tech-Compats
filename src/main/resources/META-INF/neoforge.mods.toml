@@ -1,0 +1,152 @@
+modLoader = "javafml"
+loaderVersion = "${loader_version}"
+license = "${mod_license}"
+
+[[mods]]
+modId = "${mod_id}"
+version = "${mod_version}"
+displayName = "${mod_named}"
+authors = "${mod_authors}"
+credits = "${mod_credits}"
+logoFile = "logo.png"
+description = '''${mod_description}'''
+
+[[mixins]]
+config = "thaumaturgetechcompats.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.devices.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.infusion.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.botania.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.voidminers.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.enderio.mixins.json"
+
+[[mixins]]
+config = "thaumaturgetechcompats.sophisticated.mixins.json"
+
+[[dependencies.${mod_id}]]
+modId = "neoforge"
+type = "required"
+versionRange = "[${neo_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "minecraft"
+type = "required"
+versionRange = "${minecraft_version_range}"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "thaumaturge"
+type = "required"
+versionRange = "[${thaumaturge_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "avaritia"
+type = "required"
+versionRange = "[${avaritia_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "fractal"
+type = "required"
+versionRange = "[${fractal_mod_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "ponder"
+type = "required"
+versionRange = "[${ponder_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "jade"
+type = "optional"
+versionRange = "[${jade_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "jei"
+type = "optional"
+versionRange = "[${jei_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "oritech"
+type = "optional"
+versionRange = "[${oritech_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "forcecraft"
+type = "optional"
+versionRange = "[${forcecraft_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "enderio"
+type = "optional"
+versionRange = "[${enderio_version},)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "botania"
+type = "optional"
+versionRange = "[${botania_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "voidminersremastered"
+type = "optional"
+versionRange = "[${voidminers_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "equivox"
+type = "optional"
+versionRange = "[${equivox_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "sophisticatedcore"
+type = "optional"
+versionRange = "[${sophisticatedcore_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "sophisticatedbackpacks"
+type = "optional"
+versionRange = "[${sophisticatedbackpacks_version},)"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.${mod_id}]]
+modId = "sophisticatedstorage"
+type = "optional"
+versionRange = "[${sophisticatedstorage_version},)"
+ordering = "AFTER"
+side = "BOTH"

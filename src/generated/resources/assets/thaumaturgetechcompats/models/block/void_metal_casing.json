@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "thaumaturgetechcompats:block/void_metal_casing"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:neutronium_workbench_charger"
+  },
+  "components": [
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:extremely_primordial_pearl"
+    }
+  ],
+  "instability": 10,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_workbench_charger"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:infinity_workbench_charger"
+  }
+}

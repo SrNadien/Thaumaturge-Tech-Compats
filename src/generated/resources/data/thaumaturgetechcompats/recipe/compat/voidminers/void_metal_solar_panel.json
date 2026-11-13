@@ -1,0 +1,81 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:praecantatio"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:alchemical_brass_solar_panel"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:mechanism_complex"
+    },
+    {
+      "item": "thaumaturge:jar_node"
+    },
+    {
+      "item": "thaumaturge:jar_node"
+    },
+    {
+      "item": "thaumaturge:void_seed"
+    }
+  ],
+  "instability": 6,
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_solar_void_metal"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_solar_panel"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "thaumaturgetechcompats:block/infinity_smelter_off",
+  "textures": {
+    "north": "thaumaturgetechcompats:block/infinity_smelter_front_on"
+  }
+}

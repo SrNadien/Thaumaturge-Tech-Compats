@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "thaumaturgetechcompats:block/matrix_brain_box"
+    },
+    "facing=east": {
+      "model": "thaumaturgetechcompats:block/matrix_brain_box",
+      "x": 90,
+      "y": 270
+    },
+    "facing=north": {
+      "model": "thaumaturgetechcompats:block/matrix_brain_box",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south": {
+      "model": "thaumaturgetechcompats:block/matrix_brain_box",
+      "x": 90
+    },
+    "facing=up": {
+      "model": "thaumaturgetechcompats:block/matrix_brain_box",
+      "x": 180
+    },
+    "facing=west": {
+      "model": "thaumaturgetechcompats:block/matrix_brain_box",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 55,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:rift_extractor"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.flux_rift_extractor.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:alienis"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:node_power_rift_jar"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.flux_rift_extractor.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:flux/rift_extractor"
+      ],
+      "text": "research.thaumaturgetechcompats.flux_rift_extractor.stage_1"
+    }
+  ]
+}

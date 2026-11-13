@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "twilightforest"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:mod_loaded",
+        "modid": "draconicevolution"
+      }
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturgetechcompats:sol"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "catalyst": {
+    "item": "solarflux:sp_8"
+  },
+  "research": {
+    "entry": "thaumaturgetechcompats:solarflux_alchemical"
+  },
+  "result": {
+    "count": 1,
+    "id": "solarflux:sp_alchemical"
+  }
+}

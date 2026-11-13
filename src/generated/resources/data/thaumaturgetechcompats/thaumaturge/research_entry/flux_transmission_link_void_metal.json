@@ -1,0 +1,68 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_void_metal"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 56,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_transmission_link"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.flux_transmission_link_void_metal.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:permutatio"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:alienis"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:flux_transmission_link_alchemical_brass"
+  ],
+  "row": 5,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.flux_transmission_link_void_metal.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:flux/void_metal_transmission_link"
+      ],
+      "text": "research.thaumaturgetechcompats.flux_transmission_link_void_metal.stage_1"
+    }
+  ]
+}

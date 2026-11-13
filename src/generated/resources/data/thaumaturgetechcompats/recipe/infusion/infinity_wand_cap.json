@@ -1,0 +1,52 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:neutronium_wand_cap"
+  },
+  "components": [
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    }
+  ],
+  "instability": 10,
+  "research": {
+    "entry": "thaumaturgetechcompats:infinity_wand"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:infinity_wand_cap"
+  }
+}

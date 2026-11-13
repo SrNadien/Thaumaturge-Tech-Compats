@@ -1,0 +1,76 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_storage_core"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:alchemical_brass_flux_storage_core"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:metal_void"
+    },
+    {
+      "tag": "thaumaturge:nitors"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:alumentum"
+    },
+    {
+      "item": "thaumaturge:metal_void"
+    },
+    {
+      "tag": "thaumaturge:nitors"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:alumentum"
+    }
+  ],
+  "instability": 12,
+  "research": {
+    "entry": "thaumaturgetechcompats:flux_storage_core_void_metal"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_flux_storage_core"
+  }
+}

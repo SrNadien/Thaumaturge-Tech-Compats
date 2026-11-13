@@ -1,0 +1,6 @@
+{
+  "parent": "thaumaturge:block/infusion_matrix",
+  "textures": {
+    "side": "thaumaturgetechcompats:block/infinity_infuser"
+  }
+}

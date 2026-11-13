@@ -1,0 +1,73 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 43,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_solar_generation_upgrade"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_thaumium.title",
+  "note_aspects": [
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:voidminers_magical_solar_thaumium"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_thaumium.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/voidminers/thaumium_solar_generation_upgrade",
+        "thaumaturgetechcompats:compat/voidminers/thaumium_solar_saving_upgrade"
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_thaumium.stage_1"
+    }
+  ]
+}

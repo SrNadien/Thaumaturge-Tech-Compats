@@ -1,0 +1,56 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 128,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 96,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 96,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:desiderium"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:thaumonomicon"
+  },
+  "components": [
+    {
+      "item": "thaumaturgetechcompats:akashic_record"
+    },
+    {
+      "item": "thaumaturgetechcompats:extremely_primordial_pearl"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    }
+  ],
+  "instability": 12,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_creative"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturge:thaumonomicon_cheat"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "avaritia:neutron_ingot"
+    },
+    "P": {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    }
+  },
+  "pattern": [
+    "NNN",
+    " P "
+  ],
+  "result": {
+    "count": 3,
+    "id": "thaumaturgetechcompats:neutronium_plate"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_void_metal"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 80,
+      "aspect": "thaumaturge:permutatio"
+    },
+    {
+      "amount": 60,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:vacuos"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:alchemical_brass_arcane_terraformer"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:mechanism_complex"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "minecraft:red_mushroom"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:field_terraformer_void_metal"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_arcane_terraformer"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 33,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:energized_alchemical_brass_pickaxe",
+    "thaumaturgetechcompats:energized_alchemical_brass_axe",
+    "thaumaturgetechcompats:energized_alchemical_brass_shovel",
+    "thaumaturgetechcompats:energized_alchemical_brass_hoe",
+    "thaumaturgetechcompats:energized_alchemical_brass_sword"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.mekanismtools_alchemical_brass.title",
+  "note_aspects": [
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:instrumentum"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:mekanismtools_thaumium",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.mekanismtools_alchemical_brass.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_alchemical_brass_pickaxe",
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_alchemical_brass_axe",
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_alchemical_brass_shovel",
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_alchemical_brass_hoe",
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_alchemical_brass_sword"
+      ],
+      "text": "research.thaumaturgetechcompats.mekanismtools_alchemical_brass.stage_1"
+    }
+  ]
+}

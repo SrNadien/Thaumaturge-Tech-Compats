@@ -1,0 +1,76 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_netherite"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 28,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:mortuus"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:tenebrae"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:ignis"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:emerald_star_crucifix"
+  },
+  "components": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "instability": 6,
+  "research": {
+    "entry": "thaumaturgetechcompats:star_crucifix"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:netherite_star_crucifix"
+  }
+}

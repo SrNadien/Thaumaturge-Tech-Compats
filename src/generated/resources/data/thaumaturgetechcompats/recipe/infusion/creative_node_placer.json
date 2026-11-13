@@ -1,0 +1,62 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 128,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 96,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 96,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 48,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:jar_node"
+  },
+  "components": [
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "thaumaturge:primordial_pearl"
+    },
+    {
+      "item": "thaumaturge:primordial_pearl"
+    }
+  ],
+  "instability": 12,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_creative"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturge:creative_node_placer"
+  }
+}

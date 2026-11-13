@@ -1,0 +1,55 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:fabrico"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:arcane_workbench_charger"
+  },
+  "components": [
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_workbench_charger"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_workbench_charger"
+  }
+}

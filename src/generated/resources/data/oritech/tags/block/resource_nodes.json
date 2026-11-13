@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:resource_node_cinnabar",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:resource_node_amber",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:resource_node_quartz",
+      "required": false
+    }
+  ]
+}

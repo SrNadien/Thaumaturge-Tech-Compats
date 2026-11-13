@@ -1,0 +1,76 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_gear_discharge_cannon"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 80,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 60,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:mechanism_complex"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:void_seed"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "thaumaturge:void_seed"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    }
+  ],
+  "instability": 5,
+  "research": {
+    "entry": "thaumaturgetechcompats:flux_discharge_cannon"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:discharge_cannon"
+  }
+}

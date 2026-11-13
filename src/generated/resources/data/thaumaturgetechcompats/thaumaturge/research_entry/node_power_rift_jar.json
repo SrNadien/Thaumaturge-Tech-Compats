@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 12,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:rift_jar"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.node_power_rift_jar.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:praemunio"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:node_power_flux_jar"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.node_power_rift_jar.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:nodepower/rift_jar"
+      ],
+      "text": "research.thaumaturgetechcompats.node_power_rift_jar.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_brain_box"
+  },
+  "components": [
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturge:mind_biothaumic"
+    }
+  ],
+  "instability": 7,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_brain_box"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_brain_box"
+  }
+}

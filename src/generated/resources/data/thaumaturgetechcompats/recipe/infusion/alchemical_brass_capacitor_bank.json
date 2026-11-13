@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_capacitors"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_capacitor_banks"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "catalyst": {
+    "item": "enderio:thaumium_capacitor_bank"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
+    },
+    {
+      "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
+    },
+    {
+      "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
+    },
+    {
+      "item": "thaumaturgetechcompats:alchemical_brass_capacitor"
+    }
+  ],
+  "instability": 8,
+  "research": {
+    "entry": "thaumaturgetechcompats:enderio_capacitor_banks"
+  },
+  "result": {
+    "count": 1,
+    "id": "enderio:alchemical_brass_capacitor_bank"
+  }
+}

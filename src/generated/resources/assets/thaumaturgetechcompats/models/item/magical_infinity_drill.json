@@ -1,0 +1,8 @@
+{
+  "parent": "industrialforegoing:item/infinity_drill",
+  "textures": {
+    "2": "thaumaturgetechcompats:item/magical_infinity_drill",
+    "main": "thaumaturgetechcompats:item/magical_infinity_drill_head",
+    "particle": "thaumaturgetechcompats:item/magical_infinity_drill"
+  }
+}

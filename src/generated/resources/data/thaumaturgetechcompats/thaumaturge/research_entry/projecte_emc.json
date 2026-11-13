@@ -1,0 +1,59 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "projecte"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "projecte_emc"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 70,
+  "complexity": 1,
+  "icons": [
+    "thaumaturge:ingot_thaumium"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.projecte_emc.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:permutatio"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.projecte_emc.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [],
+      "text": "research.thaumaturgetechcompats.projecte_emc.stage_1"
+    }
+  ]
+}

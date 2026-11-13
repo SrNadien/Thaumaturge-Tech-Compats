@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "industrialforegoing"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "industrialforegoing_addons"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "industrialforegoing_addon_thaumium_range"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "industrialforegoing_addon_brass_range"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "thaumaturgetechcompats:brass_range_addon"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:ender_pearl"
+    },
+    {
+      "item": "minecraft:diamond"
+    }
+  ],
+  "inputFluid": {
+    "amount": 2000,
+    "fluid": "thaumaturge:liquid_death"
+  },
+  "output": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_range_addon"
+  },
+  "processingTime": 300
+}

@@ -1,0 +1,73 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_gear_discharge_cannon"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 58,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:discharge_cannon"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.flux_discharge_cannon.title",
+  "note_aspects": [
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:flux_charger_void_metal",
+    "thaumaturge:base_eldritch"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.flux_discharge_cannon.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/discharge_cannon"
+      ],
+      "text": "research.thaumaturgetechcompats.flux_discharge_cannon.stage_1"
+    }
+  ]
+}

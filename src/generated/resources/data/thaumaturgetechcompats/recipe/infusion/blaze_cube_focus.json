@@ -1,0 +1,46 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 100,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 50,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 75,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:focus_3"
+  },
+  "components": [
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    }
+  ],
+  "instability": 10,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_foci"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:blaze_cube_focus"
+  }
+}

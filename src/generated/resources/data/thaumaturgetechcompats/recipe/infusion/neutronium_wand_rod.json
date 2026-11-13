@@ -1,0 +1,46 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_wand_rod"
+  },
+  "components": [
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    }
+  ],
+  "instability": 8,
+  "research": {
+    "entry": "thaumaturgetechcompats:neutronium_wand"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_wand_rod"
+  }
+}

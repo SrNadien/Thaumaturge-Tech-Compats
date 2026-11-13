@@ -1,0 +1,66 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_capacity_cell"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 18,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:thaumium_flux_capacity_cell"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:ingot_brass"
+    },
+    {
+      "item": "thaumaturge:alumentum"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:ingot_brass"
+    },
+    {
+      "item": "thaumaturge:alumentum"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    }
+  ],
+  "instability": 7,
+  "research": {
+    "entry": "thaumaturgetechcompats:flux_storage_core_alchemical_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_flux_capacity_cell"
+  }
+}

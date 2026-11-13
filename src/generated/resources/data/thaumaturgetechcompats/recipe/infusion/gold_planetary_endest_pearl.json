@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_copper"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:praecantatio"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:iron_planetary_endest_pearl"
+  },
+  "components": [
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "minecraft:gold_ingot"
+    }
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:planetary_endest_pearl"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:gold_planetary_endest_pearl"
+  }
+}

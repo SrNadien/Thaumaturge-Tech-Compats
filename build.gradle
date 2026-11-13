@@ -1,0 +1,244 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.gradle.userdev' version '7.1.20'
+}
+
+version = minecraft_version + "-" + mod_version + "-" + tag_lanzador
+group = mod_group_id
+
+base {
+    archivesName = mod_name
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+runs {
+    configureEach {
+        workingDirectory project.file('run')
+
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+        systemProperty 'forge.logging.console.level', 'debug'
+
+        modSource sourceSets.main
+    }
+
+    client {
+        arguments.add '--quickPlaySingleplayer'
+        arguments.add 'Mundo nuevo'
+        arguments.add '--width'
+        arguments.add '960'
+        arguments.add '--height'
+        arguments.add '540'
+    }
+
+    server {
+        arguments.add '--nogui'
+    }
+
+    clientData {
+        workingDirectory project.file('run-data')
+
+        arguments.addAll '--mod', mod_id,
+                         '--client',
+                         '--output', file('src/generated/resources/').getAbsolutePath(),
+                         '--existing', file('src/main/resources/').getAbsolutePath()
+    }
+
+    serverData {
+        workingDirectory project.file('run-data')
+
+        arguments.addAll '--mod', mod_id,
+                         '--server',
+                         '--output', file('src/generated/resources/').getAbsolutePath(),
+                         '--existing', file('src/main/resources/').getAbsolutePath()
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+def absentCompats = [
+    'compats/create',
+    'compats/mekanism',
+    'compats/industrialforegoing',
+    'compats/ftbunearthed',
+    'compats/solarflux',
+    'taintedfood/farmersdelight',
+    'jei/catalysts/FarmersDelightCatalysts.java',
+    'jei/catalysts/IndustrialForegoingCatalysts.java',
+    'jei/catalysts/UneartherCatalysts.java',
+]
+
+sourceSets.main.java {
+    absentCompats.each { path ->
+        exclude(path.endsWith('.java') ? "**/[object Object]" : "**/[object Object]/**")
+    }
+}
+
+repositories {
+    mavenCentral()
+
+    maven {
+        name = 'BlameJared'
+        url = 'https://maven.blamejared.com/'
+        content {
+            includeGroup 'mezz.jei'
+            includeGroup 'com.hrznstudio'
+        }
+    }
+
+    maven {
+        name = 'Rover656'
+        url = 'https://maven.rover656.dev/releases'
+        content {
+            includeGroup 'com.enderio'
+        }
+    }
+
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
+
+    maven {
+        name = 'CreateMod'
+        url = 'https://maven.createmod.net'
+        content {
+            includeGroup 'net.createmod.ponder'
+            includeGroup 'net.createmod.catnip'
+            includeGroup 'dev.engine-room.flywheel'
+        }
+    }
+
+    maven {
+        name = 'CurseMaven'
+        url = 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
+}
+
+dependencies {
+    implementation "net.neoforged:neoforge:${neo_version}"
+
+    implementation "maven.modrinth:fractal-lib:${fractal_version_id}"
+
+    compileOnly "curse.maven:thaumaturge-${thaumaturge_project_id}:${thaumaturge_version_id}"
+    runtimeOnly "curse.maven:thaumaturge-${thaumaturge_project_id}:${thaumaturge_version_id}"
+
+    compileOnly "maven.modrinth:re-avaritia:${avaritia_version_id}"
+    runtimeOnly "maven.modrinth:re-avaritia:${avaritia_version_id}"
+
+    compileOnly "maven.modrinth:curios:${curios_version_id}"
+    runtimeOnly "maven.modrinth:curios:${curios_version_id}"
+
+    compileOnly "maven.modrinth:lithostitched:${lithostitched_version_id}"
+    runtimeOnly "maven.modrinth:lithostitched:${lithostitched_version_id}"
+
+    compileOnly("maven.modrinth:jade:${jade_version_id}") { transitive = false }
+
+    compileOnly("mezz.jei:jei-${minecraft_version}-neoforge:${jei_version}") { transitive = false }
+
+    compileOnly("net.createmod.catnip:catnip-neoforge:${catnip_version}") { transitive = false }
+    runtimeOnly("net.createmod.catnip:catnip-neoforge:${catnip_version}") { transitive = false }
+
+    compileOnly("net.createmod.ponder:ponder-neoforge:${ponder_version}") { transitive = false }
+    runtimeOnly("net.createmod.ponder:ponder-neoforge:${ponder_version}") { transitive = false }
+
+    compileOnly("maven.modrinth:oritech:${oritech_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:oritech:${oritech_version_id}") { transitive = false }
+
+    compileOnly("com.enderio:enderio:${enderio_version}") { transitive = false }
+    runtimeOnly("com.enderio:enderio:${enderio_version}") { transitive = false }
+
+    compileOnly("maven.modrinth:forcecraft:${forcecraft_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:forcecraft:${forcecraft_version_id}") { transitive = false }
+
+    implementation "curse.maven:void-miners-remastered-${voidminers_project_id}:${voidminers_version_id}"
+
+    implementation "curse.maven:botania-revived-${botania_project_id}:${botania_version_id}"
+
+    compileOnly "curse.maven:equivox-${equivox_project_id}:${equivox_version_id}"
+    runtimeOnly "curse.maven:equivox-${equivox_project_id}:${equivox_version_id}"
+
+    compileOnly("maven.modrinth:sophisticated-core:${sophisticatedcore_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:sophisticated-core:${sophisticatedcore_version_id}") { transitive = false }
+    compileOnly("maven.modrinth:sophisticated-backpacks:${sophisticatedbackpacks_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:sophisticated-backpacks:${sophisticatedbackpacks_version_id}") { transitive = false }
+    compileOnly("maven.modrinth:sophisticated-storage:${sophisticatedstorage_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:sophisticated-storage:${sophisticatedstorage_version_id}") { transitive = false }
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+        minecraft_version        : minecraft_version,
+        minecraft_version_range  : minecraft_version_range,
+        neo_version              : neo_version,
+        loader_version           : loader_version,
+        mod_id                   : mod_id,
+        mod_name                 : mod_name,
+        mod_named                : mod_named,
+        mod_license              : mod_license,
+        mod_version              : mod_version,
+        mod_authors              : mod_authors,
+        mod_description          : mod_description,
+        mod_credits              : mod_credits,
+        thaumaturge_version      : thaumaturge_version,
+        avaritia_version         : avaritia_version,
+        fractal_mod_version      : fractal_mod_version,
+        jade_version             : jade_version,
+        curios_version           : curios_version,
+        lithostitched_version    : lithostitched_version,
+        jei_version              : jei_version,
+        ponder_version           : ponder_version,
+        oritech_version          : oritech_version,
+        enderio_version          : enderio_version,
+        forcecraft_version       : forcecraft_version,
+        botania_version          : botania_version,
+        voidminers_version       : voidminers_version,
+        equivox_version          : equivox_version,
+        sophisticatedcore_version: sophisticatedcore_version,
+        sophisticatedbackpacks_version: sophisticatedbackpacks_version,
+        sophisticatedstorage_version: sophisticatedstorage_version,
+    ]
+
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+            "Specification-Title"   : mod_name,
+            "Specification-Vendor"  : mod_authors,
+            "Specification-Version" : "1",
+            "Implementation-Title"  : project.name,
+            "Implementation-Version": project.version,
+            "Implementation-Vendor" : mod_authors,
+        ])
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-Xmaxerrs' << '20000'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

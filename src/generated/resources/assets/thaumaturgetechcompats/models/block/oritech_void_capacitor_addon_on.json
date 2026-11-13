@@ -1,0 +1,6 @@
+{
+  "parent": "oritech:block/machine_capacitor_addon_on",
+  "textures": {
+    "0": "thaumaturgetechcompats:block/oritech_void_capacitor_addon_on"
+  }
+}

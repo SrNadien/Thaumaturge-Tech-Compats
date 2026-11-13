@@ -1,0 +1,13 @@
+{
+  "parent": "minecraft:block/cube",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "down": "thaumaturgetechcompats:block/alchemical_brass_neutron_compressor_frame",
+    "east": "thaumaturgetechcompats:block/alchemical_brass_neutron_compressor_side_right",
+    "north": "thaumaturgetechcompats:block/alchemical_brass_neutron_compressor_front",
+    "particle": "thaumaturgetechcompats:block/alchemical_brass_neutron_compressor_front",
+    "south": "thaumaturgetechcompats:block/alchemical_brass_neutron_compressor_frame",
+    "up": "thaumaturgetechcompats:block/alchemical_brass_neutron_compressor_top",
+    "west": "thaumaturgetechcompats:block/alchemical_brass_neutron_compressor_side_left"
+  }
+}

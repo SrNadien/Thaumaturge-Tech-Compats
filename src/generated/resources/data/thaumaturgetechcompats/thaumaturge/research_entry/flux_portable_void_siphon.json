@@ -1,0 +1,65 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_gear_portable_void_siphon"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 58,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:portable_void_siphon"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.flux_portable_void_siphon.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:flux_charger_alchemical_brass",
+    "thaumaturge:flux_cleanup"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.flux_portable_void_siphon.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/portable_void_siphon"
+      ],
+      "text": "research.thaumaturgetechcompats.flux_portable_void_siphon.stage_1"
+    }
+  ]
+}

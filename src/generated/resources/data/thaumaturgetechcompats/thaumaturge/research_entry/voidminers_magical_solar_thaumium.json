@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 42,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_solar_panel"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.voidminers_magical_solar_thaumium.title",
+  "note_aspects": [
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturgetechcompats:node_power_flux_jar",
+    "thaumaturge:base_artifice",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_solar_thaumium.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/voidminers/thaumium_solar_panel",
+        "thaumaturgetechcompats:compat/voidminers/thaumium_solar_frame"
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_solar_thaumium.stage_1"
+    }
+  ]
+}

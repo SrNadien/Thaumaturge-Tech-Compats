@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:vitreus"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:flux_jar"
+  },
+  "components": [
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    }
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:node_power_flux_jars_avaritia"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_flux_jar"
+  }
+}

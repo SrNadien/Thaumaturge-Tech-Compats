@@ -1,0 +1,6 @@
+{
+  "parent": "oritech:item/machine_efficiency_addon",
+  "textures": {
+    "0": "thaumaturgetechcompats:block/oritech_void_efficiency_addon_off"
+  }
+}

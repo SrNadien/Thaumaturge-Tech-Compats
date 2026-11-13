@@ -1,0 +1,88 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_netherite"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_void_metal"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:tenebrae"
+    },
+    {
+      "amount": 28,
+      "aspect": "thaumaturge:mortuus"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:alienis"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:alchemical_brass_star_crucifix"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:ingot_void"
+    },
+    {
+      "item": "thaumaturge:ingot_void"
+    },
+    {
+      "item": "thaumaturge:ingot_void"
+    },
+    {
+      "item": "thaumaturge:ingot_void"
+    }
+  ],
+  "instability": 8,
+  "research": {
+    "entry": "thaumaturgetechcompats:star_crucifix"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_star_crucifix"
+  }
+}

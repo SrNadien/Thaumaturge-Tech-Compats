@@ -1,0 +1,9 @@
+{
+  "displayName": "singularity.thaumaturgetechcompats.brass",
+  "ingredient": {
+    "item": "thaumaturge:ingot_brass"
+  },
+  "name": "thaumaturgetechcompats:brass",
+  "overlayColor": 15909198,
+  "underlayColor": 10514460
+}

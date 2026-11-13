@@ -1,0 +1,39 @@
+{
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:comparator"
+    },
+    "I": {
+      "item": "avaritia:neutron_ingot"
+    },
+    "N": {
+      "tag": "thaumaturge:nitors"
+    },
+    "P": {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    "S": {
+      "item": "thaumaturgetechcompats:matrix_node_transducer"
+    }
+  },
+  "pattern": [
+    "PCP",
+    "ISI",
+    "PNP"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_transducers"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_node_transducer"
+  },
+  "vis": 800
+}

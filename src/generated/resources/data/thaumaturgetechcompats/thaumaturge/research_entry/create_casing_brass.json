@@ -1,0 +1,75 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_tech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_casing_brass"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 6,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:alchemical_brass_casing"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.create_casing_brass.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:auram"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:create_seal",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.create_casing_brass.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:create_casing_brass",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_mechanical_press",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_mechanical_mixer",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_mechanical_saw",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_mechanical_drill",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_deployer",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_millstone",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_basin",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_spout",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_item_drain",
+        "thaumaturgetechcompats:infusion/create_variant_alchemical_brass_depot"
+      ],
+      "text": "research.thaumaturgetechcompats.create_casing_brass.stage_1"
+    }
+  ]
+}

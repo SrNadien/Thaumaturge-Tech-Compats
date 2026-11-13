@@ -1,0 +1,9 @@
+{
+  "displayName": "singularity.thaumaturgetechcompats.thaumium",
+  "ingredient": {
+    "item": "thaumaturge:ingot_thaumium"
+  },
+  "name": "thaumaturgetechcompats:thaumium",
+  "overlayColor": 11566312,
+  "underlayColor": 4926086
+}

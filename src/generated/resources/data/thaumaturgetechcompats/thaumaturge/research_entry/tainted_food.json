@@ -1,0 +1,71 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 36,
+  "complexity": 2,
+  "icons": [
+    "thaumaturge:tainted_goo"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.tainted_food.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:vitium"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:victus"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:alkimia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:bottle_taint"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        },
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.tainted_food.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_bread",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_apple",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_carrot",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_baked_potato",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_cooked_beef",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_cooked_porkchop",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_pumpkin_pie",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_mushroom_stew",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_ultimate_stew",
+        "thaumaturgetechcompats:crucible/tainted_food/tainted_cosmic_meatballs"
+      ],
+      "text": "research.thaumaturgetechcompats.tainted_food.stage_1"
+    }
+  ]
+}

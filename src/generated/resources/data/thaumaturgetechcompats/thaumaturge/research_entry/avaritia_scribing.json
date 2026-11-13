@@ -1,0 +1,62 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 2,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:matrix_scribing_tools",
+    "thaumaturgetechcompats:neutronium_scribing_tools",
+    "thaumaturgetechcompats:infinity_scribing_tools"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_scribing.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:research",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_scribing.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/matrix_scribing_tools",
+        "thaumaturgetechcompats:infusion/neutronium_scribing_tools",
+        "thaumaturgetechcompats:infusion/infinity_scribing_tools",
+        "thaumaturgetechcompats:matrix_scribing_tools_refill",
+        "thaumaturgetechcompats:neutronium_scribing_tools_refill"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_scribing.stage_1"
+    }
+  ]
+}

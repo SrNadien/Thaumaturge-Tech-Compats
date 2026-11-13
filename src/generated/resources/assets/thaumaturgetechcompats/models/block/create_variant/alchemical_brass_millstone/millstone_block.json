@@ -1,0 +1,8 @@
+{
+  "parent": "create:block/millstone/block",
+  "textures": {
+    "0": "thaumaturgetechcompats:block/create_variant/alchemical_brass/gearbox",
+    "5": "thaumaturgetechcompats:block/create_variant/alchemical_brass/millstone",
+    "particle": "thaumaturgetechcompats:block/create_variant/alchemical_brass/palettes_stone_types_cap_andesite_cut_cap"
+  }
+}

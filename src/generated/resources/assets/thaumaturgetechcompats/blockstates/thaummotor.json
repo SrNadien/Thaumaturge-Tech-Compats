@@ -1,0 +1,26 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "thaumaturgetechcompats:block/thaummotor_vertical",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "thaumaturgetechcompats:block/thaummotor",
+      "y": 270
+    },
+    "facing=north": {
+      "model": "thaumaturgetechcompats:block/thaummotor",
+      "y": 180
+    },
+    "facing=south": {
+      "model": "thaumaturgetechcompats:block/thaummotor"
+    },
+    "facing=up": {
+      "model": "thaumaturgetechcompats:block/thaummotor_vertical"
+    },
+    "facing=west": {
+      "model": "thaumaturgetechcompats:block/thaummotor",
+      "y": 90
+    }
+  }
+}

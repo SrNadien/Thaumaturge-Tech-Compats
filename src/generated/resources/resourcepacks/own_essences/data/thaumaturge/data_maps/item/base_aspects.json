@@ -1,0 +1,4734 @@
+{
+  "values": {
+    "#c:dusts/glowstone": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "#c:ender_pearls": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "#c:gems/amethyst": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:auram"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "#c:ingots/gold": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:desiderium"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "#c:ingots/netherite": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:tenebrae"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "#c:nether_stars": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:auram"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "#c:rods/blaze": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "#c:storage_blocks/gold": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:desiderium"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "avaritia:crystal_matrix": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 54,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 216,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:crystal_matrix_ingot": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 32,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:dense_neutron_collector": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:dense_neutron_compressor": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 32,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:denser_neutron_collector": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 14,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:denser_neutron_compressor": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 32,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 14,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:densest_neutron_collector": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:densest_neutron_compressor": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 32,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:endest_pearl": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "avaritia:eternal_singularity": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 100,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "avaritia:infinity": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 400,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 108,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 108,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_axe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_boots": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_bow": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:aversio"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_catalyst": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:permutatio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_chestplate": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_crossbow": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:aversio"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_elytra": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:volatus"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_helmet": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_hoe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_ingot": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_mace": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:aversio"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_nugget": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 7,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_pants": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_pickaxe": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_ring": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_shield": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 50,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_shovel": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:instrumentum"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_sword": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 999,
+          "aspect": "thaumaturge:aversio"
+        },
+        {
+          "amount": 999,
+          "aspect": "thaumaturge:mortuus"
+        },
+        {
+          "amount": 100,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_totem": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:victus"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:infinity_trident": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:aversio"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:neutron": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 80,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 80,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "avaritia:neutron_collector": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:neutron_compressor": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 64,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 32,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:neutron_ingot": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "avaritia:neutron_nugget": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "avaritia:neutron_pile": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "avaritia:singularity": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:terminus"
+        },
+        {
+          "amount": 100,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:star_fuel": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:sol"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "avaritia:star_fuel_block": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "avaritia"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 100,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 100,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturgetechcompats:sol"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "botania:blaze_block": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "botania:blaze_kindling": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "botania:blaze_quartz": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "botania:blaze_quartz_pillar": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "botania:daybloom_motif": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:herba"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "botania:ender_eye_block": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "botania:frozen_star": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:gelum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "botania:quartz_blaze": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "botania:quartz_sunny": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "botania:sunny_quartz": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "botania:sunny_quartz_pillar": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "botania_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "create:crushed_raw_uranium": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "create:refined_radiance": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "create:shadow_steel": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "create"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:tenebrae"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "enderio:end_steel_ingot": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:tenebrae"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "enderio:ender_crystal": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "enderio:ender_crystal_powder": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "enderio:energetic_photovoltaic_module": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "enderio:grains_of_infinity": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "enderio:photovoltaic_cell": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "enderio:photovoltaic_composite": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "enderio:photovoltaic_plate": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "enderio:powdered_ender_pearl": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "enderio:pulsating_photovoltaic_module": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "enderio:vibrant_photovoltaic_module": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 9,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "industrialforegoing:infinity_nuke": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "industrialforegoing"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "mekanism:alloy_atomic": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanism:pellet_antimatter": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "mekanism:pellet_plutonium": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanism:pellet_polonium": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanism:radioactive_waste_barrel": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:vitium"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanism:reprocessed_fissile_fragment": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanism:uranium_hexafluoride_bucket": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanism:uranium_oxide_bucket": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanism:yellow_cake_uranium": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanism"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:alkimia"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanismgenerators:advanced_solar_generator": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanismgenerators"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 24,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 14,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "mekanismgenerators:control_rod_assembly": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanismgenerators"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanismgenerators:fission_fuel_assembly": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanismgenerators"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanismgenerators:fission_reactor_casing": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanismgenerators"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:ordo"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "mekanismgenerators:hohlraum": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanismgenerators"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "mekanismgenerators:solar_generator": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanismgenerators"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "mekanismgenerators:solar_panel": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "mekanismgenerators"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:ancient_debris": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:desiderium"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "minecraft:blaze_powder": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:alkimia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:chorus_fruit": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:herba"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:daylight_detector": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:dragon_breath": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:tenebrae"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alkimia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:dragon_egg": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:bestia"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:tenebrae"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:echo_shard": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:tenebrae"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:elytra": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:volatus"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:end_crystal": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:ender_eye": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:glowstone": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:honey_block": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vinculum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:desiderium"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:aqua"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:honey_bottle": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:victus"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:desiderium"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:aqua"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:honeycomb": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:bestia"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:desiderium"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:lava_bucket": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:magma_cream": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:alkimia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:netherite_scrap": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "minecraft:popped_chorus_fruit": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:herba"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:sea_lantern": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 33,
+          "aspect": "thaumaturge:aqua"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:shulker_shell": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:praemunio"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:bestia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "minecraft:sunflower": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:herba"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:aer"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:victus"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "minecraft:tnt": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 37,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 52,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 18,
+          "aspect": "thaumaturge:alkimia"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "minecraft:torchflower": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:herba"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "oritech:atomic_forge_block": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:big_solar_panel_block": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 26,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "oritech:black_hole_block": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:tenebrae"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "oritech:enderic_compound": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "oritech:enderic_lens": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 12,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:sensus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    },
+    "oritech:plutonium_pellet": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:reactor_controller": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:cognitio"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:reactor_double_rod": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:reactor_quad_rod": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 60,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 16,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:reactor_rod": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:small_plutonium_pellet": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:small_uranium_pellet": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:uranium_crystal": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "oritech:uranium_pellet": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "oritech"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "oritech_aspects"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        }
+      ]
+    },
+    "solarflux:blazing_coating": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:mirror": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:photovoltaic_cell_1": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:photovoltaic_cell_2": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:photovoltaic_cell_3": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:photovoltaic_cell_4": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:photovoltaic_cell_5": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:photovoltaic_cell_6": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 12,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_1": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_2": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 4,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_3": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_4": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_5": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 11,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_6": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_7": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_8": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 26,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "solarflux:sp_avaritia.infinity": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 20,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 40,
+          "aspect": "thaumaturgetechcompats:sol"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        },
+        {
+          "amount": 8,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "solarflux:sp_avaritia.neutronium": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "solarflux"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 30,
+          "aspect": "thaumaturge:potentia"
+        },
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:machina"
+        },
+        {
+          "amount": 32,
+          "aspect": "thaumaturgetechcompats:sol"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturgetechcompats:nuclear"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:terminus"
+        }
+      ]
+    },
+    "thaumaturge:amber": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:vinculum"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:vitreus"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturgetechcompats:sol"
+        }
+      ]
+    },
+    "thaumaturge:void_seed": {
+      "neoforge:conditions": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "own_essences"
+        }
+      ],
+      "neoforge:value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:herba"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:tenebrae"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:vacuos"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 2,
+          "aspect": "thaumaturge:praecantatio"
+        },
+        {
+          "amount": 1,
+          "aspect": "thaumaturge:victus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturgetechcompats:cosmic"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_storage_core"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 51,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:alchemical_brass_flux_storage_core"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.flux_storage_core_alchemical_brass.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:auram"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:flux_storage_core_thaumium",
+    "thaumaturge:base_artifice",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 8,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.flux_storage_core_alchemical_brass.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:flux/core/alchemical_brass_flux_storage_core",
+        "thaumaturgetechcompats:flux/core/alchemical_brass_flux_capacity_cell"
+      ],
+      "text": "research.thaumaturgetechcompats.flux_storage_core_alchemical_brass.stage_1"
+    }
+  ]
+}

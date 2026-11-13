@@ -1,0 +1,10 @@
+{
+  "parent": "thaumaturge:block/jar_normal",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "bottom": "thaumaturgetechcompats:block/neutronium_flux_jar_bottom",
+    "particle": "thaumaturgetechcompats:block/neutronium_flux_jar_side_0",
+    "side": "thaumaturgetechcompats:block/neutronium_flux_jar_side_0",
+    "top": "thaumaturgetechcompats:block/neutronium_flux_jar_top"
+  }
+}

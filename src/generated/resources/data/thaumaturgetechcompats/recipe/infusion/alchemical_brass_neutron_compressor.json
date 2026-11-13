@@ -1,0 +1,59 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "avaritia_machine_tiers"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturgetechcompats:nuclear"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:thaumium_neutron_compressor"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:mechanism_simple"
+    }
+  ],
+  "instability": 6,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_machine_tiers"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_neutron_compressor"
+  }
+}

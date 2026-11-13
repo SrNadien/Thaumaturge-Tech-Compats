@@ -1,0 +1,62 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 27,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_aura_converter"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.aura_converter_thaumium.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:vis_generator",
+    "thaumaturge:metallurgy@2"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.aura_converter_thaumium.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/thaumium_aura_converter"
+      ],
+      "text": "research.thaumaturgetechcompats.aura_converter_thaumium.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_void_metal"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 59,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_shield_generator"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.field_shield_void_metal.title",
+  "note_aspects": [
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:field_shield_alchemical_brass",
+    "thaumaturge:infusion",
+    "thaumaturge:base_eldritch"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.field_shield_void_metal.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/void_metal_shield_generator"
+      ],
+      "text": "research.thaumaturgetechcompats.field_shield_void_metal.stage_1"
+    }
+  ]
+}

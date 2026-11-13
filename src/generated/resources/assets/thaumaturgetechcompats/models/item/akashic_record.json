@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "halo": {
+    "color": -6233857,
+    "pulse": false,
+    "size": 3,
+    "texture": "#halo"
+  },
+  "loader": "avaritia:halo",
+  "textures": {
+    "halo": "avaritia:misc/halo",
+    "layer0": "thaumaturgetechcompats:item/akashic_record"
+  }
+}

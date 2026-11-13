@@ -1,0 +1,122 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_brush_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_loot_vis_crystals"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_loot_amber"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "thaumaturgetechcompats:feature_enabled",
+        "feature": "ftbunearthed_loot_raw_cinnabar"
+      }
+    }
+  ],
+  "type": "ftbunearthed:unearther",
+  "damage_chance": 0.6,
+  "input_block": "#c:sands",
+  "output_items": [
+    {
+      "chance": 0.02,
+      "item": {
+        "components": {
+          "thaumaturge:crystal_aspect": {
+            "aspect": "thaumaturge:aer"
+          }
+        },
+        "count": 1,
+        "id": "thaumaturge:essentia_crystal"
+      }
+    },
+    {
+      "chance": 0.02,
+      "item": {
+        "components": {
+          "thaumaturge:crystal_aspect": {
+            "aspect": "thaumaturge:aqua"
+          }
+        },
+        "count": 1,
+        "id": "thaumaturge:essentia_crystal"
+      }
+    },
+    {
+      "chance": 0.02,
+      "item": {
+        "components": {
+          "thaumaturge:crystal_aspect": {
+            "aspect": "thaumaturge:ignis"
+          }
+        },
+        "count": 1,
+        "id": "thaumaturge:essentia_crystal"
+      }
+    },
+    {
+      "chance": 0.02,
+      "item": {
+        "components": {
+          "thaumaturge:crystal_aspect": {
+            "aspect": "thaumaturge:ordo"
+          }
+        },
+        "count": 1,
+        "id": "thaumaturge:essentia_crystal"
+      }
+    },
+    {
+      "chance": 0.02,
+      "item": {
+        "components": {
+          "thaumaturge:crystal_aspect": {
+            "aspect": "thaumaturge:perditio"
+          }
+        },
+        "count": 1,
+        "id": "thaumaturge:essentia_crystal"
+      }
+    },
+    {
+      "chance": 0.02,
+      "item": {
+        "components": {
+          "thaumaturge:crystal_aspect": {
+            "aspect": "thaumaturge:terra"
+          }
+        },
+        "count": 1,
+        "id": "thaumaturge:essentia_crystal"
+      }
+    },
+    {
+      "chance": 0.1,
+      "item": {
+        "count": 1,
+        "id": "thaumaturge:amber"
+      }
+    }
+  ],
+  "processing_time": 60,
+  "tool_item": {
+    "item": "thaumaturgetechcompats:brass_brush"
+  },
+  "worker": {
+    "profession": "minecraft:mason"
+  }
+}

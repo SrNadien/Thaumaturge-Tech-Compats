@@ -1,0 +1,42 @@
+{
+  "comment": "Base EMC of the Thaumaturge raw materials that no recipe produces.",
+  "values": {
+    "before": [
+      {
+        "type": "projecte:item",
+        "emc_value": 256,
+        "id": "thaumaturge:amber"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 512,
+        "id": "thaumaturge:quicksilver"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 512,
+        "id": "thaumaturge:shimmerleaf"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 64,
+        "id": "thaumaturge:salis_mundus"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 768,
+        "id": "thaumaturge:cinderpearl"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 512,
+        "id": "thaumaturge:rare_earth"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 4096,
+        "id": "thaumaturge:void_seed"
+      }
+    ]
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "industrialforegoing"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "industrialforegoing_addons"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "industrialforegoing_addon_brass_efficiency"
+    }
+  ],
+  "type": "industrialforegoing:dissolution_chamber",
+  "input": [
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:glass_pane"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    },
+    {
+      "item": "minecraft:blaze_rod"
+    }
+  ],
+  "inputFluid": {
+    "amount": 1000,
+    "fluid": "thaumaturge:liquid_death"
+  },
+  "output": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:brass_efficiency_addon"
+  },
+  "processingTime": 200
+}

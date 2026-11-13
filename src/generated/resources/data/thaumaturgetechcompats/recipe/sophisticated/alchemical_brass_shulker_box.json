@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "sophisticatedstorage"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "sophisticated_storage_tiers"
+    }
+  ],
+  "type": "sophisticatedstorage:storage_tier_upgrade",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "thaumaturgetechcompats:thaumium_shulker_box"
+    },
+    "P": {
+      "item": "thaumaturge:plate_brass"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "PBP",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_shulker_box"
+  }
+}

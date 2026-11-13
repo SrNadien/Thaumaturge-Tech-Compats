@@ -1,0 +1,57 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "biome_purification_potion"
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 80,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 60,
+      "aspect": "thaumaturge:victus"
+    },
+    {
+      "amount": 60,
+      "aspect": "thaumaturge:aqua"
+    },
+    {
+      "amount": 60,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 50,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:vitreus"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:herba"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:purification_potion"
+  },
+  "research": {
+    "entry": "thaumaturgetechcompats:biome_purification_potion"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:biome_purification_potion"
+  }
+}

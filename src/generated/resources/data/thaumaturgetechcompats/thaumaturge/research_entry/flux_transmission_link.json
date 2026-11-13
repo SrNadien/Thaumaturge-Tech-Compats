@@ -1,0 +1,61 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 55,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_transmission_link"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.flux_transmission_link.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:permutatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:vinculum"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:flux_rift_extractor"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.flux_transmission_link.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:flux/thaumium_transmission_link",
+        "thaumaturgetechcompats:flux/transmission_linker"
+      ],
+      "text": "research.thaumaturgetechcompats.flux_transmission_link.stage_1"
+    }
+  ]
+}

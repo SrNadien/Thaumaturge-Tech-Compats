@@ -1,0 +1,43 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:aer"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "key": {
+    "M": {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    "P": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "R": {
+      "item": "thaumaturge:vis_resonator"
+    }
+  },
+  "pattern": [
+    "PRP",
+    "PMP",
+    "PPP"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:flux_charger_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_environmental_charger"
+  },
+  "vis": 60
+}

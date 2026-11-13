@@ -1,0 +1,9 @@
+{
+  "parent": "botania:block/shapes/spreader",
+  "textures": {
+    "back": "thaumaturgetechcompats:block/alchemical_brass_spreader_back",
+    "inside": "thaumaturgetechcompats:block/alchemical_brass_spreader_inside",
+    "outside": "thaumaturgetechcompats:block/alchemical_brass_spreader_outside",
+    "side": "thaumaturgetechcompats:block/alchemical_brass_spreader_side"
+  }
+}

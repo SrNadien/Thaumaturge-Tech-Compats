@@ -1,0 +1,36 @@
+{
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:ignis"
+    }
+  ],
+  "key": {
+    "C": {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    "F": {
+      "item": "thaumaturge:advanced_alchemical_construct"
+    },
+    "P": {
+      "item": "avaritia:neutron_ingot"
+    },
+    "R": {
+      "item": "thaumaturgetechcompats:matrix_smelter"
+    }
+  },
+  "pattern": [
+    "PRP",
+    "CFC",
+    "CCC"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_smelters"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_smelter"
+  },
+  "vis": 2000
+}

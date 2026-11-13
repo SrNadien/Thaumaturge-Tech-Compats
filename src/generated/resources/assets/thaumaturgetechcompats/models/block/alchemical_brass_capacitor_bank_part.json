@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "render_type": "solid",
+  "textures": {
+    "all": "thaumaturgetechcompats:block/alchemical_brass_capacitor_bank"
+  }
+}

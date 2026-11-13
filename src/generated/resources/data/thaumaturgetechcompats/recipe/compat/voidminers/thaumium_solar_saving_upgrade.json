@@ -1,0 +1,50 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "M": {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    "P": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "U": {
+      "item": "voidminersremastered:solar_rubetine_weather_modifier"
+    }
+  },
+  "pattern": [
+    " M ",
+    "PUP",
+    " M "
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_solar_upgrades_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_solar_saving_upgrade"
+  },
+  "vis": 20
+}

@@ -1,0 +1,63 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "avaritia_machine_tiers"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturgetechcompats:nuclear"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturgetechcompats:cosmic"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:alchemical_brass_neutron_collector"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:void_seed"
+    }
+  ],
+  "instability": 9,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_machine_tiers"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_neutron_collector"
+  }
+}

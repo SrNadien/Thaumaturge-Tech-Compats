@@ -1,0 +1,38 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    }
+  ],
+  "background": "thaumaturge:textures/gui/gui_research_back_4_smooth.png",
+  "formula": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:victus"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:aqua"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:alkimia"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:vitium"
+    }
+  ],
+  "icon": "thaumaturgetechcompats:textures/research/cat_purity.png",
+  "index": 11,
+  "overlay_background": "thaumaturge:textures/gui/gui_research_back_over.png"
+}

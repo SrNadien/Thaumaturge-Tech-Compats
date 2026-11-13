@@ -1,0 +1,73 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "biome_purification_potion"
+    }
+  ],
+  "category": "thaumaturgetechcompats:purity",
+  "column": -1,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:biome_purification_potion"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.biome_purification_potion.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:victus"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:vitium"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:auram"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:purification_potion"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 2,
+          "category": "thaumaturge:auromancy"
+        },
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:auromancy"
+        },
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.biome_purification_potion.stage_0"
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:crucible/biome_purification_potion"
+      ],
+      "text": "research.thaumaturgetechcompats.biome_purification_potion.stage_1"
+    }
+  ]
+}

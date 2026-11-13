@@ -1,0 +1,76 @@
+{
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:thaumium_barrel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:thaumium_chest",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_thaumium_barrel_1",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_thaumium_barrel_2",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_thaumium_barrel_3",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_thaumium_barrel_4",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:alchemical_brass_barrel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:alchemical_brass_chest",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_alchemical_brass_barrel_1",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_alchemical_brass_barrel_2",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_alchemical_brass_barrel_3",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_alchemical_brass_barrel_4",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:void_metal_barrel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:void_metal_chest",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_void_metal_barrel_1",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_void_metal_barrel_2",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_void_metal_barrel_3",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:limited_void_metal_barrel_4",
+      "required": false
+    }
+  ]
+}

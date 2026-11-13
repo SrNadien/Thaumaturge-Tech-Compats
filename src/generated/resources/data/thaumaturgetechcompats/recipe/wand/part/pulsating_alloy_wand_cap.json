@@ -1,0 +1,35 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_wand_parts"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "I": {
+      "tag": "c:ingots/pulsating_alloy"
+    }
+  },
+  "pattern": [
+    "III",
+    "I I"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:enderio_wand_parts"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:pulsating_alloy_wand_cap"
+  },
+  "vis": 60
+}

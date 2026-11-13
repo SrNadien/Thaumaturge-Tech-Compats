@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_netherite"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_copper"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 19,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 19,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 9,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 9,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:emerald_planetary_endest_pearl"
+  },
+  "components": [
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    },
+    {
+      "item": "minecraft:netherite_ingot"
+    }
+  ],
+  "instability": 5,
+  "research": {
+    "entry": "thaumaturgetechcompats:planetary_endest_pearl"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:netherite_planetary_endest_pearl"
+  }
+}

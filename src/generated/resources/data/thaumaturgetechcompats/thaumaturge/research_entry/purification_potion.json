@@ -1,0 +1,74 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    }
+  ],
+  "category": "thaumaturgetechcompats:purity",
+  "column": 0,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:purification_potion"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.purification_potion.title",
+  "note_aspects": [
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:victus"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:vitium"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:lux"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:purity",
+    "thaumaturge:flux_cleanup",
+    "thaumaturge:sane_soap"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 2,
+          "category": "thaumaturge:alchemy"
+        },
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:alchemy"
+        },
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:auromancy"
+        }
+      ],
+      "required_research": [
+        "thaumaturgetechcompats:f_taint_creature"
+      ],
+      "text": "research.thaumaturgetechcompats.purification_potion.stage_0"
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:crucible/purification_potion"
+      ],
+      "text": "research.thaumaturgetechcompats.purification_potion.stage_1"
+    }
+  ]
+}

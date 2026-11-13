@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_stone_variants"
+    }
+  ],
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 8,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:infinity_infusion_speed_stone"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.infusion_stone_variants.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:extremely_primordial_pearl",
+    "thaumaturge:infusion_boost"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.infusion_stone_variants.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/matrix_infusion_cost_stone",
+        "thaumaturgetechcompats:infusion/neutronium_infusion_cost_stone",
+        "thaumaturgetechcompats:infusion/infinity_infusion_cost_stone",
+        "thaumaturgetechcompats:infusion/matrix_infusion_speed_stone",
+        "thaumaturgetechcompats:infusion/neutronium_infusion_speed_stone",
+        "thaumaturgetechcompats:infusion/infinity_infusion_speed_stone"
+      ],
+      "text": "research.thaumaturgetechcompats.infusion_stone_variants.stage_1"
+    }
+  ]
+}

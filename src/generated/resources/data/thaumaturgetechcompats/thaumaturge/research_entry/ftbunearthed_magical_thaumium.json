@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_magical_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 30,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_unearther"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.ftbunearthed_magical_thaumium.title",
+  "note_aspects": [
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:praecantatio"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:base_artifice",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.ftbunearthed_magical_thaumium.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/ftbunearthed/magical/thaumium_unearther"
+      ],
+      "text": "research.thaumaturgetechcompats.ftbunearthed_magical_thaumium.stage_1"
+    }
+  ]
+}

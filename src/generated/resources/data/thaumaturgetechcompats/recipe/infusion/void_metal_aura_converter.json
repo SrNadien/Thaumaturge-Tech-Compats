@@ -1,0 +1,73 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_void"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 80,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:vacuos"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:alchemical_brass_aura_converter"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:mechanism_complex"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:aura_converter_void"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_aura_converter"
+  }
+}

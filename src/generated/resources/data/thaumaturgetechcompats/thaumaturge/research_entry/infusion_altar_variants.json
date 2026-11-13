@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_altar_variants"
+    }
+  ],
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 10,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:infinity_infusion_pedestal"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.infusion_altar_variants.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:extremely_primordial_pearl",
+    "thaumaturge:infusion"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.infusion_altar_variants.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/matrix_pillar_stone",
+        "thaumaturgetechcompats:arcane_workbench/neutronium_pillar_stone",
+        "thaumaturgetechcompats:arcane_workbench/infinity_pillar_stone",
+        "thaumaturgetechcompats:infusion/matrix_infusion_pedestal",
+        "thaumaturgetechcompats:infusion/neutronium_infusion_pedestal",
+        "thaumaturgetechcompats:infusion/infinity_infusion_pedestal",
+        "thaumaturgetechcompats:dust_trigger/matrix_infusion_altar",
+        "thaumaturgetechcompats:dust_trigger/neutronium_infusion_altar",
+        "thaumaturgetechcompats:dust_trigger/infinity_infusion_altar"
+      ],
+      "text": "research.thaumaturgetechcompats.infusion_altar_variants.stage_1"
+    }
+  ]
+}

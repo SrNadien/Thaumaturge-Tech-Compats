@@ -1,0 +1,58 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 6,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:infinity_workbench_charger"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_workbench_charger.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:workbench_charger",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_workbench_charger.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/matrix_workbench_charger",
+        "thaumaturgetechcompats:infusion/neutronium_workbench_charger",
+        "thaumaturgetechcompats:infusion/infinity_workbench_charger"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_workbench_charger.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_brass"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 27,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:alchemical_brass_aura_converter"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.aura_converter_brass.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:aura_converter_thaumium",
+    "thaumaturge:base_artifice",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.aura_converter_brass.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/alchemical_brass_aura_converter"
+      ],
+      "text": "research.thaumaturgetechcompats.aura_converter_brass.stage_1"
+    }
+  ]
+}

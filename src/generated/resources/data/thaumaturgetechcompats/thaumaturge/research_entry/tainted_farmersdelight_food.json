@@ -1,0 +1,79 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food_farmersdelight"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 45,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:tainted_beef_stew"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.tainted_farmersdelight_food.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:vitium"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:victus"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:alkimia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:bottle_taint"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        },
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.tainted_farmersdelight_food.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_beef_stew",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_chicken_soup",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_vegetable_soup",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_fish_stew",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_baked_cod_stew",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_noodle_soup",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_fried_rice",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_ratatouille",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_steak_and_potatoes",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_hamburger",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_bacon_sandwich",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_cooked_bacon",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_beef_patty",
+        "thaumaturgetechcompats:crucible/tainted_farmersdelight/tainted_dumplings"
+      ],
+      "text": "research.thaumaturgetechcompats.tainted_farmersdelight_food.stage_1"
+    }
+  ]
+}

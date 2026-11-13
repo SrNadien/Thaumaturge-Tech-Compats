@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food_farmersdelight"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:tainted_beef_patty"
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:vitium"
+    }
+  ],
+  "catalyst": {
+    "item": "farmersdelight:beef_patty"
+  },
+  "research": {
+    "entry": "thaumaturgetechcompats:tainted_farmersdelight_food"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:tainted_beef_patty"
+  }
+}

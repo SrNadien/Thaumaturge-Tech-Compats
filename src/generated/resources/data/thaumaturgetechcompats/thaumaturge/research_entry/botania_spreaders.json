@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botania"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania_spreaders"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 48,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_spreader"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.botania_spreaders.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:infusion"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.botania_spreaders.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/thaumium_spreader",
+        "thaumaturgetechcompats:infusion/alchemical_brass_spreader",
+        "thaumaturgetechcompats:infusion/void_metal_spreader"
+      ],
+      "text": "research.thaumaturgetechcompats.botania_spreaders.stage_1"
+    }
+  ]
+}

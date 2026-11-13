@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 1,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "key": {
+    "B": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "C": {
+      "tag": "c:ingots/copper"
+    },
+    "M": {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    "S": {
+      "tag": "c:dusts/redstone"
+    },
+    "V": {
+      "item": "thaumaturge:vis_resonator"
+    }
+  },
+  "pattern": [
+    "BSB",
+    "CVC",
+    "BMB"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:aura_converter_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_aura_converter"
+  },
+  "vis": 50
+}

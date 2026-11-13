@@ -1,0 +1,49 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:aqua"
+    }
+  ],
+  "key": {
+    "g": {
+      "item": "minecraft:grass_block"
+    },
+    "m": {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    "p": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "s": {
+      "item": "minecraft:sand"
+    },
+    "v": {
+      "item": "thaumaturge:vis_resonator"
+    }
+  },
+  "pattern": [
+    "pgp",
+    "mvm",
+    "psp"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:field_terraformer_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_arcane_terraformer"
+  },
+  "vis": 80
+}

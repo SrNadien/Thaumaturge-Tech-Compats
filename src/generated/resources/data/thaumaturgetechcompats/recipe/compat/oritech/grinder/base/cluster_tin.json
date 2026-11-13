@@ -1,0 +1,44 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_processing"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_processing_grinder"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "thaumaturgetechcompats:feature_enabled",
+        "feature": "oritech_processing_bonus"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ],
+  "type": "oritech:grinder",
+  "ingredients": [
+    {
+      "item": "thaumaturge:cluster_tin"
+    }
+  ],
+  "results": [
+    {
+      "count": 2,
+      "id": "mekanism:raw_tin"
+    },
+    {
+      "count": 1,
+      "id": "mekanism:raw_lead"
+    }
+  ],
+  "time": 40
+}

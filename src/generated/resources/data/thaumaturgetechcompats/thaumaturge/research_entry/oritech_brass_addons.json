@@ -1,0 +1,68 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_addons"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 9,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:oritech_brass_speed_addon"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.oritech_brass_addons.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:base_artifice",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.oritech_brass_addons.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/oritech/oritech_brass_speed_addon",
+        "thaumaturgetechcompats:arcane_workbench/oritech/oritech_brass_efficiency_addon",
+        "thaumaturgetechcompats:arcane_workbench/oritech/oritech_brass_capacitor_addon"
+      ],
+      "text": "research.thaumaturgetechcompats.oritech_brass_addons.stage_1"
+    }
+  ]
+}

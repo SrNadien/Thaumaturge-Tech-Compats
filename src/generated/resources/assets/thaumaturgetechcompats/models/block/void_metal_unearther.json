@@ -1,0 +1,8 @@
+{
+  "parent": "ftbunearthed:block/core",
+  "textures": {
+    "0": "thaumaturgetechcompats:block/void_metal_unearther_top",
+    "1": "thaumaturgetechcompats:block/void_metal_unearther_side",
+    "particle": "thaumaturgetechcompats:block/void_metal_unearther_side"
+  }
+}

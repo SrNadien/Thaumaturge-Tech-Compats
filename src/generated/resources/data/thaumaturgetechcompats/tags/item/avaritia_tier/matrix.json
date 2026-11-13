@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:thaumium_neutron_collector",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:thaumium_neutron_compressor",
+      "required": false
+    }
+  ]
+}

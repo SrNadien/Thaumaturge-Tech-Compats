@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "formed=false": {
+      "model": "thaumaturgetechcompats:block/thaumium_flux_storage_core"
+    },
+    "formed=true": {
+      "model": "thaumaturgetechcompats:block/thaumium_flux_storage_core_formed"
+    }
+  }
+}

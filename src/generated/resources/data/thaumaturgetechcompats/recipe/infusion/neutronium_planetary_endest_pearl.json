@@ -1,0 +1,134 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_neutronium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_matrix"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_blaze_cube"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_netherite"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_copper"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 37,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 37,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 18,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 18,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 18,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 18,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 18,
+      "aspect": "thaumaturgetechcompats:cosmic"
+    },
+    {
+      "amount": 18,
+      "aspect": "thaumaturgetechcompats:nuclear"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_planetary_endest_pearl"
+  },
+  "components": [
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+    }
+  ],
+  "instability": 11,
+  "research": {
+    "entry": "thaumaturgetechcompats:planetary_endest_pearl_apex"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_planetary_endest_pearl"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_capacitors"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 72,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_capacitor"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.enderio_capacitors.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:infusion"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.enderio_capacitors.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/thaumium_capacitor",
+        "thaumaturgetechcompats:infusion/alchemical_brass_capacitor",
+        "thaumaturgetechcompats:infusion/void_metal_capacitor"
+      ],
+      "text": "research.thaumaturgetechcompats.enderio_capacitors.stage_1"
+    }
+  ]
+}

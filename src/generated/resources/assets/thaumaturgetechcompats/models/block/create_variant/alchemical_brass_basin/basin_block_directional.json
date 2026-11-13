@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/basin/block_directional",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "1": "thaumaturgetechcompats:block/create_variant/alchemical_brass/basin",
+    "2": "thaumaturgetechcompats:block/create_variant/alchemical_brass/basin_canal",
+    "particle": "thaumaturgetechcompats:block/create_variant/alchemical_brass/industrial_iron_block"
+  }
+}

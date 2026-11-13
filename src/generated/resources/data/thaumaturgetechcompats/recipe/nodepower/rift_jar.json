@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "j": {
+      "item": "thaumaturge:jar_normal"
+    },
+    "p": {
+      "item": "thaumaturge:plate_void"
+    },
+    "v": {
+      "item": "thaumaturge:void_seed"
+    }
+  },
+  "pattern": [
+    " v ",
+    "pjp",
+    " v "
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:node_power_rift_jar"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:rift_jar"
+  },
+  "vis": 60
+}

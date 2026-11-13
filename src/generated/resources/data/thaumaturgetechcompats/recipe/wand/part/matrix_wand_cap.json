@@ -1,0 +1,24 @@
+{
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "I": {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    "P": {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    }
+  },
+  "pattern": [
+    "III",
+    "P P"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:matrix_wand"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_wand_cap"
+  },
+  "vis": 600
+}

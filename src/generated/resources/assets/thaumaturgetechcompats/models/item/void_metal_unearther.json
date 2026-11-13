@@ -1,0 +1,6 @@
+{
+  "parent": "ftbunearthed:item/unearther_item",
+  "textures": {
+    "1": "thaumaturgetechcompats:block/void_metal_unearther_side"
+  }
+}

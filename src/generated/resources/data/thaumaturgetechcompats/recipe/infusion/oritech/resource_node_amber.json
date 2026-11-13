@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_nodes"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_node_amber"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:permutatio"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "catalyst": {
+    "item": "oritech:resource_node_gold"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:ore_amber"
+    },
+    {
+      "item": "thaumaturge:amber"
+    },
+    {
+      "item": "thaumaturge:ore_amber"
+    },
+    {
+      "item": "thaumaturge:amber"
+    },
+    {
+      "item": "thaumaturge:ore_amber"
+    },
+    {
+      "item": "thaumaturge:amber"
+    },
+    {
+      "item": "thaumaturge:ore_amber"
+    },
+    {
+      "item": "thaumaturge:amber"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:oritech_nodes"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:resource_node_amber"
+  }
+}

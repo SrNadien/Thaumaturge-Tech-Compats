@@ -1,0 +1,7 @@
+{
+  "parent": "thaumaturge:block/brain_box",
+  "textures": {
+    "box": "thaumaturgetechcompats:block/infinity_brain_box",
+    "particle": "#box"
+  }
+}

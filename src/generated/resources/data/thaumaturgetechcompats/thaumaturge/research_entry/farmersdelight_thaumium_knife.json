@@ -1,0 +1,65 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_knives"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:thaumium_knife"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 45,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_knife"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.farmersdelight_thaumium_knife.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:victus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.farmersdelight_thaumium_knife.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane/farmersdelight_knives/thaumium_knife"
+      ],
+      "text": "research.thaumaturgetechcompats.farmersdelight_thaumium_knife.stage_1"
+    }
+  ]
+}

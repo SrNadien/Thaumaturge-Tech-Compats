@@ -1,0 +1,61 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_conduits"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:aqua"
+    },
+    {
+      "amount": 1,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "key": {
+    "B": {
+      "item": "enderio:conduit_binder"
+    },
+    "C": {
+      "type": "enderio:conduit",
+      "conduit_type": "enderio:ender_fluid"
+    },
+    "E": {
+      "item": "enderio:vibrant_crystal"
+    },
+    "M": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "P": {
+      "item": "thaumaturge:plate_thaumium"
+    }
+  },
+  "pattern": [
+    "PEP",
+    "BCB",
+    "PMP"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:enderio_conduits"
+  },
+  "result": {
+    "components": {
+      "enderio:conduit": "thaumaturgetechcompats:thaumium_fluid"
+    },
+    "count": 8,
+    "id": "enderio:conduit"
+  },
+  "vis": 40
+}

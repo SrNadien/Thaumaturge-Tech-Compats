@@ -1,0 +1,17 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_altar_variants"
+    }
+  ],
+  "type": "thaumaturge:dust_trigger_multiblock",
+  "blueprint": "thaumaturgetechcompats:infinity_infusion_altar",
+  "research": {
+    "entry": "thaumaturgetechcompats:infusion_altar_variants"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturge:infusion_matrix"
+  }
+}

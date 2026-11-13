@@ -1,0 +1,14 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.compats.enderio.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "nadiendev.ThaumaturgeTechCompats.compats.enderio.mixin.EnderIOMixinPlugin",
+  "mixins": [
+    "CapacitorTierInvoker",
+    "CapacitorTierMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

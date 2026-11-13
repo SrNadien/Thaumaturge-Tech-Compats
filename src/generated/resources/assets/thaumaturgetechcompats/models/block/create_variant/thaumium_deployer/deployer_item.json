@@ -1,0 +1,17 @@
+{
+  "parent": "create:block/deployer/item",
+  "textures": {
+    "0": "thaumaturgetechcompats:block/create_variant/thaumium/axis",
+    "1": "thaumaturgetechcompats:block/create_variant/thaumium/axis_top",
+    "10": "thaumaturgetechcompats:block/create_variant/thaumium/andesite_casing_piston",
+    "18": "thaumaturgetechcompats:block/create_variant/thaumium/deployer",
+    "6": "thaumaturgetechcompats:block/create_variant/thaumium/piston_bottom",
+    "7": "thaumaturgetechcompats:block/create_variant/thaumium/piston_inner",
+    "andesite_casing_short": "thaumaturgetechcompats:block/create_variant/thaumium/andesite_casing_short",
+    "gearbox": "thaumaturgetechcompats:block/create_variant/thaumium/gearbox",
+    "gearbox_top": "thaumaturgetechcompats:block/create_variant/thaumium/gearbox_top",
+    "mechanical_press_head": "thaumaturgetechcompats:block/create_variant/thaumium/mechanical_press_head",
+    "mechanical_press_pole": "thaumaturgetechcompats:block/create_variant/thaumium/mechanical_press_pole",
+    "particle": "thaumaturgetechcompats:block/create_variant/thaumium/axis"
+  }
+}

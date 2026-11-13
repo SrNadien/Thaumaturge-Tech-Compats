@@ -1,0 +1,57 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 6,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:infinity_alchemical_furnace"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_furnaces.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:alkimia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:advanced_alchemical_furnace"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_furnaces.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:dust_trigger/matrix_alchemical_furnace",
+        "thaumaturgetechcompats:dust_trigger/neutronium_alchemical_furnace",
+        "thaumaturgetechcompats:dust_trigger/infinity_alchemical_furnace"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_furnaces.stage_1"
+    }
+  ]
+}

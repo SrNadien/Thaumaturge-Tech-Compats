@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.braincharger.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ArcaneWorkbenchMixin",
+    "BrainBoxScannerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:builtin/entity",
+  "display": {
+    "fixed": {
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ],
+      "translation": [
+        0,
+        -3.5,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "scale": [
+        0.625,
+        0.625,
+        0.625
+      ],
+      "translation": [
+        0,
+        -2.75,
+        0
+      ]
+    }
+  }
+}

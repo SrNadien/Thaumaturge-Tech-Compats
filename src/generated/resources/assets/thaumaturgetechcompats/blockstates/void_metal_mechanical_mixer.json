@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "thaumaturgetechcompats:block/create_variant/void_metal_mechanical_mixer/mechanical_mixer_block"
+    }
+  }
+}

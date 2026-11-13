@@ -1,0 +1,73 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 65,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:infinity_star_crucifix"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.star_crucifix.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:mortuus"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:praemunio"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech"
+  ],
+  "row": 3,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.star_crucifix.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/copper_star_crucifix",
+        "thaumaturgetechcompats:infusion/iron_star_crucifix",
+        "thaumaturgetechcompats:infusion/gold_star_crucifix",
+        "thaumaturgetechcompats:infusion/diamond_star_crucifix",
+        "thaumaturgetechcompats:infusion/emerald_star_crucifix",
+        "thaumaturgetechcompats:infusion/netherite_star_crucifix",
+        "thaumaturgetechcompats:infusion/thaumium_star_crucifix",
+        "thaumaturgetechcompats:infusion/alchemical_brass_star_crucifix",
+        "thaumaturgetechcompats:infusion/void_metal_star_crucifix",
+        "thaumaturgetechcompats:infusion/blaze_cube_star_crucifix",
+        "thaumaturgetechcompats:infusion/matrix_star_crucifix",
+        "thaumaturgetechcompats:infusion/neutronium_star_crucifix",
+        "thaumaturgetechcompats:infusion/infinity_star_crucifix"
+      ],
+      "text": "research.thaumaturgetechcompats.star_crucifix.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thaumaturgetechcompats:block/create_variant/thaumium_mechanical_press/mechanical_press_block",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thaumaturgetechcompats:block/create_variant/thaumium_mechanical_press/mechanical_press_block"
+    },
+    "facing=south": {
+      "model": "thaumaturgetechcompats:block/create_variant/thaumium_mechanical_press/mechanical_press_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumaturgetechcompats:block/create_variant/thaumium_mechanical_press/mechanical_press_block",
+      "y": 270
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_altar_variants"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "I": {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    "S": {
+      "item": "thaumaturge:stone_eldritch_tile"
+    }
+  },
+  "pattern": [
+    "ISI",
+    "S S",
+    "ISI"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:infusion_altar_variants"
+  },
+  "result": {
+    "count": 4,
+    "id": "thaumaturgetechcompats:matrix_pillar_stone"
+  },
+  "vis": 200
+}

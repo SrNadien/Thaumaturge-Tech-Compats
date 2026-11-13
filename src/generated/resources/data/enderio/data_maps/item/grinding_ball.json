@@ -1,0 +1,70 @@
+{
+  "values": {
+    "thaumaturgetechcompats:brass_grinding_ball": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_grinding_balls"
+        }
+      ],
+      "value": {
+        "BonusMultiplier": 1.3,
+        "Durability": 60000,
+        "OutputMultiplier": 1.15,
+        "PowerUse": 0.85
+      }
+    },
+    "thaumaturgetechcompats:thaumium_grinding_ball": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_grinding_balls"
+        }
+      ],
+      "value": {
+        "BonusMultiplier": 1.8,
+        "Durability": 110000,
+        "OutputMultiplier": 1.45,
+        "PowerUse": 0.8
+      }
+    },
+    "thaumaturgetechcompats:void_metal_grinding_ball": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "enderio_grinding_balls"
+        }
+      ],
+      "value": {
+        "BonusMultiplier": 2.3,
+        "Durability": 140000,
+        "OutputMultiplier": 1.5,
+        "PowerUse": 0.65
+      }
+    }
+  }
+}

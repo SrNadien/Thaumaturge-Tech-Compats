@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:energized_thaumium_axe",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:energized_alchemical_brass_axe",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:energized_void_axe",
+      "required": false
+    }
+  ]
+}

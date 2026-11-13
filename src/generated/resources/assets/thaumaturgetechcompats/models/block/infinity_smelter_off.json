@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "minecraft:block/furnace_top",
+    "east": "thaumaturgetechcompats:block/infinity_smelter_side",
+    "north": "thaumaturgetechcompats:block/infinity_smelter_front_off",
+    "particle": "thaumaturgetechcompats:block/infinity_smelter_side",
+    "south": "thaumaturgetechcompats:block/infinity_smelter_side",
+    "up": "thaumaturgetechcompats:block/infinity_smelter_top",
+    "west": "thaumaturgetechcompats:block/infinity_smelter_side"
+  }
+}
