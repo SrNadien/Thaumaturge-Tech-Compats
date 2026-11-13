@@ -103,7 +103,7 @@ jobs:
             --arg mc "$MC" \
             --arg dep1 "$CURSEFORGE_THAUMATURGE_SLUG" --arg dep2 "$CURSEFORGE_AVARITIA_SLUG" \
             '{changelog: $changelog, changelogType: "markdown", releaseType: $type, displayName: $name,
-              gameVersionNames: [$mc, "NeoForge", "Client", "Server"],
+              gameVersionNames: [$mc, "NeoForge", "Java 25", "Client", "Server"],
               relations: {projects: [{slug: $dep1, type: "requiredDependency"}, {slug: $dep2, type: "requiredDependency"}]}}')
 
           echo "Uploading $jar to CurseForge as a $RELEASE_TYPE for NeoForge $MC"
