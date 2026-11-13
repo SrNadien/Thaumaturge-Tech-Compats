@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "thaumaturgetechcompats:item/void_metal_knife"
+  }
+}

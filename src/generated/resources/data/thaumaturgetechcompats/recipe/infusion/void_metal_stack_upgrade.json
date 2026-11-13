@@ -1,0 +1,59 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "sophisticatedcore"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "sophisticated_stack_upgrades"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 72,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 36,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 36,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:alchemical_brass_stack_upgrade"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:void_seed"
+    }
+  ],
+  "instability": 9,
+  "research": {
+    "entry": "thaumaturgetechcompats:sophisticated_stack_upgrades"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_stack_upgrade"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "F": {
+      "item": "voidminersremastered:frame_base"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "P": {
+      "item": "thaumaturge:plate_thaumium"
+    }
+  },
+  "pattern": [
+    "POP",
+    "OFO",
+    "POP"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_solar_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_solar_frame"
+  },
+  "vis": 30
+}

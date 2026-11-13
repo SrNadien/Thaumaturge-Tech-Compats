@@ -1,0 +1,46 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:vitreus"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_jar"
+  },
+  "components": [
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    }
+  ],
+  "instability": 6,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_jars"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_jar"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 64,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:infinity_planetary_endest_pearl"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.planetary_endest_pearl_apex.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:planetary_endest_pearl"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.planetary_endest_pearl_apex.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/thaumium_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/alchemical_brass_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/void_metal_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/blaze_cube_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/matrix_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/neutronium_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/infinity_planetary_endest_pearl"
+      ],
+      "text": "research.thaumaturgetechcompats.planetary_endest_pearl_apex.stage_1"
+    }
+  ]
+}

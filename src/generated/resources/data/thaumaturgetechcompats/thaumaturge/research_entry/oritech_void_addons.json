@@ -1,0 +1,68 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_addons"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 9,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:oritech_void_speed_addon"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.oritech_void_addons.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:oritech_thaumium_addons",
+    "thaumaturge:base_artifice",
+    "thaumaturge:base_eldritch"
+  ],
+  "row": 8,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.oritech_void_addons.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/oritech/oritech_void_speed_addon",
+        "thaumaturgetechcompats:arcane_workbench/oritech/oritech_void_efficiency_addon",
+        "thaumaturgetechcompats:arcane_workbench/oritech/oritech_void_capacitor_addon"
+      ],
+      "text": "research.thaumaturgetechcompats.oritech_void_addons.stage_1"
+    }
+  ]
+}

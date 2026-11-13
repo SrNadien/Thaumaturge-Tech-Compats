@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "thaumaturge:block/metal_void",
+    "particle": "thaumaturge:block/metal_void",
+    "side": "thaumaturge:block/metal_void",
+    "top": "thaumaturge:block/metal_void"
+  }
+}

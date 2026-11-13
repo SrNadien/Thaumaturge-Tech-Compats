@@ -1,0 +1,12 @@
+{
+  "parent": "create:block/deployer/vertical",
+  "textures": {
+    "5": "thaumaturgetechcompats:block/create_variant/alchemical_brass/andesite_casing_piston",
+    "6": "thaumaturgetechcompats:block/create_variant/alchemical_brass/piston_bottom",
+    "7": "thaumaturgetechcompats:block/create_variant/alchemical_brass/piston_inner",
+    "andesite_casing_short": "thaumaturgetechcompats:block/create_variant/alchemical_brass/andesite_casing_short",
+    "gearbox": "thaumaturgetechcompats:block/create_variant/alchemical_brass/gearbox",
+    "gearbox_top": "thaumaturgetechcompats:block/create_variant/alchemical_brass/gearbox_top",
+    "particle": "thaumaturgetechcompats:block/create_variant/alchemical_brass/gearbox_top"
+  }
+}

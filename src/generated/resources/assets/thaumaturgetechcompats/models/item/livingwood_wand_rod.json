@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "thaumaturgetechcompats:item/livingwood_wand_rod"
+  }
+}

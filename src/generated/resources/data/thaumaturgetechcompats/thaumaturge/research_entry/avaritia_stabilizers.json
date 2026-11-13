@@ -1,0 +1,57 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 2,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:infinity_node_stabilizer"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_stabilizers.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:node_stabilizer_advanced"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_stabilizers.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/matrix_node_stabilizer",
+        "thaumaturgetechcompats:infusion/neutronium_node_stabilizer",
+        "thaumaturgetechcompats:infusion/infinity_node_stabilizer"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_stabilizers.stage_1"
+    }
+  ]
+}

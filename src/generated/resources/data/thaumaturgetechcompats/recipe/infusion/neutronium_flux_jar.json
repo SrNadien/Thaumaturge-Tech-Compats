@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_flux_jar"
+  },
+  "components": [
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    }
+  ],
+  "instability": 6,
+  "research": {
+    "entry": "thaumaturgetechcompats:node_power_flux_jars_avaritia"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_flux_jar"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_matrix_variants"
+    }
+  ],
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 6,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:infinity_infusion_matrix"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.infusion_matrix_variants.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:extremely_primordial_pearl",
+    "thaumaturge:infusion"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.infusion_matrix_variants.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/matrix_infusion_matrix",
+        "thaumaturgetechcompats:infusion/neutronium_infusion_matrix",
+        "thaumaturgetechcompats:infusion/infinity_infusion_matrix"
+      ],
+      "text": "research.thaumaturgetechcompats.infusion_matrix_variants.stage_1"
+    }
+  ]
+}

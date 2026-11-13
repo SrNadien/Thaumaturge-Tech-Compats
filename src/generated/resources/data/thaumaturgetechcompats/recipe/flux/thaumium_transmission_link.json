@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:aer"
+    },
+    {
+      "amount": 1,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "key": {
+    "m": {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    "p": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "q": {
+      "item": "thaumaturge:quicksilver"
+    }
+  },
+  "pattern": [
+    "pqp",
+    "qmq",
+    "ppp"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:flux_transmission_link"
+  },
+  "result": {
+    "count": 2,
+    "id": "thaumaturgetechcompats:thaumium_transmission_link"
+  },
+  "vis": 40
+}

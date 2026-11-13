@@ -1,0 +1,10 @@
+{
+  "parent": "create:block/mechanical_drill/item",
+  "textures": {
+    "0": "thaumaturgetechcompats:block/create_variant/alchemical_brass/axis_top",
+    "1": "thaumaturgetechcompats:block/create_variant/alchemical_brass/axis",
+    "10": "thaumaturgetechcompats:block/create_variant/alchemical_brass/andesite_casing_very_short",
+    "8": "thaumaturgetechcompats:block/create_variant/alchemical_brass/mechanical_drill_top",
+    "gearbox": "thaumaturgetechcompats:block/create_variant/alchemical_brass/gearbox"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "ftbunearthed:item/unearther_item",
+  "textures": {
+    "1": "thaumaturgetechcompats:block/alchemical_brass_unearther_side"
+  }
+}

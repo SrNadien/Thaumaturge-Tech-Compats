@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_nodes"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_node_quartz"
+    }
+  ],
+  "type": "oritech:deep_drill",
+  "ingredients": [
+    {
+      "item": "thaumaturgetechcompats:resource_node_quartz"
+    }
+  ],
+  "results": [
+    {
+      "count": 1,
+      "id": "minecraft:quartz"
+    }
+  ],
+  "time": 1
+}

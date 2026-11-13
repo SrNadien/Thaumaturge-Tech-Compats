@@ -1,0 +1,24 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_nodes"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_node_amber"
+    }
+  ],
+  "type": "neoforge:add_features",
+  "biomes": "#minecraft:is_overworld",
+  "features": "thaumaturgetechcompats:oritech_node_amber",
+  "step": "top_layer_modification"
+}

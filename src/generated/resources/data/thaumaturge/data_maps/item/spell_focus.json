@@ -1,0 +1,22 @@
+{
+  "values": {
+    "thaumaturgetechcompats:blaze_cube_focus": {
+      "branches": 10,
+      "complexity": 95,
+      "depth": 12,
+      "repeats": 12
+    },
+    "thaumaturgetechcompats:infinity_focus": {
+      "branches": 16,
+      "complexity": 250,
+      "depth": 32,
+      "repeats": 16
+    },
+    "thaumaturgetechcompats:matrix_focus": {
+      "branches": 6,
+      "complexity": 110,
+      "depth": 18,
+      "repeats": 6
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "botania:block/shapes/spreader",
+  "textures": {
+    "back": "thaumaturgetechcompats:block/void_metal_spreader_back",
+    "inside": "thaumaturgetechcompats:block/void_metal_spreader_inside",
+    "outside": "thaumaturgetechcompats:block/void_metal_spreader_outside",
+    "side": "thaumaturgetechcompats:block/void_metal_spreader_side"
+  }
+}

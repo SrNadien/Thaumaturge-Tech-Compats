@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "sophisticatedstorage"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "sophisticated_storage_tiers"
+    }
+  ],
+  "type": "sophisticatedstorage:storage_tier_upgrade",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "thaumaturgetechcompats:limited_thaumium_barrel_1"
+    },
+    "P": {
+      "item": "thaumaturge:plate_brass"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "PBP",
+    "PPP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:limited_alchemical_brass_barrel_1"
+  }
+}

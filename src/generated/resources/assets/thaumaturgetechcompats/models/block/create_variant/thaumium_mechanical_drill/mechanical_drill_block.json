@@ -1,0 +1,10 @@
+{
+  "parent": "create:block/mechanical_drill/block",
+  "textures": {
+    "10": "thaumaturgetechcompats:block/create_variant/thaumium/andesite_casing_very_short",
+    "4": "thaumaturgetechcompats:block/create_variant/thaumium/mechanical_drill_top",
+    "gearbox": "thaumaturgetechcompats:block/create_variant/thaumium/gearbox",
+    "gearbox_top": "thaumaturgetechcompats:block/create_variant/thaumium/gearbox_top",
+    "particle": "thaumaturgetechcompats:block/create_variant/thaumium/gearbox"
+  }
+}

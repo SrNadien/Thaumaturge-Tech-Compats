@@ -1,0 +1,64 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:thaumium_shield_generator"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "thaumaturge:mirrored_glass"
+    },
+    {
+      "item": "thaumaturge:mirrored_glass"
+    }
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:field_shield_alchemical_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_shield_generator"
+  }
+}

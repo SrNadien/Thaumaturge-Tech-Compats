@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_tech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_casing_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_casing_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_casing_void"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_variants"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_variant_saw"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:auram"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:thaumium_mechanical_saw"
+  },
+  "components": [
+    {
+      "item": "thaumaturgetechcompats:void_metal_casing"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:mechanism_complex"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:create_casing_void"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_mechanical_saw"
+  }
+}

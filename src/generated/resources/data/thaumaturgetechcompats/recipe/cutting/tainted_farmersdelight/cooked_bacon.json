@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food_farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:tainted_cooked_porkchop"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:tainted_cooked_bacon"
+    }
+  ],
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "thaumaturgetechcompats:tainted_cooked_porkchop"
+    }
+  ],
+  "result": [
+    {
+      "item": {
+        "count": 2,
+        "id": "thaumaturgetechcompats:tainted_cooked_bacon"
+      }
+    }
+  ],
+  "tool": [
+    {
+      "type": "farmersdelight:item_ability",
+      "action": "knife_dig"
+    },
+    {
+      "tag": "c:tools/knife"
+    }
+  ]
+}

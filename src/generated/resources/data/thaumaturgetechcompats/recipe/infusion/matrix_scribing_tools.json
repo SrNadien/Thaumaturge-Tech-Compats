@@ -1,0 +1,46 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:scribing_tools"
+  },
+  "components": [
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    }
+  ],
+  "instability": 2,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_scribing"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_scribing_tools"
+  }
+}

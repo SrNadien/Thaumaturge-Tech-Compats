@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "avaritia:crystal_matrix_ingot"
+    }
+  },
+  "pattern": [
+    "NNN"
+  ],
+  "result": {
+    "count": 3,
+    "id": "thaumaturgetechcompats:matrix_plate"
+  }
+}

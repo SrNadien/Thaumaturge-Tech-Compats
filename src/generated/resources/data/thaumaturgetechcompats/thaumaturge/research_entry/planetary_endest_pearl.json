@@ -1,0 +1,66 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_copper"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 63,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:copper_planetary_endest_pearl"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.planetary_endest_pearl.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:praecantatio"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:extremely_primordial_pearl"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.planetary_endest_pearl.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/copper_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/iron_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/gold_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/diamond_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/emerald_planetary_endest_pearl",
+        "thaumaturgetechcompats:infusion/netherite_planetary_endest_pearl"
+      ],
+      "text": "research.thaumaturgetechcompats.planetary_endest_pearl.stage_1"
+    }
+  ]
+}

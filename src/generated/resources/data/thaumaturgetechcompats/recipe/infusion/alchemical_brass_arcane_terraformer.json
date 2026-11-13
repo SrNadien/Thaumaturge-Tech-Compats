@@ -1,0 +1,64 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:permutatio"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:thaumium_arcane_terraformer"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "minecraft:cactus"
+    },
+    {
+      "item": "minecraft:snow_block"
+    }
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:field_terraformer_alchemical_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_arcane_terraformer"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "F": {
+      "item": "thaumaturgetechcompats:thaumium_solar_frame"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "P": {
+      "item": "thaumaturge:plate_brass"
+    }
+  },
+  "pattern": [
+    "POP",
+    "OFO",
+    "POP"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_solar_alchemical_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_solar_frame"
+  },
+  "vis": 50
+}

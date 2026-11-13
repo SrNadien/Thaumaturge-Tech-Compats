@@ -1,0 +1,6 @@
+{
+  "parent": "thaumaturgetechcompats:block/matrix_smelter_off",
+  "textures": {
+    "north": "thaumaturgetechcompats:block/matrix_smelter_front_on"
+  }
+}

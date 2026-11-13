@@ -1,0 +1,78 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_magical_void"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_magical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_magical_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 30,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_unearther"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.ftbunearthed_magical_void_metal.title",
+  "note_aspects": [
+    {
+      "amount": 9,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 7,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:ftbunearthed_magical_alchemical_brass",
+    "thaumaturge:base_artifice",
+    "thaumaturge:base_eldritch"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.ftbunearthed_magical_void_metal.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/ftbunearthed/magical/void_metal_unearther"
+      ],
+      "text": "research.thaumaturgetechcompats.ftbunearthed_magical_void_metal.stage_1"
+    }
+  ]
+}

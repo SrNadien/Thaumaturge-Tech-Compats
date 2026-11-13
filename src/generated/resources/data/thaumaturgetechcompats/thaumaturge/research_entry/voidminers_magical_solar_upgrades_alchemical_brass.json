@@ -1,0 +1,82 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 43,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:alchemical_brass_solar_generation_upgrade"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_alchemical_brass.title",
+  "note_aspects": [
+    {
+      "amount": 7,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:voidminers_magical_solar_alchemical_brass",
+    "thaumaturgetechcompats:voidminers_magical_solar_upgrades_thaumium"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_alchemical_brass.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/voidminers/alchemical_brass_solar_generation_upgrade",
+        "thaumaturgetechcompats:compat/voidminers/alchemical_brass_solar_saving_upgrade"
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_alchemical_brass.stage_1"
+    }
+  ]
+}

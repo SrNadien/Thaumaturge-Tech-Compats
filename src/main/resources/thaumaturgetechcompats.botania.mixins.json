@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.compats.botania.spreader.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "nadiendev.ThaumaturgeTechCompats.compats.botania.spreader.mixin.BotaniaMixinPlugin",
+  "mixins": [
+    "ManaSpreaderBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

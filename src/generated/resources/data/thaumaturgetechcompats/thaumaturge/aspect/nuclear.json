@@ -1,0 +1,9 @@
+{
+  "color": 9166890,
+  "components": [
+    "thaumaturge:potentia",
+    "thaumaturge:perditio"
+  ],
+  "tag": "nuclear",
+  "texture": "thaumaturgetechcompats:textures/aspects/nuclear.png"
+}

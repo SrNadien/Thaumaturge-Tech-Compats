@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "fill=0": {
+      "model": "thaumaturgetechcompats:block/rift_jar_0"
+    },
+    "fill=1": {
+      "model": "thaumaturgetechcompats:block/rift_jar_1"
+    },
+    "fill=2": {
+      "model": "thaumaturgetechcompats:block/rift_jar_2"
+    },
+    "fill=3": {
+      "model": "thaumaturgetechcompats:block/rift_jar_3"
+    },
+    "fill=4": {
+      "model": "thaumaturgetechcompats:block/rift_jar_4"
+    }
+  }
+}

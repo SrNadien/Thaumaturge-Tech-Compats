@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food_farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:tainted_carrot"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:tainted_baked_potato"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:tainted_vegetable_soup"
+    }
+  ],
+  "type": "farmersdelight:cooking",
+  "container": {
+    "count": 1,
+    "id": "minecraft:bowl"
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "thaumaturgetechcompats:tainted_carrot"
+    },
+    {
+      "item": "thaumaturgetechcompats:tainted_baked_potato"
+    },
+    {
+      "tag": "c:crops/beetroot"
+    },
+    {
+      "tag": "c:foods/leafy_green"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:tainted_vegetable_soup"
+  }
+}

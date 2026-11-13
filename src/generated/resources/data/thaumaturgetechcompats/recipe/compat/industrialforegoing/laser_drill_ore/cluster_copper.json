@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "industrialforegoing"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "industrialforegoing"
+    }
+  ],
+  "type": "industrialforegoing:laser_drill_ore",
+  "catalyst": {
+    "item": "industrialforegoing:orange_laser_lens"
+  },
+  "output": {
+    "count": 1,
+    "item": "thaumaturge:cluster_copper"
+  },
+  "rarity": [
+    {
+      "biome_filter": {
+        "blacklist": [],
+        "whitelist": []
+      },
+      "depth_max": 65,
+      "depth_min": 35,
+      "dimension_filter": {
+        "blacklist": [
+          "minecraft:the_end"
+        ],
+        "whitelist": []
+      },
+      "weight": 3
+    },
+    {
+      "biome_filter": {
+        "blacklist": [],
+        "whitelist": []
+      },
+      "depth_max": 255,
+      "depth_min": 0,
+      "dimension_filter": {
+        "blacklist": [
+          "minecraft:the_end"
+        ],
+        "whitelist": []
+      },
+      "weight": 1
+    }
+  ]
+}

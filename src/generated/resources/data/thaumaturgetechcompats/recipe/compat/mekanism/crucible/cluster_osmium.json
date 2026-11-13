@@ -1,0 +1,48 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:raw_materials/osmium"
+      }
+    },
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_clusters"
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "catalyst": {
+    "tag": "c:raw_materials/osmium"
+  },
+  "research": {
+    "entry": "thaumaturge:metal_purification"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:osmium_cluster"
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "values": {
+    "forcecraft:angry_enderman": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 6,
+          "aspect": "thaumaturge:aversio"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:bestia"
+        }
+      ]
+    },
+    "forcecraft:blue_chu_chu": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:victus"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:aqua"
+        }
+      ]
+    },
+    "forcecraft:cold_chicken": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:bestia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:volatus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:gelum"
+        }
+      ]
+    },
+    "forcecraft:cold_cow": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 15,
+          "aspect": "thaumaturge:bestia"
+        },
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:gelum"
+        }
+      ]
+    },
+    "forcecraft:cold_pig": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:bestia"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:terra"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:gelum"
+        }
+      ]
+    },
+    "forcecraft:creeper_tot": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:perditio"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:bestia"
+        }
+      ]
+    },
+    "forcecraft:ender_tot": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:alienis"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:motus"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:bestia"
+        }
+      ]
+    },
+    "forcecraft:fairy": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 8,
+          "aspect": "thaumaturge:volatus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:spiritus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:lux"
+        },
+        {
+          "amount": 3,
+          "aspect": "thaumaturge:praecantatio"
+        }
+      ]
+    },
+    "forcecraft:gold_chu_chu": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:victus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:aqua"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:metallum"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:desiderium"
+        }
+      ]
+    },
+    "forcecraft:green_chu_chu": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:victus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:aqua"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:herba"
+        }
+      ]
+    },
+    "forcecraft:red_chu_chu": {
+      "neoforge:conditions": [
+        {
+          "type": "neoforge:mod_loaded",
+          "modid": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "forcecraft_aspects"
+        }
+      ],
+      "value": [
+        {
+          "amount": 10,
+          "aspect": "thaumaturge:victus"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:aqua"
+        },
+        {
+          "amount": 5,
+          "aspect": "thaumaturge:ignis"
+        }
+      ]
+    }
+  }
+}

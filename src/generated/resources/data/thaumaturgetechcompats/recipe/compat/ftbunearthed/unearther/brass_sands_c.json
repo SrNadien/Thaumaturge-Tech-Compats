@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ftbunearthed"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_brush_brass"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "thaumaturgetechcompats:feature_enabled",
+        "feature": "ftbunearthed_loot_vis_crystals"
+      }
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "thaumaturgetechcompats:feature_enabled",
+        "feature": "ftbunearthed_loot_amber"
+      }
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "ftbunearthed_loot_raw_cinnabar"
+    }
+  ],
+  "type": "ftbunearthed:unearther",
+  "damage_chance": 0.6,
+  "input_block": "#c:sands",
+  "output_items": [
+    {
+      "chance": 0.04,
+      "item": {
+        "count": 1,
+        "id": "thaumaturge:raw_cinnabar"
+      }
+    }
+  ],
+  "processing_time": 60,
+  "tool_item": {
+    "item": "thaumaturgetechcompats:brass_brush"
+  },
+  "worker": {
+    "profession": "minecraft:mason"
+  }
+}

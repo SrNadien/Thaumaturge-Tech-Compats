@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "thaumaturgetechcompats:block/void_metal_aura_converter_bottom",
+    "east": "thaumaturgetechcompats:block/void_metal_aura_converter_side",
+    "north": "thaumaturgetechcompats:block/void_metal_aura_converter_front_on",
+    "particle": "thaumaturgetechcompats:block/void_metal_aura_converter_side",
+    "south": "thaumaturgetechcompats:block/void_metal_aura_converter_back",
+    "up": "thaumaturgetechcompats:block/void_metal_aura_converter_top",
+    "west": "thaumaturgetechcompats:block/void_metal_aura_converter_side"
+  }
+}

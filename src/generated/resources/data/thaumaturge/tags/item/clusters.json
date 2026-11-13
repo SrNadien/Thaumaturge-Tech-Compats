@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:osmium_cluster",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:uranium_cluster",
+      "required": false
+    }
+  ]
+}

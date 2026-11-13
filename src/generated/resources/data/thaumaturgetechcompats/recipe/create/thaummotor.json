@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "create"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_tech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_casing_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "create_thaummotor"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "c": {
+      "item": "create:brass_casing"
+    },
+    "m": {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    "p": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "s": {
+      "item": "create:shaft"
+    }
+  },
+  "pattern": [
+    "pmp",
+    "scs",
+    "pmp"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:create_thaummotor"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaummotor"
+  },
+  "vis": 60
+}

@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "salis_mundus_variants"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:vitreus"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:praemunio"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:blaze_cube_salis_mundus"
+  },
+  "components": [
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    }
+  ],
+  "instability": 6,
+  "research": {
+    "entry": "thaumaturgetechcompats:salis_mundus_variants"
+  },
+  "result": {
+    "count": 4,
+    "id": "thaumaturgetechcompats:matrix_salis_mundus"
+  }
+}

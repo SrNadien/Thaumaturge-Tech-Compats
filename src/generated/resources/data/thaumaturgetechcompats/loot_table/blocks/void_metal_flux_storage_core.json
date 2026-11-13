@@ -1,0 +1,48 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_storage_core"
+    }
+  ],
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "functions": [
+            {
+              "function": "minecraft:copy_components",
+              "include": [
+                "thaumaturgetechcompats:dimensional_flux"
+              ],
+              "source": "block_entity"
+            }
+          ],
+          "name": "thaumaturgetechcompats:void_metal_flux_storage_core"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "thaumaturgetechcompats:blocks/void_metal_flux_storage_core"
+}

@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botania"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "botania_wand"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:aer"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:alienis"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:manasteel_wand_cap"
+  },
+  "components": [
+    {
+      "item": "botania:elementium_ingot"
+    },
+    {
+      "item": "botania:elementium_ingot"
+    },
+    {
+      "item": "botania:elementium_ingot"
+    },
+    {
+      "item": "botania:pixie_dust"
+    }
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:botania_wand"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:elementium_wand_cap"
+  }
+}

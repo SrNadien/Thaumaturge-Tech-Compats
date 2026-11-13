@@ -1,0 +1,34 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_altar_variants"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "I": {
+      "item": "avaritia:infinity_ingot"
+    },
+    "P": {
+      "item": "thaumaturgetechcompats:extremely_primordial_pearl"
+    },
+    "S": {
+      "item": "thaumaturgetechcompats:neutronium_pillar_stone"
+    }
+  },
+  "pattern": [
+    "ISI",
+    "SPS",
+    "ISI"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:infusion_altar_variants"
+  },
+  "result": {
+    "count": 4,
+    "id": "thaumaturgetechcompats:infinity_pillar_stone"
+  },
+  "vis": 800
+}

@@ -1,0 +1,42 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:curio_knowledge"
+  },
+  "components": [
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    }
+  ],
+  "instability": 12,
+  "research": {
+    "entry": "thaumaturgetechcompats:akashic_record"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:akashic_record"
+  }
+}

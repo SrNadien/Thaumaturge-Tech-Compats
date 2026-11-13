@@ -1,0 +1,120 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_matrix"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_blaze_cube"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_netherite"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_copper"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 34,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 34,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 17,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 17,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 17,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 17,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 17,
+      "aspect": "thaumaturgetechcompats:cosmic"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:blaze_cube_planetary_endest_pearl"
+  },
+  "components": [
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    }
+  ],
+  "instability": 10,
+  "research": {
+    "entry": "thaumaturgetechcompats:planetary_endest_pearl_apex"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_planetary_endest_pearl"
+  }
+}

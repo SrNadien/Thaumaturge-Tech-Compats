@@ -1,0 +1,10 @@
+{
+  "parent": "thaumaturge:block/jar_normal",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "bottom": "thaumaturgetechcompats:block/rift_jar_bottom",
+    "particle": "thaumaturgetechcompats:block/rift_jar_side_1",
+    "side": "thaumaturgetechcompats:block/rift_jar_side_1",
+    "top": "thaumaturgetechcompats:block/rift_jar_top"
+  }
+}

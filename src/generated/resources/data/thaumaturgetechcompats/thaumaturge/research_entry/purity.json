@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    }
+  ],
+  "category": "thaumaturgetechcompats:purity",
+  "column": 0,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:purification_potion"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.purity.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:victus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:first_steps"
+  ],
+  "row": 0,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.purity.stage_0"
+    },
+    {
+      "text": "research.thaumaturgetechcompats.purity.stage_1"
+    }
+  ]
+}

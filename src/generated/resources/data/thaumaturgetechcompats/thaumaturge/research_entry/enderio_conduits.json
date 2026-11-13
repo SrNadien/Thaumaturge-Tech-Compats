@@ -1,0 +1,73 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_conduits"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 71,
+  "complexity": 2,
+  "icons": [
+    "enderio:conduit_binder"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.enderio_conduits.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:infusion"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.enderio_conduits.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/thaumium_energy_conduit",
+        "thaumaturgetechcompats:arcane_workbench/alchemical_brass_energy_conduit",
+        "thaumaturgetechcompats:arcane_workbench/void_metal_energy_conduit",
+        "thaumaturgetechcompats:arcane_workbench/thaumium_item_conduit",
+        "thaumaturgetechcompats:arcane_workbench/alchemical_brass_item_conduit",
+        "thaumaturgetechcompats:arcane_workbench/void_metal_item_conduit",
+        "thaumaturgetechcompats:arcane_workbench/thaumium_fluid_conduit",
+        "thaumaturgetechcompats:arcane_workbench/alchemical_brass_fluid_conduit",
+        "thaumaturgetechcompats:arcane_workbench/void_metal_fluid_conduit"
+      ],
+      "text": "research.thaumaturgetechcompats.enderio_conduits.stage_1"
+    }
+  ]
+}

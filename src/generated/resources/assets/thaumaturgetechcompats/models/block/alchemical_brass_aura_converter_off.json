@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "thaumaturgetechcompats:block/alchemical_brass_aura_converter_bottom",
+    "east": "thaumaturgetechcompats:block/alchemical_brass_aura_converter_side",
+    "north": "thaumaturgetechcompats:block/alchemical_brass_aura_converter_front_off",
+    "particle": "thaumaturgetechcompats:block/alchemical_brass_aura_converter_side",
+    "south": "thaumaturgetechcompats:block/alchemical_brass_aura_converter_back",
+    "up": "thaumaturgetechcompats:block/alchemical_brass_aura_converter_top",
+    "west": "thaumaturgetechcompats:block/alchemical_brass_aura_converter_side"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "values": {
+    "thaumaturgetechcompats:infinity_smelter": {
+      "efficiency": 1.0,
+      "smelt_interval": 2
+    },
+    "thaumaturgetechcompats:matrix_smelter": {
+      "efficiency": 0.97,
+      "smelt_interval": 8
+    },
+    "thaumaturgetechcompats:neutronium_smelter": {
+      "efficiency": 0.985,
+      "smelt_interval": 5
+    }
+  }
+}

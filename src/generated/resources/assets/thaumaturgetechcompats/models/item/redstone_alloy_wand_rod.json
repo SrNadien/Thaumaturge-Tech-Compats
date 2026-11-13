@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "thaumaturgetechcompats:item/redstone_alloy_wand_rod"
+  }
+}

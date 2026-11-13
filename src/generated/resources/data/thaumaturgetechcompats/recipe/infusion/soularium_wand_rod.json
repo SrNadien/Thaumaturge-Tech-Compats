@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_wand_parts"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 15,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:motus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:dark_steel_wand_rod"
+  },
+  "components": [
+    {
+      "tag": "c:ingots/soularium"
+    },
+    {
+      "tag": "c:ingots/soularium"
+    },
+    {
+      "tag": "c:ingots/soularium"
+    },
+    {
+      "tag": "c:ingots/soularium"
+    }
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:enderio_wand_parts"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:soularium_wand_rod"
+  }
+}

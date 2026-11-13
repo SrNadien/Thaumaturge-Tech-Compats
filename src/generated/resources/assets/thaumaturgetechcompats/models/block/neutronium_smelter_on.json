@@ -1,0 +1,6 @@
+{
+  "parent": "thaumaturgetechcompats:block/neutronium_smelter_off",
+  "textures": {
+    "north": "thaumaturgetechcompats:block/neutronium_smelter_front_on"
+  }
+}

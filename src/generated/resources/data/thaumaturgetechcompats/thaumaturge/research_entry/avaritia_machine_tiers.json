@@ -1,0 +1,66 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "avaritia_machine_tiers"
+    }
+  ],
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 4,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_neutron_collector"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_machine_tiers.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:extremely_primordial_pearl"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_machine_tiers.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/thaumium_neutron_collector",
+        "thaumaturgetechcompats:infusion/thaumium_neutron_compressor",
+        "thaumaturgetechcompats:infusion/alchemical_brass_neutron_collector",
+        "thaumaturgetechcompats:infusion/alchemical_brass_neutron_compressor",
+        "thaumaturgetechcompats:infusion/void_metal_neutron_collector",
+        "thaumaturgetechcompats:infusion/void_metal_neutron_compressor"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_machine_tiers.stage_1"
+    }
+  ]
+}

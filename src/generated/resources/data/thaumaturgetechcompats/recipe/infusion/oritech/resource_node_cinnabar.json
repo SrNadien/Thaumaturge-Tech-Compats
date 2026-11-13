@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_nodes"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_node_cinnabar"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:permutatio"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "catalyst": {
+    "item": "oritech:resource_node_redstone"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:ore_cinnabar"
+    },
+    {
+      "item": "thaumaturge:raw_cinnabar"
+    },
+    {
+      "item": "thaumaturge:ore_cinnabar"
+    },
+    {
+      "item": "thaumaturge:raw_cinnabar"
+    },
+    {
+      "item": "thaumaturge:ore_cinnabar"
+    },
+    {
+      "item": "thaumaturge:raw_cinnabar"
+    },
+    {
+      "item": "thaumaturge:ore_cinnabar"
+    },
+    {
+      "item": "thaumaturge:raw_cinnabar"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:oritech_nodes"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:resource_node_cinnabar"
+  }
+}

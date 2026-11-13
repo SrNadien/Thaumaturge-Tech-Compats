@@ -1,0 +1,61 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "enderio_conduits"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "key": {
+    "B": {
+      "item": "enderio:conduit_binder"
+    },
+    "C": {
+      "type": "enderio:conduit",
+      "conduit_type": "thaumaturgetechcompats:alchemical_brass_energy"
+    },
+    "E": {
+      "item": "enderio:vibrant_alloy_ingot"
+    },
+    "M": {
+      "item": "thaumaturge:void_seed"
+    },
+    "P": {
+      "item": "thaumaturge:plate_void"
+    }
+  },
+  "pattern": [
+    "PEP",
+    "BCB",
+    "PMP"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:enderio_conduits"
+  },
+  "result": {
+    "components": {
+      "enderio:conduit": "thaumaturgetechcompats:void_metal_energy"
+    },
+    "count": 8,
+    "id": "enderio:conduit"
+  },
+  "vis": 120
+}

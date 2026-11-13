@@ -1,0 +1,48 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_altar_variants"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_infusion_pedestal"
+  },
+  "components": [
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:infusion_altar_variants"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_infusion_pedestal"
+  }
+}

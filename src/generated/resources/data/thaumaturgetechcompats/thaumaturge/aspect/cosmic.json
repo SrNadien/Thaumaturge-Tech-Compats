@@ -1,0 +1,9 @@
+{
+  "color": 5980121,
+  "components": [
+    "thaumaturge:alienis",
+    "thaumaturge:auram"
+  ],
+  "tag": "cosmic",
+  "texture": "thaumaturgetechcompats:textures/aspects/cosmic.png"
+}

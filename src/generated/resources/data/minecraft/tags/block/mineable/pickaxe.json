@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:thaumium_shulker_box",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:alchemical_brass_shulker_box",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:void_metal_shulker_box",
+      "required": false
+    }
+  ]
+}

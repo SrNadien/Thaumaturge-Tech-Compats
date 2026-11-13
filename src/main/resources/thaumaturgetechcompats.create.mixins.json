@@ -1,0 +1,14 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.compats.create.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "nadiendev.ThaumaturgeTechCompats.compats.create.mixin.CreateMixinPlugin",
+  "mixins": [
+    "DeployerBlockEntityMixin",
+    "SmartBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

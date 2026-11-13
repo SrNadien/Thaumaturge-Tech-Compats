@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.compats.voidminers.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "VoidMinersBlockEntityTypeMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

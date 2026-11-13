@@ -1,0 +1,10 @@
+{
+  "parent": "thaumaturge:block/jar_normal",
+  "render_type": "minecraft:translucent",
+  "textures": {
+    "bottom": "thaumaturgetechcompats:block/infinity_jar_bottom",
+    "particle": "thaumaturgetechcompats:block/infinity_jar_side",
+    "side": "thaumaturgetechcompats:block/infinity_jar_side",
+    "top": "thaumaturgetechcompats:block/infinity_jar_top"
+  }
+}

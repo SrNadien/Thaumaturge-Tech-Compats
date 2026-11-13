@@ -1,0 +1,106 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_netherite"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_blaze_cube"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:blaze_cube_salis_mundus"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 44,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:mortuus"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:void_metal_star_crucifix"
+  },
+  "components": [
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "thaumaturgetechcompats:blaze_cube_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:blaze_cube_salis_mundus"
+    }
+  ],
+  "instability": 9,
+  "research": {
+    "entry": "thaumaturgetechcompats:star_crucifix"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:blaze_cube_star_crucifix"
+  }
+}

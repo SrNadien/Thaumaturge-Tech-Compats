@@ -1,0 +1,62 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:praemunio"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:flux_jar"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:void_seed"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:plate_void"
+    },
+    {
+      "item": "thaumaturge:mechanism_complex"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:flux_rift_extractor"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:rift_extractor"
+  }
+}

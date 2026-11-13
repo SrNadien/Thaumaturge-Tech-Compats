@@ -1,0 +1,10 @@
+{
+  "parent": "block/block",
+  "corner_space": true,
+  "loader": "thaumaturge:mesh",
+  "model": "thaumaturge:models/mesh/arcane_workbench_charger.ttmesh",
+  "textures": {
+    "particle": "#texture",
+    "texture": "thaumaturgetechcompats:block/neutronium_workbench_charger"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "F": {
+      "item": "thaumaturgetechcompats:alchemical_brass_miner_frame"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "P": {
+      "item": "thaumaturge:plate_void"
+    }
+  },
+  "pattern": [
+    "POP",
+    "OFO",
+    "POP"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_miner_void_metal"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_miner_frame"
+  },
+  "vis": 70
+}

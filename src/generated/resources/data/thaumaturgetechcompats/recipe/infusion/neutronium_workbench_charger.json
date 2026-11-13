@@ -1,0 +1,55 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_workbench_charger"
+  },
+  "components": [
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturge:vis_resonator"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    },
+    {
+      "item": "avaritia:neutron_ingot"
+    }
+  ],
+  "instability": 7,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_workbench_charger"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:neutronium_workbench_charger"
+  }
+}

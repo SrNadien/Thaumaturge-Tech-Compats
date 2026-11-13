@@ -1,0 +1,74 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "mekanism_energy_tools_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 33,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:energized_thaumium_pickaxe",
+    "thaumaturgetechcompats:energized_thaumium_axe",
+    "thaumaturgetechcompats:energized_thaumium_shovel",
+    "thaumaturgetechcompats:energized_thaumium_hoe",
+    "thaumaturgetechcompats:energized_thaumium_sword"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.mekanismtools_thaumium.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturge:instrumentum"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:base_infusion",
+    "thaumaturge:metallurgy@2"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.mekanismtools_thaumium.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_thaumium_pickaxe",
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_thaumium_axe",
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_thaumium_shovel",
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_thaumium_hoe",
+        "thaumaturgetechcompats:compat/mekanism/tools/energized_thaumium_sword"
+      ],
+      "text": "research.thaumaturgetechcompats.mekanismtools_thaumium.stage_1"
+    }
+  ]
+}

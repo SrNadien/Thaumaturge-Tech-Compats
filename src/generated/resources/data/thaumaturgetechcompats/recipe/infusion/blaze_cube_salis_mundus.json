@@ -1,0 +1,52 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "salis_mundus_variants"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:ignis"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:vinculum"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:salis_mundus"
+  },
+  "components": [
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "avaritia:blaze_cube"
+    },
+    {
+      "item": "avaritia:blaze_cube"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:salis_mundus_variants"
+  },
+  "result": {
+    "count": 4,
+    "id": "thaumaturgetechcompats:blaze_cube_salis_mundus"
+  }
+}

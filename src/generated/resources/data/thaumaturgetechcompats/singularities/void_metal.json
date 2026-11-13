@@ -1,0 +1,9 @@
+{
+  "displayName": "singularity.thaumaturgetechcompats.void_metal",
+  "ingredient": {
+    "item": "thaumaturge:ingot_void"
+  },
+  "name": "thaumaturgetechcompats:void_metal",
+  "overlayColor": 8015792,
+  "underlayColor": 1182244
+}

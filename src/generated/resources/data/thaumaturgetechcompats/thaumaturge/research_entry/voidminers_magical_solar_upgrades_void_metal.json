@@ -1,0 +1,90 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 43,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_solar_generation_upgrade"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_void_metal.title",
+  "note_aspects": [
+    {
+      "amount": 9,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 7,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:voidminers_magical_solar_void_metal",
+    "thaumaturgetechcompats:voidminers_magical_solar_upgrades_alchemical_brass"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_void_metal.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/voidminers/void_metal_solar_generation_upgrade",
+        "thaumaturgetechcompats:compat/voidminers/void_metal_solar_saving_upgrade"
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_solar_upgrades_void_metal.stage_1"
+    }
+  ]
+}

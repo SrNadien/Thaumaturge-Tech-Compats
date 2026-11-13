@@ -1,0 +1,48 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:spiritus"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:totem_of_undying"
+  },
+  "components": [
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    },
+    {
+      "item": "minecraft:copper_ingot"
+    }
+  ],
+  "instability": 1,
+  "research": {
+    "entry": "thaumaturgetechcompats:star_crucifix"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:copper_star_crucifix"
+  }
+}

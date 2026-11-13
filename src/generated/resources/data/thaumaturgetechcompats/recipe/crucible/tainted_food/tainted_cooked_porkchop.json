@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:tainted_cooked_porkchop"
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:vitium"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:cooked_porkchop"
+  },
+  "research": {
+    "entry": "thaumaturgetechcompats:tainted_food"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:tainted_cooked_porkchop"
+  }
+}

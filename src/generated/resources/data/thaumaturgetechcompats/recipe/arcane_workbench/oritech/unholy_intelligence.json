@@ -1,0 +1,57 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_unholy_intelligence"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:perditio"
+    }
+  ],
+  "key": {
+    "c": {
+      "item": "thaumaturge:mechanism_complex"
+    },
+    "d": {
+      "item": "oritech:dubios_container"
+    },
+    "j": {
+      "item": "thaumaturge:jar_brain"
+    },
+    "m": {
+      "item": "thaumaturge:mind_clockwork"
+    },
+    "t": {
+      "tag": "c:plates/thaumium"
+    }
+  },
+  "pattern": [
+    "tmt",
+    "cjc",
+    "tdt"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:oritech_unholy_intelligence"
+  },
+  "result": {
+    "count": 1,
+    "id": "oritech:unholy_intelligence"
+  },
+  "vis": 100
+}

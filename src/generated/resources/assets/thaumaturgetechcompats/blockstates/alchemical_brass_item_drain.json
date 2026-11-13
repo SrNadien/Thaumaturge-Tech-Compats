@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "thaumaturgetechcompats:block/create_variant/alchemical_brass_item_drain/item_drain"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_nodes"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_node_quartz"
+    }
+  ],
+  "type": "oritech:resource_node",
+  "config": {
+    "boulderOres": [
+      "thaumaturge:deepslate_ore_quartz",
+      "thaumaturge:deepslate_ore_quartz",
+      "thaumaturge:deepslate_ore_quartz",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate"
+    ],
+    "boulderRadius": 3,
+    "nodeOreChance": 0.3,
+    "nodeOres": [
+      "thaumaturgetechcompats:resource_node_quartz"
+    ],
+    "nodeSize": 6,
+    "overlayBlock": "oritech:still_oil_block",
+    "overlayHeight": 5
+  }
+}

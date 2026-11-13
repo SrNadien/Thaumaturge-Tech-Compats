@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:alchemical_brass_neutron_collector",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:alchemical_brass_neutron_compressor",
+      "required": false
+    }
+  ]
+}

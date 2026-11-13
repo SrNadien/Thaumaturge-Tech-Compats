@@ -1,0 +1,10 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    }
+  ],
+  "entities": "#thaumaturge:tainted",
+  "key": "thaumaturgetechcompats:f_taint_creature"
+}

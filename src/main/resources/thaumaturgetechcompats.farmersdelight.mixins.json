@@ -1,0 +1,13 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "nadiendev.ThaumaturgeTechCompats.taintedfood.farmersdelight.mixin.FarmersDelightMixinPlugin",
+  "mixins": [
+    "CuttingBoardBlockEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

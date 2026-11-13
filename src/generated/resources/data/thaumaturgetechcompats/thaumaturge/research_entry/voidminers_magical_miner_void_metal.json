@@ -1,0 +1,79 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 39,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_miner"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.voidminers_magical_miner_void_metal.title",
+  "note_aspects": [
+    {
+      "amount": 9,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 7,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:voidminers_magical_miner_alchemical_brass",
+    "thaumaturge:base_artifice",
+    "thaumaturge:base_eldritch"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_miner_void_metal.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:compat/voidminers/void_metal_miner",
+        "thaumaturgetechcompats:compat/voidminers/void_metal_miner_frame"
+      ],
+      "text": "research.thaumaturgetechcompats.voidminers_magical_miner_void_metal.stage_1"
+    }
+  ]
+}

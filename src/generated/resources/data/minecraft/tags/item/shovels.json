@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "thaumaturgetechcompats:energized_thaumium_shovel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:energized_alchemical_brass_shovel",
+      "required": false
+    },
+    {
+      "id": "thaumaturgetechcompats:energized_void_shovel",
+      "required": false
+    }
+  ]
+}

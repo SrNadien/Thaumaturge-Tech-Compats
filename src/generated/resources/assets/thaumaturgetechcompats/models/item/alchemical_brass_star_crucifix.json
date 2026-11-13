@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thaumaturgetechcompats:item/alchemical_brass_star_crucifix"
+  }
+}

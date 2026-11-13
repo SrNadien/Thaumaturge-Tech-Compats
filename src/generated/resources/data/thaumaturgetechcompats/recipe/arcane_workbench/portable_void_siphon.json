@@ -1,0 +1,55 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_gear_portable_void_siphon"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:aer"
+    },
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:perditio"
+    },
+    {
+      "amount": 1,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "key": {
+    "M": {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    "P": {
+      "item": "thaumaturge:plate_brass"
+    },
+    "V": {
+      "item": "thaumaturge:void_seed"
+    }
+  },
+  "pattern": [
+    "PVP",
+    " M ",
+    " P "
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:flux_portable_void_siphon"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:portable_void_siphon"
+  },
+  "vis": 80
+}

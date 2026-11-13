@@ -1,0 +1,11 @@
+{
+  "parent": "create:block/item_drain",
+  "render_type": "minecraft:cutout_mipped",
+  "textures": {
+    "0": "thaumaturgetechcompats:block/create_variant/thaumium/item_drain_side",
+    "1": "thaumaturgetechcompats:block/create_variant/thaumium/item_drain_top",
+    "3": "thaumaturgetechcompats:block/create_variant/thaumium/pump",
+    "4": "thaumaturgetechcompats:block/create_variant/thaumium/copper_underside",
+    "particle": "thaumaturgetechcompats:block/create_variant/thaumium/item_drain_side"
+  }
+}

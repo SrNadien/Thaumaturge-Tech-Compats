@@ -1,0 +1,29 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_food"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:tainted_pumpkin_pie"
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:vitium"
+    }
+  ],
+  "catalyst": {
+    "item": "minecraft:pumpkin_pie"
+  },
+  "research": {
+    "entry": "thaumaturgetechcompats:tainted_food"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:tainted_pumpkin_pie"
+  }
+}

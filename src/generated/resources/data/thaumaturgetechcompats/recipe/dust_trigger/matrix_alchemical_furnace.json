@@ -1,0 +1,11 @@
+{
+  "type": "thaumaturge:dust_trigger_multiblock",
+  "blueprint": "thaumaturgetechcompats:matrix_alchemical_furnace",
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_furnaces"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_alchemical_furnace"
+  }
+}

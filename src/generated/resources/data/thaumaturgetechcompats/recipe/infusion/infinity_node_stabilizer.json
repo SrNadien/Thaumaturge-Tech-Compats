@@ -1,0 +1,62 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 64,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:neutronium_node_stabilizer"
+  },
+  "components": [
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "tag": "thaumaturge:nitors"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturge:alumentum"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "tag": "thaumaturge:nitors"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturge:alumentum"
+    }
+  ],
+  "instability": 16,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_stabilizers"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:infinity_node_stabilizer"
+  }
+}

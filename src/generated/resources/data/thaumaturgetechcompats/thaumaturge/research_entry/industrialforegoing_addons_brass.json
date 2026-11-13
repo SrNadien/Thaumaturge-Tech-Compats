@@ -1,0 +1,80 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "industrialforegoing"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "industrialforegoing_addons"
+    },
+    {
+      "type": "neoforge:or",
+      "values": [
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "industrialforegoing_addon_brass_speed"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "industrialforegoing_addon_brass_efficiency"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "industrialforegoing_addon_brass_processing"
+        },
+        {
+          "type": "thaumaturgetechcompats:feature_enabled",
+          "feature": "industrialforegoing_addon_brass_range"
+        }
+      ]
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 3,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:brass_speed_addon"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.industrialforegoing_addons_brass.title",
+  "note_aspects": [
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:mortuus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:liquid_death",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.industrialforegoing_addons_brass.stage_0",
+      "warp": 0
+    },
+    {
+      "text": "research.thaumaturgetechcompats.industrialforegoing_addons_brass.stage_1"
+    }
+  ]
+}

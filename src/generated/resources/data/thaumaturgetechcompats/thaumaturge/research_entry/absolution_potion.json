@@ -1,0 +1,78 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "clarity_potion"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "absolution_potion"
+    }
+  ],
+  "category": "thaumaturgetechcompats:purity",
+  "column": 1,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:absolution_potion"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.absolution_potion.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:spiritus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:clarity_potion",
+    "thaumaturge:voidseer_pearl"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 3,
+          "category": "thaumaturge:alchemy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.absolution_potion.stage_0"
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:crucible/absolution_potion"
+      ],
+      "text": "research.thaumaturgetechcompats.absolution_potion.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "oritech:block/resource_node_iron",
+  "textures": {
+    "all": "thaumaturgetechcompats:block/resource_node_quartz"
+  }
+}

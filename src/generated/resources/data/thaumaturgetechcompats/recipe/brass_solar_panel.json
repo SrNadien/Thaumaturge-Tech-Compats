@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solarflux"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "solar_alchemical_brass"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "b": {
+      "item": "thaumaturge:plate_brass"
+    },
+    "p": {
+      "item": "solarflux:photovoltaic_cell_1"
+    },
+    "s": {
+      "item": "solarflux:sp_alchemical"
+    }
+  },
+  "pattern": [
+    "ppp",
+    "bsb",
+    "bbb"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:solarflux_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "solarflux:sp_alchemical_brass"
+  },
+  "vis": 20
+}

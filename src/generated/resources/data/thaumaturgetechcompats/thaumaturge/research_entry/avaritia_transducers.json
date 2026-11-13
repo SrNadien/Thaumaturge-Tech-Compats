@@ -1,0 +1,57 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 4,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:infinity_node_transducer"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_transducers.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:node_transducer"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_transducers.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/matrix_node_transducer",
+        "thaumaturgetechcompats:arcane_workbench/neutronium_node_transducer",
+        "thaumaturgetechcompats:arcane_workbench/infinity_node_transducer"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_transducers.stage_1"
+    }
+  ]
+}

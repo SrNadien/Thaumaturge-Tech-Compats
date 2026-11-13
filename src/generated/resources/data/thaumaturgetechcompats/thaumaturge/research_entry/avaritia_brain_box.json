@@ -1,0 +1,58 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 4,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:infinity_brain_box"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_brain_box.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:thaumatorium",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_brain_box.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/matrix_brain_box",
+        "thaumaturgetechcompats:infusion/neutronium_brain_box",
+        "thaumaturgetechcompats:infusion/infinity_brain_box"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_brain_box.stage_1"
+    }
+  ]
+}

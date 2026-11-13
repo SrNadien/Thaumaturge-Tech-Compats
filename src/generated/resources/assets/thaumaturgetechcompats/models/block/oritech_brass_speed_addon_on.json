@@ -1,0 +1,6 @@
+{
+  "parent": "oritech:block/machine_speed_addon_on",
+  "textures": {
+    "1": "thaumaturgetechcompats:block/oritech_brass_speed_addon_on"
+  }
+}

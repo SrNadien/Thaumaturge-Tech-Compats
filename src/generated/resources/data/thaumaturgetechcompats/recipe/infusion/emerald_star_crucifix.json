@@ -1,0 +1,72 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_emerald"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:spiritus"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:auram"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:diamond_star_crucifix"
+  },
+  "components": [
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "instability": 5,
+  "research": {
+    "entry": "thaumaturgetechcompats:star_crucifix"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:emerald_star_crucifix"
+  }
+}

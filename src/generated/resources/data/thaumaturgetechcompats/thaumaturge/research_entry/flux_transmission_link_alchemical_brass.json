@@ -1,0 +1,64 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 56,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:alchemical_brass_transmission_link"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.flux_transmission_link_alchemical_brass.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:permutatio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:flux_transmission_link"
+  ],
+  "row": 3,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.flux_transmission_link_alchemical_brass.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:flux/alchemical_brass_transmission_link"
+      ],
+      "text": "research.thaumaturgetechcompats.flux_transmission_link_alchemical_brass.stage_1"
+    }
+  ]
+}

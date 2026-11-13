@@ -1,0 +1,62 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 6,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:infinity_focus"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_foci.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:vitreus"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:focus_greater",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_foci.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/matrix_focus",
+        "thaumaturgetechcompats:infusion/infinity_focus",
+        "thaumaturgetechcompats:infusion/blaze_cube_focus"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_foci.stage_1"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "thaumaturgetechcompats:block/neutronium_infusion_pillar",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "thaumaturgetechcompats:block/neutronium_infusion_pillar"
+    },
+    "facing=south": {
+      "model": "thaumaturgetechcompats:block/neutronium_infusion_pillar",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "thaumaturgetechcompats:block/neutronium_infusion_pillar",
+      "y": 270
+    }
+  }
+}

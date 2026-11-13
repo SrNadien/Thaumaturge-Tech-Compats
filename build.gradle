@@ -1,0 +1,343 @@
+plugins {
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.gradle.userdev' version '7.0.171'
+}
+
+version = minecraft_version + "-" + mod_version + "-" + tag_lanzador
+group = mod_group_id
+
+base {
+    archivesName = mod_name
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+runs {
+    configureEach {
+        workingDirectory project.file('run')
+
+        systemProperty 'forge.logging.markers', 'REGISTRIES'
+        systemProperty 'forge.logging.console.level', 'debug'
+
+        modSource sourceSets.main
+    }
+
+    client {
+        programArgument '--quickPlaySingleplayer'
+        programArgument 'Mundo nuevo'
+        programArgument '--width'
+        programArgument '960'
+        programArgument '--height'
+        programArgument '540'
+    }
+
+    server {
+        programArgument '--nogui'
+    }
+
+    data {
+        workingDirectory project.file('run-data')
+
+        programArguments.addAll '--mod', mod_id,
+                                '--all',
+                                '--existing-mod', 'create',
+                                '--output', file('src/generated/resources/').getAbsolutePath(),
+                                '--existing', file('src/main/resources/').getAbsolutePath()
+    }
+}
+
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+repositories {
+    mavenCentral()
+
+    maven {
+        name = 'BlameJared'
+        url = 'https://maven.blamejared.com/'
+        content {
+            includeGroup 'xyz.brassgoggledcoders'
+            includeGroup 'com.hrznstudio'
+            includeGroup 'com.buuz135'
+            includeGroup 'vazkii.patchouli'
+            includeGroup 'rearth.oritech'
+        }
+    }
+
+    maven {
+        name = 'Fractal'
+        url = 'https://maven.is-immensely.gay/releases'
+        content {
+            includeGroup 'de.dafuqs'
+        }
+    }
+
+    maven {
+        name = 'Architectury'
+        url = 'https://maven.architectury.dev/'
+        content {
+            includeGroup 'dev.architectury'
+        }
+    }
+
+    maven {
+        name = 'Rover656'
+        url = 'https://maven.rover656.dev/releases'
+        content {
+            includeGroup 'com.enderio'
+        }
+    }
+
+    maven {
+        name = 'ModMaven'
+        url = 'https://modmaven.dev/'
+        content {
+            includeGroup 'mekanism'
+        }
+    }
+
+    maven {
+        name = 'Saps'
+        url = 'https://maven.saps.dev/releases'
+        content {
+            includeGroup 'com.mrbysco.forcecraft'
+        }
+    }
+
+    maven {
+        name = 'GeckoLib'
+        url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+        content {
+            includeGroup 'software.bernie.geckolib'
+        }
+    }
+
+    maven {
+        name = 'TeamResourceful'
+        url = 'https://maven.teamresourceful.com/repository/maven-public/'
+        content {
+            includeGroup 'earth.terrarium.athena'
+        }
+    }
+
+    maven {
+        name = 'FTB'
+        url = 'https://maven.ftb.dev/releases'
+        content {
+            includeGroup 'dev.ftb.mods'
+        }
+    }
+
+    maven {
+        name = 'Modrinth'
+        url = 'https://api.modrinth.com/maven'
+        content {
+            includeGroup 'maven.modrinth'
+        }
+    }
+
+    maven {
+        name = 'CreateMod'
+        url = 'https://maven.createmod.net'
+    }
+
+    maven {
+        name = 'IThundxR'
+        url = 'https://maven.ithundxr.dev/snapshots'
+        content {
+            includeGroup 'com.tterrag.registrate'
+        }
+    }
+
+    maven {
+        name = 'CurseMaven'
+        url = 'https://cursemaven.com'
+        content {
+            includeGroup 'curse.maven'
+        }
+    }
+
+    maven {
+        name = 'Curios'
+        url = 'https://maven.theillusivec4.top/'
+    }
+}
+
+
+dependencies {
+    // NeoForge
+    implementation "net.neoforged:neoforge:${neo_version}"
+
+    // Create
+    compileOnly("com.simibubi.create:create-1.21.1:${create_version}:slim") { transitive = false }
+    runtimeOnly("com.simibubi.create:create-1.21.1:${create_version}") { transitive = false }
+
+    // Registrate
+    compileOnly "com.tterrag.registrate:Registrate:${registrate_version}"
+    runtimeOnly "com.tterrag.registrate:Registrate:${registrate_version}"
+
+    // Flywheel
+    compileOnly "dev.engine-room.flywheel:flywheel-neoforge-1.21.1:1.0.6-44"
+    runtimeOnly "dev.engine-room.flywheel:flywheel-neoforge-1.21.1:1.0.6-44"
+
+    // Ponder
+    compileOnly("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc1.21.1") { transitive = false }
+    runtimeOnly("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc1.21.1") { transitive = false }
+
+    // Jade
+    compileOnly files("libs/Jade-1.21.1-NeoForge-15.10.6.jar")
+
+    // Jei
+    compileOnly files("libs/jei-1.21.1-neoforge-19.70.0.469.jar")
+
+    // Solar Flux
+    compileOnly files("libs/SolarFluxReborn-1.21.1-21.1.8.jar")
+
+    // HammerLib
+    compileOnly files("libs/HammerLib-1.21-21.0.17.jar")
+
+    // Mekanism
+    compileOnly("mekanism:Mekanism:${mekanism_version}") { transitive = false }
+    runtimeOnly("mekanism:Mekanism:${mekanism_version}") { transitive = false }
+
+    // Titanium
+    compileOnly("com.hrznstudio:titanium:${titanium_version}") { transitive = false }
+    runtimeOnly("com.hrznstudio:titanium:${titanium_version}") { transitive = false }
+
+    // Industrial Foregoing
+    compileOnly("com.buuz135:industrialforegoing:${industrialforegoing_version}") { transitive = false }
+    runtimeOnly("com.buuz135:industrialforegoing:${industrialforegoing_version}") { transitive = false }
+
+    // Oritech
+    runtimeOnly("rearth.oritech:oritech-neoforge-1.21.1:${oritech_version}") { transitive = false }
+
+    // Ender IO
+    compileOnly("com.enderio:enderio:${enderio_version}") { transitive = false }
+    runtimeOnly("com.enderio:enderio:${enderio_version}") { transitive = false }
+
+    // Forcecraft
+    compileOnly("com.mrbysco.forcecraft:forcecraft-1.21.1:${forcecraft_version}") { transitive = false }
+    runtimeOnly("com.mrbysco.forcecraft:forcecraft-1.21.1:${forcecraft_version}") { transitive = false }
+
+    // Patchouli
+    runtimeOnly("vazkii.patchouli:Patchouli:${patchouli_version}") { transitive = false }
+    runtimeOnly "xyz.brassgoggledcoders:PatchouliProvider:1.21.1-1.0.11-Snapshot.5"
+
+    // FTB Unearthed
+    compileOnly("dev.ftb.mods:ftb-unearthed:${ftbunearthed_version}") { transitive = false }
+    runtimeOnly("dev.ftb.mods:ftb-unearthed:${ftbunearthed_version}") { transitive = false }
+    runtimeOnly("dev.ftb.mods:ftb-library-neoforge:${ftblibrary_version}") { transitive = false }
+
+    // Architectury
+    runtimeOnly("dev.architectury:architectury-neoforge:${architectury_version}") { transitive = false }
+
+    // GeckoLib
+    runtimeOnly("software.bernie.geckolib:geckolib-neoforge-1.21.1:${geckolib_version}") { transitive = false }
+
+    // Athena
+    runtimeOnly("earth.terrarium.athena:athena-neoforge-1.21.1:${athena_version}") { transitive = false }
+
+    // Libs
+    compileOnly files("libs/Re-Avaritia-neoforge-1.21.1-1.4.2-release.jar")
+    runtimeOnly fileTree(dir: file("libs"), include: "*.jar", exclude: "thaumaturge*")
+
+    // Void Miners Remastered
+    implementation "curse.maven:void-miners-remastered-${voidminers_project_id}:${voidminers_version_id}"
+
+    // Botania Revived
+    implementation "curse.maven:botania-revived-${botania_project_id}:${botania_version_id}"
+
+    // Farmers Delight
+    implementation "curse.maven:farmers-delight-${farmersdelight_project_id}:${farmersdelight_version_id}"
+
+    // Fractal
+    implementation("de.dafuqs:Fractal:${fractal_version}")
+
+    // Thaumaturge
+    compileOnly "curse.maven:thaumaturge-${thaumaturge_project_id}:${thaumaturge_version_id}"
+    runtimeOnly "curse.maven:thaumaturge-${thaumaturge_project_id}:${thaumaturge_version_id}"
+
+    // ProjectE
+    compileOnly "curse.maven:projecte-${projecte_project_id}:${projecte_version_id}"
+    runtimeOnly "curse.maven:projecte-${projecte_project_id}:${projecte_version_id}"
+
+    // Sophisticated Core, Backpacks and Storage
+    compileOnly("maven.modrinth:sophisticated-core:${sophisticatedcore_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:sophisticated-core:${sophisticatedcore_version_id}") { transitive = false }
+    compileOnly("maven.modrinth:sophisticated-backpacks:${sophisticatedbackpacks_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:sophisticated-backpacks:${sophisticatedbackpacks_version_id}") { transitive = false }
+    compileOnly("maven.modrinth:sophisticated-storage:${sophisticatedstorage_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:sophisticated-storage:${sophisticatedstorage_version_id}") { transitive = false }
+}
+
+tasks.withType(ProcessResources).configureEach {
+    var replaceProperties = [
+        minecraft_version        : minecraft_version,
+        neo_version              : neo_version,
+        loader_version           : loader_version,
+        mod_id                   : mod_id,
+        mod_name                 : mod_name,
+        mod_named                : mod_named,
+        mod_license              : mod_license,
+        mod_version              : mod_version,
+        mod_authors              : mod_authors,
+        mod_description          : mod_description,
+        thaumaturge_version      : thaumaturge_version,
+        botania_version          : botania_version,
+        voidminers_version       : voidminers_version,
+        farmersdelight_version   : farmersdelight_version,
+        fractal_mod_version      : fractal_mod_version,
+        projecte_version         : projecte_version,
+        avaritia_version        : avaritia_version,
+        jade_version           : jade_version,
+        ponder_version           : ponder_version,
+        jei_version              : jei_version,
+        solarflux_version       : solarflux_version,
+        create_version           : create_version.replaceFirst(/-\d+$/, ""),
+        oritech_version          : oritech_version,
+        enderio_version          : enderio_version,
+        forcecraft_version       : forcecraft_version,
+        ftbunearthed_version     : ftbunearthed_version,
+        mekanism_version         : mekanism_version.replaceFirst(/^1\.21\.1-/, "").replaceFirst(/\.\d+$/, ""),
+        industrialforegoing_version: industrialforegoing_version,
+        sophisticatedcore_version: sophisticatedcore_version,
+        sophisticatedbackpacks_version: sophisticatedbackpacks_version,
+        sophisticatedstorage_version: sophisticatedstorage_version,
+        mod_credits              : mod_credits,
+    ]
+
+    inputs.properties replaceProperties
+
+    filesMatching(['META-INF/neoforge.mods.toml', 'pack.mcmeta']) {
+        expand replaceProperties + [project: project]
+    }
+}
+
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes([
+            "Specification-Title"   : mod_name,
+            "Specification-Vendor"  : mod_authors,
+            "Specification-Version" : "1",
+            "Implementation-Title"  : project.name,
+            "Implementation-Version": project.version,
+            "Implementation-Vendor" : mod_authors,
+        ])
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    module {
+        downloadSources = true
+        downloadJavadoc = true
+    }
+}

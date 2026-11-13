@@ -1,0 +1,66 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_unholy_intelligence"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 18,
+  "complexity": 2,
+  "icons": [
+    "oritech:unholy_intelligence"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.oritech_unholy_intelligence.title",
+  "note_aspects": [
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:exanimis"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:jar_brain",
+    "thaumaturge:base_artifice"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:golemancy"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.oritech_unholy_intelligence.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/oritech/unholy_intelligence"
+      ],
+      "text": "research.thaumaturgetechcompats.oritech_unholy_intelligence.stage_1"
+    }
+  ]
+}

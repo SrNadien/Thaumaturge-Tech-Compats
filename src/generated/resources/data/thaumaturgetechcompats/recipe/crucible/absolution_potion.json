@@ -1,0 +1,69 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "clarity_potion"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "absolution_potion"
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 100,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 100,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 80,
+      "aspect": "thaumaturge:spiritus"
+    },
+    {
+      "amount": 80,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 80,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 60,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 60,
+      "aspect": "thaumaturge:tenebrae"
+    },
+    {
+      "amount": 60,
+      "aspect": "thaumaturge:victus"
+    },
+    {
+      "amount": 50,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:perditio"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:eldritch_eye"
+  },
+  "research": {
+    "entry": "thaumaturgetechcompats:absolution_potion"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:absolution_potion"
+  }
+}

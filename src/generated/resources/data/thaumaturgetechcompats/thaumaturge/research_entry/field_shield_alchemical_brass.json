@@ -1,0 +1,62 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_alchemical_brass"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 59,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:alchemical_brass_shield_generator"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.field_shield_alchemical_brass.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:field_shield_thaumium",
+    "thaumaturge:infusion",
+    "thaumaturge:metallurgy@1"
+  ],
+  "row": 4,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.field_shield_alchemical_brass.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/alchemical_brass_shield_generator"
+      ],
+      "text": "research.thaumaturgetechcompats.field_shield_alchemical_brass.stage_1"
+    }
+  ]
+}

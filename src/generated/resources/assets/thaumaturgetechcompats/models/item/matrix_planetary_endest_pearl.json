@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "halo": {
+    "color": -16777216,
+    "pulse": true,
+    "size": 4,
+    "texture": "#halo"
+  },
+  "loader": "avaritia:halo",
+  "textures": {
+    "halo": "avaritia:misc/halo",
+    "layer0": "thaumaturgetechcompats:item/matrix_planetary_endest_pearl"
+  }
+}

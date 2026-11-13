@@ -1,0 +1,22 @@
+{
+  "comment": "Base EMC of the Thaumaturge metals: thaumium between iron and gold, alchemical brass between gold and diamond, void metal between diamond and netherite.",
+  "values": {
+    "before": [
+      {
+        "type": "projecte:item",
+        "emc_value": 1024,
+        "id": "thaumaturge:ingot_thaumium"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 4096,
+        "id": "thaumaturge:ingot_brass"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 24576,
+        "id": "thaumaturge:ingot_void"
+      }
+    ]
+  }
+}

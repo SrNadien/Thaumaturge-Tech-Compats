@@ -1,0 +1,9 @@
+{
+  "parent": "botania:block/shapes/spreader",
+  "textures": {
+    "back": "thaumaturgetechcompats:block/thaumium_spreader_back",
+    "inside": "thaumaturgetechcompats:block/thaumium_spreader_inside",
+    "outside": "thaumaturgetechcompats:block/thaumium_spreader_outside",
+    "side": "thaumaturgetechcompats:block/thaumium_spreader_side"
+  }
+}

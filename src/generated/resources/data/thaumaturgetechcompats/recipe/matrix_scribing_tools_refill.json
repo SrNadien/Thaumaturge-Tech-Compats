@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "tag": "c:dyes/black"
+    },
+    "T": {
+      "item": "thaumaturgetechcompats:matrix_scribing_tools"
+    }
+  },
+  "pattern": [
+    "T",
+    "D"
+  ],
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_scribing_tools"
+  }
+}

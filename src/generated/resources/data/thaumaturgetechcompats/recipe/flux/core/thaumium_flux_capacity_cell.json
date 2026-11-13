@@ -1,0 +1,47 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_capacity_cell"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:aqua"
+    }
+  ],
+  "key": {
+    "a": {
+      "item": "thaumaturge:alumentum"
+    },
+    "j": {
+      "item": "thaumaturge:jar_normal"
+    },
+    "p": {
+      "item": "thaumaturge:plate_thaumium"
+    }
+  },
+  "pattern": [
+    "pap",
+    "aja",
+    "pap"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:flux_storage_core_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_flux_capacity_cell"
+  },
+  "vis": 80
+}

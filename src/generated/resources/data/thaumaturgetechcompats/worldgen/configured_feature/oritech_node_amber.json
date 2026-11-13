@@ -1,0 +1,53 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_nodes"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "oritech_node_amber"
+    }
+  ],
+  "type": "oritech:resource_node",
+  "config": {
+    "boulderOres": [
+      "thaumaturge:deepslate_ore_amber",
+      "thaumaturge:deepslate_ore_amber",
+      "thaumaturge:deepslate_ore_amber",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate",
+      "minecraft:deepslate"
+    ],
+    "boulderRadius": 3,
+    "nodeOreChance": 0.3,
+    "nodeOres": [
+      "thaumaturgetechcompats:resource_node_amber"
+    ],
+    "nodeSize": 6,
+    "overlayBlock": "oritech:still_fuel_block",
+    "overlayHeight": 5
+  }
+}

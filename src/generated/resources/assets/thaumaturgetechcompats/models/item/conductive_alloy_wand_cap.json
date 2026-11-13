@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "thaumaturgetechcompats:item/conductive_alloy_wand_cap"
+  }
+}

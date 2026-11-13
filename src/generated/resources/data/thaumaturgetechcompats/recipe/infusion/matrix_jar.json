@@ -1,0 +1,46 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:vitreus"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:jar_normal"
+  },
+  "components": [
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    }
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_jars"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_jar"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:neutronium_jar"
+  },
+  "components": [
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:extremely_primordial_pearl"
+    }
+  ],
+  "instability": 9,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_jars"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:infinity_jar"
+  }
+}

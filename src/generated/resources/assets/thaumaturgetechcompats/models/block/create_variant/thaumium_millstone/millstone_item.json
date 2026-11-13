@@ -1,0 +1,9 @@
+{
+  "parent": "create:block/millstone/item",
+  "textures": {
+    "0": "thaumaturgetechcompats:block/create_variant/thaumium/gearbox",
+    "4": "thaumaturgetechcompats:block/create_variant/thaumium/crushing_wheel_plates",
+    "5": "thaumaturgetechcompats:block/create_variant/thaumium/millstone",
+    "particle": "thaumaturgetechcompats:block/create_variant/thaumium/palettes_stone_types_cap_andesite_cut_cap"
+  }
+}

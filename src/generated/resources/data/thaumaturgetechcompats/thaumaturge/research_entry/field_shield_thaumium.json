@@ -1,0 +1,58 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 59,
+  "complexity": 1,
+  "icons": [
+    "thaumaturgetechcompats:thaumium_shield_generator"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.field_shield_thaumium.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:tech",
+    "thaumaturge:base_artifice",
+    "thaumaturge:metallurgy@2"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.field_shield_thaumium.stage_0",
+      "warp": 0
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane_workbench/thaumium_shield_generator"
+      ],
+      "text": "research.thaumaturgetechcompats.field_shield_thaumium.stage_1"
+    }
+  ]
+}

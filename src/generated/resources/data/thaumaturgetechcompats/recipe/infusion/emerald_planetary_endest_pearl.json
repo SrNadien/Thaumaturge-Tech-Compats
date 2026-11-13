@@ -1,0 +1,68 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "planetary_pearl_copper"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:motus"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:diamond_planetary_endest_pearl"
+  },
+  "components": [
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:planetary_endest_pearl"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:emerald_planetary_endest_pearl"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 2,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:neutronium_wand_rod"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.neutronium_wand.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:rod_obsidian",
+    "thaumaturgetechcompats:matrix_wand"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.neutronium_wand.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/neutronium_wand_cap",
+        "thaumaturgetechcompats:infusion/neutronium_wand_rod",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_neutronium_thaumaturgetechcompats_neutronium"
+      ],
+      "text": "research.thaumaturgetechcompats.neutronium_wand.stage_1"
+    }
+  ]
+}

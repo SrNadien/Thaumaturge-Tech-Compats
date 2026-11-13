@@ -1,0 +1,48 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_altar_variants"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 20,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 3,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:pedestal_eldritch"
+  },
+  "components": [
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    }
+  ],
+  "instability": 2,
+  "research": {
+    "entry": "thaumaturgetechcompats:infusion_altar_variants"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_infusion_pedestal"
+  }
+}

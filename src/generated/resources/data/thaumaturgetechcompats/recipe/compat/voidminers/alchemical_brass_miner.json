@@ -1,0 +1,74 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_thaumium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 18,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:thaumium_miner"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:plate_brass"
+    },
+    {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    {
+      "item": "thaumaturgetechcompats:flux_jar"
+    },
+    {
+      "item": "thaumaturgetechcompats:flux_jar"
+    }
+  ],
+  "instability": 4,
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_miner_alchemical_brass"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:alchemical_brass_miner"
+  }
+}

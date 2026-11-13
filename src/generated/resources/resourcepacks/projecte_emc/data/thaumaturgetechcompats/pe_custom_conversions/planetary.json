@@ -1,0 +1,17 @@
+{
+  "comment": "Base EMC of the first planetary endest pearl and star crucifix, whose catalysts have no EMC. Higher levels derive from these.",
+  "values": {
+    "before": [
+      {
+        "type": "projecte:item",
+        "emc_value": 4096,
+        "id": "thaumaturgetechcompats:copper_planetary_endest_pearl"
+      },
+      {
+        "type": "projecte:item",
+        "emc_value": 4096,
+        "id": "thaumaturgetechcompats:copper_star_crucifix"
+      }
+    ]
+  }
+}

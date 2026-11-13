@@ -1,0 +1,66 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_upgrades_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "M": {
+      "item": "thaumaturge:mechanism_complex"
+    },
+    "P": {
+      "item": "thaumaturge:plate_void"
+    },
+    "U": {
+      "item": "thaumaturgetechcompats:alchemical_brass_solar_generation_upgrade"
+    }
+  },
+  "pattern": [
+    " M ",
+    "PUP",
+    " M "
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_solar_upgrades_void_metal"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:void_metal_solar_generation_upgrade"
+  },
+  "vis": 50
+}

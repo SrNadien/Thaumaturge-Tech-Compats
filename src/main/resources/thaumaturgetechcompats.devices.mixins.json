@@ -1,0 +1,15 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AdvancedAlchemicalFurnaceStructureMixin",
+    "BlockEntityAdvancedAlchemicalFurnaceMixin",
+    "BlockEntityNodeMixin",
+    "BlockEntityNodeTransducerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

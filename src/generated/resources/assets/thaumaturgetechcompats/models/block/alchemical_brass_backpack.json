@@ -1,0 +1,6 @@
+{
+  "parent": "sophisticatedbackpacks:block/backpack",
+  "textures": {
+    "clips": "thaumaturgetechcompats:block/alchemical_brass_clips"
+  }
+}

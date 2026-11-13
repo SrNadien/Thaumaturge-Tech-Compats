@@ -1,0 +1,62 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 4,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:matrix_wand_cap"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.matrix_wand.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:vitreus"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturge:rod_quartz",
+    "thaumaturgetechcompats:extremely_primordial_pearl"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.matrix_wand.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:wand/part/matrix_wand_cap",
+        "thaumaturgetechcompats:wand/part/matrix_wand_rod",
+        "thaumaturge:wand/assembly/thaumaturgetechcompats_matrix_thaumaturgetechcompats_matrix"
+      ],
+      "text": "research.thaumaturgetechcompats.matrix_wand.stage_1"
+    }
+  ]
+}

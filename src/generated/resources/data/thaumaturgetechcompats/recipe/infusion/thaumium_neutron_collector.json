@@ -1,0 +1,55 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "avaritia_machine_tiers"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "avaritia:densest_neutron_collector"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:mechanism_simple"
+    }
+  ],
+  "instability": 3,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_machine_tiers"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_neutron_collector"
+  }
+}

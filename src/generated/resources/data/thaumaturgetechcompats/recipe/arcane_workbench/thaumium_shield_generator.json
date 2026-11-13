@@ -1,0 +1,46 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "flux_network_thaumium"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 1,
+      "aspect": "thaumaturge:terra"
+    }
+  ],
+  "key": {
+    "g": {
+      "item": "thaumaturge:mirrored_glass"
+    },
+    "m": {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    "p": {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    "r": {
+      "item": "thaumaturge:vis_resonator"
+    }
+  },
+  "pattern": [
+    "pgp",
+    "mrm",
+    "pgp"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:field_shield_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_shield_generator"
+  },
+  "vis": 60
+}

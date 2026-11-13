@@ -1,0 +1,8 @@
+{
+  "parent": "thaumaturge:block/pedestal_eldritch",
+  "textures": {
+    "particle": "thaumaturgetechcompats:block/neutronium_infusion_pedestal_side",
+    "side": "thaumaturgetechcompats:block/neutronium_infusion_pedestal_side",
+    "top": "thaumaturgetechcompats:block/neutronium_infusion_pedestal_top"
+  }
+}

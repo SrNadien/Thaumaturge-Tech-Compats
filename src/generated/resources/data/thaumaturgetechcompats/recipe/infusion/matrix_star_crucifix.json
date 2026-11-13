@@ -1,0 +1,120 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_iron"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_gold"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_diamond"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_emerald"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_netherite"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_alchemical_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_void_metal"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_blaze_cube"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_matrix"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 48,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 36,
+      "aspect": "thaumaturge:vitreus"
+    },
+    {
+      "amount": 36,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:mortuus"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:blaze_cube_star_crucifix"
+  },
+  "components": [
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    },
+    {
+      "item": "thaumaturgetechcompats:matrix_salis_mundus"
+    }
+  ],
+  "instability": 10,
+  "research": {
+    "entry": "thaumaturgetechcompats:star_crucifix"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_star_crucifix"
+  }
+}

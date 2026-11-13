@@ -1,0 +1,57 @@
+{
+  "category": "thaumaturgetechcompats:avaritia",
+  "column": 8,
+  "complexity": 3,
+  "icons": [
+    "thaumaturge:thaumonomicon_cheat"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.avaritia_creative.title",
+  "note_aspects": [
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:cognitio"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:akashic_record",
+    "thaumaturge:nodes"
+  ],
+  "row": 2,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "observation",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        },
+        {
+          "type": "theory",
+          "amount": 1,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_creative.stage_0",
+      "warp": 3
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/creative_node_placer",
+        "thaumaturgetechcompats:infusion/thaumonomicon_cheat"
+      ],
+      "text": "research.thaumaturgetechcompats.avaritia_creative.stage_1"
+    }
+  ]
+}

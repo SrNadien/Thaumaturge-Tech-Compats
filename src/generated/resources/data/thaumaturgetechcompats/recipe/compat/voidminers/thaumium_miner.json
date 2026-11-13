@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_miner_thaumium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:machina"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:terra"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:potentia"
+    }
+  ],
+  "catalyst": {
+    "item": "voidminersremastered:rubetine_miner"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    {
+      "item": "thaumaturgetechcompats:flux_jar"
+    },
+    {
+      "item": "thaumaturgetechcompats:flux_jar"
+    }
+  ],
+  "instability": 2,
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_miner_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_miner"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "salis_mundus_variants"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 32,
+      "aspect": "thaumaturgetechcompats:cosmic"
+    },
+    {
+      "amount": 32,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 24,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturgetechcompats:nuclear"
+    },
+    {
+      "amount": 16,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:neutronium_salis_mundus"
+  },
+  "components": [
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    }
+  ],
+  "instability": 10,
+  "research": {
+    "entry": "thaumaturgetechcompats:salis_mundus_variants"
+  },
+  "result": {
+    "count": 4,
+    "id": "thaumaturgetechcompats:infinity_salis_mundus"
+  }
+}

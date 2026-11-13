@@ -1,0 +1,12 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "infusion_matrix_variants"
+    }
+  ],
+  "effect": {
+    "type": "thaumaturgetechcompats:nuclear_radiation"
+  },
+  "weight": 3
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "thaumaturgetechcompats:block/alchemical_brass_environmental_charger"
+    },
+    "active=true": {
+      "model": "thaumaturgetechcompats:block/alchemical_brass_environmental_charger_on"
+    }
+  }
+}

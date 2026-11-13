@@ -1,0 +1,39 @@
+{
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [
+    {
+      "amount": 2,
+      "aspect": "thaumaturge:ordo"
+    }
+  ],
+  "key": {
+    "C": {
+      "item": "minecraft:comparator"
+    },
+    "I": {
+      "item": "avaritia:crystal_matrix_ingot"
+    },
+    "N": {
+      "tag": "thaumaturge:nitors"
+    },
+    "P": {
+      "item": "thaumaturgetechcompats:matrix_plate"
+    },
+    "S": {
+      "item": "thaumaturge:node_transducer"
+    }
+  },
+  "pattern": [
+    "PCP",
+    "ISI",
+    "PNP"
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_transducers"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:matrix_node_transducer"
+  },
+  "vis": 400
+}

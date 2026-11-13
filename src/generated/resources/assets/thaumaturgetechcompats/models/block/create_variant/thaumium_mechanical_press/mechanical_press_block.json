@@ -1,0 +1,11 @@
+{
+  "parent": "create:block/mechanical_press/block",
+  "textures": {
+    "4": "thaumaturgetechcompats:block/create_variant/thaumium/mechanical_press_side",
+    "gearbox": "thaumaturgetechcompats:block/create_variant/thaumium/gearbox",
+    "gearbox_top": "thaumaturgetechcompats:block/create_variant/thaumium/gearbox_top",
+    "mechanical_press_bottom": "thaumaturgetechcompats:block/create_variant/thaumium/mechanical_press_bottom",
+    "mechanical_press_top": "thaumaturgetechcompats:block/create_variant/thaumium/mechanical_press_top",
+    "particle": "thaumaturgetechcompats:block/create_variant/thaumium/mechanical_press_side"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_thaumium"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_brass"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "aura_converter_void"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 27,
+  "complexity": 3,
+  "icons": [
+    "thaumaturgetechcompats:void_metal_aura_converter"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.aura_converter_void.title",
+  "note_aspects": [
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:auram"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:vacuos"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:machina"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:aura_converter_brass",
+    "thaumaturge:base_artifice",
+    "thaumaturge:base_eldritch"
+  ],
+  "row": 6,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:eldritch"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.aura_converter_void.stage_0",
+      "warp": 2
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:infusion/void_metal_aura_converter"
+      ],
+      "text": "research.thaumaturgetechcompats.aura_converter_void.stage_1"
+    }
+  ]
+}

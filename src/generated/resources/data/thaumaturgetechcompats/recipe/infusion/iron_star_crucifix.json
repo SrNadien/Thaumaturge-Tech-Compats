@@ -1,0 +1,56 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_copper"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "star_crucifix_iron"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:vinculum"
+    },
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:praemunio"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:spiritus"
+    },
+    {
+      "amount": 4,
+      "aspect": "thaumaturge:metallum"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:copper_star_crucifix"
+  },
+  "components": [
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    }
+  ],
+  "instability": 2,
+  "research": {
+    "entry": "thaumaturgetechcompats:star_crucifix"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:iron_star_crucifix"
+  }
+}

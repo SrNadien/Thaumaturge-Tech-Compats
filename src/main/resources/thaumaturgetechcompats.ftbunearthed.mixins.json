@@ -1,0 +1,16 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "nadiendev.ThaumaturgeTechCompats.compats.ftbunearthed.magical.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockEntityTypeMixin",
+    "UneartherMenuMixin"
+  ],
+  "client": [
+    "UneartherScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}

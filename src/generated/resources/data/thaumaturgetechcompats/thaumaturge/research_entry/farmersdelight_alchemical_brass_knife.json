@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "tainted_knives"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:alchemical_brass_knife"
+    },
+    {
+      "type": "neoforge:item_exists",
+      "item": "thaumaturgetechcompats:thaumium_knife"
+    }
+  ],
+  "category": "thaumaturgetechcompats:tech",
+  "column": 45,
+  "complexity": 2,
+  "icons": [
+    "thaumaturgetechcompats:alchemical_brass_knife"
+  ],
+  "meta": [
+    "round",
+    "hidden"
+  ],
+  "name": "research.thaumaturgetechcompats.farmersdelight_alchemical_brass_knife.title",
+  "note_aspects": [
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:instrumentum"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 5,
+      "aspect": "thaumaturge:victus"
+    }
+  ],
+  "parents": [
+    "thaumaturgetechcompats:farmersdelight_thaumium_knife",
+    "thaumaturge:base_artifice",
+    "thaumaturge:metallurgy@2"
+  ],
+  "row": 5,
+  "stages": [
+    {
+      "required_knowledge": [
+        {
+          "type": "theory",
+          "amount": 2,
+          "category": "thaumaturge:artifice"
+        }
+      ],
+      "text": "research.thaumaturgetechcompats.farmersdelight_alchemical_brass_knife.stage_0",
+      "warp": 1
+    },
+    {
+      "recipes": [
+        "thaumaturgetechcompats:arcane/farmersdelight_knives/alchemical_brass_knife"
+      ],
+      "text": "research.thaumaturgetechcompats.farmersdelight_alchemical_brass_knife.stage_1"
+    }
+  ]
+}

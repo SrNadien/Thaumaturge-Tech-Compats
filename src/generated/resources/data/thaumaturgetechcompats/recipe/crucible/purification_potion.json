@@ -1,0 +1,37 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "purification_potion"
+    }
+  ],
+  "type": "thaumaturge:crucible",
+  "aspects": [
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 40,
+      "aspect": "thaumaturge:victus"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:aqua"
+    },
+    {
+      "amount": 30,
+      "aspect": "thaumaturge:lux"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturge:ethereal_bloom"
+  },
+  "research": {
+    "entry": "thaumaturgetechcompats:purification_potion"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:purification_potion"
+  }
+}

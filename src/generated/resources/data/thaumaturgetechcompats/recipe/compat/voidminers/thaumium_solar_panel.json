@@ -1,0 +1,70 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "voidminersremastered"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar"
+    },
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "voidminers_magical_solar_thaumium"
+    }
+  ],
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 12,
+      "aspect": "thaumaturge:lux"
+    },
+    {
+      "amount": 10,
+      "aspect": "thaumaturge:potentia"
+    },
+    {
+      "amount": 8,
+      "aspect": "thaumaturge:metallum"
+    },
+    {
+      "amount": 6,
+      "aspect": "thaumaturge:alkimia"
+    }
+  ],
+  "catalyst": {
+    "item": "voidminersremastered:solar_rubetine_panel"
+  },
+  "components": [
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:plate_thaumium"
+    },
+    {
+      "item": "thaumaturge:mechanism_simple"
+    },
+    {
+      "item": "thaumaturge:jar_node"
+    },
+    {
+      "item": "thaumaturge:jar_node"
+    }
+  ],
+  "instability": 2,
+  "research": {
+    "entry": "thaumaturgetechcompats:voidminers_magical_solar_thaumium"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:thaumium_solar_panel"
+  }
+}

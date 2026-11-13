@@ -1,0 +1,52 @@
+{
+  "type": "thaumaturge:infusion",
+  "aspects": [
+    {
+      "amount": 100,
+      "aspect": "thaumaturge:praecantatio"
+    },
+    {
+      "amount": 150,
+      "aspect": "thaumaturge:ordo"
+    },
+    {
+      "amount": 150,
+      "aspect": "thaumaturge:alienis"
+    },
+    {
+      "amount": 48,
+      "aspect": "thaumaturgetechcompats:terminus"
+    }
+  ],
+  "catalyst": {
+    "item": "thaumaturgetechcompats:matrix_focus"
+  },
+  "components": [
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    },
+    {
+      "item": "thaumaturgetechcompats:infinity_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    },
+    {
+      "item": "thaumaturgetechcompats:neutronium_plate"
+    }
+  ],
+  "instability": 14,
+  "research": {
+    "entry": "thaumaturgetechcompats:avaritia_foci"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:infinity_focus"
+  }
+}

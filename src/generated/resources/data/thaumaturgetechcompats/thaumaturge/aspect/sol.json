@@ -1,0 +1,9 @@
+{
+  "color": 16758272,
+  "components": [
+    "thaumaturge:lux",
+    "thaumaturge:victus"
+  ],
+  "tag": "sol",
+  "texture": "thaumaturgetechcompats:textures/aspects/sol.png"
+}

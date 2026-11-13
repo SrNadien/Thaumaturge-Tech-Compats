@@ -1,0 +1,31 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "thaumaturgetechcompats:feature_enabled",
+      "feature": "node_power"
+    }
+  ],
+  "type": "thaumaturge:arcane_workbench_shaped",
+  "crystals": [],
+  "key": {
+    "j": {
+      "item": "thaumaturge:jar_normal"
+    },
+    "p": {
+      "item": "thaumaturge:plate_void"
+    }
+  },
+  "pattern": [
+    " p ",
+    "pjp",
+    " p "
+  ],
+  "research": {
+    "entry": "thaumaturgetechcompats:node_power_flux_jar"
+  },
+  "result": {
+    "count": 1,
+    "id": "thaumaturgetechcompats:flux_jar"
+  },
+  "vis": 40
+}
