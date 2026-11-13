@@ -190,16 +190,20 @@ dependencies {
     runtimeOnly("net.createmod.ponder:ponder-neoforge:${ponder_version}+mc1.21.1") { transitive = false }
 
     // Jade
-    compileOnly files("libs/Jade-1.21.1-NeoForge-15.10.6.jar")
+    compileOnly("maven.modrinth:jade:${jade_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:jade:${jade_version_id}") { transitive = false }
 
     // Jei
-    compileOnly files("libs/jei-1.21.1-neoforge-19.70.0.469.jar")
+    compileOnly("maven.modrinth:jei:${jei_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:jei:${jei_version_id}") { transitive = false }
 
     // Solar Flux
-    compileOnly files("libs/SolarFluxReborn-1.21.1-21.1.8.jar")
+    compileOnly("maven.modrinth:solar-flux-reborn:${solarflux_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:solar-flux-reborn:${solarflux_version_id}") { transitive = false }
 
     // HammerLib
-    compileOnly files("libs/HammerLib-1.21-21.0.17.jar")
+    compileOnly("maven.modrinth:hammer-lib:${hammerlib_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:hammer-lib:${hammerlib_version_id}") { transitive = false }
 
     // Mekanism
     compileOnly("mekanism:Mekanism:${mekanism_version}") { transitive = false }
@@ -242,9 +246,11 @@ dependencies {
     // Athena
     runtimeOnly("earth.terrarium.athena:athena-neoforge-1.21.1:${athena_version}") { transitive = false }
 
-    // Libs
-    compileOnly files("libs/Re-Avaritia-neoforge-1.21.1-1.4.2-release.jar")
-    runtimeOnly fileTree(dir: file("libs"), include: "*.jar", exclude: "thaumaturge*")
+    // Re:Avaritia, Curios and Lithostitched
+    compileOnly("maven.modrinth:re-avaritia:${avaritia_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:re-avaritia:${avaritia_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:curios:${curios_version_id}") { transitive = false }
+    runtimeOnly("maven.modrinth:lithostitched:${lithostitched_version_id}") { transitive = false }
 
     // Void Miners Remastered
     implementation "curse.maven:void-miners-remastered-${voidminers_project_id}:${voidminers_version_id}"
